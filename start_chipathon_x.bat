@@ -20,7 +20,7 @@
 
 SETLOCAL
 
-SET DEFAULT_DESIGNS=%USERPROFILE%\eda\designs
+SET DEFAULT_DESIGNS=%CD%\designs
 
 IF DEFINED DRY_RUN (
 	echo This is a dry run, all commands will be printed to the shell ^(Commands printed but not executed are marked with ^$^)!

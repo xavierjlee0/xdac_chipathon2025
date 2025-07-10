@@ -67,7 +67,7 @@ PARAMS=""
 
 # SET YOUR DESIGN PATH RIGHT!
 if [ -z ${DESIGNS+z} ]; then
-	DESIGNS=$HOME/eda/designs
+	DESIGNS=$HOME/Documents/xdac_chipathon2025/designs
 	if [ ! -d "$DESIGNS" ]; then
 		${ECHO_IF_DRY_RUN} mkdir -p "$DESIGNS"
 	fi
@@ -77,7 +77,7 @@ fi
 PARAMS="$PARAMS -v ${DESIGNS}:/foss/designs:rw,z"
 
 if [ -z ${DOCKER_USER+z} ]; then
-	DOCKER_USER="hpretl"
+	DOCKER_USER="xlee3"
 fi
 
 if [ -z ${DOCKER_IMAGE+z} ]; then
