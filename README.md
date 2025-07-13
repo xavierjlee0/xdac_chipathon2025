@@ -1,3 +1,6 @@
+## XDAC Chipathon Repo: A MOSBIUS-Style Class-D Amplifier
+This repository has been modified from a project template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) analog design workflow for the SSCS 2025 Chipathon, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD). Our project proposal can be found in the /docs directory.
+
 # IIC-OSIC-TOOLS Analog Design Project Template (GlobalFoundries 180nm)
 
 This repository is a project template for the IIC-OSIC-TOOLS (https://github.com/iic-jku/IIC-OSIC-TOOLS) analog design workflow for the SSCS 2025 Chipathon, preconfigured for the GlobalFoundries 180nm PDK (gf180mcuD).
@@ -19,7 +22,6 @@ First, review [this document](https://github.com/mosbiuschip/chipathon2025/tree/
 ## Required S/W on Your Computer
 
 Before you begin, you'll need to install the following required software:
-
 
 ### 1. GitHub Desktop
 
