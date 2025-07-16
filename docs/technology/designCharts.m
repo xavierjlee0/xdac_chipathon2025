@@ -4,7 +4,8 @@ Id = squeeze(nfet_03v3.ID(:,:,68,1))';
 gm = squeeze(nfet_03v3.GM(:,:,68,1))';
 GMID = (gm./Id);
 ro = (1./ (squeeze(nfet_03v3.GDS(:,:,68,1)))');
-
+CGS = nfet_03v3.CGS(:,:,68,1)';
+ft = gm ./ (2*pi*CGS);
 %% Check
 plot(nfet_03v3.VGS, Id);
 labels=num2str(nfet_03v3.L','L= %d');
@@ -57,3 +58,21 @@ title("gf180mcuD Intrinsic Gain Chart")
 
 
 %% Generate F_T plots
+plot(GMID, ft./1e9);
+labels=num2str(nfet_03v3.L','%.2f');
+
+for i = 1:length(nfet_03v3.L)
+    % Place label near the end of the curve
+    x_label = GMID(30, i);
+    y_label = idw(30, i);
+    text(x_label, y_label, labels(i,:), ...
+         'FontSize', 8, 'VerticalAlignment', 'middle', 'HorizontalAlignment', 'center');
+end
+
+% legend(labels,'location','best');
+xlim([1, 26]);
+ylim([0, 35]);
+xticks(1:26);
+ylabel("f_t(GHz)");
+xlabel("g_m/I_D ");
+title("gf180mcuD Transition Frequency (f_t) Chart")
