@@ -30,41 +30,39 @@ C {devices/lab_pin.sym} 140 -460 0 0 {name=l1 sig_type=std_logic lab=G}
 C {devices/lab_pin.sym} 210 -540 0 0 {name=l2 sig_type=std_logic lab=D}
 C {devices/code_shown.sym} 580 -610 0 0 {name=NGSPICE only_toplevel=true
 value="
-.dc vd 0 3.3 0.01 vg 0.1 3.1 0.6  
+.option numdgt=5
 
-    
+** Param Statement **
+.param wx=2.5u
+
+** Simulation Type **
+.dc vd 0 3.3 0.01 vg 0.6 1.8 0.3  
+
+** Control Loop **
 .control
-save all
+set w_vec = ( 3.5u 7u 17.5u 35u )
 
-.param wx=5u
-compose w_vec values 7.5u 15u 37.5u 75u
-
-foreach val $&w_vec 
+foreach val $w_vec 
+  echo dc sim no. W=$val ; print to console where we are    
+  alterparam wx=$val   
   reset
-  alterparam wx=$val        
   run
 
   plot vd#branch '\{$val\}'
-  wrdata nmos_widths_tb.txt dc1.all
+  wrdata pmos_widths_tb.txt vd#branch
 
   set unset appendwrite
 end 
+
 .endc
 "}
-C {devices/launcher.sym} 265 -685 0 0 {name=h1
-descr="Click left mouse button here with control key
-pressed to load/unload waveforms in graph."
-tclcommand="
-xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw
-"
-}
 C {vsource.sym} 390 -430 2 0 {name=vd value=3 savecurrent=false}
 C {gnd.sym} 210 -360 0 0 {name=l3 lab=GND}
 C {vsource.sym} 120 -400 2 0 {name=vg value=3 savecurrent=false}
 C {symbols/pfet_03v3.sym} 190 -460 2 1 {name=M1
-L=.5u
+L=1u
 W=\\\{wx\\\}
-nf=1
+nf= 1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
@@ -75,3 +73,4 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
+C {title.sym} 160 -40 0 0 {name=l4 author="X.J. Lee"}
