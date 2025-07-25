@@ -71,8 +71,8 @@ C {devices/ipin.sym} 240 -550 0 0 {name=p4 lab=vdd}
 C {devices/ipin.sym} 320 -180 0 0 {name=p5 lab=vss}
 C {devices/opin.sym} 640 -290 0 0 {name=p6 lab=out}
 C {symbols/nfet_03v3.sym} 530 -240 0 0 {name=M4
-L=1u
-W=1.5u
+L=3u
+W=4.5u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -85,8 +85,8 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 400 -240 0 1 {name=M3
-L=1u
-W=1.5u
+L=3u
+W=4.5u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"

@@ -73,7 +73,7 @@ C {devices/ipin.sym} 260 -550 0 0 {name=p4 lab=vdd}
 C {devices/ipin.sym} 250 -170 0 0 {name=p5 lab=vss}
 C {devices/opin.sym} 660 -430 0 0 {name=p6 lab=out}
 C {devices/title.sym} 0 0 0 0 {name=l1 author="X.J. Lee"}
-C {symbols/nfet_03v3.sym} 390 -370 0 0 {name=M3
+C {symbols/nfet_03v3.sym} 390 -370 0 0 {name=M1
 L=1u
 W=3.5u
 nf=1
@@ -87,7 +87,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 600 -370 0 1 {name=M4
+C {symbols/nfet_03v3.sym} 600 -370 0 1 {name=M2
 L=1u
 W=3.5u
 nf=1
@@ -101,7 +101,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/pfet_03v3.sym} 560 -480 0 0 {name=M5
+C {symbols/pfet_03v3.sym} 560 -480 0 0 {name=M4
 L=1u
 W=6u
 nf=1
@@ -115,7 +115,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {symbols/pfet_03v3.sym} 430 -480 0 1 {name=M6
+C {symbols/pfet_03v3.sym} 430 -480 0 1 {name=M3
 L=1u
 W=6u
 nf=1
