@@ -10,6 +10,8 @@ N 210 -540 210 -490 {
 lab=D}
 N 210 -430 210 -360 {
 lab=GND}
+N 210 -390 260 -390 {lab=GND}
+N 260 -460 260 -390 {lab=GND}
 N 210 -460 260 -460 {lab=GND}
 N 120 -460 130 -460 {lab=G}
 N 120 -460 120 -430 {lab=G}
@@ -18,9 +20,7 @@ N 210 -370 390 -370 {lab=GND}
 N 210 -540 390 -540 {lab=D}
 N 390 -540 390 -460 {lab=D}
 N 390 -400 390 -370 {lab=GND}
-N 260 -460 260 -420 {lab=GND}
-N 210 -420 260 -420 {lab=GND}
-C {devices/code_shown.sym} 100 -210 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 20 -150 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -36,11 +36,11 @@ value="
 .param wx=2.5u
 
 ** Simulation Type **
-.dc vd 0 3.3 0.01 vg 0.6 1.8 0.3  
+.dc vd 0 3.3 0.01 vg 0.5 1.3 0.2  
 
 ** Control Loop **
 .control
-set w_vec = ( 3.5u 7u 17.5u 35u )
+set w_vec = ( 2.5u 5u 12.5u 25u )
 
 foreach val $w_vec 
   echo dc sim no. W=$val ; print to console where we are    
@@ -49,28 +49,28 @@ foreach val $w_vec
   run
 
   plot vd#branch '\{$val\}'
-  wrdata pmos_widths_tb.txt vd#branch
+  wrdata nmos_widths_tb.txt vd#branch
 
   set unset appendwrite
 end 
 
 .endc
 "}
-C {vsource.sym} 390 -430 2 0 {name=vd value=3 savecurrent=false}
-C {gnd.sym} 210 -360 0 0 {name=l3 lab=GND}
-C {vsource.sym} 120 -400 2 0 {name=vg value=3 savecurrent=false}
-C {symbols/pfet_03v3.sym} 190 -460 2 1 {name=M1
-L=1u
+C {symbols/nfet_03v3_dss.sym} 190 -460 0 0 {name=M1
+L=0.6u
 W=\\\{wx\\\}
-nf= 1
-m=1
+nf=1
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
 nrd="'0.18u / W'" nrs="'0.18u / W'"
 sa=0 sb=0 sd=0
-model=pfet_03v3
+model=nfet_03v3_dss
 spiceprefix=X
 }
-C {title.sym} 160 -40 0 0 {name=l4 author="X.J. Lee"}
+C {vsource.sym} 390 -430 0 0 {name=vd value=3 savecurrent=false}
+C {gnd.sym} 210 -360 0 0 {name=l3 lab=GND}
+C {vsource.sym} 120 -400 0 0 {name=vg value=3 savecurrent=false}
+C {title.sym} 160 -40 0 0 {name=l7 author="X.J. Lee"}
