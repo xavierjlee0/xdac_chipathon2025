@@ -39,7 +39,7 @@ C {devices/lab_wire.sym} -40 190 0 0 {name=p4 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} -40 210 0 0 {name=p5 sig_type=std_logic lab=vssa}
 C {devices/isource.sym} -160 170 3 0 {name=I0 value=10u}
 C {devices/lab_wire.sym} -210 170 0 0 {name=p6 sig_type=std_logic lab=vdda}
-C {devices/vsource.sym} -340 20 2 1 {name=V3 value="SIN(0 0.01 10k) AC 0.01" savecurrent=false}
+C {devices/vsource.sym} -340 20 0 1 {name=V3 value="SIN(0 0.01 10k) AC 1" savecurrent=false}
 C {devices/lab_wire.sym} -120 110 0 0 {name=p9 sig_type=std_logic lab=vin_p}
 C {devices/code_shown.sym} 150 -330 0 0 {name=Simulation only_toplevel=false value="
 .control
