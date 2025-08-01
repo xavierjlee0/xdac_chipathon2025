@@ -4,6 +4,8 @@ K {}
 V {}
 S {}
 E {}
+T {Modified bandgap reference to gf180mcuD from original work in "Analog Design Book"
+by Harald Pretl under the Apache License 2.0.} 140 -840 0 0 0.4 0.4 {}
 N 280 -160 280 -140 {lab=vss}
 N 280 -140 920 -140 {lab=vss}
 N 920 -160 920 -140 {lab=vss}
@@ -234,12 +236,12 @@ C {lab_wire.sym} 400 -450 0 0 {name=p2 sig_type=std_logic lab=vg2}
 C {lab_wire.sym} 400 -670 0 0 {name=p3 sig_type=std_logic lab=vg3}
 C {lab_wire.sym} 400 -750 0 0 {name=p4 sig_type=std_logic lab=vg4}
 C {res.sym} 280 -550 0 0 {name=R5
-value=10k
+value=10k8
 footprint=1206
 device=resistor
 m=1}
 C {res.sym} 620 -540 0 0 {name=R3
-value=10k
+value=10k8
 footprint=1206
 device=resistor
 m=1}
