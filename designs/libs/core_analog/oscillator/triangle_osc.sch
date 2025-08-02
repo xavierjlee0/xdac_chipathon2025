@@ -87,16 +87,18 @@ N 790 -390 790 -350 {lab=iref}
 N 790 -350 790 -330 {lab=iref}
 N 180 -560 220 -560 {lab=out}
 N 240 -300 240 -250 {lab=vss}
-N 750 -420 1030 -420 {lab=nq}
 N 700 -450 740 -450 {lab=nq}
-N 740 -450 740 -420 {lab=nq}
-N 740 -420 750 -420 {lab=nq}
 N 360 -400 460 -400 {lab=vcompp}
 N 460 -430 460 -400 {lab=vcompp}
 N 460 -430 500 -430 {lab=vcompp}
 N 340 -540 460 -540 {lab=vcompn}
 N 460 -540 460 -450 {lab=vcompn}
 N 460 -450 500 -450 {lab=vcompn}
+N 700 -430 710 -430 {lab=q}
+N 710 -430 730 -430 {lab=q}
+N 730 -430 740 -430 {lab=q}
+N 740 -450 760 -450 {lab=nq}
+N 760 -450 1030 -450 {lab=nq}
 C {title.sym} 160 -40 0 0 {name=l1 author="X.J. Lee"}
 C {symbols/nfet_03v3.sym} 970 -300 0 1 {name=M1
 L=1u
@@ -246,5 +248,5 @@ C {lab_wire.sym} 300 -580 0 0 {name=p10 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} 440 -400 0 0 {name=p14 sig_type=std_logic lab=vcompp}
 C {lab_wire.sym} 440 -540 0 0 {name=p15 sig_type=std_logic lab=vcompn}
 C {libs/core_analog/oscillator/sr_latch.sym} 520 -420 2 1 {name=x1}
-C {noconn.sym} 700 -430 2 0 {name=l2}
-C {lab_wire.sym} 820 -420 0 0 {name=p8 sig_type=std_logic lab=nq}
+C {lab_wire.sym} 730 -450 0 0 {name=p8 sig_type=std_logic lab=nq}
+C {lab_wire.sym} 730 -430 0 0 {name=p9 sig_type=std_logic lab=q}
