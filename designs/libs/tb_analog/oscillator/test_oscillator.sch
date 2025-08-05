@@ -65,7 +65,7 @@ OP
 *show all > op.log
 show all
 
-TRAN 200n 50u 0
+TRAN 2n 5u 0
 plot vout
 plot vout x1.vcompn vho
 plot vout x1.vcompp vlo
@@ -76,7 +76,7 @@ plot x1.vq vout
 "}
 C {capa.sym} 830 -785 0 0 {name=C1
 m=1
-value=25p
+value=15p
 footprint=1206
 device="ceramic capacitor"}
 C {lab_wire.sym} 830 -715 0 0 {name=p1 sig_type=std_logic lab=vss}
