@@ -32,8 +32,8 @@ C {devices/code_shown.sym} 470 -450 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
-let fsig = 200k
-let fnsig = 400k
+let fsig = 500k
+let fnsig = 700k
 let tper=1/fsig
 let tfr = 0.01*tper
 let ton = 0.5*tper-2*tfr
@@ -44,14 +44,14 @@ let tstep = 0.001*tper
 
 
 **voltages
-*alter @VINN[PULSE] = [ 0 3.3 0 $&tfr $&tfr $&ton $&tper 3 ]
-*alter @VINN[DC] = 2
-alter @VINN[SIN] = [ 2.4 0.1 $&fnsig 0 0 ]
+alter @VINN[PULSE] = [ 0 2.998 0 $&tfr $&tfr $&ton $&tper 3 ]
+alter @VINN[DC] = 1.98
+*alter @VINN[SIN] = [ 2.4 0.1 $&fnsig 0 0 ]
 
-*alter @VINP[PULSE] = [ 0 3.3 1u $&tfr $&tfr $&ton $&tper 3 ]
-alter @VINP[SIN] = [ 2.35 0.1 $&fsig 0 0 ]
+alter @VINP[PULSE] = [ 0 3 5u $&tfr $&tfr $&ton $&tper 3 ]
+*alter @VINP[SIN] = [ 2.35 0.1 $&fsig 0 0 ]
 
-*alter @VINP[DC] = 3.3
+alter @VINP[DC] = 2
 
 **simulation
 OP
@@ -61,7 +61,8 @@ show all
 
 
 tran $&tstep $&tstop
-
+plot v(out) v(inn) v(inp)
+*plot v(out)
 write NMOS_comparator_tb.raw
 .endc
 "}

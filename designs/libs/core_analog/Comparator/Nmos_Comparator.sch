@@ -22,28 +22,18 @@ N 320 -750 320 -670 {lab=vdd}
 N 320 -750 450 -750 {lab=vdd}
 N 450 -750 450 -670 {lab=vdd}
 N 450 -750 550 -750 {lab=vdd}
-N 550 -750 550 -670 {lab=vdd}
-N 550 -750 720 -750 {lab=vdd}
-N 720 -750 720 -660 {lab=vdd}
 N 720 -750 820 -750 {lab=vdd}
 N 820 -750 820 -660 {lab=vdd}
 N 380 -640 380 -590 {lab=#net2}
 N 380 -590 450 -590 {lab=#net2}
-N 550 -610 550 -550 {lab=#net2}
-N 450 -550 550 -550 {lab=#net2}
 N 490 -430 670 -430 {lab=#net3}
 N 450 -610 450 -550 {lab=#net2}
 N 490 -550 490 -490 {lab=#net2}
-N 680 -630 680 -550 {lab=#net2}
-N 550 -550 680 -550 {lab=#net2}
-N 720 -600 820 -600 {lab=#net4}
 N 770 -600 770 -490 {lab=#net4}
-N 590 -640 590 -530 {lab=#net4}
-N 590 -530 770 -530 {lab=#net4}
 N 860 -630 930 -630 {lab=#net4}
 N 890 -630 890 -560 {lab=#net4}
 N 770 -560 890 -560 {lab=#net4}
-N 970 -600 970 -300 {lab=Vout}
+N 970 -600 970 -300 {lab=vout}
 N 730 -270 930 -270 {lab=#net1}
 N 520 -50 970 -50 {lab=vss}
 N 970 -160 970 -50 {lab=vss}
@@ -53,13 +43,11 @@ N 200 -460 450 -460 {lab=inn}
 N 810 -460 810 -400 {lab=inp}
 N 200 -400 810 -400 {lab=inp}
 N 670 -430 770 -430 {lab=#net3}
-N 970 -460 990 -460 {lab=Vout}
+N 970 -460 990 -460 {lab=vout}
 N 320 -270 320 -240 {lab=vss}
 N 970 -270 970 -240 {lab=vss}
-N 720 -660 720 -630 {lab=vdd}
 N 820 -660 820 -630 {lab=vdd}
 N 970 -660 970 -630 {lab=vdd}
-N 550 -670 550 -640 {lab=vdd}
 N 450 -670 450 -640 {lab=vdd}
 N 320 -670 320 -640 {lab=vdd}
 N 480 -150 590 -150 {lab=iref}
@@ -84,6 +72,22 @@ N 630 -220 630 -190 {lab=#net3}
 N 630 -110 630 -50 {lab=vss}
 N 640 -140 640 -50 {lab=vss}
 N 630 -430 630 -220 {lab=#net3}
+N 550 -750 720 -750 {lab=vdd}
+N 450 -550 490 -550 {lab=#net2}
+N 770 -600 820 -600 {lab=#net4}
+N 720 -660 720 -630 {lab=vdd}
+N 670 -600 720 -600 {lab=#net4}
+N 570 -660 570 -630 {lab=vdd}
+N 570 -750 570 -660 {lab=vdd}
+N 720 -750 720 -660 {lab=vdd}
+N 570 -600 570 -550 {lab=#net2}
+N 490 -550 570 -550 {lab=#net2}
+N 610 -630 610 -530 {lab=#net4}
+N 610 -530 770 -530 {lab=#net4}
+N 760 -630 760 -550 {lab=#net2}
+N 570 -550 760 -550 {lab=#net2}
+N 670 -600 670 -580 {lab=#net4}
+N 670 -580 770 -580 {lab=#net4}
 C {title.sym} 80 80 0 0 {name=Comparator author="Christopher Amankwaa"}
 C {symbols/nfet_03v3.sym} 340 -270 0 1 {name=M3
 L=1u
@@ -156,39 +160,11 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {symbols/pfet_03v3.sym} 570 -640 0 1 {name=M8
-L=0.5u
-W=5u
-nf=4
-m=4
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
 C {symbols/pfet_03v3.sym} 840 -630 0 1 {name=M9
 L=0.5u
 W=5u
 nf=2
 m=2
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/pfet_03v3.sym} 700 -630 0 0 {name=M10
-L=0.5u
-W=5u
-nf=4
-m=4
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -259,3 +235,31 @@ write NMOS_comparator_cm_tb.raw
 "}
 C {libs/core_analog/unit_nmos/unit_nmos.sym} 120 -150 0 1 {name=x1 M = 1}
 C {libs/core_analog/unit_nmos/unit_nmos.sym} 590 -150 0 0 {name=x2 M = 2}
+C {symbols/pfet_03v3.sym} 740 -630 0 1 {name=M1
+L=0.5u
+W=5u
+nf=2
+m=2
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/pfet_03v3.sym} 590 -630 0 1 {name=M2
+L=0.5u
+W=5u
+nf=2
+m=2
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
