@@ -38,6 +38,7 @@ let tstep = 0.001*tper
 
 
 **voltages
+<<<<<<< Updated upstream
 *alter @VINN[PULSE] = [ 0 3.3 0 $&tfr $&tfr $&ton $&tper 3 ]
 *alter @VINN[DC] = 2
 alter @VINN[SIN] = [ 1.7 1.5 $&fnsig 0 0 ]
@@ -45,6 +46,17 @@ alter @VINN[SIN] = [ 1.7 1.5 $&fnsig 0 0 ]
 *alter @VINP[PULSE] = [ 0 3.3 1u $&tfr $&tfr $&ton $&tper 3 ]
 alter @VINP[SIN] = [ 1.7 1.5 $&fsig 0 0 ]
 alter @VINP[DC] = 3.3
+=======
+alter @VINN[PULSE] = [ 0 3.28 0 $&tfr $&tfr $&ton $&tper 3 ]
+alter @VINN[DC] = 2
+*alter @VINN[SIN] = [ 2.4 0.1 $&fnsig 0 0 ]
+
+alter @VINP[PULSE] = [ 0 3.3 1u $&tfr $&tfr $&ton $&tper 3 ]
+alter @VINP[DC] = 3.3
+*alter @VINP[SIN] = [ 2.35 0.1 $&fsig 0 0 ]
+
+
+>>>>>>> Stashed changes
 
 **simulation
 OP
@@ -53,7 +65,8 @@ show all
 
 
 tran $&tstep $&tstop
-
+plot v(inn) v(inp) v(out)
+plot v(out)
 write NMOS_comparator_tb.raw
 .endc
 "}
