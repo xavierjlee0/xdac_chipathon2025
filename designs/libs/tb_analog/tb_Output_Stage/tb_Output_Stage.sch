@@ -23,7 +23,7 @@ N -1060 -650 -1000 -650 {lab=#net1}
 N -820 -680 -780 -680 {lab=out}
 N -800 -620 -800 -600 {lab=GND}
 N -840 -600 -800 -600 {lab=GND}
-C {devices/code_shown.sym} -220 -990 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} -680 -1040 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
@@ -58,7 +58,7 @@ print vpp
 write Output_Stage_tb.raw
 .endc
 "}
-C {devices/code_shown.sym} -260 -260 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} -680 -390 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -84,7 +84,7 @@ C {vdd.sym} -920 -800 0 0 {name=l1 lab=VDD}
 C {gnd.sym} -920 -560 0 0 {name=l2 lab=GND}
 C {noconn.sym} -780 -680 2 0 {name=l6}
 C {res.sym} -840 -650 0 0 {name=R3
-value=32
+value=8
 footprint=1206
 device=resistor
 m=1}
