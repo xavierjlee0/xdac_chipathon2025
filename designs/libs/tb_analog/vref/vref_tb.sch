@@ -46,6 +46,8 @@ N 40 -400 40 -380 {lab=#net3}
 N 40 -520 40 -460 {lab=vdd}
 N 40 -520 100 -520 {lab=vdd}
 N 100 -520 100 -400 {lab=vdd}
+N 930 -540 930 -480 {lab=i_out}
+N 930 -420 930 -360 {lab=GND}
 C {vsource.sym} 40 -350 0 0 {name=V1 value=3.3 savecurrent=false}
 C {title.sym} 160 -40 0 0 {name=l1 author="X.J. Lee"}
 C {libs/core_analog/vref/voltage_reference.sym} 190 -410 0 0 {name=x1}
@@ -58,7 +60,7 @@ value="
 .control
 save all
 op
-show all
+show i
 
 *alter @V1[PULSE] = [ 0 3.3 200u 5u 5u 1 2 3]
 
@@ -69,7 +71,7 @@ plot vbg v_buff
 plot v1#branch
 .endc
 "}
-C {devices/code_shown.sym} 10 -220 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 10 -200 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -80,7 +82,7 @@ value="
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
 C {lab_wire.sym} 390 -310 0 0 {name=p2 sig_type=std_logic lab=vdd}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 890 -580 0 0 {name=x3 M=4}
+C {libs/core_analog/unit_pmos/unit_pmos.sym} 890 -580 0 0 {name=x3 M=1}
 C {lab_wire.sym} 340 -430 0 0 {name=p3 sig_type=std_logic lab=v_buff}
 C {lab_wire.sym} 760 -350 0 0 {name=p5 sig_type=std_logic lab=v_buff}
 C {res.sym} 760 -320 0 0 {name=R1
@@ -94,7 +96,7 @@ C {libs/core_analog/ota_5t/ota_5t.sym} 430 -500 0 0 {name=x2}
 C {lab_wire.sym} 700 -410 0 0 {name=p7 sig_type=std_logic lab=vg_pass}
 C {symbols/nfet_03v3.sym} 740 -410 0 0 {name=M1
 L=1u
-W=3u
+W=6u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -113,3 +115,10 @@ value=50
 footprint=1206
 device=resistor
 m=1}
+C {res.sym} 930 -450 0 0 {name=R3
+value=1
+footprint=1206
+device=resistor
+m=1}
+C {gnd.sym} 930 -360 0 0 {name=l4 lab=GND}
+C {lab_wire.sym} 930 -500 0 0 {name=p8 sig_type=std_logic lab=i_out}
