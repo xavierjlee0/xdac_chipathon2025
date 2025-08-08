@@ -51,12 +51,12 @@ N 370 -350 370 -100 {lab=vin}
 C {title.sym} 100 250 0 0 {name=l1 author="Christopher O Amankwaa"}
 C {capa.sym} 990 -390 0 0 {name=C1
 m=1
-value=1.3p
+value=0.5p
 footprint=1206
 device="ceramic capacitor"}
 C {capa.sym} 1040 -110 0 0 {name=C2
 m=1
-value=1.3p
+value=0.5p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/code_shown.sym} 1980 90 0 0 {name=Models only_toplevel=false

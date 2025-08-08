@@ -63,7 +63,7 @@ value="
 .control
 save all
 **Frequency & time settings
-let fsig = 900k
+let fsig = 42k
 let tper=1/fsig
 let tfr = 0.01*tper
 let ton = 0.5*tper-2*tfr
@@ -116,12 +116,12 @@ device=resistor
 m=1}
 C {capa.sym} 310 -260 0 0 {name=C1
 m=1
-value=10f
+value=1.5p
 footprint=1206
 device="ceramic capacitor"}
 C {capa.sym} 360 -240 0 0 {name=C2
 m=1
-value=10f
+value=.9p
 footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 310 -200 0 0 {name=l6 lab=GND}
