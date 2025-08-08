@@ -17,9 +17,11 @@ N -150 -70 -150 -40 {lab=GND}
 N -150 -300 -150 -250 {lab=Vssd}
 N 250 -270 270 -270 {lab=nmos}
 N 250 -290 310 -290 {lab=pmos}
-N 270 -270 330 -270 {lab=nmos}
+N 400 -270 460 -270 {lab=nmos}
 N 80 -270 80 -230 {lab=GND}
 N -150 -190 -150 -130 {lab=#net3}
+N 310 -290 440 -290 {lab=pmos}
+N 270 -270 400 -270 {lab=nmos}
 C {title.sym} 160 30 0 0 {name=l1 author="Christopher O Amankwaa"}
 C {vsource.sym} -70 -100 0 0 {name=V1 value=3.3 savecurrent=false}
 C {vsource.sym} 0 -100 0 0 {name=Vin value="1.5 AC 1.2" savecurrent=false}
@@ -41,10 +43,10 @@ C {vsource.sym} -150 -100 0 0 {name=V2 value=0 savecurrent=false}
 C {gnd.sym} -150 -40 0 0 {name=l4 lab=GND
 value=0}
 C {lab_wire.sym} -150 -260 0 0 {name=p4 sig_type=std_logic lab=Vssd}
-C {noconn.sym} 310 -290 2 0 {name=l7}
-C {noconn.sym} 330 -270 2 0 {name=l8}
-C {lab_wire.sym} 290 -290 0 0 {name=p2 sig_type=std_logic lab=pmos}
-C {lab_wire.sym} 310 -270 0 0 {name=p1 sig_type=std_logic lab=nmos}
+C {noconn.sym} 440 -290 2 0 {name=l7}
+C {noconn.sym} 460 -270 2 0 {name=l8}
+C {lab_wire.sym} 420 -290 0 0 {name=p2 sig_type=std_logic lab=pmos}
+C {lab_wire.sym} 440 -270 0 0 {name=p1 sig_type=std_logic lab=nmos}
 C {devices/code_shown.sym} 1120 -100 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
@@ -110,3 +112,13 @@ value=10
 footprint=1206
 device=resistor
 m=1}
+C {capa.sym} 310 -260 0 0 {name=C1
+m=1
+value=1p
+footprint=1206
+device="ceramic capacitor"}
+C {capa.sym} 360 -240 0 0 {name=C2
+m=1
+value=1p
+footprint=1206
+device="ceramic capacitor"}
