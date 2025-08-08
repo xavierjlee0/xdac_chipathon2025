@@ -22,6 +22,8 @@ N 80 -270 80 -230 {lab=GND}
 N -150 -190 -150 -130 {lab=#net3}
 N 310 -290 440 -290 {lab=pmos}
 N 270 -270 400 -270 {lab=nmos}
+N 310 -230 310 -200 {lab=GND}
+N 360 -210 360 -180 {lab=GND}
 C {title.sym} 160 30 0 0 {name=l1 author="Christopher O Amankwaa"}
 C {vsource.sym} -70 -100 0 0 {name=V1 value=3.3 savecurrent=false}
 C {vsource.sym} 0 -100 0 0 {name=Vin value="1.5 AC 1.2" savecurrent=false}
@@ -61,12 +63,12 @@ value="
 .control
 save all
 **Frequency & time settings
-let fsig = 42k
+let fsig = 900k
 let tper=1/fsig
 let tfr = 0.01*tper
 let ton = 0.5*tper-2*tfr
 
-let tstop = 1.5 * tper
+let tstop = 4 * tper
 let tstep = 0.001*tper
 
 
@@ -86,8 +88,8 @@ tran $&tstep $&tstop
 meas tran trise_p TRIG v(pmos) VAL=0.66 RISE=3 TARG v(pmos) VAL=3.0 RISE=3
 meas tran trise_n TRIG v(nmos) VAL=0.66 RISE=3 TARG v(nmos) VAL=3.0 RISE=3
 
-meas tran tfall_p TRIG v(pmos) VAL=3.0 FALL=2 TARG v(pmos) VAL=0.66 FALL=2
-meas tran tfall_n TRIG v(nmos) VAL=3.0 FALL=2 TARG v(nmos) VAL=0.66 FALL=2
+meas tran tfall_p TRIG v(pmos) VAL=3.0 FALL=3 TARG v(pmos) VAL=0.66 FALL=3
+meas tran tfall_n TRIG v(nmos) VAL=3.0 FALL=3 TARG v(nmos) VAL=0.66 FALL=3
 
 plot nmos pmos
 
@@ -114,11 +116,13 @@ device=resistor
 m=1}
 C {capa.sym} 310 -260 0 0 {name=C1
 m=1
-value=1p
+value=10f
 footprint=1206
 device="ceramic capacitor"}
 C {capa.sym} 360 -240 0 0 {name=C2
 m=1
-value=1p
+value=10f
 footprint=1206
 device="ceramic capacitor"}
+C {gnd.sym} 310 -200 0 0 {name=l6 lab=GND}
+C {gnd.sym} 360 -180 0 0 {name=l9 lab=GND}
