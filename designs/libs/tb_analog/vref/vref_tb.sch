@@ -4,13 +4,11 @@ K {}
 V {}
 S {}
 E {}
-T {Bandgap Reference} 80 -450 0 0 0.4 0.4 {}
-N 100 -400 100 -380 {lab=vdd}
+T {Bandgap Reference} 130 -360 0 0 0.4 0.4 {}
 N 150 -380 170 -380 {lab=GND}
 N 360 -390 410 -390 {lab=vbg}
 N 100 -290 220 -290 {lab=GND}
 N 150 -380 150 -290 {lab=GND}
-N 100 -320 100 -290 {lab=GND}
 N 660 -410 700 -410 {lab=vg_pass}
 N 390 -310 410 -310 {lab=vdd}
 N 390 -290 410 -290 {lab=GND}
@@ -42,7 +40,13 @@ N 800 -580 890 -580 {lab=#net1}
 N 940 -620 940 -590 {lab=vdd}
 N 500 -620 940 -620 {lab=vdd}
 N 750 -620 750 -590 {lab=vdd}
-C {vsource.sym} 100 -350 0 0 {name=V1 value=3.3 savecurrent=false}
+N 40 -290 100 -290 {lab=GND}
+N 40 -320 40 -290 {lab=GND}
+N 40 -400 40 -380 {lab=#net3}
+N 40 -520 40 -460 {lab=vdd}
+N 40 -520 100 -520 {lab=vdd}
+N 100 -520 100 -400 {lab=vdd}
+C {vsource.sym} 40 -350 0 0 {name=V1 value=3.3 savecurrent=false}
 C {title.sym} 160 -40 0 0 {name=l1 author="X.J. Lee"}
 C {libs/core_analog/vref/voltage_reference.sym} 190 -410 0 0 {name=x1}
 C {gnd.sym} 160 -290 0 0 {name=l2 lab=GND}
@@ -104,3 +108,8 @@ spiceprefix=X
 }
 C {gnd.sym} 760 -270 0 0 {name=l3 lab=GND}
 C {libs/core_analog/unit_pmos/unit_pmos.sym} 800 -580 0 1 {name=x5 M=1}
+C {res.sym} 40 -430 0 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1}
