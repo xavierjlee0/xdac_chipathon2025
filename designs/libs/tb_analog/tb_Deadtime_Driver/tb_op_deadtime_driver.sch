@@ -13,19 +13,20 @@ N 0 -290 0 -270 {lab=in}
 N 0 -290 80 -290 {lab=in}
 N -70 -270 -60 -270 {lab=VDDd}
 N -60 -320 -60 -270 {lab=VDDd}
-N 100 -70 100 -40 {lab=GND}
-N 100 -180 100 -130 {lab=Vssd}
+N -150 -70 -150 -40 {lab=GND}
+N -150 -300 -150 -250 {lab=Vssd}
 N 250 -270 270 -270 {lab=nmos}
 N 250 -290 310 -290 {lab=pmos}
 N 270 -270 330 -270 {lab=nmos}
-N 80 -270 80 -230 {lab=#net3}
+N 80 -270 80 -230 {lab=GND}
+N -150 -190 -150 -130 {lab=#net3}
 C {title.sym} 160 30 0 0 {name=l1 author="Christopher O Amankwaa"}
 C {vsource.sym} -70 -100 0 0 {name=V1 value=3.3 savecurrent=false}
 C {vsource.sym} 0 -100 0 0 {name=Vin value="1.5 AC 1.2" savecurrent=false}
 C {gnd.sym} -70 -40 0 0 {name=l2 lab=GND}
 C {gnd.sym} 0 -40 0 0 {name=l3 lab=GND}
 C {res.sym} -70 -220 0 0 {name=R1
-value=50
+value=10
 footprint=1206
 device=resistor
 m=1}
@@ -36,10 +37,10 @@ device=resistor
 m=1}
 C {lab_wire.sym} 40 -290 0 0 {name=p5 sig_type=std_logic lab=in}
 C {lab_wire.sym} -60 -290 0 0 {name=p3 sig_type=std_logic lab=VDDd}
-C {vsource.sym} 100 -100 0 0 {name=V2 value=0 savecurrent=false}
-C {gnd.sym} 100 -40 0 0 {name=l4 lab=GND
+C {vsource.sym} -150 -100 0 0 {name=V2 value=0 savecurrent=false}
+C {gnd.sym} -150 -40 0 0 {name=l4 lab=GND
 value=0}
-C {lab_wire.sym} 100 -140 0 0 {name=p4 sig_type=std_logic lab=Vssd}
+C {lab_wire.sym} -150 -260 0 0 {name=p4 sig_type=std_logic lab=Vssd}
 C {noconn.sym} 310 -290 2 0 {name=l7}
 C {noconn.sym} 330 -270 2 0 {name=l8}
 C {lab_wire.sym} 290 -290 0 0 {name=p2 sig_type=std_logic lab=pmos}
@@ -58,12 +59,12 @@ value="
 .control
 save all
 **Frequency & time settings
-let fsig = 900k
+let fsig = 42k
 let tper=1/fsig
 let tfr = 0.01*tper
 let ton = 0.5*tper-2*tfr
 
-let tstop = 4 * tper
+let tstop = 1.5 * tper
 let tstep = 0.001*tper
 
 
@@ -104,3 +105,8 @@ write Deadtime_Driver_tb.raw
 C {libs/core_analog/Deadtime_Driver/op_Deadtime_Driver.sym} 230 -280 0 0 {name=x1}
 C {gnd.sym} 80 -230 0 0 {name=l5 lab=GND
 value=0}
+C {res.sym} -150 -220 0 0 {name=R3
+value=10
+footprint=1206
+device=resistor
+m=1}
