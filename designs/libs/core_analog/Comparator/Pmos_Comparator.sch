@@ -156,9 +156,9 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 440 -200 0 0 {name=M8
 L=1u
-W=5.46u
+W=2.73u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -184,9 +184,9 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 350 -200 0 1 {name=M10
 L=1u
-W=5.46u
+W=2.73u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"

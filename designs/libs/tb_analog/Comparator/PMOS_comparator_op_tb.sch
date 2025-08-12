@@ -41,34 +41,36 @@ value="
 .control
 save all
 let fsig = 200k
-let fnsig = 400k
+let fnsig = 42k
 
 let tper=1/fsig
-let tfr = 0.01*tper
+let tnper=1/fnsig
+let tfr = 0.5*tper
 let ton = 0.5*tper-2*tfr
 
 let tstop =2 * tper
 let tstep = 0.001*tper
+let tnstop = 1 * tnper
 
 
 **voltages
 
 *alter @VINP[PULSE] = [ 0 3.00 0 $&tfr $&tfr $&ton $&tper 3 ]
-alter @VINP[SIN] = [ 1.4 0.01 $&fsig 0 0 ]
+alter @VINP[SIN] = [ 1.3 1.115 $&fsig 0 0 ]
 alter @VINP[DC] = 3.3
 *alter @VINP[PWL] = [ 0 0 10u 5 20u 0 30u 5 40u 0]
 
 
-*alter @VINN[PULSE] = [ 0 3.1 1u $&tfr $&tfr $&ton $&tper 3 ]
-alter @VINN[DC] = 1.4
-*alter @VINN[SIN] = [ 1 1.1 $&fnsig 0 0 ]
+alter @VINN[PULSE] = [ 0 3.1 1u $&tfr $&tfr $&ton $&tper 3 ]
+*alter @VINN[DC] = 1.4
+*alter @VINN[SIN] = [ 1.3 1.1 $&fsig 0 0 ]
 
 **simulation
 OP
 *show all > op.log
 show all
 
-tran $&tstep $&tstop
+tran $&tstep $&tnstop
 
 *plot v(out) vs v(inp)
 plot v(out) v(inn) v(inp)
