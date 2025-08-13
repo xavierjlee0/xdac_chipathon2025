@@ -16,9 +16,9 @@ N -80 40 0 40 {lab=PHI_2}
 N -80 100 0 100 {lab=Q[1:9],D_out}
 N -80 0 0 0 {lab=D_in}
 N 300 0 410 0 {lab=Q[1:9],D_out}
-C {core_swmatrix/ShiftReg_row_10_2.sym} 150 20 0 0 {name=xSR}
+C {libs/core_swmatrix/ShiftReg_row_10_2.sym} 150 20 0 0 {name=xSR}
 C {iopin.sym} 427.5 120 0 0 {name=p1 lab=pin}
-C {core_swmatrix/swmatrix_Tgate.sym} 150 110 0 0 {name=xTgates[1:10]}
+C {libs/core_swmatrix/swmatrix_Tgate.sym} 150 110 0 0 {name=xTgates[1:10]}
 C {ipin.sym} -80 40 0 0 {name=p2 lab=PHI_2
 }
 C {ipin.sym} -80 20 0 0 {name=p3 lab=PHI_1
