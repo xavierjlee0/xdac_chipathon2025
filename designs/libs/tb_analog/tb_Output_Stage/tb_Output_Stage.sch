@@ -64,7 +64,6 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {libs/core_analog/Output_Stage/Output_Stage_32_ohm.sym} -990 -610 0 0 {name=x1}
 C {vdd.sym} -1430 -800 0 0 {name=l3 lab=VDD}
 C {vsource.sym} -1350 -630 0 0 {name=Vin value=3.3 savecurrent=false}
 C {vsource.sym} -1430 -630 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -95,3 +94,4 @@ m=1
 value=400p
 footprint=1206
 device="ceramic capacitor"}
+C {libs/core_analog/Output_Stage/Output_Stage.sym} -950 -680 0 0 {name=x1}
