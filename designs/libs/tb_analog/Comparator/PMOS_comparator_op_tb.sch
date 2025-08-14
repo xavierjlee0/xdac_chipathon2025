@@ -58,7 +58,6 @@ let tnstop = 1 * tnper
 *alter @VINP[PULSE] = [ 0 3.00 0 $&tfr $&tfr $&ton $&tper 3 ]
 alter @VINP[SIN] = [ 1.3 1.115 $&fsig 0 0 ]
 alter @VINP[DC] = 3.3
-*alter @VINP[PWL] = [ 0 0 10u 5 20u 0 30u 5 40u 0]
 
 
 alter @VINN[PULSE] = [ 0 3.1 1u $&tfr $&tfr $&ton $&tper 3 ]
