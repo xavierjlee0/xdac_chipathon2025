@@ -7,7 +7,7 @@ E {}
 P 4 1 490 610 {}
 N 450 880 450 920 {lab=inp}
 N 330 780 330 820 {lab=inn}
-N 980 910 980 950 {lab=VDD}
+N 980 910 980 950 {lab=#net1}
 N 640 880 640 920 {lab=iref}
 N 640 980 640 1020 {lab=GND}
 N 980 1010 980 1050 {lab=GND}
@@ -32,56 +32,52 @@ N 720 680 780 680 {lab=VDD}
 N 780 680 780 710 {lab=VDD}
 N 840 750 860 750 {lab=out}
 N 860 750 910 750 {lab=out}
+N 980 810 980 850 {lab=VDD}
+N 710 880 710 920 {lab=iref}
+N 710 980 710 1000 {lab=GND}
+N 640 1000 710 1000 {lab=GND}
 C {devices/code_shown.sym} 1200 280 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
-<<<<<<< HEAD:designs/libs/tb_analog/Comparator/PMOS_comparator_tb
-let fsig = 250k
-let fnsig = 42k
-=======
 let fsig = 200k
-let fnsig = 400k
->>>>>>> 67ff64427b03ce015c978369db06370de1bd3383:designs/libs/tb_analog/Comparator/PMOS_comparator_tb.sch
+let fnsig = 42k
+
 let tper=1/fsig
+let tnper=1/fnsig
 let tfr = 0.5*tper
 let ton = 0.5*tper-2*tfr
 
-
 let tstop =2 * tper
 let tstep = 0.001*tper
+let tnstop = 1 * tnper
 
 
 **voltages
-<<<<<<< HEAD:designs/libs/tb_analog/Comparator/PMOS_comparator_tb
-alter @VINN[PULSE] = [ 0.5 2.5 0 $&tfr $&tfr 100p $&tper 15 ]
-*alter @VINN[DC] = 0
-*alter @VINN[SIN] = [ 1 0.6 $&fnsig 0 0 ]
 
-*alter @VINP[PULSE] = [ 0 3.0 1u $&tfr $&tfr $&ton $&tper 3 ]
-alter @VINP[SIN] = [ 1.5 0.9 $&fnsig 0 0 ]
-=======
-alter @VINN[PULSE] = [ 0 3.0 5.5u $&tfr $&tfr $&ton $&tper 3 ]
-*alter @VINN[DC] = 0
-*alter @VINN[SIN] = [ 1 1.1 $&fnsig 0 0 ]
+*alter @VINP[PULSE] = [ 0 3.00 0 $&tfr $&tfr $&ton $&tper 3 ]
+alter @VINP[SIN] = [ 1.3 1.115 $&fsig 0 0 ]
+alter @VINP[DC] = 3.3
 
-alter @VINP[PULSE] = [ 0 3.01 6u $&tfr $&tfr $&ton $&tper 3 ]
-*alter @VINP[SIN] = [ 1 1.1 $&fsig 0 0 ]
->>>>>>> 67ff64427b03ce015c978369db06370de1bd3383:designs/libs/tb_analog/Comparator/PMOS_comparator_tb.sch
-*alter @VINP[DC] = 3.3
+
+alter @VINN[PULSE] = [ 0 3.1 1u $&tfr $&tfr $&ton $&tper 3 ]
+*alter @VINN[DC] = 1.4
+*alter @VINN[SIN] = [ 1.3 1.1 $&fsig 0 0 ]
 
 **simulation
 OP
 *show all > op.log
 show all
 
+tran $&tstep $&tnstop
 
-tran $&tstep $&tstop
-
+*plot v(out) vs v(inp)
+plot v(out) v(inn) v(inp)
+*plot v(out)
 write PMOS_comparator_tb.raw
 .endc
 "}
-C {devices/code_shown.sym} 1120 910 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 1110 990 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -96,14 +92,14 @@ C {gnd.sym} 330 920 0 0 {name=l3 lab=GND}
 C {gnd.sym} 450 1020 0 0 {name=l4 lab=GND}
 C {gnd.sym} 780 820 0 0 {name=l7 lab=GND}
 C {vdd.sym} 610 680 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 980 910 0 0 {name=l9 lab=VDD}
+C {vdd.sym} 980 810 0 0 {name=l9 lab=VDD}
 C {lab_wire.sym} 670 730 0 0 {name=p1 sig_type=std_logic lab=inn}
 C {lab_wire.sym} 690 770 0 0 {name=p2 sig_type=std_logic lab=inp}
 C {lab_wire.sym} 640 900 0 0 {name=p4 sig_type=std_logic lab=iref}
 C {lab_wire.sym} 450 900 0 0 {name=p6 sig_type=std_logic lab=inp}
 C {capa.sym} 860 780 0 0 {name=C1
 m=1
-value=1p
+value=0.0135p
 footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 860 830 0 0 {name=l6 lab=GND}
@@ -111,3 +107,13 @@ C {noconn.sym} 960 750 2 0 {name=l5}
 C {lab_wire.sym} 940 750 0 0 {name=p5 sig_type=std_logic lab=out}
 C {vsource.sym} 330 850 0 0 {name=VINN value=2 savecurrent=false}
 C {libs/core_analog/Comparator/Pmos_Comparator.sym} 740 710 0 0 {name=x1}
+C {res.sym} 980 880 0 0 {name=R1
+value=10
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} 710 950 0 0 {name=R2
+value=1MEG
+footprint=1206
+device=resistor
+m=1}

@@ -6,7 +6,7 @@ S {}
 E {}
 N -280 150 -280 190 {lab=inp}
 N -400 50 -400 90 {lab=inn}
-N 250 180 250 220 {lab=VDD}
+N 250 180 250 220 {lab=#net1}
 N -90 150 -90 190 {lab=iref}
 N -90 250 -90 290 {lab=GND}
 N 250 280 250 320 {lab=GND}
@@ -28,12 +28,17 @@ N -25 20 -20 20 {lab=inp}
 N 20 -50 20 -40 {lab=iref}
 N -25 -50 20 -50 {lab=iref}
 N 100 0 155 -0 {lab=out}
+N 250 100 250 120 {lab=VDD}
+N -20 170 -20 190 {lab=iref}
+N -90 170 -20 170 {lab=iref}
+N -20 250 -20 270 {lab=GND}
+N -90 270 -20 270 {lab=GND}
 C {devices/code_shown.sym} 470 -450 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
 let fsig = 200k
-let fnsig = 400k
+let fnsig = 200k
 let tper=1/fsig
 let tfr = 0.01*tper
 let ton = 0.5*tper-2*tfr
@@ -44,14 +49,13 @@ let tstep = 0.001*tper
 
 
 **voltages
-*alter @VINN[PULSE] = [ 0 3.3 0 $&tfr $&tfr $&ton $&tper 3 ]
-*alter @VINN[DC] = 2
-alter @VINN[SIN] = [ 2.4 0.1 $&fnsig 0 0 ]
+alter @VINN[PULSE] = [ 0 2.007 1u $&tfr $&tfr $&ton $&tper 3 ]
+alter @VINN[DC] = 1.98
+*alter @VINN[SIN] = [ 2.4 0.1 $&fnsig 0 0 ]
 
-*alter @VINP[PULSE] = [ 0 3.3 1u $&tfr $&tfr $&ton $&tper 3 ]
-alter @VINP[SIN] = [ 2.35 0.1 $&fsig 0 0 ]
-
-*alter @VINP[DC] = 3.3
+alter @VINP[PULSE] = [ 0 2 0 $&tfr $&tfr $&ton $&tper 3 ]
+*alter @VINP[SIN] = [ 1.7 0.3 $&fsig 0 0 ]
+alter @VINP[DC] = 2
 
 **simulation
 OP
@@ -61,7 +65,8 @@ show all
 
 
 tran $&tstep $&tstop
-
+plot v(out) v(inn) v(inp)
+*plot v(out)
 write NMOS_comparator_tb.raw
 .endc
 "}
@@ -80,7 +85,7 @@ C {gnd.sym} -400 190 0 0 {name=l3 lab=GND}
 C {gnd.sym} -280 290 0 0 {name=l4 lab=GND}
 C {gnd.sym} 40 70 0 0 {name=l7 lab=GND}
 C {vdd.sym} 40 -100 0 0 {name=l8 lab=VDD}
-C {vdd.sym} 250 180 0 0 {name=l9 lab=VDD}
+C {vdd.sym} 250 100 0 0 {name=l9 lab=VDD}
 C {lab_wire.sym} -55 -20 0 0 {name=p1 sig_type=std_logic lab=inn}
 C {lab_wire.sym} -55 20 0 0 {name=p2 sig_type=std_logic lab=inp}
 C {lab_wire.sym} -75 -50 0 1 {name=p3 sig_type=std_logic lab=iref}
@@ -92,7 +97,17 @@ C {vsource.sym} -400 120 0 0 {name=VINN value=1 savecurrent=false}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 0 -40 0 0 {name=x1}
 C {capa.sym} 150 30 0 0 {name=C1
 m=1
-value=1p
+value=0.0135p
 footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 150 80 0 0 {name=l6 lab=GND}
+C {res.sym} 250 150 0 0 {name=R1
+value=10
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -20 220 0 0 {name=R2
+value=1MEG
+footprint=1206
+device=resistor
+m=1}
