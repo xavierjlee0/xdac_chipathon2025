@@ -17,7 +17,7 @@ N 970 -440 970 -320 {lab=#net1}
 N 1010 -220 1010 -140 {lab=#net2}
 N 1010 -140 1150 -140 {lab=#net2}
 N 1350 -140 1410 -140 {lab=vout_nmos}
-N 610 -350 660 -350 {lab=#net3}
+N 610 -350 660 -350 {lab=vin}
 N 550 -390 550 -370 {lab=#net2}
 N 550 -390 660 -390 {lab=#net2}
 N 910 -350 910 -320 {lab=#net1}
@@ -26,25 +26,29 @@ N 550 -140 680 -140 {lab=#net1}
 N 990 -440 990 -420 {lab=#net1}
 N 990 -440 1100 -440 {lab=#net1}
 N 970 -440 990 -440 {lab=#net1}
-N 1250 -440 1290 -440 {lab=vout_pmos}
+N 1370 -440 1410 -440 {lab=vout_pmos}
 N 680 -140 780 -140 {lab=#net1}
-N 680 -100 780 -100 {lab=vin}
-N 480 -350 520 -350 {lab=#net3}
+N 680 -100 780 -100 {lab=#net3}
+N 480 -350 520 -350 {lab=vin}
 N 780 -370 910 -370 {lab=#net1}
 N 910 -370 910 -350 {lab=#net1}
 N 900 -120 950 -120 {lab=#net2}
 N 950 -190 950 -120 {lab=#net2}
-N 1180 -440 1250 -440 {lab=vout_pmos}
-N 1230 -140 1270 -140 {lab=#net4}
-N 530 -350 610 -350 {lab=#net3}
-N 520 -350 530 -350 {lab=#net3}
+N 1300 -440 1370 -440 {lab=vout_pmos}
+N 1180 -440 1220 -440 {lab=#net4}
+N 530 -350 610 -350 {lab=vin}
+N 520 -350 530 -350 {lab=vin}
 N 340 -350 400 -350 {lab=vin}
-N 370 -100 680 -100 {lab=vin}
-N 370 -350 370 -100 {lab=vin}
+N 370 -100 680 -100 {lab=#net3}
 N 990 -360 990 0 {lab=vss}
 N 1050 -80 1050 -0 {lab=vss}
 N 1050 -0 1050 20 {lab=vss}
 N 990 0 1050 0 {lab=vss}
+N 360 -350 360 -310 {lab=vin}
+N 360 -230 360 -100 {lab=#net3}
+N 360 -100 370 -100 {lab=#net3}
+N 400 -350 480 -350 {lab=vin}
+N 1230 -140 1350 -140 {lab=vout_nmos}
 C {title.sym} 100 250 0 0 {name=l1 author="Christopher O Amankwaa"}
 C {devices/code_shown.sym} 1980 90 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
@@ -105,23 +109,23 @@ write Deadtime_Driver_tb.raw
 "}
 C {ipin.sym} 340 -350 0 0 {name=p1 lab=vin}
 C {ipin.sym} 1050 20 3 0 {name=p2 lab=vss}
-C {opin.sym} 1290 -440 0 0 {name=p3 lab=vout_pmos}
+C {opin.sym} 1410 -440 0 0 {name=p3 lab=vout_pmos}
 C {opin.sym} 1410 -140 0 0 {name=p4 lab=vout_nmos}
 C {symbols/cap_mim_2f0fF.sym} 990 -390 0 0 {name=C3
-W=23e-6
-L=23e-6
+W=27e-6
+L=27e-6
 model=cap_mim_2f0fF
 spiceprefix=X
 m=1}
 C {symbols/cap_mim_2f0fF.sym} 1050 -110 0 0 {name=C4
-W=23e-6
-L=23e-6
+W=27e-6
+L=27e-6
 model=cap_mim_2f0fF
 spiceprefix=X
 m=1}
-C {libs/core_analog/op_Gates/inv_1.sym} 440 -350 0 0 {name=x3 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
 C {libs/core_analog/op_Gates/nand2_1.sym} 720 -370 0 0 {name=x4 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
 C {libs/core_analog/op_Gates/nand2_1.sym} 840 -120 0 0 {name=x5 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
-C {libs/core_analog/op_Gates/inv_1.sym} 1140 -440 0 0 {name=x6 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
-C {libs/core_analog/op_Gates/inv_1.sym} 1190 -140 0 0 {name=x1 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
-C {libs/core_analog/op_Gates/inv_1.sym} 1310 -140 0 0 {name=x7 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
+C {libs/core_analog/op_Gates/inv_8.sym} 1260 -440 0 0 {name=x2 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
+C {libs/core_analog/op_Gates/inv_8.sym} 1190 -140 0 0 {name=x1 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
+C {libs/core_analog/op_Gates/inv_1.sym} 1140 -440 0 0 {name=x3 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
+C {libs/core_analog/op_Gates/inv_1.sym} 360 -270 1 0 {name=x6 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }

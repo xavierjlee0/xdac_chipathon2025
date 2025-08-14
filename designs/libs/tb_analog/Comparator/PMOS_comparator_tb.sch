@@ -57,7 +57,7 @@ tran $&tstep $&tstop
 write PMOS_comparator_tb.raw
 .endc
 "}
-C {devices/code_shown.sym} 970 760 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 1200 900 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
