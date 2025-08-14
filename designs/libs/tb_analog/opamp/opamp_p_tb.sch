@@ -14,12 +14,9 @@ N 540 -630 600 -630 {lab=vssa}
 N 490 -670 600 -670 {lab=#net2}
 N 360 -670 430 -670 {lab=vssa}
 N 280 -630 280 -600 {lab=GND}
-N 370 -730 600 -730 {lab=vin_p}
 N 280 -860 280 -850 {lab=#net3}
 N 910 -560 910 -540 {lab=vssa}
-N 370 -860 370 -730 {lab=vin_p}
 N 850 -790 900 -790 {lab=out_t}
-N 360 -730 370 -730 {lab=vin_p}
 N 870 -750 910 -750 {lab=out}
 N 280 -790 280 -770 {lab=#net4}
 N 910 -660 910 -640 {lab=out_r}
@@ -33,11 +30,14 @@ N 350 -860 370 -860 {lab=vin_p}
 N 280 -860 290 -860 {lab=#net3}
 N 280 -700 280 -690 {lab=#net5}
 N 280 -770 280 -760 {lab=#net4}
-N 560 -770 600 -770 {lab=#net6}
-N 510 -780 560 -770 {lab=#net6}
+N 560 -770 600 -770 {lab=vin_n}
 N 740 -920 910 -750 {lab=out}
-N 280 -770 450 -780 {lab=#net4}
-C {libs/core_analog/opamp/opamp_n_input.sym} 620 -840 0 0 {name=x1}
+N 450 -770 560 -770 {lab=vin_n}
+N 500 -730 600 -730 {lab=vin_p}
+N 280 -770 310 -770 {lab=#net4}
+N 370 -860 500 -730 {lab=vin_p}
+N 560 -770 680 -920 {lab=vin_n}
+N 370 -770 390 -770 {lab=#net6}
 C {devices/vsource.sym} 200 -660 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/gnd.sym} 200 -600 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} 200 -770 0 0 {name=V2 value=3.3 savecurrent=false}
@@ -45,7 +45,7 @@ C {devices/lab_wire.sym} 200 -710 0 0 {name=p2 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} 200 -940 0 0 {name=p3 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} 580 -650 0 0 {name=p4 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} 580 -630 0 0 {name=p5 sig_type=std_logic lab=vssa}
-C {devices/isource.sym} 460 -670 1 0 {name=I0 value=10u}
+C {devices/isource.sym} 460 -670 3 0 {name=I0 value=10u}
 C {devices/vsource.sym} 280 -820 0 1 {name=V3 value="SIN(0 0.01 10k) AC 1" savecurrent=false}
 C {devices/lab_wire.sym} 500 -730 0 0 {name=p9 sig_type=std_logic lab=vin_p}
 C {devices/code_shown.sym} 1120 -940 0 0 {name=Simulation only_toplevel=false value="
@@ -54,28 +54,32 @@ save all
 
 OP
 show all : gm id vds vdsat vgs > op.log
-show all
+*show all
 
 DC V4 0 3.3 0.01
-plot out
+plot out out_t
 
 *DC V3 -0.1 0.1 0.001
 AC DEC 100 10 40k
 plot db(out) db(out_t)
 
-AC dec 100 1Meg 50Meg
+AC dec 100 100 50Meg
 plot db(out) ((180/pi*ph(out))+180) db(out_t) db(out/out_t)
 
-alter @V3[PULSE] = [ -0.5 0.5 10u 25n 25n 5u 10.03u 10 ]
+alter @V3[PULSE] = [ -0.25 0.25 10u 25n 25n 5u 10.03u 10 ]
+alter @V5[PULSE] = [ 0.25 -0.25 10u 25n 25n 5u 10.03u 10 ]
+
 TRAN 5n 17u 9u
-plot out vin_p
+plot out vin_p vin_n
 *plot (x1.vc2-x1.vc1)*1000 *(out-out_r)*1000 
 *plot x1.viss x1.vb2 out_t vin_p
 *plot (x1.vb2-x1.vc2) (vin_p-x1.viss) x1.vg1 out_t
 
 alter @V3[PULSE] = [ -0.025 0.025 10u 25n 25n 5u 10.03u 10 ]
+alter @V5[PULSE] = [ 0.025 -0.025 10u 25n 25n 5u 10.03u 10 ]
+
 TRAN 5n 17u 9u 
-plot out vin_p
+plot out vin_p vin_n
 
 setplot op
 print out out_t
@@ -90,7 +94,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 "}
-C {devices/vsource.sym} 280 -660 0 0 {name=V4 value=2 savecurrent=false}
+C {devices/vsource.sym} 280 -660 0 0 {name=V4 value=0.4 savecurrent=false}
 C {devices/gnd.sym} 280 -600 0 0 {name=l2 lab=GND}
 C {capa.sym} 910 -590 0 0 {name=C1
 m=1
@@ -129,8 +133,11 @@ value=10k
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 480 -780 1 0 {name=R6
+C {res.sym} 420 -770 1 0 {name=R6
 value=10k
 footprint=1206
 device=resistor
 m=1}
+C {libs/core_analog/opamp/opamp_p_input.sym} 620 -840 0 0 {name=x1}
+C {devices/lab_wire.sym} 510 -770 0 0 {name=p11 sig_type=std_logic lab=vin_n}
+C {devices/vsource.sym} 340 -770 1 1 {name=V5 value=0 savecurrent=false}
