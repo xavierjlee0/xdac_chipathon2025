@@ -16,7 +16,6 @@ N 360 -670 430 -670 {lab=vssa}
 N 280 -630 280 -600 {lab=GND}
 N 280 -860 280 -850 {lab=#net3}
 N 910 -560 910 -540 {lab=vssa}
-N 850 -790 900 -790 {lab=out_t}
 N 870 -750 910 -750 {lab=out}
 N 280 -790 280 -770 {lab=#net4}
 N 910 -660 910 -640 {lab=out_r}
@@ -31,13 +30,18 @@ N 280 -860 290 -860 {lab=#net3}
 N 280 -700 280 -690 {lab=#net5}
 N 280 -770 280 -760 {lab=#net4}
 N 560 -770 600 -770 {lab=vin_n}
-N 740 -920 910 -750 {lab=out}
 N 450 -770 560 -770 {lab=vin_n}
 N 500 -730 600 -730 {lab=vin_p}
 N 280 -770 310 -770 {lab=#net4}
-N 370 -860 500 -730 {lab=vin_p}
-N 560 -770 680 -920 {lab=vin_n}
-N 370 -770 390 -770 {lab=#net6}
+N 910 -920 910 -760 {lab=out}
+N 740 -920 910 -920 {lab=out}
+N 560 -920 680 -920 {lab=vin_n}
+N 560 -920 560 -770 {lab=vin_n}
+N 370 -860 530 -860 {lab=vin_p}
+N 530 -860 530 -730 {lab=vin_p}
+N 390 -830 390 -770 {lab=#net4}
+N 310 -770 390 -830 {lab=#net4}
+N 910 -760 910 -750 {lab=out}
 C {devices/vsource.sym} 200 -660 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/gnd.sym} 200 -600 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} 200 -770 0 0 {name=V2 value=3.3 savecurrent=false}
@@ -57,14 +61,14 @@ show all : gm id vds vdsat vgs > op.log
 *show all
 
 DC V4 0 3.3 0.01
-plot out out_t
+plot out
 
 *DC V3 -0.1 0.1 0.001
 AC DEC 100 10 40k
-plot db(out) db(out_t)
+plot db(out)
 
 AC dec 100 100 50Meg
-plot db(out) ((180/pi*ph(out))+180) db(out_t) db(out/out_t)
+plot db(out) ((180/pi*ph(out))+180)
 
 alter @V3[PULSE] = [ -0.25 0.25 10u 25n 25n 5u 10.03u 10 ]
 alter @V5[PULSE] = [ 0.25 -0.25 10u 25n 25n 5u 10.03u 10 ]
@@ -98,13 +102,11 @@ C {devices/vsource.sym} 280 -660 0 0 {name=V4 value=0.4 savecurrent=false}
 C {devices/gnd.sym} 280 -600 0 0 {name=l2 lab=GND}
 C {capa.sym} 910 -590 0 0 {name=C1
 m=1
-value=35p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {title.sym} 160 -60 0 0 {name=l4 author="X.J. Lee"}
 C {devices/lab_wire.sym} 960 -750 0 0 {name=p7 sig_type=std_logic lab=out}
-C {devices/lab_wire.sym} 895 -790 0 0 {name=p8 sig_type=std_logic lab=out_t}
-C {noconn.sym} 900 -790 2 0 {name=l5}
 C {devices/lab_wire.sym} 400 -670 0 0 {name=p1 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} 910 -540 0 0 {name=p6 sig_type=std_logic lab=vssa}
 C {res.sym} 910 -690 0 0 {name=R1

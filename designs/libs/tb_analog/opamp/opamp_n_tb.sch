@@ -17,11 +17,9 @@ N 280 -630 280 -600 {lab=GND}
 N 370 -730 600 -730 {lab=vin_p}
 N 280 -860 280 -850 {lab=#net3}
 N 910 -560 910 -540 {lab=vssa}
-N 370 -860 370 -730 {lab=vin_p}
-N 850 -790 900 -790 {lab=out_t}
 N 360 -730 370 -730 {lab=vin_p}
 N 870 -750 910 -750 {lab=out}
-N 280 -790 280 -770 {lab=#net4}
+N 280 -790 280 -770 {lab=vin_p}
 N 910 -660 910 -640 {lab=out_r}
 N 910 -750 910 -720 {lab=out}
 N 910 -640 910 -620 {lab=out_r}
@@ -29,14 +27,20 @@ N 910 -640 950 -640 {lab=out_r}
 N 850 -750 870 -750 {lab=out}
 N 200 -940 200 -920 {lab=vdda}
 N 970 -750 1020 -750 {lab=out}
-N 350 -860 370 -860 {lab=vin_p}
+N 350 -860 370 -860 {lab=vin_n}
 N 280 -860 290 -860 {lab=#net3}
-N 280 -700 280 -690 {lab=#net5}
-N 280 -770 280 -760 {lab=#net4}
-N 560 -770 600 -770 {lab=#net6}
-N 510 -780 560 -770 {lab=#net6}
-N 740 -920 910 -750 {lab=out}
-N 280 -770 450 -780 {lab=#net4}
+N 280 -700 280 -690 {lab=#net4}
+N 280 -770 280 -760 {lab=vin_p}
+N 560 -770 600 -770 {lab=#net5}
+N 280 -770 360 -730 {lab=vin_p}
+N 370 -860 420 -860 {lab=vin_n}
+N 480 -860 560 -860 {lab=#net5}
+N 560 -860 560 -770 {lab=#net5}
+N 560 -920 560 -860 {lab=#net5}
+N 560 -920 670 -920 {lab=#net5}
+N 670 -920 680 -920 {lab=#net5}
+N 740 -920 910 -920 {lab=out}
+N 910 -920 910 -750 {lab=out}
 C {libs/core_analog/opamp/opamp_n_input.sym} 620 -840 0 0 {name=x1}
 C {devices/vsource.sym} 200 -660 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/gnd.sym} 200 -600 0 0 {name=l1 lab=GND}
@@ -61,21 +65,21 @@ plot out
 
 *DC V3 -0.1 0.1 0.001
 AC DEC 100 10 40k
-plot db(out) db(out_t)
+plot db(out)
 
 AC dec 100 1Meg 50Meg
-plot db(out) ((180/pi*ph(out))+180) db(out_t) db(out/out_t)
+plot db(out) ((180/pi*ph(out))+180)
 
 alter @V3[PULSE] = [ -0.5 0.5 10u 25n 25n 5u 10.03u 10 ]
 TRAN 5n 17u 9u
-plot out vin_p
+plot out vin_p vin_n
 *plot (x1.vc2-x1.vc1)*1000 *(out-out_r)*1000 
 *plot x1.viss x1.vb2 out_t vin_p
-*plot (x1.vb2-x1.vc2) (vin_p-x1.viss) x1.vg1 out_t
+*plot (x1.vb2-x1.vc2) (vin_p-x1.viss) x1.vg1
 
 alter @V3[PULSE] = [ -0.025 0.025 10u 25n 25n 5u 10.03u 10 ]
 TRAN 5n 17u 9u 
-plot out vin_p
+plot out vin_p vin_n
 
 setplot op
 print out out_t
@@ -90,7 +94,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 "}
-C {devices/vsource.sym} 280 -660 0 0 {name=V4 value=2 savecurrent=false}
+C {devices/vsource.sym} 280 -660 0 0 {name=V4 value=1.7 savecurrent=false}
 C {devices/gnd.sym} 280 -600 0 0 {name=l2 lab=GND}
 C {capa.sym} 910 -590 0 0 {name=C1
 m=1
@@ -99,8 +103,6 @@ footprint=1206
 device="ceramic capacitor"}
 C {title.sym} 160 -60 0 0 {name=l4 author="X.J. Lee"}
 C {devices/lab_wire.sym} 960 -750 0 0 {name=p7 sig_type=std_logic lab=out}
-C {devices/lab_wire.sym} 895 -790 0 0 {name=p8 sig_type=std_logic lab=out_t}
-C {noconn.sym} 900 -790 2 0 {name=l5}
 C {devices/lab_wire.sym} 400 -670 0 0 {name=p1 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} 910 -540 0 0 {name=p6 sig_type=std_logic lab=vssa}
 C {res.sym} 910 -690 0 0 {name=R1
@@ -125,12 +127,13 @@ footprint=1206
 device=resistor
 m=1}
 C {res.sym} 710 -920 1 0 {name=R5
-value=10k
+value=25k
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 480 -780 1 0 {name=R6
-value=10k
+C {res.sym} 450 -860 1 0 {name=R6
+value=25k
 footprint=1206
 device=resistor
 m=1}
+C {devices/lab_wire.sym} 410 -860 0 0 {name=p8 sig_type=std_logic lab=vin_n}
