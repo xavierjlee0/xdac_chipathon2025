@@ -23,7 +23,7 @@ N -1060 -650 -1000 -650 {lab=#net1}
 N -820 -680 -780 -680 {lab=out}
 N -800 -620 -800 -600 {lab=GND}
 N -840 -600 -800 -600 {lab=GND}
-C {devices/code_shown.sym} -220 -990 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} -680 -1040 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
@@ -58,13 +58,14 @@ print vpp
 write Output_Stage_tb.raw
 .endc
 "}
-C {devices/code_shown.sym} -260 -260 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} -680 -390 0 0 {name=MODELS only_toplevel=true
+
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {libs/core_analog/Output_Stage/Output_Stage_32_ohm.sym} -990 -610 0 0 {name=x1}
+
 C {vdd.sym} -1430 -800 0 0 {name=l3 lab=VDD}
 C {vsource.sym} -1350 -630 0 0 {name=Vin value=3.3 savecurrent=false}
 C {vsource.sym} -1430 -630 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -76,7 +77,7 @@ footprint=1206
 device=resistor
 m=1}
 C {res.sym} -1250 -690 3 0 {name=R2
-value=100
+value=10
 footprint=1206
 device=resistor
 m=1}
@@ -95,3 +96,5 @@ m=1
 value=400p
 footprint=1206
 device="ceramic capacitor"}
+C {libs/core_analog/Output_Stage/Output_Stage.sym} -950 -680 0 0 {name=x1}
+
