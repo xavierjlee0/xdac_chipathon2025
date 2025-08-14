@@ -5,6 +5,7 @@ V {}
 S {}
 E {}
 P 4 1 680 -840 {}
+
 N 910 -750 970 -750 {lab=out}
 N 200 -630 200 -600 {lab=GND}
 N 200 -740 200 -690 {lab=vssa}
@@ -57,6 +58,7 @@ C {devices/code_shown.sym} 1120 -940 0 0 {name=Simulation only_toplevel=false va
 save all
 
 OP
+
 show all : gm id vds vdsat vgs > op.log
 show all
 
@@ -65,7 +67,7 @@ plot out
 
 *DC V3 -0.1 0.1 0.001
 AC DEC 100 10 40k
-plot db(out)
+plot db(out) db(out_t)
 
 AC dec 100 1Meg 50Meg
 plot db(out) ((180/pi*ph(out))+180)
@@ -102,7 +104,6 @@ footprint=1206
 device="ceramic capacitor"}
 C {title.sym} 160 -60 0 0 {name=l4 author="X.J. Lee"}
 C {devices/lab_wire.sym} 960 -750 0 0 {name=p7 sig_type=std_logic lab=out}
-
 C {devices/lab_wire.sym} 400 -670 0 0 {name=p1 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} 910 -540 0 0 {name=p6 sig_type=std_logic lab=vssa}
 C {res.sym} 910 -690 0 0 {name=R1

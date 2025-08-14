@@ -22,7 +22,7 @@ C {devices/iopin.sym} -40 0 0 1 {name=p3 lab=gate}
 C {symbols/nfet_03v3.sym} 20 0 0 0 {name=M1
 L=1u
 W=2.5u
-nf=2
+nf=1
 m=\{M\}
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
