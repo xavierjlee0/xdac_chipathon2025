@@ -32,17 +32,13 @@ N 720 680 780 680 {lab=VDD}
 N 780 680 780 710 {lab=VDD}
 N 840 750 860 750 {lab=out}
 N 860 750 910 750 {lab=out}
-C {devices/code_shown.sym} 1200 280 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 1100 0 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
-<<<<<<< HEAD:designs/libs/tb_analog/Comparator/PMOS_comparator_tb
 let fsig = 250k
 let fnsig = 42k
-=======
-let fsig = 200k
-let fnsig = 400k
->>>>>>> 67ff64427b03ce015c978369db06370de1bd3383:designs/libs/tb_analog/Comparator/PMOS_comparator_tb.sch
+
 let tper=1/fsig
 let tfr = 0.5*tper
 let ton = 0.5*tper-2*tfr
@@ -53,21 +49,13 @@ let tstep = 0.001*tper
 
 
 **voltages
-<<<<<<< HEAD:designs/libs/tb_analog/Comparator/PMOS_comparator_tb
 alter @VINN[PULSE] = [ 0.5 2.5 0 $&tfr $&tfr 100p $&tper 15 ]
 *alter @VINN[DC] = 0
 *alter @VINN[SIN] = [ 1 0.6 $&fnsig 0 0 ]
 
 *alter @VINP[PULSE] = [ 0 3.0 1u $&tfr $&tfr $&ton $&tper 3 ]
 alter @VINP[SIN] = [ 1.5 0.9 $&fnsig 0 0 ]
-=======
-alter @VINN[PULSE] = [ 0 3.0 5.5u $&tfr $&tfr $&ton $&tper 3 ]
-*alter @VINN[DC] = 0
-*alter @VINN[SIN] = [ 1 1.1 $&fnsig 0 0 ]
 
-alter @VINP[PULSE] = [ 0 3.01 6u $&tfr $&tfr $&ton $&tper 3 ]
-*alter @VINP[SIN] = [ 1 1.1 $&fsig 0 0 ]
->>>>>>> 67ff64427b03ce015c978369db06370de1bd3383:designs/libs/tb_analog/Comparator/PMOS_comparator_tb.sch
 *alter @VINP[DC] = 3.3
 
 **simulation
@@ -77,6 +65,8 @@ show all
 
 
 tran $&tstep $&tstop
+plot inn inp out
+
 
 write PMOS_comparator_tb.raw
 .endc

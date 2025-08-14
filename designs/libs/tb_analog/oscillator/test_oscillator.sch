@@ -65,7 +65,7 @@ OP
 *show all > op.log
 show all
 
-TRAN 200n 50u 0
+TRAN 5n 30u 0
 plot vout
 plot vout x1.vcompn vho
 plot vout x1.vcompp vlo

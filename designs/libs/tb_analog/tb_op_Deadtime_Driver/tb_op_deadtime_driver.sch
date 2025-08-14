@@ -111,7 +111,7 @@ meas tran nmos_max MAX v(nmos)
 write Deadtime_Driver_tb.raw
 .endc
 "}
-C {libs/core_analog/Deadtime_Driver/op_Deadtime_Driver.sym} 230 -280 0 0 {name=x1}
+C {libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sym} 230 -280 0 0 {name=x1}
 C {gnd.sym} 80 -230 0 0 {name=l5 lab=GND
 value=0}
 C {res.sym} -150 -220 0 0 {name=R3
