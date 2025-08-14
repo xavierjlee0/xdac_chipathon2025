@@ -14,12 +14,8 @@ N 580 -190 580 -140 {lab=vss}
 N 240 -190 240 -140 {lab=vss}
 N 240 -140 280 -140 {lab=vss}
 N 880 -190 880 -140 {lab=vss}
-N 920 -260 920 -220 {lab=vb3}
-N 620 -260 620 -220 {lab=vb2}
-N 620 -340 620 -320 {lab=v2_match}
 N 620 -420 620 -400 {lab=#net1}
 N 620 -520 620 -480 {lab=vg3}
-N 920 -480 920 -320 {lab=vout}
 N 920 -560 920 -540 {lab=#net2}
 N 920 -780 920 -620 {lab=vdd}
 N 620 -640 620 -580 {lab=vg4}
@@ -69,15 +65,28 @@ N 920 -400 1000 -400 {lab=vout}
 N 620 -580 620 -570 {lab=vg4}
 N 280 -420 280 -400 {lab=#net4}
 N 620 -720 620 -700 {lab=#net5}
-N 440 -550 470 -550 {lab=vdd}
-N 470 -780 470 -550 {lab=vdd}
-N 440 -670 440 -580 {lab=vg3}
 N 440 -520 440 -450 {lab=vg2}
-N 390 -550 400 -550 {lab=vg2}
-N 390 -550 390 -500 {lab=vg2}
-N 390 -500 440 -500 {lab=vg2}
+N 390 -610 400 -610 {lab=vg2}
+N 390 -610 390 -560 {lab=vg2}
+N 390 -560 440 -560 {lab=vg2}
 N 540 -590 620 -590 {lab=vg4}
 N 500 -510 560 -510 {lab=vg3}
+N 240 -550 260 -550 {lab=vss}
+N 240 -550 240 -450 {lab=vss}
+N 640 -540 660 -540 {lab=vss}
+N 660 -540 660 -450 {lab=vss}
+N 440 -670 440 -640 {lab=vg3}
+N 440 -610 470 -610 {lab=vdd}
+N 470 -780 470 -610 {lab=vdd}
+N 440 -580 440 -520 {lab=vg2}
+N 850 -290 900 -290 {lab=vss}
+N 850 -290 850 -140 {lab=vss}
+N 920 -240 920 -220 {lab=vb3}
+N 920 -480 920 -340 {lab=vout}
+N 620 -340 620 -330 {lab=v2_match}
+N 620 -230 620 -220 {lab=vb2}
+N 510 -280 600 -280 {lab=vss}
+N 510 -280 510 -140 {lab=vss}
 C {title.sym} 160 -40 0 0 {name=l1 author="X.J. Lee"}
 C {symbols/nfet_03v3.sym} 300 -450 0 1 {name=M1B
 L=1u
@@ -235,29 +244,9 @@ C {lab_wire.sym} 400 -370 0 0 {name=p1 sig_type=std_logic lab=vg1}
 C {lab_wire.sym} 400 -450 0 0 {name=p2 sig_type=std_logic lab=vg2}
 C {lab_wire.sym} 400 -670 0 0 {name=p3 sig_type=std_logic lab=vg3}
 C {lab_wire.sym} 400 -750 0 0 {name=p4 sig_type=std_logic lab=vg4}
-C {res.sym} 280 -550 0 0 {name=R5
-value=10k8
-footprint=1206
-device=resistor
-m=1}
-C {res.sym} 620 -540 0 0 {name=R3
-value=10k8
-footprint=1206
-device=resistor
-m=1}
-C {res.sym} 920 -290 0 0 {name=R2
-value=47.5k
-footprint=1206
-device=resistor
-m=1}
-C {res.sym} 620 -290 0 0 {name=R1
-value=3600
-footprint=1206
-device=resistor
-m=1}
 C {ipin.sym} 140 -780 0 0 {name=p5 lab=vdd}
 C {opin.sym} 1000 -400 0 0 {name=p7 lab=vout}
-C {symbols/pfet_03v3.sym} 420 -550 0 0 {name=M1
+C {symbols/pfet_03v3.sym} 420 -610 0 0 {name=M1
 L=10u
 W=0.4u
 nf=1
@@ -271,21 +260,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {devices/code_shown.sym} 1100 -750 0 0 {name=NGSPICE only_toplevel=true
-value="
-
-.control
-save all
-op
-show all
-dc temp -40 80 1
-plot vg1 vg2 vg3 vg4
-plot vout
-plot vb1 v2_match
-plot v1#branch
-.endc
-"}
-C {devices/code_shown.sym} 1100 -450 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 1280 -250 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -301,3 +276,17 @@ C {lab_wire.sym} 620 -230 0 0 {name=p9 sig_type=std_logic lab=vb2}
 C {lab_wire.sym} 920 -230 0 0 {name=p10 sig_type=std_logic lab=vb3}
 C {ipin.sym} 140 -140 0 0 {name=p6 lab=vss}
 C {lab_wire.sym} 620 -330 0 0 {name=p11 sig_type=std_logic lab=v2_match}
+C {symbols/ppolyf_u.sym} 620 -540 0 1 {name=R3
+W=1e-6
+L=15e-6
+model=ppolyf_u
+spiceprefix=X
+m=1}
+C {symbols/ppolyf_u.sym} 280 -550 0 0 {name=R5
+W=1e-6
+L=15e-6
+model=ppolyf_u
+spiceprefix=X
+m=1}
+C {libs/core_analog/vref/vref_R2.sym} 920 -290 0 0 {name=x1}
+C {libs/core_analog/vref/vref_R1.sym} 620 -280 0 0 {name=x2}
