@@ -83,7 +83,6 @@ plot out vin_p vin_n
 
 setplot op
 print out out_t
-
 .endc
 "}
 C {devices/code_shown.sym} 40 -360 0 0 {name=Models only_toplevel=false
@@ -103,6 +102,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {title.sym} 160 -60 0 0 {name=l4 author="X.J. Lee"}
 C {devices/lab_wire.sym} 960 -750 0 0 {name=p7 sig_type=std_logic lab=out}
+
 C {devices/lab_wire.sym} 400 -670 0 0 {name=p1 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} 910 -540 0 0 {name=p6 sig_type=std_logic lab=vssa}
 C {res.sym} 910 -690 0 0 {name=R1
@@ -122,6 +122,7 @@ footprint=1206
 device=resistor
 m=1}
 C {res.sym} 280 -730 2 0 {name=R4
+
 value=50
 footprint=1206
 device=resistor
