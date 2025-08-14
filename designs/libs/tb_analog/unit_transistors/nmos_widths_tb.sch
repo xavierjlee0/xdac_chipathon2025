@@ -57,7 +57,7 @@ end
 .endc
 "}
 C {symbols/nfet_03v3_dss.sym} 190 -460 0 0 {name=M1
-L=0.6u
+L=1u
 W=\\\{wx\\\}
 nf=1
 mult=1
