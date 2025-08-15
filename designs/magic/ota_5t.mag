@@ -1,0 +1,28 @@
+magic
+tech gf180mcuD
+timestamp 1755218867
+use nfet_03v3_3R888D  nfet_03v3_3R888D_0
+timestamp 1755214461
+transform 0 1 26 -1 0 295
+box -35 -46 35 46
+use nfet_03v3_3R888D  nfet_03v3_3R888D_1
+timestamp 1755214461
+transform 0 1 146 -1 0 295
+box -35 -46 35 46
+use nfet_03v3_M87C69  XM1
+timestamp 1755213080
+transform 0 1 56 -1 0 395
+box -35 -56 35 56
+use nfet_03v3_M87C69  XM2
+timestamp 1755213080
+transform 0 1 236 -1 0 395
+box -35 -56 35 56
+use pfet_03v3_ARW468  XM3
+timestamp 1755213080
+transform 0 1 241 -1 0 475
+box -35 -81 35 81
+use pfet_03v3_ARW468  XM4
+timestamp 1755213080
+transform 0 1 61 -1 0 475
+box -35 -81 35 81
+<< end >>

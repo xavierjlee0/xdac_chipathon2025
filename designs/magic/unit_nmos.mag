@@ -1,0 +1,27 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1755213080
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+use nfet_03v3_3F888D  nfet_03v3_3F888D_0
+timestamp 1755213080
+transform 1 0 442 0 1 380
+box -502 -460 502 460
+use nfet_03v3_SHQB6Z  XM1
+timestamp 1755213080
+transform 1 0 -60 0 1 -1200
+box 0 0 1 1
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 1280 0 0 0 drain
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 1280 0 0 0 sub
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 1280 0 0 0 gate
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 1280 0 0 0 source
+port 3 nsew
+<< end >>

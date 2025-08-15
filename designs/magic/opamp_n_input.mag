@@ -1,0 +1,92 @@
+magic
+tech gf180mcuD
+magscale 1 5
+timestamp 1755219597
+<< checkpaint >>
+rect 210 4610 2560 4640
+rect 210 4084 2880 4610
+rect -390 2582 2880 4084
+rect 3110 2582 5410 10088
+rect -390 1480 5410 2582
+rect -1030 1300 5410 1480
+rect -1030 -1030 5830 1300
+rect -710 -1060 5830 -1030
+rect -390 -1090 5830 -1060
+rect -90 -1120 5830 -1090
+rect 210 -1150 5830 -1120
+rect 530 -1180 5830 -1150
+rect 850 -1210 5830 -1180
+rect 1270 -1240 5830 -1210
+rect 2190 -1270 5830 -1240
+rect 2810 -1300 5830 -1270
+rect 3110 -1330 5830 -1300
+rect 3380 -1360 5830 -1330
+use unit_pmos  x1
+timestamp 1755219597
+transform 1 0 2720 0 1 360
+box 0 -600 100 100
+use unit_pmos  x2
+timestamp 1755219597
+transform 1 0 2820 0 1 360
+box 0 -600 100 100
+use unit_pmos  x3
+timestamp 1755219597
+transform 1 0 3020 0 1 360
+box 0 -600 100 100
+use unit_pmos  x4
+timestamp 1755219597
+transform 1 0 2920 0 1 360
+box 0 -600 100 100
+use unit_pmos  x5
+timestamp 1755219597
+transform 1 0 3120 0 1 360
+box 0 -600 100 100
+use nfet_03v3_5CLVY4  XM1
+timestamp 0
+transform 1 0 145 0 1 225
+box -175 -255 175 255
+use nfet_03v3_5CLVY4  XM2
+timestamp 0
+transform 1 0 465 0 1 195
+box -175 -255 175 255
+use nfet_03v3_W3NHXL  XM3
+timestamp 0
+transform 1 0 1705 0 1 1715
+box -175 -1895 175 1895
+use nfet_03v3_W3NHXL  XM4
+timestamp 0
+transform 1 0 1385 0 1 1745
+box -175 -1895 175 1895
+use pfet_03v3_2U6A5C  XM5
+timestamp 0
+transform 1 0 1075 0 1 1467
+box -165 -1587 165 1587
+use pfet_03v3_2U6A5C  XM6
+timestamp 0
+transform 1 0 775 0 1 1497
+box -165 -1587 165 1587
+use nfet_03v3_2FEAG4  XM7
+timestamp 0
+transform 1 0 2075 0 1 686
+box -225 -896 225 896
+use nfet_03v3_GUGEP4  XM8
+timestamp 0
+transform 1 0 3975 0 1 413
+box -165 -713 165 713
+use pfet_03v3_9AMUUH  XM9
+timestamp 0
+transform 1 0 4260 0 1 4379
+box -150 -4709 150 4709
+use nfet_03v3_XTXT2U  XM10
+timestamp 0
+transform 1 0 3515 0 1 -65
+box -325 -205 325 205
+use nfet_03v3_287JE4  XM11
+timestamp 0
+transform 1 0 2495 0 1 90
+box -225 -330 225 330
+use nfet_03v3_287JE4  XM12
+timestamp 0
+transform 1 0 4605 0 1 -30
+box -225 -330 225 330
+<< end >>
