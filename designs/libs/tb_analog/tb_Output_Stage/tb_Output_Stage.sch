@@ -38,7 +38,7 @@ value="
 
 .control
 save all
-let fsig = 500k
+let fsig = 20k
 let tper=1/fsig
 let tfr = 0.01*tper
 let ton = 0.5*tper-2*tfr
