@@ -4,9 +4,9 @@ K {}
 V {}
 S {}
 E {}
-N -280 -150 -280 -70 {lab=VDD}
-N -280 -10 -280 40 {lab=GND}
-N -280 20 20 20 {lab=GND}
+N -280 -120 -280 -70 {lab=VDD}
+N -280 20 -280 40 {lab=GND}
+N -180 20 20 20 {lab=GND}
 N -40 -70 20 -70 {lab=VDD}
 N -40 -120 -40 -70 {lab=VDD}
 N -280 -120 -40 -120 {lab=VDD}
@@ -17,6 +17,9 @@ N -100 -30 10 -30 {lab=in}
 N 10 -30 10 -20 {lab=in}
 N 10 -20 20 -20 {lab=in}
 N 190 -40 240 -40 {lab=out}
+N -280 -10 -280 20 {lab=GND}
+N -280 -150 -280 -120 {lab=VDD}
+N -280 20 -180 20 {lab=GND}
 C {Schmitt.sym} 130 -30 0 0 {name=x1}
 C {title.sym} 160 100 0 0 {name=Schmitt TB author= "Angel Romero"}
 C {vsource.sym} -280 -40 0 0 {name=V1 value=3.3 savecurrent=false}
@@ -33,24 +36,27 @@ value="
 save all
 
 **Define input signal 
-let fsig = 1000k
+let fsig = 5k
 let tper = 1/fsig
-let tfr = 4ns
-let ton = 500ns
+let tfr = 100us
+let ton = 1ns
 
 **Define transient parameters
-let tstop = 3*tper
-let tstep = 2ns
+let tstop = 200us
+let tstep = 1ns
 
 **Set Sources
 alter @VIN[DC] = 0.0
-alter @VIN[PULSE] = [ 0 3.3 0 $&tfr $&tfr $&ton $&tper 0 ]
+alter @VIN[PULSE] = [ .1 3.2 0 $&tfr $&tfr $&ton $&tper 0 ]
 
 **Simulations 
 op 
 dc vin 0 3.3 .1
 tran $&tstep $&tstop
-
+meas tran vth_low FIND v(in) When v(in)=v(out) RISE = 1	
+meas tran vth_high FIND v(in) When v(in)=v(out) FALL = 1
+let difference = vth_high-vth_low
+print difference
 write Schmitt_tb.raw
 .endc
 "}

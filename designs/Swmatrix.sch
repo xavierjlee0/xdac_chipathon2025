@@ -6,13 +6,13 @@ S {}
 E {}
 B 2 50 290 1340 1010 {flags=graph
 y1=0
-ypos1=0.045099071
-ypos2=3.7179901
+ypos1=-0.51087037
+ypos2=3.5384926
 divy=5
 subdivy=1
 unity=1
-x1=3.362981e-05
-x2=6.4504437e-05
+x1=-1.233787e-05
+x2=0.00059398499
 divx=5
 subdivx=1
 ylabmag=0.5
@@ -60,6 +60,26 @@ xswmatrix.xswmatrix_row[6].q[6]
 xswmatrix.xswmatrix_row[6].q[7]
 xswmatrix.xswmatrix_row[6].q[8]
 xswmatrix.xswmatrix_row[6].q[9]
+xswmatrix.d_out_row[6]
+xswmatrix.xswmatrix_row[22].q[1]
+xswmatrix.xswmatrix_row[22].q[2]
+xswmatrix.xswmatrix_row[22].q[3]
+xswmatrix.xswmatrix_row[22].q[4]
+xswmatrix.xswmatrix_row[22].q[5]
+xswmatrix.xswmatrix_row[22].q[6]
+xswmatrix.xswmatrix_row[22].q[7]
+xswmatrix.xswmatrix_row[22].q[8]
+xswmatrix.xswmatrix_row[22].q[9]
+xswmatrix.d_out_row[22]
+xswmatrix.xswmatrix_row[23].q[1]
+xswmatrix.xswmatrix_row[23].q[2]
+xswmatrix.xswmatrix_row[23].q[3]
+xswmatrix.xswmatrix_row[23].q[4]
+xswmatrix.xswmatrix_row[23].q[5]
+xswmatrix.xswmatrix_row[23].q[6]
+xswmatrix.xswmatrix_row[23].q[7]
+xswmatrix.xswmatrix_row[23].q[8]
+xswmatrix.xswmatrix_row[23].q[9]
 d_out"
 hilight_wave=23
 xlabmag=0.5
@@ -74,18 +94,18 @@ This is a 60 by 10 Switch Matrix (for now)
 - the PINS are the rows} 810 -107.5 0 0 0.3 0.3 {}
 N -100 580 -100 620 {lab=GND}
 N -100 490 -100 520 {lab=VSSd}
-N -250 110 -200 110 {lab=clock}
+N -250 110 -200 110 {lab=#net1}
 N 50 110 70 110 {lab=clock_in}
-N 370 130 400 130 {lab=#net1}
-N 400 130 400 160 {lab=#net1}
-N 400 160 450 160 {lab=#net1}
-N 370 110 450 110 {lab=#net2}
-N 530 110 610 110 {lab=#net3}
-N 530 160 610 160 {lab=#net4}
-N 50 30 370 30 {lab=#net5}
-N 370 30 370 60 {lab=#net5}
-N 370 60 450 60 {lab=#net5}
-N 530 60 610 60 {lab=#net6}
+N 370 130 400 130 {lab=#net2}
+N 400 130 400 160 {lab=#net2}
+N 400 160 450 160 {lab=#net2}
+N 370 110 450 110 {lab=#net3}
+N 530 110 610 110 {lab=#net4}
+N 530 160 610 160 {lab=#net5}
+N 50 30 370 30 {lab=#net6}
+N 370 30 370 60 {lab=#net6}
+N 370 60 450 60 {lab=#net6}
+N 530 60 610 60 {lab=#net7}
 N 690 60 790 60 {lab=data_in}
 N 790 60 790 90 {lab=data_in}
 N 790 90 830 90 {lab=data_in}
@@ -95,17 +115,31 @@ N 790 140 790 160 {lab=PHI_2}
 N 790 130 790 140 {lab=PHI_2}
 N 790 130 830 130 {lab=PHI_2}
 N 1130 90 1280 90 {lab=d_out}
-N 1130 110 1280 110 {lab=#net7}
-N -100 370 -100 430 {lab=#net8}
+N 1130 110 1280 110 {lab=#net8}
+N -100 370 -100 430 {lab=#net9}
 N 20 110 50 110 {lab=clock_in}
 N -120 110 -60 110 {lab=clockb}
 N -120 30 -60 30 {lab=datab}
-N -250 30 -200 30 {lab=data}
-N 20 30 50 30 {lab=#net5}
+N -250 30 -200 30 {lab=#net10}
+N 20 30 50 30 {lab=#net6}
 N -100 290 -100 310 {lab=VDDd}
-N 1130 130 1280 130 {lab=#net9}
+N 1130 130 1280 130 {lab=#net11}
 N -620 540 -620 580 {lab=VSSd}
 N -620 430 -620 480 {lab=clock}
+N -580 210 -540 210 {lab=clock}
+N -540 210 -540 240 {lab=clock}
+N -540 240 -420 240 {lab=clock}
+N -420 240 -410 240 {lab=clock}
+N -580 20 -520 20 {lab=data}
+N -520 30 -430 30 {lab=data}
+N -520 20 -520 30 {lab=data}
+N -470 -20 -430 -20 {lab=VDDd}
+N -470 70 -430 70 {lab=VSSd}
+N -450 190 -410 190 {lab=VDDd}
+N -450 280 -410 280 {lab=VSSd}
+N -260 10 -260 30 {lab=#net10}
+N -260 30 -250 30 {lab=#net10}
+N -240 110 -240 220 {lab=#net1}
 C {libs/core_swmatrix/NO_ClkGen.sym} 220 120 0 0 {name=x1}
 C {libs/core_swmatrix/swmatrix_30_by_10.sym} 980 110 0 0 {name=xswmatrix}
 C {vsource.sym} -100 460 0 0 {name=V1 value=\{Vdd\} savecurrent=false}
@@ -125,7 +159,7 @@ C {code_shown.sym} -2110 1870 0 0 {name=Simulation only_toplevel=false value="
 .control
 
     save all
-    TRAN 2n 61000n
+    TRAN 1000n 231000n
     write Swmatrix.raw
 
 .endc
@@ -179,8 +213,14 @@ footprint=1206
 device=resistor
 m=1}
 C {noconn.sym} 1280 130 2 0 {name=l4}
-C {lab_wire.sym} -230 110 0 0 {name=p1 sig_type=std_logic lab=clock}
-C {lab_wire.sym} -230 30 0 0 {name=p2 sig_type=std_logic lab=data}
+C {lab_wire.sym} -580 210 0 0 {name=p1 sig_type=std_logic lab=clock}
+C {lab_wire.sym} -580 20 0 0 {name=p2 sig_type=std_logic lab=data}
 C {vsource.sym} -620 510 0 0 {name=V3 value="PULSE(0 3.3 0.1n 4n 4n 500n 1000n)" savecurrent=false}
 C {lab_wire.sym} -620 570 0 0 {name=p12 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} -620 450 0 0 {name=p13 sig_type=std_logic lab=clock}
+C {Schmitt.sym} -320 20 0 0 {name=x2}
+C {Schmitt.sym} -300 230 0 0 {name=x13}
+C {lab_wire.sym} -430 190 0 0 {name=p14 sig_type=std_logic lab=VDDd}
+C {lab_wire.sym} -460 -20 0 0 {name=p15 sig_type=std_logic lab=VDDd}
+C {lab_wire.sym} -430 280 0 0 {name=p16 sig_type=std_logic lab=VSSd}
+C {lab_wire.sym} -450 70 0 0 {name=p17 sig_type=std_logic lab=VSSd}
