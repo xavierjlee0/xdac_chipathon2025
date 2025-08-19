@@ -6,13 +6,13 @@ S {}
 E {}
 B 2 50 290 1340 1010 {flags=graph
 y1=0
-ypos1=-0.51087037
-ypos2=3.5384926
+ypos1=7.992793
+ypos2=12.042155
 divy=5
 subdivy=1
 unity=1
-x1=-1.233787e-05
-x2=0.00059398499
+x1=0.00022282133
+x2=0.00023432216
 divx=5
 subdivx=1
 ylabmag=0.5
@@ -26,7 +26,7 @@ autoload=1
 digital=1
 sim_type=tran
 rawfile=$netlist_dir/Swmatrix.raw
-color="4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 6 6 6 6 6 6 4 4 4 4 4 4 4 4 4 10"
+color="4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 6 6 6 6 6 6 4 4 4 4 4 4 4 4 4 10 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 8"
 node="clock_in
 phi_1
 phi_2
@@ -159,7 +159,7 @@ C {code_shown.sym} -2110 1870 0 0 {name=Simulation only_toplevel=false value="
 .control
 
     save all
-    TRAN 1000n 231000n
+    TRAN 1000n 233000n
     write Swmatrix.raw
 
 .endc
@@ -215,7 +215,7 @@ m=1}
 C {noconn.sym} 1280 130 2 0 {name=l4}
 C {lab_wire.sym} -580 210 0 0 {name=p1 sig_type=std_logic lab=clock}
 C {lab_wire.sym} -580 20 0 0 {name=p2 sig_type=std_logic lab=data}
-C {vsource.sym} -620 510 0 0 {name=V3 value="PULSE(0 3.3 0.1n 4n 4n 500n 1000n)" savecurrent=false}
+C {vsource.sym} -620 510 0 0 {name=V3 value="PULSE(0 3.3 0.1n 4n 4n 500n 1000n 231)" savecurrent=false}
 C {lab_wire.sym} -620 570 0 0 {name=p12 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} -620 450 0 0 {name=p13 sig_type=std_logic lab=clock}
 C {Schmitt.sym} -320 20 0 0 {name=x2}
