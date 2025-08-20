@@ -50,7 +50,7 @@ let tstep = 0.001*tper
 
 **voltages
 alter @Vin[PULSE] = [ 0 2.3 0 $&tfr $&tfr $&ton $&tper 3 ]
-alter @Vin[DC] = 0
+alter @Vin[DC] = 2
 *alter @Vin[SIN] = [ 1.7 1.5 $&fsig 0 0 ]
 
 **simulation
