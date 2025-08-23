@@ -78,6 +78,7 @@ value="
 C {devices/code_shown.sym} 1130 -1080 0 0 {name=NGSPICE only_toplevel=true
 value="
 .temp 27
+.param MC_SWITCH = 1.0
 .options savecurrents
 .global VDDd VSSd
 .control
@@ -96,7 +97,9 @@ let tstep = 0.001*tper
 alter @Vin[PULSE] = [ 0 2.3 0 $&tfr $&tfr $&ton $&tper 3 ]
 alter @Vin[DC] = 3.3
 *alter @Vin[SIN] = [ 1.7 1.5 $&fsig 0 0 ]
-
+alter @V1[DC] = 3
+alter @V3[DC = 3.1
+alter @V2[DC] = 0.02
 **simulation
 OP
 *show all > op.log

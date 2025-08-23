@@ -70,7 +70,7 @@ OP
 show all
 
 tran $&tstep $&tnstop
-
+print @m.x1.x2.xm3.m0[U0]
 *plot v(out) vs v(inp)
 plot v(out) v(inn) v(inp)
 *plot v(out)
