@@ -6,13 +6,13 @@ S {}
 E {}
 B 2 50 290 1340 1010 {flags=graph
 y1=0
-ypos1=7.992793
-ypos2=12.042155
+ypos1=15.686581
+ypos2=19.735942
 divy=5
 subdivy=1
 unity=1
-x1=0.00022282133
-x2=0.00023432216
+x1=-1.6117204e-07
+x2=5.0342052e-06
 divx=5
 subdivx=1
 ylabmag=0.5
@@ -40,46 +40,60 @@ xswmatrix.xswmatrix_row[1].q[6]
 xswmatrix.xswmatrix_row[1].q[7]
 xswmatrix.xswmatrix_row[1].q[8]
 xswmatrix.xswmatrix_row[1].q[9]
+xswmatrix.xswmatrix_row[1].q[10]
+xswmatrix.xswmatrix_row[1].q[11]
+xswmatrix.xswmatrix_row[1].q[12]
+xswmatrix.xswmatrix_row[1].q[13]
+xswmatrix.xswmatrix_row[1].q[14]
+xswmatrix.xswmatrix_row[1].q[15]
 xswmatrix.d_out_row[1]
-xswmatrix.xswmatrix_row[5].q[1]
-xswmatrix.xswmatrix_row[5].q[2]
-xswmatrix.xswmatrix_row[5].q[3]
-xswmatrix.xswmatrix_row[5].q[4]
-xswmatrix.xswmatrix_row[5].q[5]
-xswmatrix.xswmatrix_row[5].q[6]
-xswmatrix.xswmatrix_row[5].q[7]
-xswmatrix.xswmatrix_row[5].q[8]
-xswmatrix.xswmatrix_row[5].q[9]
-xswmatrix.d_out_row[5]
-xswmatrix.xswmatrix_row[6].q[1]
-xswmatrix.xswmatrix_row[6].q[2]
-xswmatrix.xswmatrix_row[6].q[3]
-xswmatrix.xswmatrix_row[6].q[4]
-xswmatrix.xswmatrix_row[6].q[5]
-xswmatrix.xswmatrix_row[6].q[6]
-xswmatrix.xswmatrix_row[6].q[7]
-xswmatrix.xswmatrix_row[6].q[8]
-xswmatrix.xswmatrix_row[6].q[9]
-xswmatrix.d_out_row[6]
-xswmatrix.xswmatrix_row[22].q[1]
-xswmatrix.xswmatrix_row[22].q[2]
-xswmatrix.xswmatrix_row[22].q[3]
-xswmatrix.xswmatrix_row[22].q[4]
-xswmatrix.xswmatrix_row[22].q[5]
-xswmatrix.xswmatrix_row[22].q[6]
-xswmatrix.xswmatrix_row[22].q[7]
-xswmatrix.xswmatrix_row[22].q[8]
-xswmatrix.xswmatrix_row[22].q[9]
-xswmatrix.d_out_row[22]
-xswmatrix.xswmatrix_row[23].q[1]
-xswmatrix.xswmatrix_row[23].q[2]
-xswmatrix.xswmatrix_row[23].q[3]
-xswmatrix.xswmatrix_row[23].q[4]
-xswmatrix.xswmatrix_row[23].q[5]
-xswmatrix.xswmatrix_row[23].q[6]
-xswmatrix.xswmatrix_row[23].q[7]
-xswmatrix.xswmatrix_row[23].q[8]
-xswmatrix.xswmatrix_row[23].q[9]
+xswmatrix.xswmatrix_row[2].q[1]
+xswmatrix.xswmatrix_row[2].q[2]
+xswmatrix.xswmatrix_row[2].q[3]
+xswmatrix.xswmatrix_row[2].q[4]
+xswmatrix.xswmatrix_row[2].q[5]
+xswmatrix.xswmatrix_row[2].q[6]
+xswmatrix.xswmatrix_row[2].q[7]
+xswmatrix.xswmatrix_row[2].q[8]
+xswmatrix.xswmatrix_row[2].q[9]
+xswmatrix.xswmatrix_row[2].q[10]
+xswmatrix.xswmatrix_row[2].q[11]
+xswmatrix.xswmatrix_row[2].q[12]
+xswmatrix.xswmatrix_row[2].q[13]
+xswmatrix.xswmatrix_row[2].q[14]
+xswmatrix.xswmatrix_row[2].q[15]
+xswmatrix.d_out_row[2]
+xswmatrix.xswmatrix_row[9].q[1]
+xswmatrix.xswmatrix_row[9].q[2]
+xswmatrix.xswmatrix_row[9].q[3]
+xswmatrix.xswmatrix_row[9].q[4]
+xswmatrix.xswmatrix_row[9].q[5]
+xswmatrix.xswmatrix_row[9].q[6]
+xswmatrix.xswmatrix_row[9].q[7]
+xswmatrix.xswmatrix_row[9].q[8]
+xswmatrix.xswmatrix_row[9].q[9]
+xswmatrix.xswmatrix_row[9].q[10]
+xswmatrix.xswmatrix_row[9].q[11]
+xswmatrix.xswmatrix_row[9].q[12]
+xswmatrix.xswmatrix_row[9].q[13]
+xswmatrix.xswmatrix_row[9].q[14]
+xswmatrix.xswmatrix_row[9].q[15]
+xswmatrix.d_out_row[9]
+xswmatrix.xswmatrix_row[10].q[1]
+xswmatrix.xswmatrix_row[10].q[2]
+xswmatrix.xswmatrix_row[10].q[3]
+xswmatrix.xswmatrix_row[10].q[4]
+xswmatrix.xswmatrix_row[10].q[5]
+xswmatrix.xswmatrix_row[10].q[6]
+xswmatrix.xswmatrix_row[10].q[7]
+xswmatrix.xswmatrix_row[10].q[8]
+xswmatrix.xswmatrix_row[10].q[9]
+xswmatrix.xswmatrix_row[10].q[10]
+xswmatrix.xswmatrix_row[10].q[11]
+xswmatrix.xswmatrix_row[10].q[12]
+xswmatrix.xswmatrix_row[10].q[13]
+xswmatrix.xswmatrix_row[10].q[14]
+xswmatrix.xswmatrix_row[10].q[15]
 d_out"
 hilight_wave=23
 xlabmag=0.5
@@ -88,7 +102,7 @@ y2=2.7
 legend=0
 }
 T {CHANGED!
-This is a 60 by 10 Switch Matrix (for now)
+This is a 18 by 16 Switch Matrix (for now)
 - the transmission gates are an empty cell
 - the BUSES are the columns
 - the PINS are the rows} 810 -107.5 0 0 0.3 0.3 {}
@@ -140,6 +154,10 @@ N -450 280 -410 280 {lab=VSSd}
 N -260 10 -260 30 {lab=#net10}
 N -260 30 -250 30 {lab=#net10}
 N -240 110 -240 220 {lab=#net1}
+N 960 30 960 60 {lab=VDDd}
+N 910 30 960 30 {lab=VDDd}
+N 1010 30 1010 60 {lab=VSSd}
+N 1010 30 1060 30 {lab=VSSd}
 C {libs/core_swmatrix/NO_ClkGen.sym} 220 120 0 0 {name=x1}
 C {libs/core_swmatrix/swmatrix_30_by_10.sym} 980 110 0 0 {name=xswmatrix}
 C {vsource.sym} -100 460 0 0 {name=V1 value=\{Vdd\} savecurrent=false}
@@ -159,7 +177,7 @@ C {code_shown.sym} -2110 1870 0 0 {name=Simulation only_toplevel=false value="
 .control
 
     save all
-    TRAN 1000n 233000n
+    TRAN 2000n 290000n
     write Swmatrix.raw
 
 .endc
@@ -215,7 +233,7 @@ m=1}
 C {noconn.sym} 1280 130 2 0 {name=l4}
 C {lab_wire.sym} -580 210 0 0 {name=p1 sig_type=std_logic lab=clock}
 C {lab_wire.sym} -580 20 0 0 {name=p2 sig_type=std_logic lab=data}
-C {vsource.sym} -620 510 0 0 {name=V3 value="PULSE(0 3.3 0.1n 4n 4n 500n 1000n 231)" savecurrent=false}
+C {vsource.sym} -620 510 0 0 {name=V3 value="PULSE(0 3.3 0.1n 4n 4n 500n 1000n 289)" savecurrent=false}
 C {lab_wire.sym} -620 570 0 0 {name=p12 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} -620 450 0 0 {name=p13 sig_type=std_logic lab=clock}
 C {Schmitt.sym} -320 20 0 0 {name=x2}
@@ -224,3 +242,5 @@ C {lab_wire.sym} -430 190 0 0 {name=p14 sig_type=std_logic lab=VDDd}
 C {lab_wire.sym} -460 -20 0 0 {name=p15 sig_type=std_logic lab=VDDd}
 C {lab_wire.sym} -430 280 0 0 {name=p16 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} -450 70 0 0 {name=p17 sig_type=std_logic lab=VSSd}
+C {lab_wire.sym} 1050 30 0 0 {name=p18 sig_type=std_logic lab=VSSd}
+C {lab_wire.sym} 940 30 0 0 {name=p19 sig_type=std_logic lab=VDDd}
