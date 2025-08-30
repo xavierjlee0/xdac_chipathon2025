@@ -6,13 +6,13 @@ S {}
 E {}
 B 2 50 290 1340 1010 {flags=graph
 y1=0
-ypos1=15.686581
-ypos2=19.735942
+ypos1=16.20592
+ypos2=19.037221
 divy=5
 subdivy=1
 unity=1
-x1=-1.6117204e-07
-x2=5.0342052e-06
+x1=-2.422112e-06
+x2=3.2474084e-05
 divx=5
 subdivx=1
 ylabmag=0.5
@@ -30,6 +30,7 @@ color="4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 6 6 6 6 6 6 4 4 4 4 4 4 4
 node="clock_in
 phi_1
 phi_2
+data
 data_in
 xswmatrix.xswmatrix_row[1].q[1]
 xswmatrix.xswmatrix_row[1].q[2]
@@ -63,37 +64,37 @@ xswmatrix.xswmatrix_row[2].q[13]
 xswmatrix.xswmatrix_row[2].q[14]
 xswmatrix.xswmatrix_row[2].q[15]
 xswmatrix.d_out_row[2]
-xswmatrix.xswmatrix_row[9].q[1]
-xswmatrix.xswmatrix_row[9].q[2]
-xswmatrix.xswmatrix_row[9].q[3]
-xswmatrix.xswmatrix_row[9].q[4]
-xswmatrix.xswmatrix_row[9].q[5]
-xswmatrix.xswmatrix_row[9].q[6]
-xswmatrix.xswmatrix_row[9].q[7]
-xswmatrix.xswmatrix_row[9].q[8]
-xswmatrix.xswmatrix_row[9].q[9]
-xswmatrix.xswmatrix_row[9].q[10]
-xswmatrix.xswmatrix_row[9].q[11]
-xswmatrix.xswmatrix_row[9].q[12]
-xswmatrix.xswmatrix_row[9].q[13]
-xswmatrix.xswmatrix_row[9].q[14]
-xswmatrix.xswmatrix_row[9].q[15]
-xswmatrix.d_out_row[9]
-xswmatrix.xswmatrix_row[10].q[1]
-xswmatrix.xswmatrix_row[10].q[2]
-xswmatrix.xswmatrix_row[10].q[3]
-xswmatrix.xswmatrix_row[10].q[4]
-xswmatrix.xswmatrix_row[10].q[5]
-xswmatrix.xswmatrix_row[10].q[6]
-xswmatrix.xswmatrix_row[10].q[7]
-xswmatrix.xswmatrix_row[10].q[8]
-xswmatrix.xswmatrix_row[10].q[9]
-xswmatrix.xswmatrix_row[10].q[10]
-xswmatrix.xswmatrix_row[10].q[11]
-xswmatrix.xswmatrix_row[10].q[12]
-xswmatrix.xswmatrix_row[10].q[13]
-xswmatrix.xswmatrix_row[10].q[14]
-xswmatrix.xswmatrix_row[10].q[15]
+xswmatrix.xswmatrix_row[4].q[1]
+xswmatrix.xswmatrix_row[4].q[2]
+xswmatrix.xswmatrix_row[4].q[3]
+xswmatrix.xswmatrix_row[4].q[4]
+xswmatrix.xswmatrix_row[4].q[5]
+xswmatrix.xswmatrix_row[4].q[6]
+xswmatrix.xswmatrix_row[4].q[7]
+xswmatrix.xswmatrix_row[4].q[8]
+xswmatrix.xswmatrix_row[4].q[9]
+xswmatrix.xswmatrix_row[4].q[10]
+xswmatrix.xswmatrix_row[4].q[11]
+xswmatrix.xswmatrix_row[4].q[12]
+xswmatrix.xswmatrix_row[4].q[13]
+xswmatrix.xswmatrix_row[4].q[14]
+xswmatrix.xswmatrix_row[4].q[15]
+xswmatrix.d_out_row[4]
+xswmatrix.xswmatrix_row[5].q[1]
+xswmatrix.xswmatrix_row[5].q[2]
+xswmatrix.xswmatrix_row[5].q[3]
+xswmatrix.xswmatrix_row[5].q[4]
+xswmatrix.xswmatrix_row[5].q[5]
+xswmatrix.xswmatrix_row[5].q[6]
+xswmatrix.xswmatrix_row[5].q[7]
+xswmatrix.xswmatrix_row[5].q[8]
+xswmatrix.xswmatrix_row[5].q[9]
+xswmatrix.xswmatrix_row[5].q[10]
+xswmatrix.xswmatrix_row[5].q[11]
+xswmatrix.xswmatrix_row[5].q[12]
+xswmatrix.xswmatrix_row[5].q[13]
+xswmatrix.xswmatrix_row[5].q[14]
+xswmatrix.xswmatrix_row[5].q[15]
 d_out"
 hilight_wave=23
 xlabmag=0.5
@@ -154,10 +155,10 @@ N -450 280 -410 280 {lab=VSSd}
 N -260 10 -260 30 {lab=#net10}
 N -260 30 -250 30 {lab=#net10}
 N -240 110 -240 220 {lab=#net1}
-N 960 30 960 60 {lab=VDDd}
-N 910 30 960 30 {lab=VDDd}
-N 1010 30 1010 60 {lab=VSSd}
-N 1010 30 1060 30 {lab=VSSd}
+N 950 40 950 60 {lab=VDDd}
+N 920 40 950 40 {lab=VDDd}
+N 1010 40 1010 60 {lab=VSSd}
+N 1010 40 1040 40 {lab=VSSd}
 C {libs/core_swmatrix/NO_ClkGen.sym} 220 120 0 0 {name=x1}
 C {libs/core_swmatrix/swmatrix_30_by_10.sym} 980 110 0 0 {name=xswmatrix}
 C {vsource.sym} -100 460 0 0 {name=V1 value=\{Vdd\} savecurrent=false}
@@ -177,7 +178,7 @@ C {code_shown.sym} -2110 1870 0 0 {name=Simulation only_toplevel=false value="
 .control
 
     save all
-    TRAN 2000n 290000n
+    TRAN 1000n 81000n
     write Swmatrix.raw
 
 .endc
@@ -190,7 +191,7 @@ C {netlist.sym} -2120 1550 0 0 {name=s1 value="
 
 * data
 aclock [ clock_node ] clock_vector
-.model clock_vector d_source(input_file=\\"/foss/designs/libs/data_source/data_swmatrix5_10.txt\\")
+.model clock_vector d_source(input_file=\\"/foss/designs/libs/data_source/data_swmatrix_zeros.txt\\")
 * convert digital signals to analog
 aconvert [ clock_node ] [  data ] dac_in
 .model dac_in dac_bridge (out_low=0V out_high=3.3V t_rise=4ns t_fall=4ns)
@@ -242,5 +243,5 @@ C {lab_wire.sym} -430 190 0 0 {name=p14 sig_type=std_logic lab=VDDd}
 C {lab_wire.sym} -460 -20 0 0 {name=p15 sig_type=std_logic lab=VDDd}
 C {lab_wire.sym} -430 280 0 0 {name=p16 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} -450 70 0 0 {name=p17 sig_type=std_logic lab=VSSd}
-C {lab_wire.sym} 1050 30 0 0 {name=p18 sig_type=std_logic lab=VSSd}
-C {lab_wire.sym} 940 30 0 0 {name=p19 sig_type=std_logic lab=VDDd}
+C {lab_wire.sym} 940 40 0 0 {name=p18 sig_type=std_logic lab=VDDd}
+C {lab_wire.sym} 1030 40 0 0 {name=p19 sig_type=std_logic lab=VSSd}
