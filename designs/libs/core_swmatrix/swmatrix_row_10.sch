@@ -18,8 +18,12 @@ N -170 140 -150 140 {lab=pin}
 N -197.5 140 -170 140 {lab=pin}
 N 300 120 340 120 {lab=VDDd}
 N 300 160 350 160 {lab=VSSd}
-N 300 140 390 140 {lab=#net1}
-N -60 140 0 140 {lab=#net2}
+N 300 140 390 140 {lab=BUS[1:16]}
+N -60 140 0 140 {lab=pin}
+N 30 80 130 80 {lab=EN}
+N 130 80 130 90 {lab=EN}
+N 390 140 470 140 {lab=BUS[1:16]}
+N -150 140 -60 140 {lab=pin}
 C {libs/core_swmatrix/ShiftReg_row_10_2.sym} 150 20 0 0 {name=xSR}
 C {iopin.sym} -197.5 140 2 0 {name=p1 lab=pin}
 C {ipin.sym} -80 40 0 0 {name=p2 lab=PHI_2
@@ -35,5 +39,4 @@ C {title.sym} -62.5 232.5 0 0 {name=l2 author="Peter Kinget"}
 C {libs/core_analog/tx_gate/transmission_gate_2.sym} 150 140 0 0 {name=xTx_gate[1:16]}
 C {iopin.sym} 337.5 120 0 0 {name=p9 lab=VDDd}
 C {iopin.sym} 347.5 160 0 0 {name=p10 lab=VSSd}
-C {noconn.sym} -60 140 0 0 {name=l1}
-C {noconn.sym} 390 140 2 0 {name=l3}
+C {ipin.sym} 30 80 0 0 {name=p11 lab=EN}
