@@ -88,6 +88,14 @@ N 760 -630 760 -550 {lab=#net2}
 N 570 -550 760 -550 {lab=#net2}
 N 670 -600 670 -580 {lab=#net4}
 N 670 -580 770 -580 {lab=#net4}
+N 80 -190 80 -180 {lab=iref}
+N 70 -150 70 -140 {lab=vss}
+N 70 -150 80 -150 {lab=vss}
+N 80 -120 80 -110 {lab=vss}
+N 630 -190 630 -180 {lab=#net3}
+N 630 -150 640 -150 {lab=vss}
+N 640 -150 640 -140 {lab=vss}
+N 630 -120 630 -110 {lab=vss}
 C {title.sym} 80 80 0 0 {name=Comparator author="Christopher Amankwaa"}
 C {symbols/nfet_03v3.sym} 340 -270 0 1 {name=M3
 L=1u
@@ -210,31 +218,6 @@ C {ipin.sym} 80 -260 1 0 {name=p3 lab=iref
 C {ipin.sym} 200 -460 0 0 {name=p4 lab=inn}
 C {ipin.sym} 200 -400 0 0 {name=p5 lab=inp}
 C {opin.sym} 990 -460 0 0 {name=p6 lab=vout}
-C {devices/code_shown.sym} 1090 -1040 0 0 {name=NGSPICE only_toplevel=true
-value="
-.control
-*save all
-op
-show all
-
-** RUN SIMULATIONS **
-dc vinn -2 5 0.01
-
-plot @m.x1.xm5.m0[vds] - @m.x1.xm5.m0[vgs] + @m.x1.xm5.m0[vth]
-*plot @m.x1.xm5.m0[vgs]
-*plot @m.x1.xm5.m0[vds]
-*plot @m.x1.xm5.m0[vth]
-
-
-* Export results to file
-write nmos_Comparator_saturation.txt
-
-
-write NMOS_comparator_cm_tb.raw
-.endc
-"}
-C {libs/core_analog/unit_nmos/unit_nmos.sym} 120 -150 0 1 {name=x1 M = 1}
-C {libs/core_analog/unit_nmos/unit_nmos.sym} 590 -150 0 0 {name=x2 M = 2}
 C {symbols/pfet_03v3.sym} 740 -630 0 1 {name=M1
 L=0.5u
 W=10u
@@ -261,5 +244,33 @@ ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
 nrd="'0.18u / W'" nrs="'0.18u / W'"
 sa=0 sb=0 sd=0
 model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 100 -150 0 1 {name=M8
+L=1u
+W=2.5u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
+spiceprefix=X
+}
+C {symbols/nfet_03v3.sym} 610 -150 0 0 {name=M10
+L=1u
+W=5u
+nf=2
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=nfet_03v3
 spiceprefix=X
 }

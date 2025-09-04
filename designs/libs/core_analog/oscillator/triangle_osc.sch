@@ -231,13 +231,6 @@ spiceprefix=X
 C {ipin.sym} 80 -520 0 0 {name=p5 lab=vho}
 C {ipin.sym} 80 -420 0 0 {name=p6 lab=vlo}
 C {opin.sym} 1300 -460 0 0 {name=p7 lab=out}
-C {devices/code_shown.sym} 0 -150 0 0 {name=Models only_toplevel=false
-format="tcleval( @value )"
-value="
-.include $::180MCU_MODELS/design.ngspice
-.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
-"}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 240 -580 0 0 {name=xn_comp}
 C {libs/core_analog/Comparator/Pmos_Comparator.sym} 240 -440 0 0 {name=xp_comp}
 C {ipin.sym} 40 -700 0 0 {name=p12 lab=vdd}

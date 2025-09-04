@@ -1,0 +1,85 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 04/09/2025 13:40
+
+.SUBCKT triangle_osc vss vout inn|vlo inn|inp|out vdd iref vssd vddd inp|vho
+M$1 \$3 inn|vlo \$16 vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
++ PD=17.86U
+M$5 \$4 inn|inp|out \$16 vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
++ PD=17.86U
+M$9 vdd \$2 \$2 vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U PD=33.38U
+M$14 vdd \$2 vout vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U
++ PD=33.38U
+M$19 \$16 \$35 vdd vdd pfet_03v3 L=1U W=14U AS=5.005P AD=5.005P PS=20.36U
++ PD=20.36U
+M$23 \$35 \$35 vdd vdd pfet_03v3 L=1U W=7U AS=3.185P AD=3.185P PS=12.32U
++ PD=12.32U
+M$25 inn|inp|out \$36 \$49 vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U
++ PD=13.3U
+M$26 vdd \$8 \$48 vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U PD=13.3U
+M$27 vdd \$8 \$8 vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U PD=13.3U
+M$28 \$49 \$8 vdd vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U PD=13.3U
+M$29 \$66 \$66 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
++ PD=16.82U
+M$31 \$68 \$66 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
++ PD=16.82U
+M$33 \$65 \$66 vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P PS=26.57U
++ PD=26.57U
+M$35 \$66 \$68 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
++ PD=16.82U
+M$37 \$68 \$68 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
++ PD=16.82U
+M$39 \$69 \$68 vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P PS=26.57U
++ PD=26.57U
+M$41 \$38 \$36 vddd vddd pfet_05v0 L=0.5U W=3.29U AS=1.1515P AD=1.1515P
++ PS=6.335U PD=6.335U
+M$42 vddd vout \$38 vddd pfet_05v0 L=0.5U W=3.29U AS=0.8554P AD=0.8554P
++ PS=4.33U PD=4.33U
+M$45 \$36 \$38 vddd vddd pfet_05v0 L=0.5U W=3.29U AS=1.1515P AD=1.1515P
++ PS=6.335U PD=6.335U
+M$46 vddd \$69 \$36 vddd pfet_05v0 L=0.5U W=3.29U AS=0.8554P AD=0.8554P
++ PS=4.33U PD=4.33U
+M$49 vss \$3 \$2 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
++ PD=12.22U
+M$50 \$3 \$3 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
++ PD=12.22U
+M$51 vss \$4 \$3 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
++ PD=12.22U
+M$52 \$4 \$3 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
++ PD=12.22U
+M$53 vss \$4 \$4 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
++ PD=12.22U
+M$54 vout \$4 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
++ PD=12.22U
+M$55 vss iref \$8 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$56 \$9 iref vss vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$57 vss iref iref vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$58 inn|inp|out \$36 \$9 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
++ PD=9.22U
+M$59 vss iref \$35 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$60 \$48 \$48 vss vss nfet_03v3 L=1U W=2.5U AS=1.525P AD=1.525P PS=6.22U
++ PD=6.22U
+M$61 \$58 \$48 vss vss nfet_03v3 L=1U W=5U AS=2.175P AD=2.175P PS=9.24U PD=9.24U
+M$63 \$65 \$65 vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
++ PD=8.22U
+M$64 \$69 \$65 vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
++ PD=8.22U
+M$65 \$66 inn|inp|out \$58 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
++ PD=9.22U
+M$66 \$68 inp|vho \$58 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
++ PD=9.22U
+M$67 \$37 \$36 vssd vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.2112P PS=3.52U
++ PD=1.64U
+M$68 \$38 vout \$37 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.3432P PS=1.64U
++ PD=1.84U
+M$69 \$43 vout \$38 vss nfet_05v0 L=0.6U W=1.32U AS=0.3432P AD=0.2112P PS=1.84U
++ PD=1.64U
+M$70 vssd \$36 \$43 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.5808P PS=1.64U
++ PD=3.52U
+M$71 \$50 \$38 vssd vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.2112P PS=3.52U
++ PD=1.64U
+M$72 \$36 \$69 \$50 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.3432P PS=1.64U
++ PD=1.84U
+M$73 \$53 \$69 \$36 vss nfet_05v0 L=0.6U W=1.32U AS=0.3432P AD=0.2112P PS=1.84U
++ PD=1.64U
+M$74 vssd \$38 \$53 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.5808P PS=1.64U
++ PD=3.52U
+.ENDS triangle_osc
