@@ -66,6 +66,9 @@ N 480 410 510 410 {lab=VSSd}
 N 480 460 520 460 {lab=VDDd}
 N 510 410 530 410 {lab=VSSd}
 N -460 280 -410 280 {lab=VSSd}
+N 1150 180 1220 180 {lab=PIN[1]}
+N 1160 210 1220 210 {lab=PIN[2]}
+N 1160 230 1220 230 {lab=PIN[3]}
 C {libs/core_swmatrix/NO_ClkGen.sym} 220 120 0 0 {name=x1}
 C {libs/core_swmatrix/swmatrix_30_by_10.sym} 980 110 0 0 {name=xswmatrix}
 C {libs/gf180mcu_fd_sc_mcu9t5v0_symbols/inv_2.sym} -160 30 0 0 {name=x3 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
@@ -109,4 +112,9 @@ C {lab_wire.sym} 530 410 0 0 {name=p22 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} -430 280 0 0 {name=p24 sig_type=std_logic lab=VSSd}
 C {opin.sym} 1280 90 0 0 {name=p25 lab=data_out}
 C {iopin.sym} 1280 110 0 0 {name=p27 lab=BUS[1:16]}
-C {iopin.sym} 1280 130 0 0 {name=p28 lab=PIN[1:3]}
+C {iopin.sym} 1220 180 0 0 {name=p28 lab=PIN[1]}
+C {iopin.sym} 1220 230 0 0 {name=p1 lab=PIN[3]}
+C {iopin.sym} 1220 210 0 0 {name=p2 lab=PIN[2]}
+C {lab_wire.sym} 1190 180 0 0 {name=p11 sig_type=std_logic lab=PIN[1]}
+C {lab_wire.sym} 1180 210 0 0 {name=p20 sig_type=std_logic lab=PIN[2]}
+C {lab_wire.sym} 1170 230 0 0 {name=p29 sig_type=std_logic lab=PIN[3]}
