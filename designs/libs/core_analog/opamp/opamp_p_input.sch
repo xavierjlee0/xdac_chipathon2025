@@ -62,36 +62,20 @@ N 390 -630 410 -630 {lab=vdd}
 N 310 -130 410 -130 {lab=vss}
 N 310 -630 390 -630 {lab=vdd}
 N 210 -130 310 -130 {lab=vss}
-N 260 -210 260 -130 {lab=vss}
-N 410 -210 410 -130 {lab=vss}
-N 420 -240 420 -130 {lab=vss}
-N 300 -250 370 -250 {lab=vg_mir}
 N 120 -130 130 -130 {lab=vss}
 N 70 -130 210 -130 {lab=vss}
 N 250 -470 260 -470 {lab=ibias}
-N 410 -320 410 -290 {lab=vc_mir}
-N 420 -350 420 -240 {lab=vss}
-N 260 -320 260 -290 {lab=vg_mir}
-N 250 -350 250 -240 {lab=vss}
-N 250 -240 250 -130 {lab=vss}
 N 260 -470 260 -400 {lab=ibias}
-N 260 -430 320 -430 {lab=ibias}
-N 320 -430 320 -360 {lab=ibias}
-N 260 -310 330 -310 {lab=vg_mir}
-N 330 -310 330 -250 {lab=vg_mir}
 N 680 -290 720 -290 {lab=vb2}
 N 500 -400 530 -400 {lab=vinn}
 N 410 -530 410 -520 {lab=vb3}
 N 480 -580 480 -530 {lab=vb3}
-N 350 -360 370 -360 {lab=ibias}
-N 300 -360 320 -360 {lab=ibias}
-N 320 -360 350 -360 {lab=ibias}
 N 720 -290 720 -250 {lab=vb2}
 N 970 -170 990 -170 {lab=vo1}
-N 450 -490 480 -490 {lab=v1_mir}
-N 480 -490 480 -440 {lab=v1_mir}
-N 410 -440 480 -440 {lab=v1_mir}
-N 410 -460 410 -400 {lab=v1_mir}
+N 450 -490 480 -490 {lab=ibias}
+N 480 -490 480 -440 {lab=ibias}
+N 410 -440 480 -440 {lab=ibias}
+N 410 -460 410 -400 {lab=ibias}
 N 410 -530 480 -530 {lab=vb3}
 N 390 -490 410 -490 {lab=vdd}
 N 390 -580 390 -490 {lab=vdd}
@@ -132,20 +116,9 @@ N 990 -260 990 -240 {lab=vcomp}
 N 990 -410 990 -320 {lab=out}
 N 870 -350 950 -350 {lab=vo1}
 N 990 -410 1030 -410 {lab=out}
-N 260 -220 260 -210 {lab=vss}
-N 410 -220 410 -210 {lab=vss}
-N 410 -250 420 -250 {lab=vss}
-N 410 -290 410 -280 {lab=vc_mir}
-N 410 -330 410 -320 {lab=vc_mir}
-N 260 -290 260 -280 {lab=vg_mir}
-N 250 -250 260 -250 {lab=vss}
-N 260 -330 260 -320 {lab=vg_mir}
-N 250 -360 250 -350 {lab=vss}
-N 250 -360 260 -360 {lab=vss}
-N 410 -360 420 -360 {lab=vss}
-N 420 -360 420 -350 {lab=vss}
 N 260 -400 260 -390 {lab=ibias}
-N 410 -400 410 -390 {lab=v1_mir}
+N 410 -400 410 -390 {lab=ibias}
+N 260 -390 410 -390 {lab=ibias}
 C {title.sym} 160 -40 0 0 {name=l1 author="X.J. Lee"}
 C {opin.sym} 1130 -410 2 1 {name=p1 lab=out}
 C {ipin.sym} 120 -630 2 1 {name=p2 lab=vdd}
@@ -345,66 +318,7 @@ L=24e-6
 model=cap_mim_2f0fF
 spiceprefix=X
 m=1}
-C {symbols/nfet_03v3.sym} 390 -250 0 0 {name=M14
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 280 -250 0 1 {name=M15
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 390 -360 0 0 {name=M16
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 280 -360 0 1 {name=M17
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 350 -250 2 1 {name=p10 sig_type=std_logic lab=vg_mir}
 C {lab_wire.sym} 570 -580 2 1 {name=p12 sig_type=std_logic lab=vb3}
 C {lab_wire.sym} 930 -350 2 1 {name=p13 sig_type=std_logic lab=vo1}
 C {lab_wire.sym} 930 -240 2 1 {name=p14 sig_type=std_logic lab=vcomp}
 C {lab_wire.sym} 570 -240 2 0 {name=p15 sig_type=std_logic lab=vc45}
-C {lab_wire.sym} 420 -440 2 0 {name=p16 sig_type=std_logic lab=v1_mir}
-C {lab_wire.sym} 410 -310 2 0 {name=p17 sig_type=std_logic lab=vc_mir}
