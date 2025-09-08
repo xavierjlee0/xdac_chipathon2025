@@ -131,6 +131,24 @@ N 1060 -510 1060 -300 {lab=out}
 N 1040 -420 1060 -420 {lab=out}
 N 1040 -490 1040 -480 {lab=#net2}
 N 990 -490 1040 -490 {lab=#net2}
+N 160 -640 160 -630 {lab=vdd}
+N 150 -610 150 -600 {lab=vdd}
+N 150 -600 160 -600 {lab=vdd}
+N 160 -570 160 -560 {lab=vb2}
+N 330 -610 330 -600 {lab=#net5}
+N 280 -610 290 -610 {lab=vdd}
+N 290 -580 290 -560 {lab=#net5}
+N 290 -530 290 -520 {lab=#net5}
+N 290 -460 290 -450 {lab=ibias}
+N 280 -500 280 -490 {lab=vdd}
+N 280 -490 290 -490 {lab=vdd}
+N 440 -530 440 -520 {lab=#net6}
+N 450 -500 450 -490 {lab=vdd}
+N 440 -490 450 -490 {lab=vdd}
+N 440 -460 440 -450 {lab=#net7}
+N 440 -570 440 -560 {lab=#net6}
+N 440 -640 440 -630 {lab=vdd}
+N 440 -600 450 -600 {lab=vdd}
 C {title.sym} 160 -40 0 0 {name=l1 author="X.J. Lee"}
 C {symbols/nfet_03v3.sym} 580 -450 0 0 {name=M1
 L=1u
@@ -252,17 +270,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 660 -600 0 0 {name=p7 sig_type=std_logic lab=vg1}
 C {lab_wire.sym} 700 -350 0 0 {name=p9 sig_type=std_logic lab=viss}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 330 -600 0 1 {name=x1
-M=1}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 400 -600 0 0 {name=x2
-M=1}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 200 -600 0 1 {name=x4
-M=1}
 C {lab_wire.sym} 750 -570 0 0 {name=p11 sig_type=std_logic lab=vb2}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 330 -490 0 1 {name=x3
-M=1}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 400 -490 0 0 {name=x5
-M=1}
 C {symbols/nfet_03v3.sym} 730 -480 0 0 {name=M10
 L=4u
 W=2u
@@ -320,9 +328,79 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/cap_mim_2f0fF.sym} 1040 -450 0 0 {name=C1
+C {symbols/pfet_03v3.sym} 180 -600 0 1 {name=M13
+L=1u
+W=3.5u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/pfet_03v3.sym} 310 -610 0 1 {name=M14
+L=1u
+W=3.5u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/pfet_03v3.sym} 310 -490 0 1 {name=M15
+L=1u
+W=3.5u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/pfet_03v3.sym} 420 -490 0 0 {name=M16
+L=1u
+W=3.5u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/pfet_03v3.sym} 420 -600 0 0 {name=M17
+L=1u
+W=3.5u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/cap_mim_analog.sym} 1040 -450 0 0 {name=C2
 W=25e-6
 L=24e-6
-model=cap_mim_2f0fF
+model=cap_mim_2f0_m5m6_noshield
 spiceprefix=X
 m=1}

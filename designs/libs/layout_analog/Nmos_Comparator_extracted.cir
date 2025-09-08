@@ -1,23 +1,28 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 04/09/2025 13:36
+* Extracted by KLayout with GF180MCU LVS runset on : 08/09/2025 08:31
 
-.SUBCKT Nmos_Comparator vss iref inn inp vdd
-M$1 \$10 \$10 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
+.SUBCKT Nmos_Comparator vss iref i_bias_n v_3_7_n inn v_5_11_n inp vout vdd
+M$1 v_5_11_n v_5_11_n vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P
++ PS=16.82U PD=16.82U
+M$3 \$11 v_5_11_n vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
 + PD=16.82U
-M$3 \$11 \$10 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
-+ PD=16.82U
-M$5 \$10 \$11 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
+M$5 v_5_11_n \$11 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
 + PD=16.82U
 M$7 \$11 \$11 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
 + PD=16.82U
-M$9 \$6 \$10 vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P PS=26.57U
-+ PD=26.57U
-M$11 \$9 \$11 vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P PS=26.57U
+M$9 v_3_7_n v_5_11_n vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P
++ PS=26.57U PD=26.57U
+M$11 vout \$11 vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P PS=26.57U
 + PD=26.57U
 M$13 iref iref vss vss nfet_03v3 L=1U W=2.5U AS=1.525P AD=1.525P PS=6.22U
 + PD=6.22U
-M$14 \$3 iref vss vss nfet_03v3 L=1U W=5U AS=2.175P AD=2.175P PS=9.24U PD=9.24U
-M$16 \$6 \$6 vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U PD=8.22U
-M$17 \$9 \$6 vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U PD=8.22U
-M$18 \$10 inn \$3 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
-M$19 \$11 inp \$3 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$14 i_bias_n iref vss vss nfet_03v3 L=1U W=5U AS=2.175P AD=2.175P PS=9.24U
++ PD=9.24U
+M$16 v_3_7_n v_3_7_n vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
++ PD=8.22U
+M$17 vout v_3_7_n vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
++ PD=8.22U
+M$18 v_5_11_n inn i_bias_n vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
++ PD=9.22U
+M$19 \$11 inp i_bias_n vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
++ PD=9.22U
 .ENDS Nmos_Comparator

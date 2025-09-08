@@ -1,0 +1,22 @@
+** sch_path: /foss/designs/libs/core_analog/opamp/opamp_n_input.sch
+.subckt opamp_n_input vinp vinn ibias vdd out vss
+*.PININFO out:O vdd:I vss:I vinn:I ibias:I vinp:I
+M1 net1 vinn viss vss nfet_03v3 L=1u W=3u nf=1 m=1
+M2 net2 vinp viss vss nfet_03v3 L=1u W=3u nf=1 m=1
+M6 net3 vg1 vdd vdd pfet_03v3 L=0.8u W=5u nf=1 m=5
+M5 vg1 vg1 vdd vdd pfet_03v3 L=0.8u W=5u nf=1 m=5
+M4 net3 vb2 net2 vss nfet_03v3 L=1u W=5u nf=1 m=6
+M3 vg1 vb2 net1 vss nfet_03v3 L=1u W=5u nf=1 m=6
+M7 viss net4 vss vss nfet_03v3 L=2u W=4.5u nf=1 m=3
+M11 net4 net4 vss vss nfet_03v3 L=2u W=4.5u nf=1 m=1
+M10 vb2 vb2 viss vss nfet_03v3 L=4u W=2u nf=1 m=1
+M8 out net4 vss vss nfet_03v3 L=0.8u W=5.5u nf=1 m=2
+M9 out net3 vdd vdd pfet_03v3 L=0.5u W=5.5u nf=1 m=14
+M12 net7 net7 net4 vss nfet_03v3 L=2u W=4.5u nf=1 m=1
+M13 vb2 net5 vdd vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+M14 net5 net5 vdd vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+M15 ibias ibias net5 vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+M16 net7 ibias net6 vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+M17 net6 net5 vdd vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+XC2 net2 out cap_mim_2f0_m3m4_noshield c_width=25e-6 c_length=24e-6 m=1
+.ends

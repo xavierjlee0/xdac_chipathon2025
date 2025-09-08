@@ -1,0 +1,70 @@
+magic
+tech gf180mcu
+timestamp 1757313187
+<< checkpaint >>
+rect -13 -8 42 63
+<< l34d0 >>
+rect -5 3 0 53
+rect 22 3 26 53
+rect 8 3 13 53
+rect 3 59 7 63
+rect 14 59 18 63
+rect 30 3 34 53
+<< l33d0 >>
+rect -4 4 -1 6
+rect -4 10 -1 12
+rect -4 15 -1 18
+rect -4 21 -1 23
+rect -4 27 -1 29
+rect -4 32 -1 35
+rect -4 38 -1 40
+rect -4 44 -1 46
+rect -4 49 -1 52
+rect 22 4 25 6
+rect 22 10 25 12
+rect 22 15 25 18
+rect 22 21 25 23
+rect 22 27 25 29
+rect 22 32 25 35
+rect 22 38 25 40
+rect 22 44 25 46
+rect 22 49 25 52
+rect 9 4 12 6
+rect 9 10 12 12
+rect 9 15 12 18
+rect 9 21 12 23
+rect 9 27 12 29
+rect 9 32 12 35
+rect 9 38 12 40
+rect 9 44 12 46
+rect 9 49 12 52
+rect 4 60 6 62
+rect 15 60 17 62
+rect 31 4 33 6
+rect 31 10 33 12
+rect 31 15 33 18
+rect 31 21 33 23
+rect 31 27 33 29
+rect 31 32 33 35
+rect 31 38 33 40
+rect 31 44 33 46
+rect 31 49 33 52
+<< l30d0 >>
+rect 2 -3 8 59
+rect 13 -3 19 59
+rect 2 59 8 63
+rect 13 59 19 63
+<< l31d0 >>
+rect -7 -3 26 58
+<< l32d0 >>
+rect 26 -2 36 57
+<< l22d0 >>
+rect 0 0 21 56
+rect -5 0 0 56
+rect 21 0 26 56
+rect 26 0 34 56
+<< l21d0 >>
+rect -13 -8 42 63
+<< labels >>
+rlabel l34d10 31.7777777778 27.7777777778 31.7777777778 27.7777777778 0 
+<< end >>

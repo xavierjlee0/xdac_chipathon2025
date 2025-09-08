@@ -13,6 +13,12 @@ M9 net4 net1 vdd vdd pfet_03v3 L=1u W=6u nf=1 m=1
 xn_comp vdd vcompn vho vss out net4 Nmos_Comparator
 xp_comp vdd vcompp out vss vlo net5 Pmos_Comparator
 x1 vcompp q nq vcompn sr_latch
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+
+**** end user architecture code
 .ends
 
 * expanding   symbol:  libs/core_analog/Comparator/Nmos_Comparator.sym # of pins=6
