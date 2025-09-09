@@ -48,7 +48,7 @@ C {devices/lab_wire.sym} 790 -200 0 1 {name=p5 sig_type=std_logic lab=ASIG}
 C {devices/code_shown.sym} 0 -540 0 0 {name=DUT only_toplevel=true
 format="tcleval( @value )"
 value="
-.include "/foss/designs/Chipathon2025_pads/xschem/gf180mcu_fd_io__asig_5p0_extracted.spice"
+.include "/foss/designs/libs/core_analog/Chipathon2025_pads/xschem/gf180mcu_fd_io__asig_5p0_extracted.spice"
 XDUT DVSS DVDD VSS VDD PAD ASIG gf180mcu_fd_io__asig_5p0_extracted
 "}
 C {devices/code_shown.sym} 930 -410 0 0 {name=MODELS only_toplevel=true

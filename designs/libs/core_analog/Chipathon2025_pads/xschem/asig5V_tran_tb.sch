@@ -21,8 +21,8 @@ N 710 -260 710 -150 {lab=Vin}
 N 710 -150 760 -150 {lab=Vin}
 N 800 -100 800 -80 {lab=VSS}
 N 800 -330 800 -290 {lab=VDD}
-N 800 -230 800 -180 {lab=ASIG}
-N 800 -200 820 -200 {lab=ASIG}
+N 800 -230 800 -180 {lab=asig}
+N 800 -200 820 -200 {lab=asig}
 N 690 -200 710 -200 {lab=Vin}
 N 800 -260 870 -260 {lab=VDD}
 N 870 -330 870 -260 {lab=VDD}
@@ -35,6 +35,13 @@ N 800 -80 870 -80 {lab=VSS}
 N 480 -140 480 -100 {lab=GND}
 N 480 -240 480 -200 {lab=Vin}
 N 380 -100 480 -100 {lab=GND}
+N 820 -200 890 -200 {lab=asig}
+N 970 -120 990 -120 {lab=VSS}
+N 990 -120 990 -90 {lab=VSS}
+N 980 -90 990 -90 {lab=VSS}
+N 990 -120 1010 -120 {lab=VSS}
+N 870 -280 970 -280 {lab=VDD}
+N 970 -280 1010 -280 {lab=VDD}
 C {vsource.sym} 80 -170 0 0 {name=V1 value=5 savecurrent=false}
 C {vsource.sym} 180 -170 0 0 {name=V2 value=5 savecurrent=false}
 C {vsource.sym} 280 -170 0 0 {name=V3 value=0 savecurrent=false}
@@ -44,14 +51,12 @@ C {lab_wire.sym} 180 -240 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {gnd.sym} 230 -80 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 280 -240 0 0 {name=p3 sig_type=std_logic lab=DVSS}
 C {lab_wire.sym} 380 -240 0 0 {name=p4 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 820 -200 0 1 {name=p5 sig_type=std_logic lab=ASIG}
 C {devices/code_shown.sym} 30 -540 0 0 {name=DUT only_toplevel=true
 format="tcleval( @value )"
 value="
-.include "/foss/designs/Chipathon2025_pads/xschem/gf180mcu_fd_io__asig_5p0_extracted.spice"
-XDUT DVSS DVDD VSS VDD PAD ASIG gf180mcu_fd_io__asig_5p0_extracted
+.include "/foss/designs/libs/core_analog/Chipathon2025_pads/xschem/gf180mcu_fd_io__asig_5p0_extracted.spice"
 "}
-C {devices/code_shown.sym} 960 -410 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 10 10 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
@@ -60,7 +65,7 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 "}
-C {devices/code_shown.sym} 970 -230 0 0 {name=s1
+C {devices/code_shown.sym} 20 190 0 0 {name=s1
 only_toplevel=false
 value="
 
@@ -102,3 +107,10 @@ sa=0 sb=0 sd=0
 model=nfet_05v0
 spiceprefix=X
 }
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1090 -120 0 1 {name=IO1
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {lab_wire.sym} -350 -410 0 0 {name=p5 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 980 -90 0 0 {name=p10 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 850 -200 0 0 {name=p11 sig_type=std_logic lab=asig}
