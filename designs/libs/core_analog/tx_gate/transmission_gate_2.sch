@@ -63,3 +63,10 @@ spiceprefix=X
 C {ipin.sym} 520 -480 0 0 {name=p5 lab=Vin}
 C {iopin.sym} 760 -370 1 0 {name=p6 lab=vss}
 C {libs/gf180mcu_fd_sc_mcu9t5v0_symbols/inv_1.sym} 650 -670 0 0 {name=x1 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
+C {devices/code_shown.sym} 40 -280 0 0 {name=Models only_toplevel=false
+format="tcleval( @value )"
+value="
+.include $::180MCU_MODELS/design.ngspice
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+"}
