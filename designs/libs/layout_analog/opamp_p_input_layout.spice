@@ -1,0 +1,89 @@
+* NGSPICE file created from opamp_p_input.ext - technology: gf180mcuD
+
+.subckt pfet a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=1u
+.ends
+
+.subckt pfet$6 a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=1u
+.ends
+
+.subckt nfet$9 a_1960_0# a_1838_0# a_n84_0# a_38_n132#
+X0 a_1838_0# a_38_n132# a_n84_0# a_1960_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=9u
+.ends
+
+.subckt pfet$4 a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=2.6p pd=9.3u as=2.6p ps=9.3u w=4u l=1u
+.ends
+
+.subckt nfet$13 a_360_0# a_238_0# a_n84_0# a_38_n132#
+X0 a_238_0# a_38_n132# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt cap_mim m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=25u c_length=24u
+.ends
+
+.subckt nfet$1 vss a_238_0# a_n84_0# a_38_n132#
+X0 a_238_0# a_38_n132# a_n84_0# vss nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt pfet$7 a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=2.925p pd=10.3u as=2.925p ps=10.3u w=4.5u l=1u
+.ends
+
+.subckt nfet a_952_0# a_382_0# a_606_0# a_486_n60# a_262_n60# a_158_0# a_38_n60# a_n84_0#
++ a_710_n60# a_830_0#
+X0 a_830_0# a_710_n60# a_606_0# a_952_0# nfet_03v3 ad=3.355p pd=12.22u as=1.43p ps=6.02u w=5.5u l=0.6u
+X1 a_382_0# a_262_n60# a_158_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=1.43p ps=6.02u w=5.5u l=0.6u
+X2 a_606_0# a_486_n60# a_382_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=1.43p ps=6.02u w=5.5u l=0.6u
+X3 a_158_0# a_38_n60# a_n84_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=3.355p ps=12.22u w=5.5u l=0.6u
+.ends
+
+.subckt pfet$5 a_1054_0# a_382_0# a_606_0# a_486_n60# a_262_n60# a_158_0# a_1158_n60#
++ a_38_n60# a_n92_0# a_934_n60# a_710_n60# a_830_0# a_1278_0# w_n230_n138#
+X0 a_1278_0# a_1158_n60# a_1054_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.6u
+X1 a_830_0# a_710_n60# a_606_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X2 a_1054_0# a_934_n60# a_830_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X3 a_382_0# a_262_n60# a_158_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X4 a_606_0# a_486_n60# a_382_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X5 a_158_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.6u
+.ends
+
+.subckt pfet$3 a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.925p pd=10.3u as=2.925p ps=10.3u w=4.5u l=1u
+.ends
+
+.subckt opamp_p_input vcomp vb2 vb3 vss vdd vg1 viss out vinn vinp ibias vo1 vc45
+Xpfet_0[0] vdd viss vb3 vdd pfet
+Xpfet_0[1] vdd viss vb3 vdd pfet
+Xpfet$6_0[0] vdd vb3 viss vdd pfet$6
+Xpfet$6_0[1] vdd vb3 viss vdd pfet$6
+Xpfet$6_0[2] vdd vb3 viss vdd pfet$6
+Xnfet$9_0 vss vss vb2 vb2 nfet$9
+Xpfet$4_0[0] viss vo1 vinp vdd pfet$4
+Xpfet$4_0[1] viss vo1 vinp vdd pfet$4
+Xnfet$13_0[0] vss vss vc45 vg1 nfet$13
+Xnfet$13_0[1] vss vss vc45 vg1 nfet$13
+Xpfet$4_1[0] viss vg1 vinn vdd pfet$4
+Xpfet$4_1[1] viss vg1 vinn vdd pfet$4
+Xnfet$13_1[0] vss vcomp vo1 vb2 nfet$13
+Xnfet$13_1[1] vss vcomp vo1 vb2 nfet$13
+Xcap_mim_0 vcomp out cap_mim
+Xpfet$4_2[0] viss vo1 vinp vdd pfet$4
+Xpfet$4_2[1] viss vo1 vinp vdd pfet$4
+Xnfet$13_2[0] vss vss vcomp vg1 nfet$13
+Xnfet$13_2[1] vss vss vcomp vg1 nfet$13
+Xpfet$4_3[0] viss vg1 vinn vdd pfet$4
+Xpfet$4_3[1] viss vg1 vinn vdd pfet$4
+Xnfet$1_0[0] vss vc45 vg1 vb2 nfet$1
+Xnfet$1_0[1] vss vc45 vg1 vb2 nfet$1
+Xpfet$7_0 vdd vb2 vb3 vdd pfet$7
+Xpfet$7_1[0] vb3 ibias ibias vdd pfet$7
+Xpfet$7_1[1] vdd vb3 vb3 vdd pfet$7
+Xnfet_0 vss vss out vo1 vo1 out vo1 vss vo1 vss nfet
+Xpfet$5_0 out vdd out vb3 vb3 out vb3 vb3 vdd vb3 vb3 vdd vdd vdd pfet$5
+Xpfet$3_0[0] vb3 ibias ibias vdd pfet$3
+Xpfet$3_0[1] vdd vb3 vb3 vdd pfet$3
+.ends
+

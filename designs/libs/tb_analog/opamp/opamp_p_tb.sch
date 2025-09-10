@@ -49,7 +49,7 @@ C {devices/lab_wire.sym} 200 -710 0 0 {name=p2 sig_type=std_logic lab=vssa}
 C {devices/lab_wire.sym} 200 -940 0 0 {name=p3 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} 580 -650 0 0 {name=p4 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} 580 -630 0 0 {name=p5 sig_type=std_logic lab=vssa}
-C {devices/isource.sym} 460 -670 3 0 {name=I0 value=10u}
+C {devices/isource.sym} 460 -670 1 0 {name=I0 value=10u}
 C {devices/vsource.sym} 280 -820 0 1 {name=V3 value="SIN(0 0.01 10k) AC 1" savecurrent=false}
 C {devices/lab_wire.sym} 500 -730 0 0 {name=p9 sig_type=std_logic lab=vin_p}
 C {devices/code_shown.sym} 1120 -940 0 0 {name=Simulation only_toplevel=false value="
