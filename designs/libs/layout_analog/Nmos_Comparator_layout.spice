@@ -1,0 +1,44 @@
+* NGSPICE file created from Nmos_Comparator.ext - technology: gf180mcuD
+
+.subckt nfet$5 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt nfet a_342_n60# a_238_0# a_542_0# a_38_n60# a_n84_0# a_664_0#
+X0 a_542_0# a_342_n60# a_238_0# a_664_0# nfet_03v3 ad=1.525p pd=6.22u as=0.65p ps=3.02u w=2.5u l=1u
+X1 a_238_0# a_38_n60# a_n84_0# a_664_0# nfet_03v3 ad=0.65p pd=3.02u as=1.525p ps=6.22u w=2.5u l=1u
+.ends
+
+.subckt nfet$6 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.135p pd=8.22u as=2.135p ps=8.22u w=3.5u l=1u
+.ends
+
+.subckt pfet$3 a_242_n60# a_38_n60# a_n92_0# a_342_0# a_138_0# w_n230_n138#
+X0 a_342_0# a_242_n60# a_138_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.5u
+X1 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.5u
+.ends
+
+.subckt pfet$1 a_242_n60# a_38_n60# a_n92_0# a_342_0# a_138_0# w_n230_n138#
+X0 a_342_0# a_242_n60# a_138_0# w_n230_n138# pfet_03v3 ad=5.3625p pd=17.8u as=2.145p ps=8.77u w=8.25u l=0.5u
+X1 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.145p pd=8.77u as=5.3625p ps=17.8u w=8.25u l=0.5u
+.ends
+
+.subckt nfet$2 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=1.525p pd=6.22u as=1.525p ps=6.22u w=2.5u l=1u
+.ends
+
+.subckt Nmos_Comparator vss inn inp vdd v_6_9_n vout iref i_bias_n v_3_7_n v_5_11_n
+Xnfet$5_0 vss i_bias_n inn v_5_11_n nfet$5
+Xnfet$5_1 vss i_bias_n inp v_6_9_n nfet$5
+Xnfet_0 iref i_bias_n vss iref vss vss nfet
+Xnfet$6_0 vss vss v_3_7_n vout nfet$6
+Xpfet$3_0 v_6_9_n v_6_9_n vdd vdd v_5_11_n vdd pfet$3
+Xpfet$3_1 v_5_11_n v_5_11_n vdd vdd v_6_9_n vdd pfet$3
+Xnfet$6_1 vss vss v_3_7_n v_3_7_n nfet$6
+Xpfet$3_2 v_5_11_n v_5_11_n vdd vdd v_5_11_n vdd pfet$3
+Xpfet$1_0 v_6_9_n v_6_9_n vdd vdd vout vdd pfet$1
+Xpfet$3_3 v_6_9_n v_6_9_n vdd vdd v_6_9_n vdd pfet$3
+Xpfet$1_1 v_5_11_n v_5_11_n vdd vdd v_3_7_n vdd pfet$1
+Xnfet$2_0 vss vss iref iref nfet$2
+.ends
+
