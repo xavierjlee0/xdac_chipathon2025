@@ -1,0 +1,157 @@
+magic
+tech gf180mcu
+timestamp 1757377354
+<< checkpaint >>
+rect -69 16 185 153
+<< l34d0 >>
+rect -60 31 11 41
+rect -60 41 -50 47
+rect 2 41 11 58
+rect -54 102 -45 129
+rect -54 129 77 145
+rect 179 33 185 142
+rect 61 42 67 98
+rect -24 61 2 65
+rect -24 79 2 83
+rect -24 96 2 100
+rect 70 23 77 135
+rect 70 23 123 27
+rect 89 30 120 34
+rect 89 48 120 52
+rect 89 64 120 68
+rect 89 80 120 84
+rect 89 96 120 100
+rect 89 112 120 116
+rect 90 128 120 132
+rect -14 87 4 91
+rect 104 120 120 124
+rect 104 104 120 108
+rect 104 88 120 92
+rect 104 72 120 76
+rect 104 56 120 60
+rect 104 40 120 44
+rect -14 71 2 75
+<< l81d0 >>
+rect -14 37 -1 153
+rect 97 23 108 146
+rect -6 132 108 146
+<< l46d0 >>
+rect -32 45 -20 152
+rect -23 113 94 132
+rect 81 23 93 132
+<< l42d0 >>
+rect -51 70 -41 143
+rect -51 136 185 142
+<< l36d0 >>
+rect -61 44 -57 77
+rect -61 45 66 48
+<< labels >>
+rlabel l34d10 -57.3 64.6 -57.3 64.6 0 I
+rlabel l34d10 -50.75 71.6 -50.75 71.6 0 ZN
+rlabel l34d10 -57.8 99.6 -57.8 99.6 0 VDD
+rlabel l34d10 -54.8 48.6 -54.8 48.6 0 VSS
+rlabel l46d10 -29 148 -29 148 0 Pin
+rlabel l81d10 -9 149 -9 149 0 Bus
+rlabel l42d10 -44 113 -44 113 0 Control_Not
+rlabel l36d10 19 46 19 46 0 Control
+use pfetx241 pfetx241_1
+timestamp 1757377354
+transform 0 1 117 -1 0 129
+box -12 -7 113 67
+use inv_1 inv_1_1
+timestamp 1757377354
+transform 1 0 -238 0 1 -199
+box 169 243 200 303
+use nfetx241 nfetx241_1
+timestamp 1757377354
+transform 0 1 -1 -1 0 96
+box -6 -3 44 67
+use via_devx241 via_devx241_1
+timestamp 1757377354
+transform -1 0 -45 0 -1 76
+box 0 0 4 4
+use via_dev via_dev_1
+timestamp 1757377354
+transform -1 0 66 0 -1 49
+box 0 0 4 4
+use via_devx241 via_devx241_2
+timestamp 1757377354
+transform -1 0 184 0 -1 141
+box 0 0 4 4
+use via_devx242 via_devx242_1
+timestamp 1757377354
+transform -1 0 -20 0 -1 100
+box 0 0 4 4
+use via_devx242 via_devx242_2
+timestamp 1757377354
+transform -1 0 -20 0 -1 83
+box 0 0 4 4
+use via_devx242 via_devx242_3
+timestamp 1757377354
+transform -1 0 -20 0 -1 65
+box 0 0 4 4
+use via_devx242 via_devx242_4
+timestamp 1757377354
+transform -1 0 93 0 -1 34
+box 0 0 4 4
+use via_devx242 via_devx242_5
+timestamp 1757377354
+transform -1 0 93 0 -1 52
+box 0 0 4 4
+use via_devx242 via_devx242_6
+timestamp 1757377354
+transform -1 0 93 0 -1 68
+box 0 0 4 4
+use via_devx242 via_devx242_7
+timestamp 1757377354
+transform -1 0 93 0 -1 84
+box 0 0 4 4
+use via_devx242 via_devx242_8
+timestamp 1757377354
+transform -1 0 93 0 -1 100
+box 0 0 4 4
+use via_devx242 via_devx242_9
+timestamp 1757377354
+transform -1 0 93 0 -1 116
+box 0 0 4 4
+use via_devx242 via_devx242_10
+timestamp 1757377354
+transform -1 0 94 0 -1 132
+box 0 0 4 4
+use via_devx243 via_devx243_1
+timestamp 1757377354
+transform -1 0 -10 0 -1 91
+box 0 0 4 4
+use via_devx243 via_devx243_2
+timestamp 1757377354
+transform -1 0 -10 0 -1 75
+box 0 0 4 4
+use via_devx243 via_devx243_3
+timestamp 1757377354
+transform -1 0 108 0 -1 124
+box 0 0 4 4
+use via_devx243 via_devx243_4
+timestamp 1757377354
+transform -1 0 108 0 -1 108
+box 0 0 4 4
+use via_devx243 via_devx243_5
+timestamp 1757377354
+transform -1 0 108 0 -1 92
+box 0 0 4 4
+use via_devx243 via_devx243_6
+timestamp 1757377354
+transform -1 0 108 0 -1 76
+box 0 0 4 4
+use via_devx243 via_devx243_7
+timestamp 1757377354
+transform -1 0 108 0 -1 60
+box 0 0 4 4
+use via_devx243 via_devx243_8
+timestamp 1757377354
+transform -1 0 108 0 -1 44
+box 0 0 4 4
+use via_devx241 via_devx241_3
+timestamp 1757377354
+transform -1 0 -57 0 -1 74
+box 0 0 4 4
+<< end >>
