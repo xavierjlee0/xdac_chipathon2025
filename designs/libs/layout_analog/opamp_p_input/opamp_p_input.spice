@@ -1,0 +1,18 @@
+** sch_path: /foss/designs/libs/core_analog/opamp/opamp_p_input.sch
+.subckt opamp_p_input vinp vinn ibias vdd out vss
+*.PININFO out:O vdd:I vss:I vinn:I ibias:I vinp:I
+M7 viss vb3 vdd vdd pfet_03v3 L=1u W=5u nf=1 m=5
+M8 out vb3 vdd vdd pfet_03v3 L=0.6u W=5u nf=1 m=6
+M11 vb3 vb3 vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=2
+M12 ibias ibias vb3 vdd pfet_03v3 L=1u W=4.5u nf=1 m=2
+M1 vg1 vinn viss vdd pfet_03v3 L=1u W=4u nf=1 m=4
+M2 vo1 vinp viss vdd pfet_03v3 L=1u W=4u nf=1 m=4
+M5 vc45 vg1 vss vss nfet_03v3 L=1u W=4u nf=1 m=2
+M6 vcomp vg1 vss vss nfet_03v3 L=1u W=4u nf=1 m=2
+M9 out vo1 vss vss nfet_03v3 L=0.6u W=5.5u nf=1 m=4
+M3 vo1 vb2 vcomp vss nfet_03v3 L=1u W=4u nf=1 m=2
+M4 vg1 vb2 vc45 vss nfet_03v3 L=1u W=4u nf=1 m=2
+M10 vb2 vb2 vss vss nfet_03v3 L=9u W=4u nf=1 m=1
+M13 vb2 vb3 vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=1
+XC1 out vcomp cap_mim_2f0fF c_width=25e-6 c_length=24e-6 m=1
+.ends
