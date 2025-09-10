@@ -1,0 +1,20 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 10/09/2025 02:50
+
+.SUBCKT opamp_p_input vcomp vc45 vss out vg1 vo1 vb2 vdd vinn vinp viss ibias
++ vb3
+M$1 vg1 vinn viss vdd pfet_03v3 L=1U W=16U AS=10.4P AD=10.4P PS=37.2U PD=37.2U
+M$2 viss vinp vo1 vdd pfet_03v3 L=1U W=16U AS=10.4P AD=10.4P PS=37.2U PD=37.2U
+M$9 vb3 ibias ibias vdd pfet_03v3 L=1U W=9U AS=5.85P AD=5.85P PS=20.6U PD=20.6U
+M$10 vdd vb3 vb3 vdd pfet_03v3 L=1U W=9U AS=5.85P AD=5.85P PS=20.6U PD=20.6U
+M$11 vdd vb3 viss vdd pfet_03v3 L=1U W=25U AS=16.25P AD=16.25P PS=56.5U PD=56.5U
+M$14 out vb3 vdd vdd pfet_03v3 L=0.6U W=30U AS=9.75P AD=9.75P PS=38.9U PD=38.9U
+M$20 vdd vb3 vb2 vdd pfet_03v3 L=1U W=4.5U AS=2.925P AD=2.925P PS=10.3U PD=10.3U
+M$25 vss vg1 vc45 vss nfet_03v3 L=1U W=8U AS=4.88P AD=4.88P PS=18.44U PD=18.44U
+M$26 vcomp vg1 vss vss nfet_03v3 L=1U W=8U AS=4.88P AD=4.88P PS=18.44U PD=18.44U
+M$29 out vo1 vss vss nfet_03v3 L=0.6U W=22U AS=7.645P AD=7.645P PS=30.28U
++ PD=30.28U
+M$33 vg1 vb2 vc45 vss nfet_03v3 L=1U W=8U AS=4.88P AD=4.88P PS=18.44U PD=18.44U
+M$34 vcomp vb2 vo1 vss nfet_03v3 L=1U W=8U AS=4.88P AD=4.88P PS=18.44U PD=18.44U
+M$37 vss vb2 vb2 vss nfet_03v3 L=9U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+C$38 out \$25 1.2e-12 cap_mim_2f0_m5m6_noshield A=600P P=98U
+.ENDS opamp_p_input
