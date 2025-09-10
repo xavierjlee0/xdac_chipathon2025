@@ -31,7 +31,7 @@ X10 a_1854_0# a_1788_1260# a_1694_0# w_n230_n138# pfet_03v3 ad=3.9p pd=13.3u as=
 X11 a_1694_0# a_1628_1260# a_1534_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
 .ends
 
-.subckt transmission_gate_2 VSSd VDDd I Bus ZN Pin
+.subckt transmission_gate_2 VSSd VDDd I Pin ZN Bus
 Xinv_1_0 VDDd VSSd ZN I VSSd VDDd inv_1
 Xnfet$1_0 I Pin I I Bus Pin Bus I Pin VSSd nfet$1
 Xpfet$1_0 Pin Bus Bus ZN Bus Pin ZN Pin ZN ZN Pin ZN ZN Pin Bus Pin ZN Bus Bus ZN
