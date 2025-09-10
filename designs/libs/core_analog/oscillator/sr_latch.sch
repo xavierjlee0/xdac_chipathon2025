@@ -8,7 +8,7 @@ N 520 -260 560 -260 {lab=NOTQ}
 N 380 -280 400 -280 {lab=Q}
 N 380 -400 400 -400 {lab=NOTQ}
 N 280 -440 400 -440 {lab=NOTR}
-N 280 -240 400 -240 {lab=S}
+N 280 -240 400 -240 {lab=NOTS}
 N 520 -420 620 -420 {lab=Q}
 N 620 -420 620 -340 {lab=Q}
 N 380 -320 380 -280 {lab=Q}
@@ -31,5 +31,5 @@ C {ipin.sym} 280 -440 0 0 {name=p1 lab=NOTR}
 C {ipin.sym} 280 -240 0 0 {name=p2 lab=NOTS}
 C {opin.sym} 660 -420 0 0 {name=p3 lab=Q}
 C {opin.sym} 660 -260 0 0 {name=p4 lab=NOTQ}
-C {libs/gf180mcu_fd_sc_mcu9t5v0_symbols/nand2_2.sym} 460 -420 0 0 {name=x2 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
-C {libs/gf180mcu_fd_sc_mcu9t5v0_symbols/nand2_2.sym} 460 -260 0 0 {name=x1 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
+C {libs/core_analog/op_Gates/nand2_2.sym} 460 -420 0 0 {name=x3 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
+C {libs/core_analog/op_Gates/nand2_2.sym} 460 -260 0 0 {name=x1 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
