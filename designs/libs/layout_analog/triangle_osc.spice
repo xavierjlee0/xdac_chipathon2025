@@ -1,19 +1,22 @@
 ** sch_path: /foss/designs/libs/core_analog/oscillator/triangle_osc.sch
 .subckt triangle_osc vdd vho out vlo iref vss
 *.PININFO iref:I vss:I vho:I vlo:I out:O vdd:I
-M1 net1 iref vss vss nfet_03v3 L=1u W=4u nf=1 m=1
-M8 net2 iref vss vss nfet_03v3 L=1u W=4u nf=1 m=1
-M4 net1 net1 vdd vdd pfet_03v3 L=1u W=6u nf=1 m=1
-M5 net3 net1 vdd vdd pfet_03v3 L=1u W=6u nf=1 m=1
-M6 out nq net3 vdd pfet_03v3 L=1u W=6u nf=1 m=1
-M7 out nq net2 vss nfet_03v3 L=1u W=4u nf=1 m=1
-M2 iref iref vss vss nfet_03v3 L=1u W=4u nf=1 m=1
-M10 net5 iref vss vss nfet_03v3 L=1u W=4u nf=1 m=1
-M9 net4 net1 vdd vdd pfet_03v3 L=1u W=6u nf=1 m=1
-xn_comp vdd vcompn vho vss out net4 Nmos_Comparator
-xp_comp vdd vcompp out vss vlo net5 Pmos_Comparator
+M1 v_4_1_pn iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=3
+M8 v_8_7 iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=3
+M4 v_4_1_pn v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=3
+M5 v_5_6 v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=3
+M6 out nq v_5_6 vdd pfet_03v3 L=0.3u W=4u nf=1 m=2
+M7 out nq v_8_7 vss nfet_03v3 L=0.3u W=4u nf=1 m=1
+M2 iref iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
+M10 ibias_p iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
+M9 ibias_n v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=1
+xn_comp vdd vcompn vho vss out ibias_n Nmos_Comparator
+xp_comp vdd vcompp out vss vlo ibias_p Pmos_Comparator
 x1 vcompp q nq vcompn sr_latch
 **** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
 
 
 **** end user architecture code
@@ -24,18 +27,18 @@ x1 vcompp q nq vcompn sr_latch
 ** sch_path: /foss/designs/libs/core_analog/Comparator/Nmos_Comparator.sch
 .subckt Nmos_Comparator vdd vout inp vss inn iref
 *.PININFO vss:I vdd:I iref:I inn:I inp:I vout:O
-M3 net1 net1 vss vss nfet_03v3 L=1u W=3.5u nf=1 m=1
-M4 vout net1 vss vss nfet_03v3 L=1u W=3.5u nf=1 m=1
-M5 net2 inn net3 vss nfet_03v3 L=1u W=4u nf=1 m=1
-M6 net4 inp net3 vss nfet_03v3 L=1u W=4u nf=1 m=1
-M7 net1 net2 vdd vdd pfet_03v3 L=0.5u W=16.5u nf=4 m=1
-M9 net4 net4 vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
-M11 net2 net2 vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
-M12 vout net4 vdd vdd pfet_03v3 L=0.5u W=16.5u nf=4 m=1
-M1 net4 net2 vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
-M2 net2 net4 vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+M3 v_3_7_n v_3_7_n vss vss nfet_03v3 L=1u W=3.5u nf=1 m=1
+M4 vout v_3_7_n vss vss nfet_03v3 L=1u W=3.5u nf=1 m=1
+M5 v_5_11_n inn i_bias_n vss nfet_03v3 L=1u W=4u nf=1 m=1
+M6 v_6_9_n inp i_bias_n vss nfet_03v3 L=1u W=4u nf=1 m=1
+M7 v_3_7_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=16.5u nf=4 m=1
+M9 v_6_9_n v_6_9_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+M11 v_5_11_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+M12 vout v_6_9_n vdd vdd pfet_03v3 L=0.5u W=16.5u nf=4 m=1
+M1 v_6_9_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+M2 v_5_11_n v_6_9_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
 M8 iref iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
-M10 net3 iref vss vss nfet_03v3 L=1u W=5u nf=2 m=1
+M10 i_bias_n iref vss vss nfet_03v3 L=1u W=5u nf=2 m=1
 .ends
 
 
@@ -67,36 +70,4 @@ M2 iref iref vdd vdd pfet_03v3 L=1u W=7u nf=1 m=1
 x1 NOTR NOTQ Q VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_2
 x2 Q NOTS NOTQ VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_2
 .ends
-
-* Copyright 2022 GlobalFoundries PDK Authors
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*      http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-
-.SUBCKT gf180mcu_fd_sc_mcu9t5v0__nand2_2 A1 A2 ZN VDD VNW VPW VSS
-*.PININFO A1:I A2:I ZN:O VDD:P VNW:P VPW:P VSS:G
-*.EQN ZN=!(A1 * A2)
-M_i_1_1 net_0_0 A2 VSS VPW nfet_05v0 W=1.320000U L=0.600000U
-M_i_0_1 ZN A1 net_0_0 VPW nfet_05v0 W=1.320000U L=0.600000U
-M_i_0_0 net_0_1 A1 ZN VPW nfet_05v0 W=1.320000U L=0.600000U
-M_i_1_0 VSS A2 net_0_1 VPW nfet_05v0 W=1.320000U L=0.600000U
-M_i_3_1 ZN A2 VDD VNW pfet_05v0 W=1.645000U L=0.500000U
-M_i_2_1 VDD A1 ZN VNW pfet_05v0 W=1.645000U L=0.500000U
-M_i_2_0 ZN A1 VDD VNW pfet_05v0 W=1.645000U L=0.500000U
-M_i_3_0 VDD A2 ZN VNW pfet_05v0 W=1.645000U L=0.500000U
-.ENDS
-
-
-******* EOF
-
-
 

@@ -14,18 +14,18 @@ N 930 -300 930 -250 {lab=vss}
 N 870 -350 870 -300 {lab=iref}
 N 1020 -350 1020 -300 {lab=iref}
 N 950 -700 950 -660 {lab=vdd}
-N 990 -630 1060 -630 {lab=#net1}
-N 1020 -630 1020 -560 {lab=#net1}
-N 950 -560 1020 -560 {lab=#net1}
+N 990 -630 1060 -630 {lab=v_4_1_pn}
+N 1020 -630 1020 -560 {lab=v_4_1_pn}
+N 950 -560 1020 -560 {lab=v_4_1_pn}
 N 1100 -700 1100 -660 {lab=vdd}
 N 1100 -630 1120 -630 {lab=vdd}
 N 1120 -700 1120 -630 {lab=vdd}
 N 780 -700 1120 -700 {lab=vdd}
 N 930 -630 950 -630 {lab=vdd}
 N 930 -700 930 -630 {lab=vdd}
-N 1100 -380 1100 -330 {lab=#net2}
+N 1100 -380 1100 -330 {lab=v_8_7}
 N 1100 -490 1100 -470 {lab=out}
-N 1100 -600 1100 -550 {lab=#net3}
+N 1100 -600 1100 -550 {lab=v_5_6}
 N 1030 -520 1060 -520 {lab=nq}
 N 1030 -490 1030 -410 {lab=nq}
 N 1030 -410 1060 -410 {lab=nq}
@@ -41,13 +41,13 @@ N 260 -270 260 -250 {lab=vss}
 N 240 -300 260 -300 {lab=vss}
 N 300 -300 320 -300 {lab=iref}
 N 700 -350 700 -300 {lab=iref}
-N 950 -600 950 -570 {lab=#net1}
+N 950 -600 950 -570 {lab=v_4_1_pn}
 N 250 -650 260 -650 {lab=vdd}
 N 250 -700 250 -650 {lab=vdd}
 N 260 -700 260 -680 {lab=vdd}
-N 300 -650 830 -650 {lab=#net1}
-N 830 -650 830 -560 {lab=#net1}
-N 830 -560 950 -560 {lab=#net1}
+N 300 -650 830 -650 {lab=v_4_1_pn}
+N 830 -650 830 -560 {lab=v_4_1_pn}
+N 830 -560 950 -560 {lab=v_4_1_pn}
 N 140 -560 180 -560 {lab=out}
 N 140 -560 140 -390 {lab=out}
 N 50 -250 170 -250 {lab=vss}
@@ -75,13 +75,13 @@ N 280 -360 280 -340 {lab=vss}
 N 140 -380 220 -380 {lab=out}
 N 770 -300 790 -300 {lab=vss}
 N 830 -300 870 -300 {lab=iref}
-N 260 -620 260 -580 {lab=#net4}
-N 260 -360 260 -330 {lab=#net5}
+N 260 -620 260 -580 {lab=ibias_n}
+N 260 -360 260 -330 {lab=ibias_p}
 N 280 -340 310 -340 {lab=vss}
 N 280 -440 310 -440 {lab=vdd}
 N 280 -580 300 -580 {lab=vdd}
 N 700 -350 870 -350 {lab=iref}
-N 950 -570 950 -330 {lab=#net1}
+N 950 -570 950 -330 {lab=v_4_1_pn}
 N 870 -350 1020 -350 {lab=iref}
 N 790 -390 790 -350 {lab=iref}
 N 790 -350 790 -330 {lab=iref}
@@ -248,5 +248,10 @@ format="tcleval( @value )"
 value="
 .include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
 .include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
+
 "}
+C {lab_wire.sym} 260 -340 0 0 {name=p11 sig_type=std_logic lab=ibias_p}
+C {lab_wire.sym} 260 -590 0 0 {name=p16 sig_type=std_logic lab=ibias_n}
+C {lab_wire.sym} 930 -560 0 0 {name=p17 sig_type=std_logic lab=v_4_1_pn}
+C {lab_wire.sym} 1100 -350 0 0 {name=p18 sig_type=std_logic lab=v_8_7}
+C {lab_wire.sym} 1100 -580 0 0 {name=p19 sig_type=std_logic lab=v_5_6}
