@@ -1,4 +1,4 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 04/09/2025 14:34
+* Extracted by KLayout with GF180MCU LVS runset on : 09/09/2025 02:01
 
 .SUBCKT triangle_osc vss vcompp inn|vlo inn|inp|out vdd iref vssd vddd inp|vho
 M$1 \$3 inn|vlo \$16 vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
