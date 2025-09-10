@@ -1,6 +1,0 @@
-** sch_path: /foss/designs/libs/core_analog/oscillator/sr_latch.sch
-.subckt sr_latch NOTR Q NOTQ NOTS
-*.PININFO NOTR:I NOTS:I Q:O NOTQ:O
-x1 NOTR NOTQ Q VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_2
-x2 Q NOTS NOTQ VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_2
-.ends
