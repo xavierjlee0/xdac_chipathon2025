@@ -75,8 +75,8 @@ N 280 -360 280 -340 {lab=vss}
 N 140 -380 220 -380 {lab=out}
 N 770 -300 790 -300 {lab=vss}
 N 830 -300 870 -300 {lab=iref}
-N 260 -620 260 -580 {lab=ibias_n}
-N 260 -360 260 -330 {lab=ibias_p}
+N 260 -620 260 -580 {lab=ibias_compn}
+N 260 -360 260 -330 {lab=ibias_compp}
 N 280 -340 310 -340 {lab=vss}
 N 280 -440 310 -440 {lab=vdd}
 N 280 -580 300 -580 {lab=vdd}
@@ -250,8 +250,8 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 
 "}
-C {lab_wire.sym} 260 -340 0 0 {name=p11 sig_type=std_logic lab=ibias_p}
-C {lab_wire.sym} 260 -590 0 0 {name=p16 sig_type=std_logic lab=ibias_n}
+C {lab_wire.sym} 260 -340 0 0 {name=p11 sig_type=std_logic lab=ibias_compp}
+C {lab_wire.sym} 260 -590 0 0 {name=p16 sig_type=std_logic lab=ibias_compn}
 C {lab_wire.sym} 930 -560 0 0 {name=p17 sig_type=std_logic lab=v_4_1_pn}
 C {lab_wire.sym} 1100 -350 0 0 {name=p18 sig_type=std_logic lab=v_8_7}
 C {lab_wire.sym} 1100 -580 0 0 {name=p19 sig_type=std_logic lab=v_5_6}

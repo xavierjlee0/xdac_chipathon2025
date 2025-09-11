@@ -1,92 +1,92 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 10/09/2025 21:35
+* Extracted by KLayout with GF180MCU LVS runset on : 11/09/2025 02:32
 
-.SUBCKT triangle_osc vss vcompp inn|vlo v_4_1_pn v_8_7 inn|inp|out vdd iref
-+ vssd vddd ibias_p nq ibias_n v_5_6 inp|vho
-M$1 \$3 inn|vlo \$16 vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
-+ PD=17.86U
-M$5 \$4 inn|inp|out \$16 vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
-+ PD=17.86U
-M$9 vdd \$2 \$2 vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U PD=33.38U
-M$14 vdd \$2 vcompp vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U
+.SUBCKT triangle_osc vdd ibias_p ibias_compp v_7_3_p v_4_1_pn v_8_7 vcompp
++ v_5_11_p v_6_9_p iref vlo out vss vssd vddd nq ibias_compn v_5_6 i_bias_n vho
++ v_3_7_n v_5_11_n v_6_9_n vcompn
+M$1 ibias_compp ibias_compp vdd vdd pfet_03v3 L=1U W=7U AS=3.185P AD=3.185P
++ PS=12.32U PD=12.32U
+M$3 ibias_p ibias_compp vdd vdd pfet_03v3 L=1U W=14U AS=5.005P AD=5.005P
++ PS=20.36U PD=20.36U
+M$7 vdd v_7_3_p v_7_3_p vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U
 + PD=33.38U
-M$19 \$16 ibias_p vdd vdd pfet_03v3 L=1U W=14U AS=5.005P AD=5.005P PS=20.36U
-+ PD=20.36U
-M$23 ibias_p ibias_p vdd vdd pfet_03v3 L=1U W=7U AS=3.185P AD=3.185P PS=12.32U
-+ PD=12.32U
-M$25 inn|inp|out nq v_5_6 vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U
-+ PD=13.3U
-M$26 vdd v_4_1_pn ibias_n vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U
+M$12 vcompp v_7_3_p vdd vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U
++ PD=33.38U
+M$17 v_5_11_p vlo ibias_p vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
++ PD=17.86U
+M$21 v_6_9_p out ibias_p vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
++ PD=17.86U
+M$25 out nq v_5_6 vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U PD=13.3U
+M$26 vdd v_4_1_pn ibias_compn vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U
 + PD=13.3U
 M$27 vdd v_4_1_pn v_4_1_pn vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U
 + PD=13.3U
 M$28 v_5_6 v_4_1_pn vdd vdd pfet_03v3 L=1U W=6U AS=3.9P AD=3.9P PS=13.3U
 + PD=13.3U
-M$29 \$67 \$67 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
+M$29 v_5_11_n v_5_11_n vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P
++ PS=16.82U PD=16.82U
+M$31 v_6_9_n v_5_11_n vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P
++ PS=16.82U PD=16.82U
+M$33 v_3_7_n v_5_11_n vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P
++ PS=26.57U PD=26.57U
+M$35 v_5_11_n v_6_9_n vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P
++ PS=16.82U PD=16.82U
+M$37 v_6_9_n v_6_9_n vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
 + PD=16.82U
-M$31 \$68 \$67 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
-+ PD=16.82U
-M$33 \$65 \$67 vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P PS=26.57U
-+ PD=26.57U
-M$35 \$67 \$68 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
-+ PD=16.82U
-M$37 \$68 \$68 vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
-+ PD=16.82U
-M$39 \$69 \$68 vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P PS=26.57U
-+ PD=26.57U
-M$41 \$38 nq vddd vddd pfet_05v0 L=0.5U W=3.29U AS=1.1515P AD=1.1515P PS=6.335U
+M$39 vcompn v_6_9_n vdd vdd pfet_03v3 L=0.5U W=16.5U AS=7.5075P AD=7.5075P
++ PS=26.57U PD=26.57U
+M$41 \$35 nq vddd vddd pfet_05v0 L=0.5U W=3.29U AS=1.1515P AD=1.1515P PS=6.335U
 + PD=6.335U
-M$42 vddd vcompp \$38 vddd pfet_05v0 L=0.5U W=3.29U AS=0.8554P AD=0.8554P
+M$42 vddd vcompp \$35 vddd pfet_05v0 L=0.5U W=3.29U AS=0.8554P AD=0.8554P
 + PS=4.33U PD=4.33U
-M$45 nq \$38 vddd vddd pfet_05v0 L=0.5U W=3.29U AS=1.1515P AD=1.1515P PS=6.335U
+M$45 nq \$35 vddd vddd pfet_05v0 L=0.5U W=3.29U AS=1.1515P AD=1.1515P PS=6.335U
 + PD=6.335U
-M$46 vddd \$69 nq vddd pfet_05v0 L=0.5U W=3.29U AS=0.8554P AD=0.8554P PS=4.33U
-+ PD=4.33U
-M$49 vss \$3 \$2 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$50 \$3 \$3 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$51 vss \$4 \$3 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$52 \$4 \$3 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$53 vss \$4 \$4 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$54 vcompp \$4 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$55 vss iref v_4_1_pn vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
+M$46 vddd vcompn nq vddd pfet_05v0 L=0.5U W=3.29U AS=0.8554P AD=0.8554P
++ PS=4.33U PD=4.33U
+M$49 vdd iref v_4_1_pn vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
 + PD=9.22U
-M$56 v_8_7 iref vss vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
-M$57 vss iref iref vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
-M$58 inn|inp|out nq v_8_7 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
+M$50 v_8_7 iref vdd vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$51 vdd iref iref vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$52 out nq v_8_7 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$53 vss v_5_11_p v_7_3_p vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$54 v_5_11_p v_5_11_p vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$55 vss v_6_9_p v_5_11_p vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$56 v_6_9_p v_5_11_p vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$57 vss v_6_9_p v_6_9_p vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$58 vcompp v_6_9_p vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
++ PD=12.22U
+M$59 vdd iref ibias_compp vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
 + PD=9.22U
-M$59 vss iref ibias_p vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
-+ PD=9.22U
-M$60 ibias_n ibias_n vss vss nfet_03v3 L=1U W=2.5U AS=1.525P AD=1.525P PS=6.22U
-+ PD=6.22U
-M$61 \$58 ibias_n vss vss nfet_03v3 L=1U W=5U AS=2.175P AD=2.175P PS=9.24U
-+ PD=9.24U
-M$63 \$65 \$65 vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
+M$60 i_bias_n ibias_compn vss vss nfet_03v3 L=1U W=5U AS=2.175P AD=2.175P
++ PS=9.24U PD=9.24U
+M$62 ibias_compn ibias_compn vss vss nfet_03v3 L=1U W=2.5U AS=1.525P AD=1.525P
++ PS=6.22U PD=6.22U
+M$63 vss v_3_7_n v_3_7_n vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
 + PD=8.22U
-M$64 \$69 \$65 vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
+M$64 vcompn v_3_7_n vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
 + PD=8.22U
-M$65 \$67 inn|inp|out \$58 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
+M$65 i_bias_n out v_5_11_n vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
 + PD=9.22U
-M$66 \$68 inp|vho \$58 vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
+M$66 v_6_9_n vho i_bias_n vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
 + PD=9.22U
-M$67 \$37 nq vssd vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.2112P PS=3.52U
+M$67 \$34 nq vssd vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.2112P PS=3.52U
 + PD=1.64U
-M$68 \$38 vcompp \$37 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.3432P
+M$68 \$35 vcompp \$34 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.3432P
 + PS=1.64U PD=1.84U
-M$69 \$44 vcompp \$38 vss nfet_05v0 L=0.6U W=1.32U AS=0.3432P AD=0.2112P
+M$69 \$44 vcompp \$35 vss nfet_05v0 L=0.6U W=1.32U AS=0.3432P AD=0.2112P
 + PS=1.84U PD=1.64U
 M$70 vssd nq \$44 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.5808P PS=1.64U
 + PD=3.52U
-M$71 \$50 \$38 vssd vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.2112P PS=3.52U
+M$71 \$51 \$35 vssd vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.2112P PS=3.52U
 + PD=1.64U
-M$72 nq \$69 \$50 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.3432P PS=1.64U
+M$72 nq vcompn \$51 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.3432P PS=1.64U
 + PD=1.84U
-M$73 \$53 \$69 nq vss nfet_05v0 L=0.6U W=1.32U AS=0.3432P AD=0.2112P PS=1.84U
+M$73 \$52 vcompn nq vss nfet_05v0 L=0.6U W=1.32U AS=0.3432P AD=0.2112P PS=1.84U
 + PD=1.64U
-M$74 vssd \$38 \$53 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.5808P PS=1.64U
+M$74 vssd \$35 \$52 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.5808P PS=1.64U
 + PD=3.52U
 .ENDS triangle_osc
