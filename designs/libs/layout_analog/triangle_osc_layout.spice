@@ -125,32 +125,33 @@ Xpfet$1_1 v_5_11_n v_5_11_n vdd vdd v_3_7_n vdd pfet$1
 Xnfet$2_0 VSUBS VSUBS m1_n922_n1160# m1_n922_n1160# nfet$2
 .ends
 
-.subckt triangle_osc iref vdd vddd vho ibias_compn v_4_1_pn out vlo nq
-Xpfet$8_0[0] vdd v_4_1_pn v_4_1_pn vdd pfet$8
-Xpfet$8_0[1] vdd v_4_1_pn v_4_1_pn vdd pfet$8
-Xpfet$8_0[2] vdd v_4_1_pn v_4_1_pn vdd pfet$8
+.subckt triangle_osc iref vdd v_4_1_pn vss vddd q ibias_compn v_8_7 v_5_6 out vlo
++ ibias_compp nq vho
+Xpfet$8_0[0] vdd v_4_1_pn v_5_6 vdd pfet$8
+Xpfet$8_0[1] vdd v_4_1_pn v_5_6 vdd pfet$8
+Xpfet$8_0[2] vdd v_4_1_pn v_5_6 vdd pfet$8
 Xpfet$8_1[0] vdd v_4_1_pn v_4_1_pn vdd pfet$8
 Xpfet$8_1[1] vdd v_4_1_pn v_4_1_pn vdd pfet$8
 Xpfet$8_1[2] vdd v_4_1_pn v_4_1_pn vdd pfet$8
-Xpfet$8_2 vdd v_4_1_pn m1_n212_n582# vdd pfet$8
+Xpfet$8_2 vdd v_4_1_pn ibias_compn vdd pfet$8
 XPmos_Comparator_0 Pmos_Comparator_0/vcompp Pmos_Comparator_0/v_7_3_p Pmos_Comparator_0/v_5_11_p
-+ Pmos_Comparator_0/v_6_9_p Pmos_Comparator_0/vdd Pmos_Comparator_0/ibias_compp Pmos_Comparator_0/ibias_p
-+ vlo out Pmos_Comparator_0/ibias_compp vho Pmos_Comparator
-Xpfet$10_0[0] v_4_1_pn nq out vdd pfet$10
-Xpfet$10_0[1] v_4_1_pn nq out vdd pfet$10
-Xnfet$8_0 vho vho iref iref nfet$8
-Xnfet$8_1 vho vho iref Pmos_Comparator_0/ibias_compp nfet$8
-Xnfet$8_2[0] vho vho iref v_4_1_pn nfet$8
-Xnfet$8_2[1] vho vho iref v_4_1_pn nfet$8
-Xnfet$8_2[2] vho vho iref v_4_1_pn nfet$8
-Xnfet$8_3[0] vho vho iref m1_694_n2914# nfet$8
-Xnfet$8_3[1] vho vho iref m1_694_n2914# nfet$8
-Xnfet$8_3[2] vho vho iref m1_694_n2914# nfet$8
-Xnand2_2_0[0] vddd vho nq vho vddd m1_n1185_n1789# Nmos_Comparator_0/vcompn nand2_2
-Xnand2_2_0[1] vddd vho m1_n1185_n1789# vho vddd nq Pmos_Comparator_0/vcompp nand2_2
-Xnfet$4_0 m1_694_n2914# out vho nq nfet$4
-XNmos_Comparator_0 Nmos_Comparator_0/vss Nmos_Comparator_0/vdd Nmos_Comparator_0/vcompn
-+ Nmos_Comparator_0/v_6_9_n Nmos_Comparator_0/i_bias_n Nmos_Comparator_0/v_3_7_n Nmos_Comparator_0/v_5_11_n
-+ m1_n212_n582# vho out vho Nmos_Comparator
++ Pmos_Comparator_0/v_6_9_p vdd ibias_compp Pmos_Comparator_0/ibias_p vlo out ibias_compp
++ vss Pmos_Comparator
+Xpfet$10_0[0] v_5_6 nq out vdd pfet$10
+Xpfet$10_0[1] v_5_6 nq out vdd pfet$10
+Xnfet$8_0 vss vss iref iref nfet$8
+Xnfet$8_1 vss vss iref ibias_compp nfet$8
+Xnfet$8_2[0] vss vss iref v_4_1_pn nfet$8
+Xnfet$8_2[1] vss vss iref v_4_1_pn nfet$8
+Xnfet$8_2[2] vss vss iref v_4_1_pn nfet$8
+Xnfet$8_3[0] vss vss iref v_8_7 nfet$8
+Xnfet$8_3[1] vss vss iref v_8_7 nfet$8
+Xnfet$8_3[2] vss vss iref v_8_7 nfet$8
+Xnand2_2_0[0] vddd vss nq vss vddd q Nmos_Comparator_0/vcompn nand2_2
+Xnand2_2_0[1] vddd vss q vss vddd nq Pmos_Comparator_0/vcompp nand2_2
+Xnfet$4_0 v_8_7 out vss nq nfet$4
+XNmos_Comparator_0 Nmos_Comparator_0/vss vdd Nmos_Comparator_0/vcompn Nmos_Comparator_0/v_6_9_n
++ Nmos_Comparator_0/i_bias_n Nmos_Comparator_0/v_3_7_n Nmos_Comparator_0/v_5_11_n
++ ibias_compn vho out vss Nmos_Comparator
 .ends
 

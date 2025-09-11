@@ -139,81 +139,92 @@ Flattening unmatched subcell nfet$4 in circuit triangle_osc (0)(1 instance)
 Flattening unmatched subcell sr_latch in circuit triangle_osc (1)(1 instance)
 Flattening unmatched subcell gf180mcu_fd_sc_mcu9t5v0__nand2_2 in circuit triangle_osc (1)(2 instances)
 
-Cell triangle_osc (0) disconnected node: ibias_compn
-Class triangle_osc (0):  Merged 14 parallel devices.
+Class triangle_osc (0):  Merged 13 parallel devices.
 Class triangle_osc (1):  Merged 4 parallel devices.
-Cell triangle_osc (0) disconnected node: ibias_compn
 Subcircuit summary:
 Circuit 1: triangle_osc                    |Circuit 2: triangle_osc                    
 -------------------------------------------|-------------------------------------------
-pfet_03v3 (9->3)                           |pfet_03v3 (9->4) **Mismatch**              
+pfet_03v3 (9->4)                           |pfet_03v3 (9->4)                           
 Pmos_Comparator (1)                        |Pmos_Comparator (1)                        
 nfet_03v3 (9->5)                           |nfet_03v3 (9->5)                           
 nfet_05v0 (8)                              |nfet_05v0 (8)                              
 pfet_05v0 (8->4)                           |pfet_05v0 (8->4)                           
 Nmos_Comparator (1)                        |Nmos_Comparator (1)                        
-Number of devices: 22 **Mismatch**         |Number of devices: 23 **Mismatch**         
+Number of devices: 23                      |Number of devices: 23                      
 Number of nets: 28 **Mismatch**            |Number of nets: 29 **Mismatch**            
 ---------------------------------------------------------------------------------------
 NET mismatches: Class fragments follow (with fanout counts):
 Circuit 1: triangle_osc                    |Circuit 2: triangle_osc                    
 
 ---------------------------------------------------------------------------------------
-Net: vdd                                   |Net: vdd                                   
-  pfet_03v3/(1|3) = 2                      |  pfet_03v3/(1|3) = 3                      
-  pfet_03v3/4 = 3                          |  pfet_03v3/4 = 4                          
-                                           |  Nmos_Comparator/vdd = 1                  
-                                           |  Pmos_Comparator/vdd = 1                  
-                                           |                                           
-Net: v_4_1_pn                              |Net: v_4_1_pn                              
-  nfet_03v3/(1|3) = 1                      |  nfet_03v3/(1|3) = 1                      
-  pfet_03v3/(1|3) = 2                      |  pfet_03v3/(1|3) = 1                      
-  pfet_03v3/2 = 2                          |  pfet_03v3/2 = 3                          
-                                           |                                           
-Net: Pmos_Comparator_0/vdd                 |Net: vss                                   
-  Pmos_Comparator/vdd = 1                  |  nfet_03v3/(1|3) = 4                      
-                                           |  nfet_03v3/4 = 5                          
-                                           |  Nmos_Comparator/vss = 1                  
-                                           |  Pmos_Comparator/vss = 1                  
-                                           |                                           
-Net: Nmos_Comparator_0/vdd                 |Net: v_5_6                                 
-  Nmos_Comparator/vdd = 1                  |  pfet_03v3/(1|3) = 2                      
-                                           |                                           
-Net: vho                                   |Net: vho                                   
-  Pmos_Comparator/VSUBS = 1                |  Nmos_Comparator/inp = 1                  
-  nfet_03v3/(1|3) = 4                      |                                           
-  nfet_03v3/4 = 5                          |                                           
-  nfet_05v0/4 = 8                          |                                           
+Net: vss                                   |Net: vss                                   
+  nfet_03v3/(1|3) = 4                      |  nfet_03v3/(1|3) = 4                      
+  nfet_03v3/4 = 5                          |  nfet_03v3/4 = 5                          
+  Pmos_Comparator/VSUBS = 1                |  Nmos_Comparator/vss = 1                  
+  nfet_05v0/4 = 8                          |  Pmos_Comparator/vss = 1                  
   nfet_05v0/(1|3) = 4                      |                                           
-  Nmos_Comparator/m1_n316_n956# = 1        |                                           
   Nmos_Comparator/VSUBS = 1                |                                           
-                                           |                                           
-Net: nq                                    |Net: nq                                    
-  pfet_03v3/2 = 1                          |  pfet_03v3/2 = 1                          
-  nfet_03v3/2 = 1                          |  nfet_03v3/2 = 1                          
-  nfet_05v0/2 = 2                          |  nfet_05v0/2 = 2                          
-  pfet_05v0/2 = 1                          |  pfet_05v0/2 = 1                          
-  nfet_05v0/(1|3) = 2                      |  nfet_05v0/(1|3) = 2                      
-  pfet_05v0/(1|3) = 2                      |  pfet_05v0/(1|3) = 2                      
                                            |                                           
 (no matching net)                          |Net: sr_latch:1/VSSd                       
                                            |  nfet_05v0/(1|3) = 4                      
                                            |  nfet_05v0/4 = 8                          
 ---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: q                                     |Net: q                                     
+  pfet_05v0/2 = 1                          |  pfet_05v0/2 = 1                          
+  nfet_05v0/2 = 2                          |  nfet_05v0/2 = 2                          
+  nfet_05v0/(1|3) = 2                      |  nfet_05v0/(1|3) = 2                      
+  pfet_05v0/(1|3) = 2                      |  pfet_05v0/(1|3) = 2                      
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: Nmos_Comparator_0/vcompn              |Net: vcompn                                
+  nfet_05v0/2 = 2                          |  nfet_05v0/2 = 2                          
+  pfet_05v0/2 = 1                          |  pfet_05v0/2 = 1                          
+  Nmos_Comparator/vcompn = 1               |  Nmos_Comparator/vout = 1                 
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: /nand2_2_0[0]/a_1371_7378#            |Net: sr_latch:1/gf180mcu_fd_sc_mcu9t5v0__n 
+  nfet_05v0/(1|3) = 2                      |  nfet_05v0/(1|3) = 2                      
+                                           |                                           
+Net: /nand2_2_0[0]/a_1371_6970#            |Net: sr_latch:1/gf180mcu_fd_sc_mcu9t5v0__n 
+  nfet_05v0/(1|3) = 2                      |  nfet_05v0/(1|3) = 2                      
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: nq                                    |Net: nq                                    
+  pfet_03v3/2 = 1                          |  pfet_03v3/2 = 1                          
+  nfet_05v0/(1|3) = 2                      |  nfet_05v0/(1|3) = 2                      
+  pfet_05v0/(1|3) = 2                      |  pfet_05v0/(1|3) = 2                      
+  pfet_05v0/2 = 1                          |  pfet_05v0/2 = 1                          
+  nfet_05v0/2 = 2                          |  nfet_05v0/2 = 2                          
+  nfet_03v3/2 = 1                          |  nfet_03v3/2 = 1                          
+---------------------------------------------------------------------------------------
 DEVICE mismatches: Class fragments follow (with node fanout counts):
 Circuit 1: triangle_osc                    |Circuit 2: triangle_osc                    
 
 ---------------------------------------------------------------------------------------
-Instance: pfet$8_0[0]/pfet_03v3:0          |Instance: pfet_03v3:M4                     
-  (1,3) = (5,5)                            |  (1,3) = (9,5)                            
-  2 = 5                                    |  2 = 5                                    
-  4 = 5                                    |  4 = 9                                    
+Instance: nand2_2_0[0]/nfet_05v0:6         |Instance: sr_latch:1/gf180mcu_fd_sc_mcu9t5 
+  (1,3) = (23,2)                           |  (1,3) = (12,2)                           
+  2 = 7                                    |  2 = 4                                    
+  4 = 23                                   |  4 = 12                                   
                                            |                                           
-(no matching instance)                     |Instance: pfet_03v3:M5                     
-                                           |  (1,3) = (9,2)                            
-                                           |  2 = 5                                    
-                                           |  4 = 9                                    
+Instance: nand2_2_0[0]/nfet_05v0:4         |Instance: sr_latch:1/gf180mcu_fd_sc_mcu9t5 
+  (1,3) = (23,2)                           |  (1,3) = (12,2)                           
+  2 = 7                                    |  2 = 4                                    
+  4 = 23                                   |  4 = 12                                   
                                            |                                           
+Instance: nand2_2_0[0]/nfet_05v0:2         |Instance: sr_latch:1/gf180mcu_fd_sc_mcu9t5 
+  (1,3) = (9,2)                            |  (1,3) = (9,2)                            
+  2 = 4                                    |  2 = 7                                    
+  4 = 23                                   |  4 = 12                                   
+                                           |                                           
+Instance: nand2_2_0[0]/nfet_05v0:0         |Instance: sr_latch:1/gf180mcu_fd_sc_mcu9t5 
+  (1,3) = (9,2)                            |  (1,3) = (9,2)                            
+  2 = 4                                    |  2 = 7                                    
+  4 = 23                                   |  4 = 12                                   
 ---------------------------------------------------------------------------------------
 Netlists do not match.
 Port matching may fail to disambiguate symmetries.
@@ -221,17 +232,20 @@ Port matching may fail to disambiguate symmetries.
 Subcircuit pins:
 Circuit 1: triangle_osc                    |Circuit 2: triangle_osc                    
 -------------------------------------------|-------------------------------------------
-vdd                                        |(no pin, node is v_4_1_pn)                 
-v_4_1_pn                                   |(no pin, node is v_5_6)                    
-vho                                        |(no pin, node is nq)                       
-nq                                         |vss **Mismatch**                           
-vlo                                        |vlo                                        
-iref                                       |iref                                       
+vss                                        |vss                                        
+q                                          |(no pin, node is q)                        
 vddd                                       |(no pin, node is sr_latch:1/VDDd)          
+vho                                        |vho                                        
+vlo                                        |vlo                                        
 out                                        |out                                        
-(no pin, node is nq)                       |vdd                                        
-(no pin, node is nq)                       |vho                                        
-ibias_compn                                |(no matching pin)                          
+v_8_7                                      |(no pin, node is v_8_7)                    
+v_5_6                                      |(no pin, node is v_5_6)                    
+ibias_compp                                |(no pin, node is ibias_compp)              
+ibias_compn                                |(no pin, node is ibias_compn)              
+v_4_1_pn                                   |(no pin, node is v_4_1_pn)                 
+iref                                       |iref                                       
+nq                                         |(no pin, node is nq)                       
+vdd                                        |vdd                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists for triangle_osc and triangle_osc altered to match.
 Device classes triangle_osc and triangle_osc are equivalent.
