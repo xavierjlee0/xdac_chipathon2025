@@ -1,4 +1,4 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 11/09/2025 00:56
+* Extracted by KLayout with GF180MCU LVS runset on : 11/09/2025 21:19
 
 .SUBCKT Pmos_Comparator vss v_7_3_p v_5_11_p v_6_9_p vout inn inp ibias_p iref
 + vdd

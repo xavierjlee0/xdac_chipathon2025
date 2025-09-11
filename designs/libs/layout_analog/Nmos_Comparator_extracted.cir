@@ -1,6 +1,7 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 10/09/2025 23:28
+* Extracted by KLayout with GF180MCU LVS runset on : 11/09/2025 21:08
 
-.SUBCKT Nmos_Comparator vss i_bias_n iref inn v_3_7_n v_5_11_n v_6_9_n vout vdd
+.SUBCKT Nmos_Comparator vss iref i_bias_n inn inp v_3_7_n v_5_11_n v_6_9_n vout
++ vdd
 M$1 v_5_11_n v_5_11_n vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P
 + PS=16.82U PD=16.82U
 M$3 v_6_9_n v_5_11_n vdd vdd pfet_03v3 L=0.5U W=10U AS=4.55P AD=4.55P PS=16.82U
@@ -23,6 +24,6 @@ M$17 vout v_3_7_n vss vss nfet_03v3 L=1U W=3.5U AS=2.135P AD=2.135P PS=8.22U
 + PD=8.22U
 M$18 i_bias_n inn v_5_11_n vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
 + PD=9.22U
-M$19 v_6_9_n \$5 i_bias_n vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
+M$19 v_6_9_n inp i_bias_n vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P PS=9.22U
 + PD=9.22U
 .ENDS Nmos_Comparator

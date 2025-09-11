@@ -36,8 +36,8 @@ X0 a_838_0# a_38_n60# a_n84_0# a_960_0# nfet_03v3 ad=1.22p pd=5.22u as=1.22p ps=
 X0 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=3.575p pd=12.3u as=3.575p ps=12.3u w=5.5u l=0.5u
 .ends
 
-.subckt opamp_n_input out ibias vinp vinn viss vb2 vg1 v_2_4 i_in v_17_16 v_16_12
-+ v_11_7 v_6_9 v_3_1 vdd vss
+.subckt opamp_n_input out ibias vinp vinn viss vb2 vg1 i_in v_17_16 v_16_12 v_11_7
++ v_6_9 v_2_4 v_3_1 vdd vss
 Xpfet_0 v_17_16 ibias v_16_12 vdd pfet
 Xpfet_1 vdd i_in i_in vdd pfet
 Xpfet_2 vdd i_in vb2 vdd pfet
