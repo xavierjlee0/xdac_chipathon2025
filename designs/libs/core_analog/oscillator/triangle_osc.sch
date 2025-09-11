@@ -246,7 +246,6 @@ C {lab_wire.sym} 730 -430 0 0 {name=p9 sig_type=std_logic lab=q}
 C {devices/code_shown.sym} 40 -160 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
-.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
 .include $::180MCU_MODELS/design.ngspice
 
 "}

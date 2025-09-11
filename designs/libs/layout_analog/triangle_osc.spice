@@ -15,7 +15,6 @@ xp_comp vdd vcompp out vss vlo ibias_compp Pmos_Comparator
 x1 vcompp q nq vcompn sr_latch
 **** begin user architecture code
 
-.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
 .include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
 
 
