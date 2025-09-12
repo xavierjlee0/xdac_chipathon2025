@@ -774,7 +774,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {lab_wire.sym} 980 -2520 0 1 {name=p126 sig_type=std_logic lab=vcascode_iref_top}
-C {lab_wire.sym} 1340 -2490 0 1 {name=p127 sig_type=std_logic lab=vpgates_iref_top}
+C {lab_wire.sym} 1330 -2490 0 1 {name=p127 sig_type=std_logic lab=vpgates_iref_top}
 C {symbols/pfet_03v3.sym} 1290 -2370 0 1 {name=M15
 L=1u
 W=4u
@@ -919,3 +919,19 @@ C {lab_wire.sym} 2030 -1900 0 1 {name=p137 sig_type=std_logic lab=clk_in
 }
 C {lab_wire.sym} 2080 -1880 0 1 {name=p138 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 2060 -1860 2 0 {name=p139 sig_type=std_logic lab=vdd}
+C {noconn.sym} 3140 -2760 0 1 {name=l24}
+C {noconn.sym} 3140 -2720 0 1 {name=l25}
+C {noconn.sym} 3140 -2680 0 1 {name=l26}
+C {noconn.sym} 3140 -2640 0 1 {name=l27}
+C {noconn.sym} 3140 -2600 0 1 {name=l28}
+C {noconn.sym} 3140 -2560 0 1 {name=l29}
+C {noconn.sym} 3140 -2520 0 1 {name=l30}
+C {noconn.sym} 3140 -2480 0 1 {name=l31}
+C {noconn.sym} 3140 -2440 0 1 {name=l32}
+C {noconn.sym} 3140 -2400 0 1 {name=l33}
+C {noconn.sym} 3140 -2360 0 1 {name=l34}
+C {noconn.sym} 3140 -2320 0 1 {name=l35}
+C {noconn.sym} 3140 -2280 0 1 {name=l36}
+C {noconn.sym} 3140 -2240 0 1 {name=l37}
+C {noconn.sym} 3140 -2200 0 1 {name=l38}
+C {noconn.sym} 3140 -2160 0 1 {name=l39}
