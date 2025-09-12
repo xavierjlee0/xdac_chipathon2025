@@ -82,6 +82,14 @@ N 330 -290 330 -230 {lab=#net4}
 N 370 -260 370 -200 {lab=#net2}
 N 330 -170 330 -140 {lab=vss}
 N 280 -360 420 -360 {lab=#net4}
+N 440 -740 440 -730 {lab=vdd}
+N 430 -710 430 -700 {lab=vdd}
+N 430 -700 440 -700 {lab=vdd}
+N 440 -670 440 -660 {lab=#net3}
+N 940 -740 940 -730 {lab=vdd}
+N 940 -670 940 -660 {lab=iref}
+N 950 -710 950 -700 {lab=vdd}
+N 940 -700 950 -700 {lab=vdd}
 C {title.sym} 80 80 0 0 {name=Comparator author="Christopher Amankwaa"}
 C {symbols/pfet_03v3.sym} 710 -620 0 0 {name=M3
 L=0.6u
@@ -231,5 +239,31 @@ C {ipin.sym} 940 -600 3 0 {name=p3 lab=iref
 C {ipin.sym} 850 -430 2 0 {name=p4 lab=inn}
 C {ipin.sym} 850 -490 2 0 {name=p5 lab=inp}
 C {opin.sym} -10 -440 2 0 {name=p6 lab=vout}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 900 -700 0 0 {name=x1 M = 2}
-C {libs/core_analog/unit_pmos/unit_pmos.sym} 480 -700 0 1 {name=x2 M = 4}
+C {symbols/pfet_03v3.sym} 460 -700 0 1 {name=M1
+L=1u
+W=14u
+nf=4
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {symbols/pfet_03v3.sym} 920 -700 0 0 {name=M2
+L=1u
+W=7u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}

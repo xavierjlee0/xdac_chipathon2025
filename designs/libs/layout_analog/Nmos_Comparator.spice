@@ -1,0 +1,16 @@
+** sch_path: /foss/designs/libs/core_analog/Comparator/Nmos_Comparator.sch
+.subckt Nmos_Comparator vdd vout inp vss inn iref
+*.PININFO vss:I vdd:I iref:I inn:I inp:I vout:O
+M3 v_3_7_n v_3_7_n vss vss nfet_03v3 L=1u W=3.5u nf=1 m=1
+M4 vout v_3_7_n vss vss nfet_03v3 L=1u W=3.5u nf=1 m=1
+M5 v_5_11_n inn i_bias_n vss nfet_03v3 L=1u W=4u nf=1 m=1
+M6 v_6_9_n inp i_bias_n vss nfet_03v3 L=1u W=4u nf=1 m=1
+M7 v_3_7_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=16.5u nf=4 m=1
+M9 v_6_9_n v_6_9_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+M11 v_5_11_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+M12 vout v_6_9_n vdd vdd pfet_03v3 L=0.5u W=16.5u nf=4 m=1
+M1 v_6_9_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+M2 v_5_11_n v_6_9_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+M8 iref iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
+M10 i_bias_n iref vss vss nfet_03v3 L=1u W=5u nf=2 m=1
+.ends

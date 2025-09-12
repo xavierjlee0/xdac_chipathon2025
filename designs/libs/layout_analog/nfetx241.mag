@@ -1,0 +1,108 @@
+magic
+tech gf180mcuD
+timestamp 1757378150
+<< checkpaint >>
+rect -6 -3 44 67
+<< l34d0 >>
+rect -4 3 0 57
+rect 31 3 35 57
+rect 5 3 9 57
+rect 13 3 17 57
+rect 21 3 25 57
+rect 1 63 5 67
+rect 17 63 21 67
+rect 9 63 13 67
+rect 25 63 29 67
+rect 38 3 42 57
+<< l33d0 >>
+rect -3 3 -1 6
+rect -3 9 -1 11
+rect -3 14 -1 16
+rect -3 19 -1 21
+rect -3 24 -1 26
+rect -3 29 -1 31
+rect -3 34 -1 36
+rect -3 39 -1 41
+rect -3 44 -1 46
+rect -3 49 -1 52
+rect -3 54 -1 57
+rect 32 3 34 6
+rect 32 9 34 11
+rect 32 14 34 16
+rect 32 19 34 21
+rect 32 24 34 26
+rect 32 29 34 31
+rect 32 34 34 36
+rect 32 39 34 41
+rect 32 44 34 46
+rect 32 49 34 52
+rect 32 54 34 57
+rect 6 3 8 6
+rect 6 9 8 11
+rect 6 14 8 16
+rect 6 19 8 21
+rect 6 24 8 26
+rect 6 29 8 31
+rect 6 34 8 36
+rect 6 39 8 41
+rect 6 44 8 46
+rect 6 49 8 52
+rect 6 54 8 57
+rect 14 3 16 6
+rect 14 9 16 11
+rect 14 14 16 16
+rect 14 19 16 21
+rect 14 24 16 26
+rect 14 29 16 31
+rect 14 34 16 36
+rect 14 39 16 41
+rect 14 44 16 46
+rect 14 49 16 52
+rect 14 54 16 57
+rect 22 3 24 6
+rect 22 9 24 11
+rect 22 14 24 16
+rect 22 19 24 21
+rect 22 24 24 26
+rect 22 29 24 31
+rect 22 34 24 36
+rect 22 39 24 41
+rect 22 44 24 46
+rect 22 49 24 52
+rect 22 54 24 57
+rect 2 64 4 66
+rect 18 64 20 66
+rect 10 64 12 66
+rect 26 64 28 66
+rect 39 3 41 6
+rect 39 9 41 11
+rect 39 14 41 16
+rect 39 19 41 21
+rect 39 24 41 26
+rect 39 29 41 31
+rect 39 34 41 36
+rect 39 39 41 41
+rect 39 44 41 46
+rect 39 49 41 52
+rect 39 54 41 57
+<< l30d0 >>
+rect 2 -3 5 63
+rect 18 -3 21 63
+rect 10 -3 13 63
+rect 26 -3 29 63
+rect 2 63 5 67
+rect 18 63 21 67
+rect 10 63 13 67
+rect 26 63 29 67
+<< l32d0 >>
+rect -6 -2 35 62
+<< l22d0 >>
+rect 0 0 31 60
+rect -4 0 0 60
+rect 31 0 35 60
+rect 35 0 42 60
+<< l31d0 >>
+rect 35 -2 44 62
+<< labels >>
+rlabel l34d10 39.8 30 39.8 30 0 
+<< end >>

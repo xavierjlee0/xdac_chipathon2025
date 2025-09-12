@@ -231,13 +231,6 @@ spiceprefix=X
 C {ipin.sym} 80 -520 0 0 {name=p5 lab=vho}
 C {ipin.sym} 80 -420 0 0 {name=p6 lab=vlo}
 C {opin.sym} 1300 -460 0 0 {name=p7 lab=out}
-C {devices/code_shown.sym} 0 -150 0 0 {name=Models only_toplevel=false
-format="tcleval( @value )"
-value="
-.include $::180MCU_MODELS/design.ngspice
-.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
-.lib $::180MCU_MODELS/sm141064.ngspice typical
-"}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 240 -580 0 0 {name=xn_comp}
 C {libs/core_analog/Comparator/Pmos_Comparator.sym} 240 -440 0 0 {name=xp_comp}
 C {ipin.sym} 40 -700 0 0 {name=p12 lab=vdd}
@@ -250,3 +243,10 @@ C {lab_wire.sym} 440 -540 0 0 {name=p15 sig_type=std_logic lab=vcompn}
 C {libs/core_analog/oscillator/sr_latch.sym} 520 -420 2 1 {name=x1}
 C {lab_wire.sym} 730 -450 0 0 {name=p8 sig_type=std_logic lab=nq}
 C {lab_wire.sym} 730 -430 0 0 {name=p9 sig_type=std_logic lab=q}
+C {devices/code_shown.sym} 40 -160 0 0 {name=Models only_toplevel=false
+format="tcleval( @value )"
+value="
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+"}
