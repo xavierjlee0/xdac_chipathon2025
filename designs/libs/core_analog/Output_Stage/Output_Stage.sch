@@ -23,9 +23,9 @@ N 270 -260 380 -260 {lab=vin_nmos}
 C {title.sym} 70 30 0 0 {name=l1 author="Christopher O Amankwaa"}
 C {symbols/pfet_03v3.sym} 400 -370 0 0 {name=M1
 L=0.28u
-W=100u
-nf=20
-m=32
+W=5u
+nf=1
+m=640
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -37,9 +37,9 @@ spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 400 -260 0 0 {name=M2
 L=0.28u
-W=100u
-nf=20
-m=14
+W=5u
+nf=1
+m=280
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"

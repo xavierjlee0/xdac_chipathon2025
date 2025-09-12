@@ -1,4 +1,4 @@
-timestamp 1586235724
+timestamp 1586245950
 version 8.3
 tech gf180mcuD
 style ngspice()
@@ -12,6 +12,7 @@ parameters pfet_10v0_asym l=l w=w a1=as p1=ps a2=ad p2=pd
 parameters pfet_06v0_dss l=l w=w a1=as p1=ps a2=ad p2=pd l1=s_sab l2=d_sab
 parameters pfet_05v0 l=l w=w a1=as p1=ps a2=ad p2=pd
 parameters pfet_06v0 l=l w=w a1=as p1=ps a2=ad p2=pd
+
 port "VNW" 1 2202 6992 2202 6992 nw
 port "VPW" 2 2201 6191 2201 6191 pw
 node "a_2166_6271#" 19 281.495 2166 6271 mvndif 0 0 0 0 0 0 0 0 23232 704 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90208 1672 0 0 0 0 0 0 0 0

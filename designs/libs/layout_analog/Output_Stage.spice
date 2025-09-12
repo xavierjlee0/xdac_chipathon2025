@@ -1,0 +1,6 @@
+** sch_path: /foss/designs/libs/core_analog/Output_Stage/Output_Stage.sch
+.subckt Output_Stage vdd vin_pmos vout vin_nmos vss
+*.PININFO vin_pmos:I vdd:I vss:I vout:O vin_nmos:I
+XM1 vout vin_pmos vdd vdd pfet_03v3 L=0.28u W=5u nf=1 m=640
+XM2 vout vin_nmos vss vss nfet_03v3 L=0.28u W=5u nf=1 m=280
+.ends

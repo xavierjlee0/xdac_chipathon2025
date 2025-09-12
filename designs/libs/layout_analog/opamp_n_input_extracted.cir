@@ -1,6 +1,6 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 10/09/2025 02:16
+* Extracted by KLayout with GF180MCU LVS runset on : 11/09/2025 20:51
 
-.SUBCKT opamp_n_input vss out v_11_7 viss v_16_12 vinn vinp v_2_4 ibias vg1
+.SUBCKT opamp_n_input vss vinn ibias v_16_12 v_11_7 viss v_2_4 vinp out vg1
 + v_6_9 i_in v_17_16 v_3_1 vb2 vdd
 M$1 i_in ibias ibias vdd pfet_03v3 L=1U W=3.5U AS=2.275P AD=2.275P PS=8.3U
 + PD=8.3U
