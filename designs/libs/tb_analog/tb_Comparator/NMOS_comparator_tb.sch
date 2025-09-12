@@ -22,8 +22,7 @@ N -400 -10 -130 -10 {lab=inn}
 N 55 10 105 10 {lab=out}
 N -70 30 -65 30 {lab=inp}
 N -70 -10 -65 -10 {lab=inn}
-N 100 10 100 40 {lab=out}
-N 100 100 100 140 {lab=GND}
+N 95 150 95 190 {lab=GND}
 N -100 110 -100 150 {lab=VDD}
 N -180 140 -180 160 {lab=iref}
 N -220 140 -180 140 {lab=iref}
@@ -33,6 +32,7 @@ N -310 110 -310 120 {lab=inp}
 N -400 90 -400 110 {lab=inn}
 N -400 170 -400 190 {lab=#net2}
 N -310 180 -310 200 {lab=#net3}
+N 95 70 95 90 {lab=#net4}
 C {devices/code_shown.sym} 470 -450 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
@@ -106,12 +106,12 @@ C {noconn.sym} 105 10 2 0 {name=l5}
 C {lab_wire.sym} 85 10 0 0 {name=p5 sig_type=std_logic lab=out}
 C {vsource.sym} -400 220 0 0 {name=VINN value=1 savecurrent=false}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} -45 -30 0 0 {name=x1}
-C {capa.sym} 100 70 0 0 {name=C1
+C {capa.sym} 95 120 0 0 {name=C1
 m=1
 value=1p
 footprint=1206
 device="ceramic capacitor"}
-C {gnd.sym} 100 140 0 0 {name=l6 lab=GND}
+C {gnd.sym} 95 190 0 0 {name=l6 lab=GND}
 C {res.sym} -310 150 0 0 {name=R3
 value=10
 footprint=1206
@@ -132,3 +132,4 @@ value=1MEG
 footprint=1206
 device=resistor
 m=1}
+C {vsource.sym} 95 40 0 0 {name=V2 value=0 savecurrent=false}
