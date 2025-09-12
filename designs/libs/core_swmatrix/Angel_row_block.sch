@@ -27,7 +27,7 @@ N -150 140 -60 140 {lab=pin}
 N 300 20 380 20 {lab=I[1:16]}
 N 180 -50 180 -30 {lab=VSSd}
 N 180 -50 250 -50 {lab=VSSd}
-N 210 -30 250 -30 {lab=#net1}
+N 210 -30 270 -30 {lab=VDD}
 C {libs/core_swmatrix/ShiftReg_row_10_2.sym} 150 20 0 0 {name=xSR}
 C {iopin.sym} -197.5 140 2 0 {name=p1 lab=pin}
 C {ipin.sym} -80 40 0 0 {name=p2 lab=PHI_2
@@ -46,4 +46,4 @@ C {iopin.sym} 347.5 160 0 0 {name=p10 lab=VSSd}
 C {ipin.sym} 30 -40 0 0 {name=p11 lab=EN}
 C {lab_wire.sym} 330 20 0 1 {name=p12 sig_type=std_logic lab=I[1:16]}
 C {lab_wire.sym} 220 -50 0 0 {name=p13 sig_type=std_logic lab=VSSd}
-C {lab_wire.sym} 240 -30 0 0 {name=p14 sig_type=std_logic lab=VDDd}
+C {lab_wire.sym} 260 -30 0 0 {name=p14 sig_type=std_logic lab=VDDd}
