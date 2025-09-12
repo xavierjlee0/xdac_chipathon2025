@@ -243,12 +243,6 @@ C {lab_wire.sym} 440 -540 0 0 {name=p15 sig_type=std_logic lab=vcompn}
 C {libs/core_analog/oscillator/sr_latch.sym} 520 -420 2 1 {name=x1}
 C {lab_wire.sym} 730 -450 0 0 {name=p8 sig_type=std_logic lab=nq}
 C {lab_wire.sym} 730 -430 0 0 {name=p9 sig_type=std_logic lab=q}
-C {devices/code_shown.sym} 40 -160 0 0 {name=Models only_toplevel=false
-format="tcleval( @value )"
-value="
-.include $::180MCU_MODELS/design.ngspice
-
-"}
 C {lab_wire.sym} 260 -340 0 0 {name=p11 sig_type=std_logic lab=ibias_compp}
 C {lab_wire.sym} 260 -590 0 0 {name=p16 sig_type=std_logic lab=ibias_compn}
 C {lab_wire.sym} 930 -560 0 0 {name=p17 sig_type=std_logic lab=v_4_1_pn}
