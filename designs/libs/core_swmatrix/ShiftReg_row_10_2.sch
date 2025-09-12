@@ -4,21 +4,34 @@ K {}
 V {}
 S {}
 E {}
-T {Shift Register with 10 registers
+T {Shift Register with 16 registers
 - driven by non-overlapping clocks 
 - version with all outputs pinned out} -310 -190 0 0 0.4 0.4 {}
-N 240 -30 320 -30 {lab=Q[1:9],Q}
-N -120 -30 -60 -30 {lab=D_in,Q[1:9]}
+N 240 -30 320 -30 {lab=Q[1:16]}
+N -120 -30 -60 -30 {lab=D_in,Q[1:15]}
 N -240 -10 -60 -10 {lab=PHI_1}
 N -240 10 -60 10 {lab=PHI_2}
 N -240 -30 -210 -30 {lab=D_in}
-N 360 -30 380 -30 {lab=Q[1:10]}
-C {libs/core_swmatrix/DFF_2phase_1.sym} 90 -10 0 0 {name=xFF[1:10]}
+N 360 -30 380 -30 {lab=Q[1:16]}
+N -90 -90 40 -90 {lab=EN}
+N 40 -90 40 -60 {lab=EN}
+N 240 -10 290 -10 {lab=I[1:16]}
+N 110 -100 110 -60 {lab=VSSd}
+N 100 -100 110 -100 {lab=VSSd}
+N 160 -100 160 -60 {lab=VDD}
+N 160 -100 190 -100 {lab=VDD}
+C {libs/core_swmatrix/DFF_2phase_1.sym} 90 -10 0 0 {name=xFF[1:16]}
 C {ipin.sym} -240 -10 0 0 {name=p1 lab=PHI_1}
 C {ipin.sym} -240 10 0 0 {name=p2 lab=PHI_2}
 C {ipin.sym} -240 -30 0 0 {name=p3 lab=D_in}
-C {lab_wire.sym} 310 -30 0 0 {name=p4 sig_type=std_logic lab=Q[1:10]
+C {lab_wire.sym} 310 -30 0 0 {name=p4 sig_type=std_logic lab=Q[1:16]
 }
-C {lab_wire.sym} -80 -30 0 0 {name=p5 sig_type=std_logic lab=D_in,Q[1:9]}
-C {opin.sym} 380 -30 0 0 {name=p6 lab=Q[1:10]}
+C {lab_wire.sym} -80 -30 0 0 {name=p5 sig_type=std_logic lab=D_in,Q[1:15]}
+C {opin.sym} 380 -30 0 0 {name=p6 lab=Q[1:16]}
 C {title.sym} -245 182.5 0 0 {name=l2 author="Peter Kinget"}
+C {ipin.sym} -90 -90 0 0 {name=p7 lab=EN}
+C {opin.sym} 380 0 0 0 {name=p8 lab=I[1:16]}
+C {lab_wire.sym} 290 -10 0 0 {name=p9 sig_type=std_logic lab=I[1:16]
+}
+C {ipin.sym} 100 -100 0 0 {name=p10 lab=VSSd}
+C {ipin.sym} 190 -100 2 0 {name=p11 lab=VDDd}

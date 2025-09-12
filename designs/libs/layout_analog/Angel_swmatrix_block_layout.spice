@@ -1,0 +1,144 @@
+* NGSPICE file created from Angel_swmatrix_block.ext - technology: gf180mcuD
+
+.subckt inv_1 VNW VPW a_2374_6271# a_2254_6227# a_2166_6271# a_2186_6775#
+X0 a_2374_6271# a_2254_6227# a_2166_6271# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X1 a_2374_6271# a_2254_6227# a_2186_6775# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+.ends
+
+.subckt nfet$1 a_30_1260# a_254_0# a_190_1260# a_350_1260# a_414_0# a_n84_0# a_94_0#
++ a_510_1260# a_574_0# a_696_0#
+X0 a_254_0# a_190_1260# a_94_0# a_696_0# nfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X1 a_574_0# a_510_1260# a_414_0# a_696_0# nfet_03v3 ad=3.66p pd=13.22u as=1.56p ps=6.52u w=6u l=0.28u
+X2 a_94_0# a_30_1260# a_n84_0# a_696_0# nfet_03v3 ad=1.56p pd=6.52u as=3.66p ps=13.22u w=6u l=0.28u
+X3 a_414_0# a_350_1260# a_254_0# a_696_0# nfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+.ends
+
+.subckt pfet$1 a_1534_0# a_1054_0# a_734_0# a_508_1260# a_1694_0# a_254_0# a_1308_1260#
++ a_894_0# a_668_1260# a_1468_1260# a_1214_0# a_828_1260# a_28_1260# a_1854_0# a_414_0#
++ a_n92_0# a_1628_1260# a_1374_0# a_94_0# a_188_1260# a_574_0# a_988_1260# a_1788_1260#
++ a_348_1260# a_1148_1260# w_n230_n138#
+X0 a_1214_0# a_1148_1260# a_1054_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X1 a_734_0# a_668_1260# a_574_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X2 a_254_0# a_188_1260# a_94_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X3 a_574_0# a_508_1260# a_414_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X4 a_1534_0# a_1468_1260# a_1374_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X5 a_1374_0# a_1308_1260# a_1214_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X6 a_1054_0# a_988_1260# a_894_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X7 a_894_0# a_828_1260# a_734_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X8 a_94_0# a_28_1260# a_n92_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=3.9p ps=13.3u w=6u l=0.28u
+X9 a_414_0# a_348_1260# a_254_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X10 a_1854_0# a_1788_1260# a_1694_0# w_n230_n138# pfet_03v3 ad=3.9p pd=13.3u as=1.56p ps=6.52u w=6u l=0.28u
+X11 a_1694_0# a_1628_1260# a_1534_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+.ends
+
+.subckt transmission_gate_2 I VDDd VSSd ZN pin Bus
+Xinv_1_0 VDDd VSSd ZN I VSSd VDDd inv_1
+Xnfet$1_0 I pin I I Bus pin Bus I pin VSSd nfet$1
+Xpfet$1_0 pin Bus Bus ZN Bus pin ZN pin ZN ZN pin ZN ZN pin Bus pin ZN Bus Bus ZN
++ pin ZN ZN ZN ZN VDDd pfet$1
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__latq_1 Q VDD VSS D E VNW VPW
+X0 VSS a_1020_652# Q VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X1 a_504_110# a_36_92# VDD VNW pfet_05v0 ad=0.44p pd=2.88u as=0.476p ps=2.18u w=1u l=0.5u
+X2 VDD a_1020_652# Q VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X3 a_1264_107# a_36_92# a_1020_652# VPW nfet_05v0 ad=0.263p pd=1.49u as=0.182p ps=1.22u w=0.7u l=0.6u
+X4 VSS E a_36_92# VPW nfet_05v0 ad=0.263p pd=1.49u as=0.3476p ps=2.46u w=0.79u l=0.6u
+X5 VSS a_1364_532# a_1264_107# VPW nfet_05v0 ad=0.2054p pd=1.31u as=0.263p ps=1.49u w=0.79u l=0.6u
+X6 VDD E a_36_92# VNW pfet_05v0 ad=0.476p pd=2.18u as=0.6072p ps=3.64u w=1.38u l=0.5u
+X7 VDD a_1364_532# a_1224_652# VNW pfet_05v0 ad=0.3588p pd=1.9u as=0.426p ps=2.08u w=1.38u l=0.5u
+X8 a_872_652# D VDD VNW pfet_05v0 ad=0.12p pd=1.24u as=0.44p ps=2.88u w=1u l=0.5u
+X9 a_1364_532# a_1020_652# VDD VNW pfet_05v0 ad=0.6072p pd=3.64u as=0.3588p ps=1.9u w=1.38u l=0.5u
+X10 a_1020_652# a_504_110# a_872_107# VPW nfet_05v0 ad=0.182p pd=1.22u as=83.99999f ps=0.94u w=0.7u l=0.6u
+X11 a_872_107# D VSS VPW nfet_05v0 ad=83.99999f pd=0.94u as=0.308p ps=2.28u w=0.7u l=0.6u
+X12 a_1020_652# a_36_92# a_872_652# VNW pfet_05v0 ad=0.26p pd=1.52u as=0.12p ps=1.24u w=1u l=0.5u
+X13 a_504_110# a_36_92# VSS VPW nfet_05v0 ad=0.308p pd=2.28u as=0.263p ps=1.49u w=0.7u l=0.6u
+X14 a_1364_532# a_1020_652# VSS VPW nfet_05v0 ad=0.3476p pd=2.46u as=0.2054p ps=1.31u w=0.79u l=0.6u
+X15 a_1224_652# a_504_110# a_1020_652# VNW pfet_05v0 ad=0.426p pd=2.08u as=0.26p ps=1.52u w=1u l=0.5u
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__nand2_1 VDD VSS A1 A2 ZN VNW VPW
+X0 ZN A2 VDD VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
+X1 VDD A1 ZN VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X2 ZN A1 a_245_69# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X3 a_245_69# A2 VSS VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__inv_1 VDD VSS I ZN VNW VPW
+X0 ZN I VDD VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X1 ZN I VSS VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt DFF_2phase_1 out_m D PHI_1 Q I EN PHI_2 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW
++ VSS
+Xgf180mcu_fd_sc_mcu9t5v0__latq_1_0 Q gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS out_m
++ PHI_2 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__latq_1
+Xgf180mcu_fd_sc_mcu9t5v0__latq_1_1 out_m gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS
++ D PHI_1 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__latq_1
+Xgf180mcu_fd_sc_mcu9t5v0__nand2_1_0 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS EN Q
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__nand2_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_0 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I
++ I gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__inv_1
+.ends
+
+.subckt Angel_one_SW_block transmission_gate_2_0/VDDd transmission_gate_2_0/Bus DFF_2phase_1_0/D
++ DFF_2phase_1_0/PHI_2 DFF_2phase_1_0/PHI_1 DFF_2phase_1_0/Q DFF_2phase_1_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW
++ DFF_2phase_1_0/EN transmission_gate_2_0/pin VSUBS
+Xtransmission_gate_2_0 DFF_2phase_1_0/I transmission_gate_2_0/VDDd VSUBS transmission_gate_2_0/ZN
++ transmission_gate_2_0/pin transmission_gate_2_0/Bus transmission_gate_2
+XDFF_2phase_1_0 DFF_2phase_1_0/out_m DFF_2phase_1_0/D DFF_2phase_1_0/PHI_1 DFF_2phase_1_0/Q
++ DFF_2phase_1_0/I DFF_2phase_1_0/EN DFF_2phase_1_0/PHI_2 DFF_2phase_1_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW
++ VSUBS DFF_2phase_1
+.ends
+
+.subckt Angel_row_block VDD D_in D_out pin BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6]
++ BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] EN
++ PHI_2 PHI_1 VSS
+XAngel_one_SW_block_0[0] VDD BUS[1] D_in PHI_2 PHI_1 Angel_one_SW_block_0[1]/DFF_2phase_1_0/D
++ VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[1] VDD BUS[2] Angel_one_SW_block_0[1]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[2]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[2] VDD BUS[3] Angel_one_SW_block_0[2]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[3]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[3] VDD BUS[4] Angel_one_SW_block_0[3]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[4]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[4] VDD BUS[5] Angel_one_SW_block_0[4]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[5]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[5] VDD BUS[6] Angel_one_SW_block_0[5]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[6]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[6] VDD BUS[7] Angel_one_SW_block_0[6]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[7]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[7] VDD BUS[8] Angel_one_SW_block_0[7]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[8]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[8] VDD BUS[9] Angel_one_SW_block_0[8]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[9]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[9] VDD BUS[10] Angel_one_SW_block_0[9]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[9]/DFF_2phase_1_0/Q VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[10] VDD BUS[11] Angel_one_SW_block_0[9]/DFF_2phase_1_0/Q PHI_2
++ PHI_1 Angel_one_SW_block_0[11]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[11] VDD BUS[12] Angel_one_SW_block_0[11]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[12]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[12] VDD BUS[13] Angel_one_SW_block_0[12]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[13]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[13] VDD BUS[14] Angel_one_SW_block_0[13]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[14]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[14] VDD BUS[15] Angel_one_SW_block_0[14]/DFF_2phase_1_0/D PHI_2
++ PHI_1 Angel_one_SW_block_0[15]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
+XAngel_one_SW_block_0[15] VDD BUS[16] Angel_one_SW_block_0[15]/DFF_2phase_1_0/D PHI_2
++ PHI_1 D_out VDD EN pin VSS Angel_one_SW_block
+.ends
+
+.subckt Angel_swmatrix_block VDD VSS D_in PHI_1 PHI_2 D_out D_out_row[1] D_out_row[2]
++ PIN[1] PIN[2] PIN[3] BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] EN
+XAngel_row_block_0[0] Angel_row_block_0[0]/VDD Angel_row_block_0[0]/D_in D_out PIN[3]
++ BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12]
++ BUS[13] BUS[14] BUS[15] BUS[16] EN PHI_2 PHI_1 VSS Angel_row_block
+XAngel_row_block_0[1] VDD Angel_row_block_0[1]/D_in D_out_row[2] PIN[2] BUS[1] BUS[2]
++ BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12] BUS[13]
++ BUS[14] BUS[15] BUS[16] EN PHI_2 PHI_1 VSS Angel_row_block
+XAngel_row_block_0[2] VDD D_in D_out_row[1] PIN[1] BUS[1] BUS[2] BUS[3] BUS[4] BUS[5]
++ BUS[6] BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16]
++ EN PHI_2 PHI_1 VSS Angel_row_block
+.ends
+

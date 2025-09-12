@@ -1,0 +1,73 @@
+** sch_path: /foss/designs/libs/core_swmatrix/Angel_row_block
+.subckt Angel_row_block pin PHI_2 PHI_1 BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12]
++ BUS[13] BUS[14] BUS[15] BUS[16] D_in D_out VDD VSS EN
+*.PININFO pin:B PHI_2:I PHI_1:I BUS[1:16]:B D_in:I D_out:O VDD:B VSS:B EN:I
+xSR Q[1] Q[2] Q[3] Q[4] Q[5] Q[6] Q[7] Q[8] Q[9] Q[10] Q[11] Q[12] Q[13] Q[14] Q[15] D_out D_in PHI_1 PHI_2 I[1] I[2] I[3] I[4]
++ I[5] I[6] I[7] I[8] I[9] I[10] I[11] I[12] I[13] I[14] I[15] I[16] EN VSS VDD ShiftReg_row_10_2
+xTx_gate[1] VDD I[1] BUS[1] pin VSS transmission_gate_2
+xTx_gate[2] VDD I[2] BUS[2] pin VSS transmission_gate_2
+xTx_gate[3] VDD I[3] BUS[3] pin VSS transmission_gate_2
+xTx_gate[4] VDD I[4] BUS[4] pin VSS transmission_gate_2
+xTx_gate[5] VDD I[5] BUS[5] pin VSS transmission_gate_2
+xTx_gate[6] VDD I[6] BUS[6] pin VSS transmission_gate_2
+xTx_gate[7] VDD I[7] BUS[7] pin VSS transmission_gate_2
+xTx_gate[8] VDD I[8] BUS[8] pin VSS transmission_gate_2
+xTx_gate[9] VDD I[9] BUS[9] pin VSS transmission_gate_2
+xTx_gate[10] VDD I[10] BUS[10] pin VSS transmission_gate_2
+xTx_gate[11] VDD I[11] BUS[11] pin VSS transmission_gate_2
+xTx_gate[12] VDD I[12] BUS[12] pin VSS transmission_gate_2
+xTx_gate[13] VDD I[13] BUS[13] pin VSS transmission_gate_2
+xTx_gate[14] VDD I[14] BUS[14] pin VSS transmission_gate_2
+xTx_gate[15] VDD I[15] BUS[15] pin VSS transmission_gate_2
+xTx_gate[16] VDD I[16] BUS[16] pin VSS transmission_gate_2
+.ends
+
+* expanding   symbol:  libs/core_swmatrix/ShiftReg_row_10_2.sym # of pins=8
+** sym_path: /foss/designs/libs/core_swmatrix/ShiftReg_row_10_2.sym
+** sch_path: /foss/designs/libs/core_swmatrix/ShiftReg_row_10_2.sch
+.subckt ShiftReg_row_10_2 Q[1] Q[2] Q[3] Q[4] Q[5] Q[6] Q[7] Q[8] Q[9] Q[10] Q[11] Q[12] Q[13] Q[14] Q[15] Q[16] D_in PHI_1 PHI_2
++ I[1] I[2] I[3] I[4] I[5] I[6] I[7] I[8] I[9] I[10] I[11] I[12] I[13] I[14] I[15] I[16] EN VSS VDD
+*.PININFO PHI_1:I PHI_2:I D_in:I Q[1:16]:O EN:I I[1:16]:O VSS:I VDD:I
+xFF[1] D_in Q[1] PHI_1 PHI_2 EN I[1] VSS VDD DFF_2phase_1
+xFF[2] Q[1] Q[2] PHI_1 PHI_2 EN I[2] VSS VDD DFF_2phase_1
+xFF[3] Q[2] Q[3] PHI_1 PHI_2 EN I[3] VSS VDD DFF_2phase_1
+xFF[4] Q[3] Q[4] PHI_1 PHI_2 EN I[4] VSS VDD DFF_2phase_1
+xFF[5] Q[4] Q[5] PHI_1 PHI_2 EN I[5] VSS VDD DFF_2phase_1
+xFF[6] Q[5] Q[6] PHI_1 PHI_2 EN I[6] VSS VDD DFF_2phase_1
+xFF[7] Q[6] Q[7] PHI_1 PHI_2 EN I[7] VSS VDD DFF_2phase_1
+xFF[8] Q[7] Q[8] PHI_1 PHI_2 EN I[8] VSS VDD DFF_2phase_1
+xFF[9] Q[8] Q[9] PHI_1 PHI_2 EN I[9] VSS VDD DFF_2phase_1
+xFF[10] Q[9] Q[10] PHI_1 PHI_2 EN I[10] VSS VDD DFF_2phase_1
+xFF[11] Q[10] Q[11] PHI_1 PHI_2 EN I[11] VSS VDD DFF_2phase_1
+xFF[12] Q[11] Q[12] PHI_1 PHI_2 EN I[12] VSS VDD DFF_2phase_1
+xFF[13] Q[12] Q[13] PHI_1 PHI_2 EN I[13] VSS VDD DFF_2phase_1
+xFF[14] Q[13] Q[14] PHI_1 PHI_2 EN I[14] VSS VDD DFF_2phase_1
+xFF[15] Q[14] Q[15] PHI_1 PHI_2 EN I[15] VSS VDD DFF_2phase_1
+xFF[16] Q[15] Q[16] PHI_1 PHI_2 EN I[16] VSS VDD DFF_2phase_1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/tx_gate/transmission_gate_2.sym # of pins=5
+** sym_path: /foss/designs/libs/core_analog/tx_gate/transmission_gate_2.sym
+** sch_path: /foss/designs/libs/core_analog/tx_gate/transmission_gate_2.sch
+.subckt transmission_gate_2 VDDd I Bus Pin VSSd
+*.PININFO VDDd:B I:I Bus:O Pin:I VSSd:B
+XM3 Bus I Pin VSSd nfet_03v3 L=0.28u W=6u nf=1 m=4
+XM4 Bus net1 Pin VDDd pfet_03v3 L=0.28u W=6u nf=1 m=12
+x1 I net1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+.ends
+
+
+* expanding   symbol:  libs/core_swmatrix/DFF_2phase_1.sym # of pins=8
+** sym_path: /foss/designs/libs/core_swmatrix/DFF_2phase_1.sym
+** sch_path: /foss/designs/libs/core_swmatrix/DFF_2phase_1.sch
+.subckt DFF_2phase_1 D Q PHI_1 PHI_2 EN I VSS VDD
+*.PININFO D:I PHI_1:I PHI_2:I Q:O EN:I I:O VSS:I VDD:I
+xmain D PHI_1 out_m VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__latq_1
+xsecondary out_m PHI_2 Q VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__latq_1
+x2 EN Q net1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_1
+x3 net1 I VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+* noconn VSS
+* noconn VDD
+.ends
+
