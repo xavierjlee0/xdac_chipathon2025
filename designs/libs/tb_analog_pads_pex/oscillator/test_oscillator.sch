@@ -101,7 +101,7 @@ C {lab_wire.sym} 960 -705 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1100 -815 0 0 {name=p19 sig_type=std_logic lab=pad
 }
 C {lab_wire.sym} 895 -895 0 0 {name=p20 sig_type=std_logic lab=vdd}
-C {devices/code_shown.sym} 1130 -510 0 0 {name=Models only_toplevel=false
+C {devices/code_shown.sym} 1040 -550 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include /foss/designs/libs/core_analog/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice

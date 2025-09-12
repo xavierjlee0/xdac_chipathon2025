@@ -36,9 +36,6 @@ N 560 -920 670 -920 {lab=#net5}
 N 670 -920 680 -920 {lab=#net5}
 N 740 -920 910 -920 {lab=out}
 N 910 -920 910 -750 {lab=out}
-N 70 -820 70 -760 {lab=#net6}
-N 70 -900 70 -880 {lab=vddd}
-N 70 -700 200 -700 {lab=vssa}
 N 1100 -670 1140 -670 {lab=vssa}
 N 1100 -830 1140 -830 {lab=vdda}
 N 1110 -870 1110 -830 {lab=vdda}
@@ -128,13 +125,6 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/lab_wire.sym} 410 -860 0 0 {name=p8 sig_type=std_logic lab=vin_n}
-C {devices/lab_wire.sym} 70 -900 0 0 {name=p11 sig_type=std_logic lab=vddd}
-C {res.sym} 70 -850 0 0 {name=R1
-value=5
-footprint=1206
-device=resistor
-m=1}
-C {devices/vsource.sym} 70 -730 0 0 {name=V5 value=5 savecurrent=false}
 C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1220 -670 0 1 {name=IO1
 model=gf180mcu_fd_io__asig_5p0_extracted
 spiceprefix=X
