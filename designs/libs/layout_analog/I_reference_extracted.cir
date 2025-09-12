@@ -1,0 +1,43 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 12/09/2025 09:26
+
+.SUBCKT I_reference vss ibias_opp_10u opp_s opn_s ibias_opn_10u osc_s
++ vpgates_iref_top vdd iref_10u_osc ibias_buffer_opp buffer_s pcomp_s
++ ibias_pcomp_10u ibias_ncomp_10u ncomp_s top_ref vngates_iref_top cascode_s
++ vcascode_iref_top
+M$1 osc_s vpgates_iref_top vdd vdd pfet_03v3 L=1U W=4U AS=2.6P AD=2.6P PS=9.3U
++ PD=9.3U
+M$2 iref_10u_osc iref_10u_osc osc_s vdd pfet_03v3 L=1U W=4U AS=2.6P AD=2.6P
++ PS=9.3U PD=9.3U
+M$3 vdd vpgates_iref_top vpgates_iref_top vdd pfet_03v3 L=1U W=4U AS=2.6P
++ AD=2.6P PS=9.3U PD=9.3U
+M$4 vpgates_iref_top vcascode_iref_top vcascode_iref_top vdd pfet_03v3 L=1U
++ W=4U AS=2.6P AD=2.6P PS=9.3U PD=9.3U
+M$5 ncomp_s vpgates_iref_top vdd vdd pfet_03v3 L=1U W=4U AS=2.6P AD=2.6P
++ PS=9.3U PD=9.3U
+M$6 ibias_ncomp_10u ibias_ncomp_10u ncomp_s vdd pfet_03v3 L=1U W=4U AS=2.6P
++ AD=2.6P PS=9.3U PD=9.3U
+M$7 opp_s ibias_opp_10u ibias_opp_10u vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P
++ PS=9.22U PD=9.22U
+M$8 ibias_opn_10u ibias_opn_10u opn_s vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P
++ PS=9.22U PD=9.22U
+M$9 vss vngates_iref_top opp_s vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P
++ PS=9.22U PD=9.22U
+M$10 opn_s vngates_iref_top vss vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P
++ PS=9.22U PD=9.22U
+M$11 buffer_s ibias_buffer_opp ibias_buffer_opp vss nfet_03v3 L=1U W=4U
++ AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$12 ibias_pcomp_10u ibias_pcomp_10u pcomp_s vss nfet_03v3 L=1U W=4U AS=2.44P
++ AD=2.44P PS=9.22U PD=9.22U
+M$13 vss vngates_iref_top buffer_s vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P
++ PS=9.22U PD=9.22U
+M$14 pcomp_s vngates_iref_top vss vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P
++ PS=9.22U PD=9.22U
+M$15 vss vngates_iref_top vngates_iref_top vss nfet_03v3 L=1U W=4U AS=2.44P
++ AD=2.44P PS=9.22U PD=9.22U
+M$16 vngates_iref_top top_ref top_ref vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P
++ PS=9.22U PD=9.22U
+M$17 vcascode_iref_top vcascode_iref_top cascode_s vss nfet_03v3 L=1U W=4U
++ AS=2.44P AD=2.44P PS=9.22U PD=9.22U
+M$18 cascode_s vngates_iref_top vss vss nfet_03v3 L=1U W=4U AS=2.44P AD=2.44P
++ PS=9.22U PD=9.22U
+.ENDS I_reference
