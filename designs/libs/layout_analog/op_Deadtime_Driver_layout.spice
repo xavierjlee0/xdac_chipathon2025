@@ -1,0 +1,79 @@
+* NGSPICE file created from op_Deadtime_Driver.ext - technology: gf180mcuD
+
+.subckt nand2_1$1 VNW VPW a_2809_3578# a_2709_3030# a_2621_3074# a_2893_3030# a_2621_3578#
+X0 a_2621_3578# a_2893_3030# a_2809_3578# VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X1 a_2809_3578# a_2893_3030# a_2829_3074# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X2 a_2809_3578# a_2709_3030# a_2621_3578# VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
+X3 a_2829_3074# a_2709_3030# a_2621_3074# VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt inv_8$1 VNW VPW a_4630_5296# a_4818_5296# a_4718_4748# a_4630_4792#
+X0 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X1 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X2 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X3 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X4 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X5 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X6 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X7 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X8 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X9 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X10 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X11 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X12 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X13 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X14 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X15 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+.ends
+
+.subckt nand2_1 VNW VPW a_2809_3578# a_2709_3030# a_2621_3074# a_2893_3030# a_2621_3578#
+X0 a_2621_3578# a_2893_3030# a_2809_3578# VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X1 a_2809_3578# a_2893_3030# a_2829_3074# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X2 a_2809_3578# a_2709_3030# a_2621_3578# VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
+X3 a_2829_3074# a_2709_3030# a_2621_3074# VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt inv_1 VNW VPW a_3844_3074# a_4052_3074# a_3864_3578# a_3932_3030#
+X0 a_4052_3074# a_3932_3030# a_3844_3074# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X1 a_4052_3074# a_3932_3030# a_3864_3578# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+.ends
+
+.subckt inv_1$1 VNW VPW a_3844_3074# a_4052_3074# a_3864_3578# a_3932_3030#
+X0 a_4052_3074# a_3932_3030# a_3844_3074# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X1 a_4052_3074# a_3932_3030# a_3864_3578# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+.ends
+
+.subckt inv_8 VNW VPW a_4630_5296# a_4818_5296# a_4718_4748# a_4630_4792#
+X0 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X1 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X2 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X3 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X4 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X5 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X6 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X7 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X8 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X9 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X10 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X11 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X12 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X13 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X14 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X15 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+.ends
+
+.subckt cap_mim$1 m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=27u c_length=27u
+.ends
+
+.subckt op_Deadtime_Driver vout_pmos vout_nmos n1 vdd vss vin n2 n3 n4
+Xnand2_1$1_0 vdd vss n3 vin vss n2 vdd nand2_1$1
+Xinv_8$1_0 vdd vss vdd vout_nmos n2 vss inv_8$1
+Xnand2_1_0 vdd vss n2 n1 vss n3 vdd nand2_1
+Xinv_1_0 vdd vss vss n4 vdd n3 inv_1
+Xinv_1$1_0 vdd vss vss n1 vdd vin inv_1$1
+Xinv_8_0 vdd vss vdd vout_pmos n4 vss inv_8
+Xcap_mim$1_0 vss n2 cap_mim$1
+Xcap_mim$1_1 vss n3 cap_mim$1
+.ends
+

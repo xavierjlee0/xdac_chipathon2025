@@ -1,0 +1,38 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 12/09/2025 04:24
+
+.SUBCKT op_Deadtime_Driver vss n2 n1 vout_nmos vin vdd n3 n4 vout_pmos
+M$1 n2 n1 vdd vdd pfet_05v0 L=0.5U W=1.645U AS=0.7238P AD=0.4277P PS=4.17U
++ PD=2.165U
+M$2 vdd n3 n2 vdd pfet_05v0 L=0.5U W=1.645U AS=0.4277P AD=0.7238P PS=2.165U
++ PD=4.17U
+M$3 n1 vin vdd vdd pfet_05v0 L=0.5U W=1.83U AS=0.8052P AD=0.8052P PS=4.54U
++ PD=4.54U
+M$4 vout_nmos n2 vdd vdd pfet_05v0 L=0.5U W=14.64U AS=4.7763P AD=4.7763P
++ PS=21.69U PD=21.69U
+M$12 n3 vin vdd vdd pfet_05v0 L=0.5U W=1.645U AS=0.7238P AD=0.4277P PS=4.17U
++ PD=2.165U
+M$13 vdd n2 n3 vdd pfet_05v0 L=0.5U W=1.645U AS=0.4277P AD=0.7238P PS=2.165U
++ PD=4.17U
+M$14 n4 n3 vdd vdd pfet_05v0 L=0.5U W=1.83U AS=0.8052P AD=0.8052P PS=4.54U
++ PD=4.54U
+M$15 vout_pmos n4 vdd vdd pfet_05v0 L=0.5U W=14.64U AS=4.7763P AD=4.7763P
++ PS=21.69U PD=21.69U
+M$23 n1 vin vss vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.5808P PS=3.52U
++ PD=3.52U
+M$24 \$12 n1 vss vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.2112P PS=3.52U
++ PD=1.64U
+M$25 n2 n3 \$12 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.5808P PS=1.64U
++ PD=3.52U
+M$26 vout_nmos n2 vss vss nfet_05v0 L=0.6U W=10.56U AS=2.9832P AD=2.9832P
++ PS=16.4U PD=16.4U
+M$34 n4 n3 vss vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.5808P PS=3.52U
++ PD=3.52U
+M$35 vout_pmos n4 vss vss nfet_05v0 L=0.6U W=10.56U AS=2.9832P AD=2.9832P
++ PS=16.4U PD=16.4U
+M$43 \$28 vin vss vss nfet_05v0 L=0.6U W=1.32U AS=0.5808P AD=0.2112P PS=3.52U
++ PD=1.64U
+M$44 n3 n2 \$28 vss nfet_05v0 L=0.6U W=1.32U AS=0.2112P AD=0.5808P PS=1.64U
++ PD=3.52U
+C$45 n2 \$5 1.458e-12 cap_mim_2f0_m5m6_noshield A=729P P=108U
+C$46 n3 \$36 1.458e-12 cap_mim_2f0_m5m6_noshield A=729P P=108U
+.ENDS op_Deadtime_Driver

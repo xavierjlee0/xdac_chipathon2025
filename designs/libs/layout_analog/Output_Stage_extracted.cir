@@ -1,0 +1,8 @@
+* Extracted by KLayout with GF180MCU LVS runset on : 12/09/2025 06:25
+
+.SUBCKT Output_Stage vss vout vin_nmos vdd vin_pmos
+M$1 vdd vin_pmos vout vdd pfet_03v3 L=0.28U W=3200U AS=2080P AD=2080P PS=7232U
++ PD=7232U
+M$641 vss vin_nmos vout vss nfet_03v3 L=0.28U W=1400U AS=854P AD=854P
++ PS=3141.6U PD=3141.6U
+.ENDS Output_Stage
