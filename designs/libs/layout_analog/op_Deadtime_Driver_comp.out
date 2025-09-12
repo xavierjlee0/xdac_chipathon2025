@@ -1,0 +1,98 @@
+
+Circuit 1 cell pfet_05v0 and Circuit 2 cell pfet_05v0 are black boxes.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+
+Circuit 1 cell nfet_05v0 and Circuit 2 cell nfet_05v0 are black boxes.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0fF are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0fF is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0fF                   
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0fF are equivalent.
+Flattening unmatched subcell nand2_1$1 in circuit op_Deadtime_Driver (0)(1 instance)
+Flattening unmatched subcell inv_8$1 in circuit op_Deadtime_Driver (0)(1 instance)
+Flattening unmatched subcell nand2_1 in circuit op_Deadtime_Driver (0)(1 instance)
+Flattening unmatched subcell inv_1 in circuit op_Deadtime_Driver (0)(1 instance)
+Flattening unmatched subcell inv_1$1 in circuit op_Deadtime_Driver (0)(1 instance)
+Flattening unmatched subcell inv_8 in circuit op_Deadtime_Driver (0)(1 instance)
+Flattening unmatched subcell cap_mim$1 in circuit op_Deadtime_Driver (0)(2 instances)
+Flattening unmatched subcell gf180mcu_fd_sc_mcu9t5v0__nand2_1[[0]] in circuit op_Deadtime_Driver (1)(2 instances)
+Flattening unmatched subcell gf180mcu_fd_sc_mcu9t5v0__inv_8[[0]] in circuit op_Deadtime_Driver (1)(2 instances)
+Flattening unmatched subcell gf180mcu_fd_sc_mcu9t5v0__inv_1[[0]] in circuit op_Deadtime_Driver (1)(2 instances)
+
+Class op_Deadtime_Driver (0):  Merged 28 parallel devices.
+Class op_Deadtime_Driver (1):  Merged 28 parallel devices.
+Subcircuit summary:
+Circuit 1: op_Deadtime_Driver              |Circuit 2: op_Deadtime_Driver              
+-------------------------------------------|-------------------------------------------
+pfet_05v0 (22->8)                          |pfet_05v0 (22->8)                          
+nfet_05v0 (22->8)                          |nfet_05v0 (22->8)                          
+cap_mim_2f0_m4m5_noshield (2)              |cap_mim_2f0fF (2)                          
+Number of devices: 18                      |Number of devices: 18                      
+Number of nets: 11 **Mismatch**            |Number of nets: 12 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: op_Deadtime_Driver              |Circuit 2: op_Deadtime_Driver              
+
+---------------------------------------------------------------------------------------
+Net: vss                                   |Net: vss                                   
+  nfet_05v0/4 = 8                          |  cap_mim_2f0fF/2 = 2                      
+  nfet_05v0/(1|3) = 6                      |                                           
+  cap_mim_2f0_m4m5_noshield/2 = 2          |                                           
+                                           |                                           
+(no matching net)                          |Net: VSSd                                  
+                                           |  nfet_05v0/(1|3) = 6                      
+                                           |  nfet_05v0/4 = 8                          
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: op_Deadtime_Driver              |Circuit 2: op_Deadtime_Driver              
+-------------------------------------------|-------------------------------------------
+vss                                        |vss                                        
+vout_pmos                                  |vout_pmos                                  
+vout_nmos                                  |vout_nmos                                  
+vdd                                        |(no pin, node is VDDd)                     
+vin                                        |vin                                        
+n1                                         |(no pin, node is n1)                       
+n4                                         |(no pin, node is n4)                       
+n3                                         |(no pin, node is n3)                       
+n2                                         |(no pin, node is n2)                       
+---------------------------------------------------------------------------------------
+Cell pin lists for op_Deadtime_Driver and op_Deadtime_Driver altered to match.
+Device classes op_Deadtime_Driver and op_Deadtime_Driver are equivalent.
+
+Final result: Top level cell failed pin matching.

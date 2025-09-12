@@ -1,4 +1,6 @@
-# Tcl script to run LVS on opamp_n_input
+
+# Tcl script to run LVS on Angel_swmatrix_block
+
 
 if {[catch {set PDK_ROOT $::env(PDK_ROOT)}]} {set PDK_ROOT /usr/share/pdk}
 if {[catch {set PDK $::env(PDK)}]} {set PDK gf180mcuD}

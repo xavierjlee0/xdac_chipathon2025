@@ -1,0 +1,351 @@
+
+Circuit 1 cell nfet_05v0 and Circuit 2 cell nfet_05v0 are black boxes.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_05v0                       |Circuit 2: nfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_05v0 and nfet_05v0 are equivalent.
+
+Circuit 1 cell pfet_05v0 and Circuit 2 cell pfet_05v0 are black boxes.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_05v0 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_05v0                       |Circuit 2: pfet_05v0                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_05v0 and pfet_05v0 are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Subcircuit summary:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__latq_1 |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__latq_1 
+-------------------------------------------|-------------------------------------------
+nfet_05v0 (8)                              |nfet_05v0 (8)                              
+pfet_05v0 (8)                              |pfet_05v0 (8)                              
+Number of devices: 16                      |Number of devices: 16                      
+Number of nets: 15                         |Number of nets: 15                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__latq_1 |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__latq_1 
+-------------------------------------------|-------------------------------------------
+E                                          |E                                          
+D                                          |D                                          
+a_1908_69#                                 |Q **Mismatch**                             
+VPW                                        |VPW                                        
+VNW                                        |VNW                                        
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists for gf180mcu_fd_sc_mcu9t5v0__latq_1 and gf180mcu_fd_sc_mcu9t5v0__latq_1 altered to match.
+Device classes gf180mcu_fd_sc_mcu9t5v0__latq_1 and gf180mcu_fd_sc_mcu9t5v0__latq_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__nand2_ |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__nand2_ 
+-------------------------------------------|-------------------------------------------
+pfet_05v0 (2)                              |pfet_05v0 (2)                              
+nfet_05v0 (2)                              |nfet_05v0 (2)                              
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__nand2_ |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__nand2_ 
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+A2                                         |A2                                         
+VPW                                        |VPW                                        
+A1                                         |A1                                         
+VDD                                        |VDD                                        
+VNW                                        |VNW                                        
+ZN                                         |ZN                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gf180mcu_fd_sc_mcu9t5v0__nand2_1 and gf180mcu_fd_sc_mcu9t5v0__nand2_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__inv_1  |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__inv_1  
+-------------------------------------------|-------------------------------------------
+pfet_05v0 (1)                              |pfet_05v0 (1)                              
+nfet_05v0 (1)                              |nfet_05v0 (1)                              
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gf180mcu_fd_sc_mcu9t5v0__inv_1  |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__inv_1  
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+VPW                                        |VPW                                        
+VDD                                        |VDD                                        
+VNW                                        |VNW                                        
+ZN                                         |ZN                                         
+I                                          |I                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gf180mcu_fd_sc_mcu9t5v0__inv_1 and gf180mcu_fd_sc_mcu9t5v0__inv_1 are equivalent.
+Flattening unmatched subcell inv_1 in circuit transmission_gate_2 (0)(1 instance)
+Flattening unmatched subcell nfet$1 in circuit transmission_gate_2 (0)(1 instance)
+Flattening unmatched subcell pfet$1 in circuit transmission_gate_2 (0)(1 instance)
+
+Flattening instances of gf180mcu_fd_sc_mcu9t5v0__inv_1 in cell transmission_gate_2 (1) makes a better match
+Making another compare attempt.
+
+Class transmission_gate_2 (0):  Merged 14 parallel devices.
+Subcircuit summary:
+Circuit 1: transmission_gate_2             |Circuit 2: transmission_gate_2             
+-------------------------------------------|-------------------------------------------
+nfet_05v0 (1)                              |nfet_05v0 (1)                              
+pfet_05v0 (1)                              |pfet_05v0 (1)                              
+nfet_03v3 (4->1)                           |nfet_03v3 (4->1)                           
+pfet_03v3 (12->1)                          |pfet_03v3 (12->1)                          
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: transmission_gate_2             |Circuit 2: transmission_gate_2             
+-------------------------------------------|-------------------------------------------
+Bus                                        |Bus                                        
+Pin                                        |Pin                                        
+I                                          |I                                          
+VSSd                                       |VSSd                                       
+ZN                                         |(no pin, node is net1)                     
+VDDd                                       |VDDd                                       
+---------------------------------------------------------------------------------------
+Cell pin lists for transmission_gate_2 and transmission_gate_2 altered to match.
+Device classes transmission_gate_2 and transmission_gate_2 are equivalent.
+
+Cell DFF_2phase_1 (1) disconnected node: VSS
+Cell DFF_2phase_1 (1) disconnected node: VDD
+Subcircuit summary:
+Circuit 1: DFF_2phase_1                    |Circuit 2: DFF_2phase_1                    
+-------------------------------------------|-------------------------------------------
+gf180mcu_fd_sc_mcu9t5v0__latq_1 (2)        |gf180mcu_fd_sc_mcu9t5v0__latq_1 (2)        
+gf180mcu_fd_sc_mcu9t5v0__nand2_1 (1)       |gf180mcu_fd_sc_mcu9t5v0__nand2_1 (1)       
+gf180mcu_fd_sc_mcu9t5v0__inv_1 (1)         |gf180mcu_fd_sc_mcu9t5v0__inv_1 (1)         
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: DFF_2phase_1                    |Circuit 2: DFF_2phase_1                    
+-------------------------------------------|-------------------------------------------
+D                                          |D                                          
+PHI_1                                      |PHI_1                                      
+PHI_2                                      |PHI_2                                      
+EN                                         |EN                                         
+I                                          |I                                          
+Q                                          |Q                                          
+VDD                                        |(no pin, node is VDDd)                     
+VSS                                        |(no pin, node is VSSd)                     
+(no matching pin)                          |VSS                                        
+(no matching pin)                          |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists for DFF_2phase_1 and DFF_2phase_1 altered to match.
+Device classes DFF_2phase_1 and DFF_2phase_1 are equivalent.
+Flattening unmatched subcell Angel_one_SW_block in circuit Angel_row_block (0)(16 instances)
+Flattening unmatched subcell ShiftReg_row_10_2 in circuit Angel_row_block (1)(1 instance)
+
+Subcircuit summary:
+Circuit 1: Angel_row_block                 |Circuit 2: Angel_row_block                 
+-------------------------------------------|-------------------------------------------
+transmission_gate_2 (16)                   |transmission_gate_2 (16)                   
+DFF_2phase_1 (16)                          |DFF_2phase_1 (16)                          
+Number of devices: 32                      |Number of devices: 32                      
+Number of nets: 71 **Mismatch**            |Number of nets: 103 **Mismatch**           
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: Angel_row_block                 |Circuit 2: Angel_row_block                 
+
+---------------------------------------------------------------------------------------
+Net: VDD                                   |Net: VDD                                   
+  transmission_gate_2/VDDd = 16            |  transmission_gate_2/VDDd = 16            
+  DFF_2phase_1/VDD = 16                    |                                           
+                                           |                                           
+Net: VSS                                   |Net: VSS                                   
+  transmission_gate_2/VSSd = 16            |  transmission_gate_2/VSSd = 16            
+  DFF_2phase_1/VSS = 16                    |                                           
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_41         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_43         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_45         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_47         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_49         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_51         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_53         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_55         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_57         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_59         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_61         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_63         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_65         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_67         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_42         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_44         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_46         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_48         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_50         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_52         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_54         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_56         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_58         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_60         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_62         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_64         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_66         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_68         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_69         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_70         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_40         
+                                           |  DFF_2phase_1/proxyVSS = 1                
+                                           |                                           
+(no matching net)                          |Net: ShiftReg_row_10_2:SR/dummy_39         
+                                           |  DFF_2phase_1/proxyVDD = 1                
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: Angel_row_block                 |Circuit 2: Angel_row_block                 
+-------------------------------------------|-------------------------------------------
+VDD                                        |(no pin, node is ShiftReg_row_10_2:SR/dumm 
+VSS                                        |(no pin, node is ShiftReg_row_10_2:SR/dumm 
+EN                                         |EN                                         
+PHI_1                                      |PHI_1                                      
+PHI_2                                      |PHI_2                                      
+Pin                                        |pin                                        
+D_out                                      |D_out                                      
+BUS[1]                                     |BUS[1]                                     
+BUS[15]                                    |BUS[15]                                    
+BUS[3]                                     |BUS[3]                                     
+BUS[13]                                    |BUS[13]                                    
+BUS[5]                                     |BUS[5]                                     
+BUS[11]                                    |BUS[11]                                    
+BUS[7]                                     |BUS[7]                                     
+BUS[9]                                     |BUS[9]                                     
+BUS[8]                                     |BUS[8]                                     
+BUS[10]                                    |BUS[10]                                    
+BUS[6]                                     |BUS[6]                                     
+BUS[12]                                    |BUS[12]                                    
+BUS[4]                                     |BUS[4]                                     
+BUS[14]                                    |BUS[14]                                    
+BUS[2]                                     |BUS[2]                                     
+BUS[16]                                    |BUS[16]                                    
+(no pin, node is Angel_one_SW_block_0[0]/D |D_in                                       
+(no pin, node is VSS)                      |VDD                                        
+(no pin, node is VSS)                      |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists for Angel_row_block and Angel_row_block altered to match.
+Device classes Angel_row_block and Angel_row_block are equivalent.
+
+Final result: Top level cell failed pin matching.
