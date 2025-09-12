@@ -1,3 +1,4 @@
+
 # Tcl script to run LVS on Angel_swmatrix_block
 
 
@@ -12,10 +13,10 @@ set reflibs /foss/designs/libs/layout_analog/libs_new.ref
 set setupfile gf180mcuD_setup.tcl
 set sclib ${reflibs}/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
 
-set circuit1 [readnet spice Angel_swmatrix_block_layout.spice]
+set circuit1 [readnet spice opamp_n_input_layout.spice]
 set circuit2 [readnet spice $sclib]
 
-readnet spice Angel_swmatrix_block.spice $circuit2
+readnet spice opamp_n_input.spice $circuit2
 
-lvs "$circuit1 Angel_swmatrix_block" "$circuit2 Angel_swmatrix_block" \
-        $setupfile Angel_swmatrix_block_comp.out
+lvs "$circuit1 opamp_n_input" "$circuit2 opamp_n_input" \
+        $setupfile opamp_n_input_comp.out

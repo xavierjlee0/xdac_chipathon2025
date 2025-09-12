@@ -1,0 +1,24 @@
+** sch_path: /foss/designs/libs/core_analog/I_reference/I_reference.sch
+.subckt I_reference top_ref vss ibias_opp_10u vss ibias_buffer_opp vss vss vss vdd vdd vdd ibias_pcomp_10u ibias_opn_10u
++ ibias_ncomp_10u iref_10u_osc vss
+*.PININFO top_ref:I vss:I ibias_opp_10u:O vss:I ibias_buffer_opp:O vss:I vss:I vss:I vdd:I vdd:I vdd:I ibias_pcomp_10u:O
+*+ ibias_opn_10u:O ibias_ncomp_10u:O iref_10u_osc:O vss:I
+M1 vngates_iref_top vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+M2 top_ref top_ref vngates_iref_top vss nfet_03v3 L=1u W=4u nf=1 m=1
+M4 pcomp_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+M5 ibias_pcomp_10u ibias_pcomp_10u pcomp_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+M3 opp_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+M6 ibias_opp_10u ibias_opp_10u opp_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+M9 buffer_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+M10 ibias_buffer_opp ibias_buffer_opp buffer_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+M11 cascode_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+M12 vcascode_iref_top vcascode_iref_top cascode_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+M14 vpgates_iref_top vpgates_iref_top vdd vdd pfet_03v3 L=1u W=4u nf=1 m=1
+M15 vcascode_iref_top vcascode_iref_top vpgates_iref_top vdd pfet_03v3 L=1u W=4u nf=1 m=1
+M20 ncomp_s vpgates_iref_top vdd vdd pfet_03v3 L=1u W=4u nf=1 m=1
+M21 ibias_ncomp_10u ibias_ncomp_10u ncomp_s vdd pfet_03v3 L=1u W=4u nf=1 m=1
+M13 opn_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+M16 ibias_opn_10u ibias_opn_10u opn_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+M7 osc_s vpgates_iref_top vdd vdd pfet_03v3 L=1u W=4u nf=1 m=1
+M8 iref_10u_osc iref_10u_osc osc_s vdd pfet_03v3 L=1u W=4u nf=1 m=1
+.ends

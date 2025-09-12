@@ -1,25 +1,29 @@
-* Extracted by KLayout with GF180MCU LVS runset on : 04/09/2025 05:33
+* Extracted by KLayout with GF180MCU LVS runset on : 11/09/2025 21:19
 
-.SUBCKT Pmos_Comparator vss vout inn inp vdd iref
-M$1 vdd \$2 vout vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U
+.SUBCKT Pmos_Comparator vss v_7_3_p v_5_11_p v_6_9_p vout inn inp ibias_p iref
++ vdd
+M$1 v_5_11_p inn ibias_p vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
++ PD=17.86U
+M$5 v_6_9_p inp ibias_p vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U
++ PD=17.86U
+M$9 vout v_7_3_p vdd vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U
 + PD=33.38U
-M$6 vdd \$2 \$2 vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U PD=33.38U
-M$11 \$3 inn \$14 vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U PD=17.86U
-M$15 \$4 inp \$14 vdd pfet_03v3 L=1U W=12U AS=4.29P AD=4.29P PS=17.86U PD=17.86U
-M$19 \$14 iref vdd vdd pfet_03v3 L=1U W=14U AS=5.005P AD=5.005P PS=20.36U
+M$14 vdd v_7_3_p v_7_3_p vdd pfet_03v3 L=0.6U W=25U AS=8.45P AD=8.45P PS=33.38U
++ PD=33.38U
+M$19 ibias_p iref vdd vdd pfet_03v3 L=1U W=14U AS=5.005P AD=5.005P PS=20.36U
 + PD=20.36U
 M$23 iref iref vdd vdd pfet_03v3 L=1U W=7U AS=3.185P AD=3.185P PS=12.32U
 + PD=12.32U
-M$25 vss \$3 \$2 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$26 \$3 \$3 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$27 vss \$4 \$3 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$28 \$4 \$3 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$29 vss \$4 \$4 vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
-+ PD=12.22U
-M$30 vout \$4 vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
+M$25 vss v_5_11_p v_7_3_p vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$26 v_5_11_p v_5_11_p vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$27 vss v_6_9_p v_5_11_p vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$28 v_6_9_p v_5_11_p vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$29 vss v_6_9_p v_6_9_p vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P
++ PS=12.22U PD=12.22U
+M$30 vout v_6_9_p vss vss nfet_03v3 L=1U W=5.5U AS=3.355P AD=3.355P PS=12.22U
 + PD=12.22U
 .ENDS Pmos_Comparator
