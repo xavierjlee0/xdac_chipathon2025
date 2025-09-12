@@ -74,13 +74,13 @@ Circuit 1: gf180mcu_fd_sc_mcu9t5v0__latq_1 |Circuit 2: gf180mcu_fd_sc_mcu9t5v0__
 -------------------------------------------|-------------------------------------------
 E                                          |E                                          
 D                                          |D                                          
-Q                                          |Q                                          
+a_1908_69#                                 |Q **Mismatch**                             
 VPW                                        |VPW                                        
 VNW                                        |VNW                                        
 VSS                                        |VSS                                        
 VDD                                        |VDD                                        
 ---------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
+Cell pin lists for gf180mcu_fd_sc_mcu9t5v0__latq_1 and gf180mcu_fd_sc_mcu9t5v0__latq_1 altered to match.
 Device classes gf180mcu_fd_sc_mcu9t5v0__latq_1 and gf180mcu_fd_sc_mcu9t5v0__latq_1 are equivalent.
 
 Subcircuit summary:
@@ -155,7 +155,7 @@ Subcircuit pins:
 Circuit 1: transmission_gate_2             |Circuit 2: transmission_gate_2             
 -------------------------------------------|-------------------------------------------
 Bus                                        |Bus                                        
-pin                                        |Pin                                        
+Pin                                        |Pin                                        
 I                                          |I                                          
 VSSd                                       |VSSd                                       
 ZN                                         |(no pin, node is net1)                     
@@ -173,7 +173,7 @@ gf180mcu_fd_sc_mcu9t5v0__inv_1 (1)         |gf180mcu_fd_sc_mcu9t5v0__inv_1 (1)
 Number of devices: 4                       |Number of devices: 4                       
 Number of nets: 10                         |Number of nets: 10                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely with port errors.
+Netlists match uniquely.
 
 Subcircuit pins:
 Circuit 1: DFF_2phase_1                    |Circuit 2: DFF_2phase_1                    
@@ -183,10 +183,9 @@ PHI_1                                      |PHI_1
 PHI_2                                      |PHI_2                                      
 EN                                         |EN                                         
 I                                          |I                                          
-gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW       |VDDd **Mismatch**                          
-VSS                                        |VSSd **Mismatch**                          
-out_m                                      |(no pin, node is out_m)                    
 Q                                          |Q                                          
+VDD                                        |VDDd **Mismatch**                          
+VSS                                        |VSSd **Mismatch**                          
 ---------------------------------------------------------------------------------------
 Cell pin lists for DFF_2phase_1 and DFF_2phase_1 altered to match.
 Device classes DFF_2phase_1 and DFF_2phase_1 are equivalent.
@@ -199,7 +198,7 @@ Circuit 1: Angel_row_block                 |Circuit 2: Angel_row_block
 transmission_gate_2 (16)                   |transmission_gate_2 (16)                   
 DFF_2phase_1 (16)                          |DFF_2phase_1 (16)                          
 Number of devices: 32                      |Number of devices: 32                      
-Number of nets: 87                         |Number of nets: 87                         
+Number of nets: 71                         |Number of nets: 71                         
 ---------------------------------------------------------------------------------------
 Netlists match uniquely.
 
@@ -209,9 +208,9 @@ Circuit 1: Angel_row_block                 |Circuit 2: Angel_row_block
 PHI_1                                      |PHI_1                                      
 PHI_2                                      |PHI_2                                      
 EN                                         |EN                                         
-pin                                        |pin                                        
+Pin                                        |pin                                        
 D_out                                      |D_out                                      
-D_in                                       |D_in                                       
+Angel_one_SW_block_0[0]/DFF_2phase_1_0/D   |D_in **Mismatch**                          
 BUS[16]                                    |BUS[16]                                    
 BUS[2]                                     |BUS[2]                                     
 BUS[14]                                    |BUS[14]                                    
@@ -234,39 +233,205 @@ VDD                                        |VDDd **Mismatch**
 Cell pin lists for Angel_row_block and Angel_row_block altered to match.
 Device classes Angel_row_block and Angel_row_block are equivalent.
 
+Cell Angel_swmatrix_block (0) disconnected node: VSS
+Cell Angel_swmatrix_block (0) disconnected node: BUS[2]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[3]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[4]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[5]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[6]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[7]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[8]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[9]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[10]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[11]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[12]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[13]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[14]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[15]
+Cell Angel_swmatrix_block (0) disconnected node: BUS[16]
 Subcircuit summary:
 Circuit 1: Angel_swmatrix_block            |Circuit 2: Angel_swmatrix_block            
 -------------------------------------------|-------------------------------------------
-Angel_row_block (3)                        |Angel_row_block (3)                        
-Number of devices: 3                       |Number of devices: 3                       
-Number of nets: 31 **Mismatch**            |Number of nets: 28 **Mismatch**            
+Angel_row_block (18)                       |Angel_row_block (18)                       
+Number of devices: 18                      |Number of devices: 18                      
+Number of nets: 91 **Mismatch**            |Number of nets: 58 **Mismatch**            
 ---------------------------------------------------------------------------------------
 NET mismatches: Class fragments follow (with fanout counts):
 Circuit 1: Angel_swmatrix_block            |Circuit 2: Angel_swmatrix_block            
 
 ---------------------------------------------------------------------------------------
-Net: D_in                                  |Net: D_in                                  
-  Angel_row_block/D_in = 1                 |  Angel_row_block/D_in = 1                 
-                                           |                                           
-Net: D_out                                 |Net: D_out                                 
+Net: Angel_row_block_0[0]/D_out            |Net: D_out                                 
   Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
                                            |                                           
-Net: Angel_row_block_0[1]/D_in             |Net: VDDd                                  
-  Angel_row_block/D_in = 1                 |  Angel_row_block/VDDd = 3                 
+Net: Angel_row_block_0[1]/D_out            |Net: D_in                                  
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_in = 1                 
                                            |                                           
-Net: D_out_row[1]                          |Net: D_out_row[1]                          
-  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
-                                           |  Angel_row_block/D_in = 1                 
+Net: Angel_row_block_0[2]/D_out            |Net: VDDd                                  
+  Angel_row_block/D_out = 1                |  Angel_row_block/VDDd = 18                
                                            |                                           
-Net: D_out_row[2]                          |Net: D_out_row[2]                          
+Net: Angel_row_block_0[3]/D_out            |Net: D_out_row[1]                          
   Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
                                            |  Angel_row_block/D_in = 1                 
                                            |                                           
-Net: Angel_row_block_0[0]/D_in             |(no matching net)                          
-  Angel_row_block/D_in = 1                 |                                           
+Net: Angel_row_block_0[4]/D_out            |Net: D_out_row[2]                          
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
                                            |                                           
-Net: Angel_row_block_0[0]/VDD              |(no matching net)                          
+Net: Angel_row_block_0[5]/D_out            |Net: D_out_row[3]                          
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[6]/D_out            |Net: D_out_row[4]                          
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[7]/D_out            |Net: D_out_row[5]                          
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[8]/D_out            |Net: D_out_row[6]                          
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[9]/D_out            |Net: D_out_row[7]                          
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[10]/D_out           |Net: D_out_row[8]                          
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[11]/D_out           |Net: D_out_row[9]                          
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[12]/D_out           |Net: D_out_row[10]                         
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[13]/D_out           |Net: D_out_row[11]                         
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[14]/D_out           |Net: D_out_row[12]                         
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[15]/D_out           |Net: D_out_row[13]                         
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[16]/D_out           |Net: D_out_row[14]                         
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[17]/D_out           |Net: D_out_row[15]                         
+  Angel_row_block/D_out = 1                |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[0]/VDD              |Net: D_out_row[16]                         
+  Angel_row_block/VDD = 1                  |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[1]/VDD              |Net: D_out_row[17]                         
+  Angel_row_block/VDD = 1                  |  Angel_row_block/D_out = 1                
+                                           |  Angel_row_block/D_in = 1                 
+                                           |                                           
+Net: Angel_row_block_0[2]/VDD              |(no matching net)                          
   Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[3]/VDD              |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[4]/VDD              |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[5]/VDD              |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[6]/VDD              |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[7]/VDD              |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[8]/VDD              |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[9]/VDD              |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[10]/VDD             |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[11]/VDD             |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[12]/VDD             |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[13]/VDD             |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[14]/VDD             |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[15]/VDD             |(no matching net)                          
+  Angel_row_block/VDD = 1                  |                                           
+                                           |                                           
+Net: Angel_row_block_0[0]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[1]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[2]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[3]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[4]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[5]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[6]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[7]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[8]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[9]/Angel_one_SW_blo |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[10]/Angel_one_SW_bl |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[11]/Angel_one_SW_bl |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[12]/Angel_one_SW_bl |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[13]/Angel_one_SW_bl |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[14]/Angel_one_SW_bl |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[15]/Angel_one_SW_bl |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: Angel_row_block_0[16]/Angel_one_SW_bl |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
+                                           |                                           
+Net: D                                     |(no matching net)                          
+  Angel_row_block/Angel_one_SW_block_0[0]/ |                                           
                                            |                                           
 Net: VDD                                   |(no matching net)                          
   Angel_row_block/VDD = 2                  |                                           
@@ -277,8 +442,6 @@ Port matching may fail to disambiguate symmetries.
 Subcircuit pins:
 Circuit 1: Angel_swmatrix_block            |Circuit 2: Angel_swmatrix_block            
 -------------------------------------------|-------------------------------------------
-D_in                                       |(no pin, node is D_out_row[1])             
-D_out                                      |(no pin, node is D_out_row[2])             
 Cell pin lists are equivalent.
 Device classes Angel_swmatrix_block and Angel_swmatrix_block are equivalent.
 

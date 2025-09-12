@@ -31,17 +31,17 @@ X10 a_1854_0# a_1788_1260# a_1694_0# w_n230_n138# pfet_03v3 ad=3.9p pd=13.3u as=
 X11 a_1694_0# a_1628_1260# a_1534_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
 .ends
 
-.subckt transmission_gate_2 I VDDd VSSd ZN pin Bus
+.subckt transmission_gate_2 I VDDd VSSd ZN Pin Bus
 Xinv_1_0 VDDd VSSd ZN I VSSd VDDd inv_1
-Xnfet$1_0 I pin I I Bus pin Bus I pin VSSd nfet$1
-Xpfet$1_0 pin Bus Bus ZN Bus pin ZN pin ZN ZN pin ZN ZN pin Bus pin ZN Bus Bus ZN
-+ pin ZN ZN ZN ZN VDDd pfet$1
+Xnfet$1_0 I Pin I I Bus Pin Bus I Pin VSSd nfet$1
+Xpfet$1_0 Pin Bus Bus ZN Bus Pin ZN Pin ZN ZN Pin ZN ZN Pin Bus Pin ZN Bus Bus ZN
++ Pin ZN ZN ZN ZN VDDd pfet$1
 .ends
 
-.subckt gf180mcu_fd_sc_mcu9t5v0__latq_1 Q VDD VSS D E VNW VPW
-X0 VSS a_1020_652# Q VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.subckt gf180mcu_fd_sc_mcu9t5v0__latq_1 VSS D E VDD VNW VPW a_1908_69#
+X0 VSS a_1020_652# a_1908_69# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
 X1 a_504_110# a_36_92# VDD VNW pfet_05v0 ad=0.44p pd=2.88u as=0.476p ps=2.18u w=1u l=0.5u
-X2 VDD a_1020_652# Q VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X2 VDD a_1020_652# a_1908_69# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
 X3 a_1264_107# a_36_92# a_1020_652# VPW nfet_05v0 ad=0.263p pd=1.49u as=0.182p ps=1.22u w=0.7u l=0.6u
 X4 VSS E a_36_92# VPW nfet_05v0 ad=0.263p pd=1.49u as=0.3476p ps=2.46u w=0.79u l=0.6u
 X5 VSS a_1364_532# a_1264_107# VPW nfet_05v0 ad=0.2054p pd=1.31u as=0.263p ps=1.49u w=0.79u l=0.6u
@@ -57,88 +57,220 @@ X14 a_1364_532# a_1020_652# VSS VPW nfet_05v0 ad=0.3476p pd=2.46u as=0.2054p ps=
 X15 a_1224_652# a_504_110# a_1020_652# VNW pfet_05v0 ad=0.426p pd=2.08u as=0.26p ps=1.52u w=1u l=0.5u
 .ends
 
-.subckt gf180mcu_fd_sc_mcu9t5v0__nand2_1 VDD VSS A1 A2 ZN VNW VPW
+.subckt gf180mcu_fd_sc_mcu9t5v0__nand2_1 VSS A1 A2 VDD ZN VNW VPW
 X0 ZN A2 VDD VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
 X1 VDD A1 ZN VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
 X2 ZN A1 a_245_69# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
 X3 a_245_69# A2 VSS VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
 .ends
 
-.subckt gf180mcu_fd_sc_mcu9t5v0__inv_1 VDD VSS I ZN VNW VPW
+.subckt gf180mcu_fd_sc_mcu9t5v0__inv_1 VSS I VDD ZN VNW VPW
 X0 ZN I VDD VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
 X1 ZN I VSS VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
 .ends
 
-.subckt DFF_2phase_1 out_m D PHI_1 Q I EN PHI_2 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW
-+ VSS
-Xgf180mcu_fd_sc_mcu9t5v0__latq_1_0 Q gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS out_m
-+ PHI_2 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__latq_1
-Xgf180mcu_fd_sc_mcu9t5v0__latq_1_1 out_m gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS
-+ D PHI_1 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__latq_1
-Xgf180mcu_fd_sc_mcu9t5v0__nand2_1_0 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS EN Q
-+ gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__nand2_1
-Xgf180mcu_fd_sc_mcu9t5v0__inv_1_0 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I
-+ I gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW VSS gf180mcu_fd_sc_mcu9t5v0__inv_1
+.subckt DFF_2phase_1 D PHI_1 Q I EN PHI_2 VDD VSS
+Xgf180mcu_fd_sc_mcu9t5v0__latq_1_0 VSS gf180mcu_fd_sc_mcu9t5v0__latq_1_0/D PHI_2 VDD
++ VDD VSS Q gf180mcu_fd_sc_mcu9t5v0__latq_1
+Xgf180mcu_fd_sc_mcu9t5v0__latq_1_1 VSS D PHI_1 VDD VDD VSS gf180mcu_fd_sc_mcu9t5v0__latq_1_0/D
++ gf180mcu_fd_sc_mcu9t5v0__latq_1
+Xgf180mcu_fd_sc_mcu9t5v0__nand2_1_0 VSS EN Q VDD gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I
++ VDD VSS gf180mcu_fd_sc_mcu9t5v0__nand2_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_0 VSS gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I VDD I VDD
++ VSS gf180mcu_fd_sc_mcu9t5v0__inv_1
 .ends
 
 .subckt Angel_one_SW_block transmission_gate_2_0/VDDd transmission_gate_2_0/Bus DFF_2phase_1_0/D
-+ DFF_2phase_1_0/PHI_2 DFF_2phase_1_0/PHI_1 DFF_2phase_1_0/Q DFF_2phase_1_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW
-+ DFF_2phase_1_0/EN transmission_gate_2_0/pin VSUBS
++ transmission_gate_2_0/Pin DFF_2phase_1_0/VDD DFF_2phase_1_0/PHI_2 DFF_2phase_1_0/PHI_1
++ DFF_2phase_1_0/Q DFF_2phase_1_0/EN VSUBS
 Xtransmission_gate_2_0 DFF_2phase_1_0/I transmission_gate_2_0/VDDd VSUBS transmission_gate_2_0/ZN
-+ transmission_gate_2_0/pin transmission_gate_2_0/Bus transmission_gate_2
-XDFF_2phase_1_0 DFF_2phase_1_0/out_m DFF_2phase_1_0/D DFF_2phase_1_0/PHI_1 DFF_2phase_1_0/Q
-+ DFF_2phase_1_0/I DFF_2phase_1_0/EN DFF_2phase_1_0/PHI_2 DFF_2phase_1_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_0/VNW
-+ VSUBS DFF_2phase_1
++ transmission_gate_2_0/Pin transmission_gate_2_0/Bus transmission_gate_2
+XDFF_2phase_1_0 DFF_2phase_1_0/D DFF_2phase_1_0/PHI_1 DFF_2phase_1_0/Q DFF_2phase_1_0/I
++ DFF_2phase_1_0/EN DFF_2phase_1_0/PHI_2 DFF_2phase_1_0/VDD VSUBS DFF_2phase_1
 .ends
 
-.subckt Angel_row_block VDD D_in D_out pin BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6]
-+ BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] EN
-+ PHI_2 PHI_1 VSS
-XAngel_one_SW_block_0[0] VDD BUS[1] D_in PHI_2 PHI_1 Angel_one_SW_block_0[1]/DFF_2phase_1_0/D
-+ VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[1] VDD BUS[2] Angel_one_SW_block_0[1]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[2]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[2] VDD BUS[3] Angel_one_SW_block_0[2]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[3]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[3] VDD BUS[4] Angel_one_SW_block_0[3]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[4]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[4] VDD BUS[5] Angel_one_SW_block_0[4]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[5]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[5] VDD BUS[6] Angel_one_SW_block_0[5]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[6]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[6] VDD BUS[7] Angel_one_SW_block_0[6]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[7]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[7] VDD BUS[8] Angel_one_SW_block_0[7]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[8]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[8] VDD BUS[9] Angel_one_SW_block_0[8]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[9]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[9] VDD BUS[10] Angel_one_SW_block_0[9]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[9]/DFF_2phase_1_0/Q VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[10] VDD BUS[11] Angel_one_SW_block_0[9]/DFF_2phase_1_0/Q PHI_2
-+ PHI_1 Angel_one_SW_block_0[11]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[11] VDD BUS[12] Angel_one_SW_block_0[11]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[12]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[12] VDD BUS[13] Angel_one_SW_block_0[12]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[13]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[13] VDD BUS[14] Angel_one_SW_block_0[13]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[14]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[14] VDD BUS[15] Angel_one_SW_block_0[14]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 Angel_one_SW_block_0[15]/DFF_2phase_1_0/D VDD EN pin VSS Angel_one_SW_block
-XAngel_one_SW_block_0[15] VDD BUS[16] Angel_one_SW_block_0[15]/DFF_2phase_1_0/D PHI_2
-+ PHI_1 D_out VDD EN pin VSS Angel_one_SW_block
+.subckt Angel_row_block D_out Pin BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] EN PHI_2 PHI_1 BUS[1]
++ VDD Angel_one_SW_block_0[0]/DFF_2phase_1_0/D VSS
+XAngel_one_SW_block_0[0] VDD BUS[1] Angel_one_SW_block_0[0]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[1]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[1] VDD BUS[2] Angel_one_SW_block_0[1]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[2]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[2] VDD BUS[3] Angel_one_SW_block_0[2]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[3]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[3] VDD BUS[4] Angel_one_SW_block_0[3]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[4]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[4] VDD BUS[5] Angel_one_SW_block_0[4]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[5]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[5] VDD BUS[6] Angel_one_SW_block_0[5]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[6]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[6] VDD BUS[7] Angel_one_SW_block_0[6]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[7]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[7] VDD BUS[8] Angel_one_SW_block_0[7]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[8]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[8] VDD BUS[9] Angel_one_SW_block_0[8]/DFF_2phase_1_0/D Pin VDD
++ PHI_2 PHI_1 Angel_one_SW_block_0[9]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[9] VDD BUS[10] Angel_one_SW_block_0[9]/DFF_2phase_1_0/D Pin
++ VDD PHI_2 PHI_1 Angel_one_SW_block_0[9]/DFF_2phase_1_0/Q EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[10] VDD BUS[11] Angel_one_SW_block_0[9]/DFF_2phase_1_0/Q Pin
++ VDD PHI_2 PHI_1 Angel_one_SW_block_0[11]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[11] VDD BUS[12] Angel_one_SW_block_0[11]/DFF_2phase_1_0/D Pin
++ VDD PHI_2 PHI_1 Angel_one_SW_block_0[12]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[12] VDD BUS[13] Angel_one_SW_block_0[12]/DFF_2phase_1_0/D Pin
++ VDD PHI_2 PHI_1 Angel_one_SW_block_0[13]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[13] VDD BUS[14] Angel_one_SW_block_0[13]/DFF_2phase_1_0/D Pin
++ VDD PHI_2 PHI_1 Angel_one_SW_block_0[14]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[14] VDD BUS[15] Angel_one_SW_block_0[14]/DFF_2phase_1_0/D Pin
++ VDD PHI_2 PHI_1 Angel_one_SW_block_0[15]/DFF_2phase_1_0/D EN VSS Angel_one_SW_block
+XAngel_one_SW_block_0[15] VDD BUS[16] Angel_one_SW_block_0[15]/DFF_2phase_1_0/D Pin
++ VDD PHI_2 PHI_1 D_out EN VSS Angel_one_SW_block
 .ends
 
-.subckt Angel_swmatrix_block VDD VSS D_in PHI_1 PHI_2 D_out D_out_row[1] D_out_row[2]
-+ PIN[1] PIN[2] PIN[3] BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
-+ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] EN
-XAngel_row_block_0[0] Angel_row_block_0[0]/VDD Angel_row_block_0[0]/D_in D_out PIN[3]
-+ BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12]
-+ BUS[13] BUS[14] BUS[15] BUS[16] EN PHI_2 PHI_1 VSS Angel_row_block
-XAngel_row_block_0[1] VDD Angel_row_block_0[1]/D_in D_out_row[2] PIN[2] BUS[1] BUS[2]
-+ BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12] BUS[13]
-+ BUS[14] BUS[15] BUS[16] EN PHI_2 PHI_1 VSS Angel_row_block
-XAngel_row_block_0[2] VDD D_in D_out_row[1] PIN[1] BUS[1] BUS[2] BUS[3] BUS[4] BUS[5]
-+ BUS[6] BUS[7] BUS[8] BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16]
-+ EN PHI_2 PHI_1 VSS Angel_row_block
+.subckt Angel_swmatrix_block VDD VSS PHI_1 PHI_2 D PIN[3] PIN[2] PIN[18] PIN[17] PIN[16]
++ PIN[15] PIN[14] PIN[13] PIN[12] PIN[11] PIN[10] PIN[9] PIN[8] PIN[7] PIN[6] PIN[5]
++ PIN[4] PIN[1] BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9] BUS[10]
++ BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] EN
+XAngel_row_block_0[0] Angel_row_block_0[0]/D_out PIN[18] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[0]/VDD Angel_row_block_0[0]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[1] Angel_row_block_0[1]/D_out PIN[17] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[1]/VDD Angel_row_block_0[1]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[2] Angel_row_block_0[2]/D_out PIN[16] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[2]/VDD Angel_row_block_0[2]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[3] Angel_row_block_0[3]/D_out PIN[15] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[3]/VDD Angel_row_block_0[3]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[4] Angel_row_block_0[4]/D_out PIN[14] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[4]/VDD Angel_row_block_0[4]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[5] Angel_row_block_0[5]/D_out PIN[13] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[5]/VDD Angel_row_block_0[5]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[6] Angel_row_block_0[6]/D_out PIN[12] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[6]/VDD Angel_row_block_0[6]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[7] Angel_row_block_0[7]/D_out PIN[11] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[7]/VDD Angel_row_block_0[7]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[8] Angel_row_block_0[8]/D_out PIN[10] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[8]/VDD Angel_row_block_0[8]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[9] Angel_row_block_0[9]/D_out PIN[9] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[9]/VDD Angel_row_block_0[9]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[10] Angel_row_block_0[10]/D_out PIN[8] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[10]/VDD Angel_row_block_0[10]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[11] Angel_row_block_0[11]/D_out PIN[7] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[11]/VDD Angel_row_block_0[11]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[12] Angel_row_block_0[12]/D_out PIN[6] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[12]/VDD Angel_row_block_0[12]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[13] Angel_row_block_0[13]/D_out PIN[5] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[13]/VDD Angel_row_block_0[13]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[14] Angel_row_block_0[14]/D_out PIN[4] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[14]/VDD Angel_row_block_0[14]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[15] Angel_row_block_0[15]/D_out PIN[3] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ Angel_row_block_0[15]/VDD Angel_row_block_0[15]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D
++ VSUBS Angel_row_block
+XAngel_row_block_0[16] Angel_row_block_0[16]/D_out PIN[2] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ VDD Angel_row_block_0[16]/Angel_one_SW_block_0[0]/DFF_2phase_1_0/D VSUBS Angel_row_block
+XAngel_row_block_0[17] Angel_row_block_0[17]/D_out PIN[1] Angel_row_block_0[9]/BUS[2]
++ Angel_row_block_0[9]/BUS[3] Angel_row_block_0[9]/BUS[4] Angel_row_block_0[9]/BUS[5]
++ Angel_row_block_0[9]/BUS[6] Angel_row_block_0[9]/BUS[7] Angel_row_block_0[9]/BUS[8]
++ Angel_row_block_0[9]/BUS[9] Angel_row_block_0[9]/BUS[10] Angel_row_block_0[9]/BUS[11]
++ Angel_row_block_0[9]/BUS[12] Angel_row_block_0[9]/BUS[13] Angel_row_block_0[9]/BUS[14]
++ Angel_row_block_0[9]/BUS[15] Angel_row_block_0[9]/BUS[16] EN PHI_2 PHI_1 BUS[1]
++ VDD D VSUBS Angel_row_block
 .ends
 
