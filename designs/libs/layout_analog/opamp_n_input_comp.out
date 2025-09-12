@@ -1,0 +1,89 @@
+
+Circuit 1 cell pfet_03v3 and Circuit 2 cell pfet_03v3 are black boxes.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pfet_03v3                       |Circuit 2: pfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pfet_03v3 and pfet_03v3 are equivalent.
+
+Circuit 1 cell nfet_03v3 and Circuit 2 cell nfet_03v3 are black boxes.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell nfet_03v3 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: nfet_03v3                       |Circuit 2: nfet_03v3                       
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes nfet_03v3 and nfet_03v3 are equivalent.
+
+Circuit 1 cell cap_mim_2f0_m4m5_noshield and Circuit 2 cell cap_mim_2f0fF are black boxes.
+Warning: Equate pins:  cell cap_mim_2f0_m4m5_noshield is a placeholder, treated as a black box.
+Warning: Equate pins:  cell cap_mim_2f0fF is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: cap_mim_2f0_m4m5_noshield       |Circuit 2: cap_mim_2f0fF                   
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cap_mim_2f0_m4m5_noshield and cap_mim_2f0fF are equivalent.
+Flattening unmatched subcell pfet in circuit opamp_n_input (0)(5 instances)
+Flattening unmatched subcell pfet$6 in circuit opamp_n_input (0)(10 instances)
+Flattening unmatched subcell nfet$9 in circuit opamp_n_input (0)(5 instances)
+Flattening unmatched subcell cap_mim in circuit opamp_n_input (0)(1 instance)
+Flattening unmatched subcell nfet$11 in circuit opamp_n_input (0)(12 instances)
+Flattening unmatched subcell nfet in circuit opamp_n_input (0)(2 instances)
+Flattening unmatched subcell nfet$12 in circuit opamp_n_input (0)(2 instances)
+Flattening unmatched subcell nfet$10 in circuit opamp_n_input (0)(1 instance)
+Flattening unmatched subcell pfet$1 in circuit opamp_n_input (0)(14 instances)
+
+Class opamp_n_input (0):  Merged 34 parallel devices.
+Subcircuit summary:
+Circuit 1: opamp_n_input                   |Circuit 2: opamp_n_input                   
+-------------------------------------------|-------------------------------------------
+pfet_03v3 (29->8)                          |pfet_03v3 (29->8)                          
+nfet_03v3 (22->9)                          |nfet_03v3 (22->9)                          
+cap_mim_2f0_m4m5_noshield (1)              |cap_mim_2f0fF (1)                          
+Number of devices: 18                      |Number of devices: 18                      
+Number of nets: 16                         |Number of nets: 16                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: opamp_n_input                   |Circuit 2: opamp_n_input                   
+-------------------------------------------|-------------------------------------------
+vinn                                       |vinn                                       
+vinp                                       |vinp                                       
+vss                                        |vss                                        
+viss                                       |(no pin, node is viss)                     
+vg1                                        |(no pin, node is vg1)                      
+vb2                                        |(no pin, node is vb2)                      
+v_11_7                                     |(no pin, node is v_11_7)                   
+i_in                                       |(no pin, node is i_in)                     
+vdd                                        |vdd                                        
+v_2_4                                      |(no pin, node is v_2_4)                    
+v_6_9                                      |(no pin, node is v_6_9)                    
+out                                        |out                                        
+v_16_12                                    |(no pin, node is v_16_12)                  
+ibias                                      |ibias                                      
+v_3_1                                      |(no pin, node is v_3_1)                    
+v_17_16                                    |(no pin, node is v_17_16)                  
+---------------------------------------------------------------------------------------
+Cell pin lists for opamp_n_input and opamp_n_input altered to match.
+Device classes opamp_n_input and opamp_n_input are equivalent.
+
+Final result: Top level cell failed pin matching.

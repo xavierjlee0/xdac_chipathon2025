@@ -65,3 +65,4 @@ spiceprefix=X
 C {ipin.sym} 520 -480 0 0 {name=p5 lab=Pin}
 C {iopin.sym} 760 -370 1 0 {name=p6 lab=VSSd}
 C {libs/gf180mcu_fd_sc_mcu9t5v0_symbols/inv_1.sym} 650 -670 0 0 {name=x1 VGND=VSSd VNB=VDDd VPB=VSSd VPWR=VDDd prefix=gf180mcu_fd_sc_mcu9t5v0__ }
+

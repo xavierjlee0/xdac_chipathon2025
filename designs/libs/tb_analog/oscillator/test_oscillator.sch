@@ -58,6 +58,7 @@ C {devices/code_shown.sym} 680 -540 0 0 {name=Simulation only_toplevel=false val
 .param Tbit = 20n
 .global VDDd VSSd
 .ic v(vout)=0
+.options savecurrents
 .control
 save all
 
@@ -71,7 +72,7 @@ plot vout x1.vcompn vho
 plot vout x1.vcompp vlo
 plot vout vlo vho
 plot x1.vq vout
-
+plot @C1[i]
 .endc
 "}
 C {capa.sym} 830 -785 0 0 {name=C1

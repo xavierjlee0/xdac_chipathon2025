@@ -1,0 +1,94 @@
+* NGSPICE file created from opamp_n_input.ext - technology: gf180mcuD
+
+.subckt pfet a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.275p pd=8.3u as=2.275p ps=8.3u w=3.5u l=1u
+.ends
+
+.subckt pfet$6 a_38_n60# a_n92_0# a_198_0# w_n230_n138#
+X0 a_198_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=0.8u
+.ends
+
+.subckt nfet$9 a_38_n60# a_n84_0# a_560_0# a_438_0#
+X0 a_438_0# a_38_n60# a_n84_0# a_560_0# nfet_03v3 ad=2.745p pd=10.22u as=2.745p ps=10.22u w=4.5u l=2u
+.ends
+
+.subckt cap_mim m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=25u c_length=24u
+.ends
+
+.subckt nfet$11 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=3.05p pd=11.22u as=3.05p ps=11.22u w=5u l=1u
+.ends
+
+.subckt nfet a_38_n60# a_n84_0# a_198_0# a_320_0#
+X0 a_198_0# a_38_n60# a_n84_0# a_320_0# nfet_03v3 ad=3.355p pd=12.22u as=3.355p ps=12.22u w=5.5u l=0.8u
+.ends
+
+.subckt nfet$12 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=1.83p pd=7.22u as=1.83p ps=7.22u w=3u l=1u
+.ends
+
+.subckt nfet$10 a_838_0# a_38_n60# a_n84_0# a_960_0#
+X0 a_838_0# a_38_n60# a_n84_0# a_960_0# nfet_03v3 ad=1.22p pd=5.22u as=1.22p ps=5.22u w=2u l=4u
+.ends
+
+.subckt pfet$1 a_38_n60# a_n92_0# a_138_0# w_n230_n138#
+X0 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=3.575p pd=12.3u as=3.575p ps=12.3u w=5.5u l=0.5u
+.ends
+
+.subckt opamp_n_input out ibias vinp vinn viss vb2 vg1 v_2_4 i_in v_17_16 v_16_12
++ v_11_7 v_6_9 v_3_1 vdd vss
+Xpfet_0 v_17_16 ibias v_16_12 vdd pfet
+Xpfet_1 vdd i_in i_in vdd pfet
+Xpfet_2 vdd i_in vb2 vdd pfet
+Xpfet_3 vdd i_in v_17_16 vdd pfet
+Xpfet_4 i_in ibias ibias vdd pfet
+Xpfet$6_0[0|0] vg1 vg1 vdd vdd pfet$6
+Xpfet$6_0[1|0] vg1 vg1 vdd vdd pfet$6
+Xpfet$6_0[0|1] vg1 vg1 vdd vdd pfet$6
+Xpfet$6_0[1|1] vg1 vg1 vdd vdd pfet$6
+Xnfet$9_0[0] v_11_7 viss vss vss nfet$9
+Xnfet$9_0[1] v_11_7 viss vss vss nfet$9
+Xnfet$9_0[2] v_11_7 viss vss vss nfet$9
+Xpfet$6_2 vg1 v_6_9 vdd vdd pfet$6
+Xpfet$6_1 vg1 vg1 vdd vdd pfet$6
+Xnfet$9_1 v_11_7 v_11_7 vss vss nfet$9
+Xpfet$6_3[0|0] vg1 v_6_9 vdd vdd pfet$6
+Xpfet$6_3[1|0] vg1 v_6_9 vdd vdd pfet$6
+Xpfet$6_3[0|1] vg1 v_6_9 vdd vdd pfet$6
+Xpfet$6_3[1|1] vg1 v_6_9 vdd vdd pfet$6
+Xnfet$9_2 v_16_12 v_16_12 vss v_11_7 nfet$9
+Xcap_mim_0 out v_2_4 cap_mim
+Xnfet$11_0[0] vss v_2_4 vb2 v_6_9 nfet$11
+Xnfet$11_0[1] vss v_2_4 vb2 v_6_9 nfet$11
+Xnfet$11_0[2] vss v_2_4 vb2 v_6_9 nfet$11
+Xnfet$11_1[0] vss v_2_4 vb2 v_6_9 nfet$11
+Xnfet$11_1[1] vss v_2_4 vb2 v_6_9 nfet$11
+Xnfet$11_1[2] vss v_2_4 vb2 v_6_9 nfet$11
+Xnfet$11_2[0] vss v_3_1 vb2 vg1 nfet$11
+Xnfet$11_2[1] vss v_3_1 vb2 vg1 nfet$11
+Xnfet$11_2[2] vss v_3_1 vb2 vg1 nfet$11
+Xnfet$11_3[0] vss v_3_1 vb2 vg1 nfet$11
+Xnfet$11_3[1] vss v_3_1 vb2 vg1 nfet$11
+Xnfet$11_3[2] vss v_3_1 vb2 vg1 nfet$11
+Xnfet_0 v_11_7 out vss vss nfet
+Xnfet_1 v_11_7 out vss vss nfet
+Xnfet$12_0 vss viss vinp v_2_4 nfet$12
+Xnfet$12_1 vss viss vinn v_3_1 nfet$12
+Xnfet$10_0 viss vb2 vb2 vss nfet$10
+Xpfet$1_0[0] v_6_9 out vdd vdd pfet$1
+Xpfet$1_0[1] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[0|0] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[1|0] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[2|0] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[3|0] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[0|1] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[1|1] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[2|1] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[3|1] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[0|2] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[1|2] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[2|2] v_6_9 out vdd vdd pfet$1
+Xpfet$1_1[3|2] v_6_9 out vdd vdd pfet$1
+.ends
+
