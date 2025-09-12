@@ -250,3 +250,4 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
+C {noconn.sym} 740 -430 2 0 {name=l2}

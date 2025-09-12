@@ -1,7 +1,7 @@
 ** sch_path: /foss/designs/libs/core_analog/tx_gate/transmission_gate_2.sch
 .subckt transmission_gate_2 VDDd I Bus Pin VSSd
 *.PININFO VDDd:B I:I Bus:O Pin:I VSSd:B
-XM3 Bus I Pin VSSd nfet_03v3 L=0.28u W=6u nf=1 m=4
-XM4 Bus ZN Pin VDDd pfet_03v3 L=0.28u W=6u nf=1 m=12
-x1 I ZN VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+M3 Bus I Pin VSSd nfet_03v3 L=0.28u W=6u nf=1 m=4
+M4 Bus net1 Pin VDDd pfet_03v3 L=0.28u W=6u nf=1 m=12
+x1 I net1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
 .ends
