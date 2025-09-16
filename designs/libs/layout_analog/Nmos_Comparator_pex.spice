@@ -1,0 +1,151 @@
+* NGSPICE file created from Nmos_Comparator.ext - technology: gf180mcuD
+
+.subckt nfet$5 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+C0 a_n84_0# a_238_0# 0.11655f
+C1 a_38_n60# a_n84_0# 0.06967f
+C2 a_38_n60# a_238_0# 0.06967f
+C3 a_238_0# a_360_0# 0.54275f
+C4 a_n84_0# a_360_0# 0.1615f
+C5 a_38_n60# a_360_0# 0.45162f
+.ends
+
+.subckt nfet a_342_n60# a_238_0# a_542_0# a_38_n60# a_n84_0# a_664_0#
+X0 a_542_0# a_342_n60# a_238_0# a_664_0# nfet_03v3 ad=1.525p pd=6.22u as=0.65p ps=3.02u w=2.5u l=1u
+X1 a_238_0# a_38_n60# a_n84_0# a_664_0# nfet_03v3 ad=0.65p pd=3.02u as=1.525p ps=6.22u w=2.5u l=1u
+C0 a_238_0# a_n84_0# 0.06881f
+C1 a_542_0# a_238_0# 0.06881f
+C2 a_238_0# a_38_n60# 0.04323f
+C3 a_542_0# a_342_n60# 0.03868f
+C4 a_38_n60# a_342_n60# 0.04027f
+C5 a_38_n60# a_n84_0# 0.03868f
+C6 a_238_0# a_342_n60# 0.04323f
+C7 a_542_0# a_664_0# 0.31314f
+C8 a_238_0# a_664_0# 0.0267f
+C9 a_n84_0# a_664_0# 0.10145f
+C10 a_342_n60# a_664_0# 0.42024f
+C11 a_38_n60# a_664_0# 0.42024f
+.ends
+
+.subckt pfet$3 a_242_n60# a_38_n60# a_n92_0# a_342_0# a_138_0# w_n230_n138# VSUBS
+X0 a_342_0# a_242_n60# a_138_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.5u
+X1 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.5u
+C0 a_138_0# a_n92_0# 0.25995f
+C1 a_n92_0# w_n230_n138# 0.04942f
+C2 a_38_n60# a_242_n60# 0.05023f
+C3 a_138_0# a_38_n60# 0.06079f
+C4 w_n230_n138# a_38_n60# 0.1418f
+C5 a_342_0# a_242_n60# 0.0546f
+C6 a_138_0# a_342_0# 0.25995f
+C7 w_n230_n138# a_342_0# 0.63487f
+C8 a_138_0# a_242_n60# 0.06079f
+C9 w_n230_n138# a_242_n60# 0.14728f
+C10 a_138_0# w_n230_n138# 0.00678f
+C11 a_n92_0# a_38_n60# 0.0546f
+C12 a_342_0# VSUBS 0.02019f
+C13 a_138_0# VSUBS 0.02019f
+C14 a_n92_0# VSUBS 0.15079f
+C15 a_242_n60# VSUBS 0.1204f
+C16 a_38_n60# VSUBS 0.12588f
+C17 w_n230_n138# VSUBS 3.89693f
+.ends
+
+.subckt nfet$6 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.135p pd=8.22u as=2.135p ps=8.22u w=3.5u l=1u
+C0 a_n84_0# a_238_0# 0.09927f
+C1 a_38_n60# a_n84_0# 0.05934f
+C2 a_38_n60# a_238_0# 0.05934f
+C3 a_238_0# a_360_0# 0.46621f
+C4 a_n84_0# a_360_0# 0.14148f
+C5 a_38_n60# a_360_0# 0.452f
+.ends
+
+.subckt pfet$1 a_242_n60# a_38_n60# a_n92_0# a_342_0# a_138_0# w_n230_n138# VSUBS
+X0 a_342_0# a_242_n60# a_138_0# w_n230_n138# pfet_03v3 ad=5.3625p pd=17.8u as=2.145p ps=8.77u w=8.25u l=0.5u
+X1 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.145p pd=8.77u as=5.3625p ps=17.8u w=8.25u l=0.5u
+C0 a_138_0# a_n92_0# 0.46802f
+C1 a_n92_0# w_n230_n138# 0.0839f
+C2 a_38_n60# a_242_n60# 0.05023f
+C3 a_138_0# a_38_n60# 0.10944f
+C4 w_n230_n138# a_38_n60# 0.14163f
+C5 a_342_0# a_242_n60# 0.0983f
+C6 a_138_0# a_342_0# 0.46802f
+C7 w_n230_n138# a_342_0# 1.13797f
+C8 a_138_0# a_242_n60# 0.10944f
+C9 w_n230_n138# a_242_n60# 0.14711f
+C10 a_138_0# w_n230_n138# 0.00714f
+C11 a_n92_0# a_38_n60# 0.0983f
+C12 a_342_0# VSUBS 0.0216f
+C13 a_138_0# VSUBS 0.0216f
+C14 a_n92_0# VSUBS 0.25675f
+C15 a_242_n60# VSUBS 0.11976f
+C16 a_38_n60# VSUBS 0.12524f
+C17 w_n230_n138# VSUBS 5.90712f
+.ends
+
+.subckt nfet$2 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=1.525p pd=6.22u as=1.525p ps=6.22u w=2.5u l=1u
+C0 a_n84_0# a_238_0# 0.06471f
+C1 a_38_n60# a_n84_0# 0.03868f
+C2 a_38_n60# a_238_0# 0.03868f
+C3 a_238_0# a_360_0# 0.31314f
+C4 a_n84_0# a_360_0# 0.10145f
+C5 a_38_n60# a_360_0# 0.45304f
+.ends
+
+.subckt Nmos_Comparator_pex vdd vout inp vss inn iref
+Xnfet$5_0 vss m1_n1038_n762# inp m1_n1572_302# nfet$5
+Xnfet$5_1 vss m1_n1038_n762# inn m1_n3992_282# nfet$5
+Xnfet_0 iref m1_n1038_n762# vss iref vss vss nfet
+Xpfet$3_0 m1_n1572_302# m1_n1572_302# vdd vdd m1_n3992_282# vdd vss pfet$3
+Xnfet$6_0 vss vss m1_n3902_426# m1_n3902_426# nfet$6
+Xpfet$3_1 m1_n3992_282# m1_n3992_282# vdd vdd m1_n1572_302# vdd vss pfet$3
+Xnfet$6_1 vss vss m1_n3902_426# vout nfet$6
+Xpfet$3_2 m1_n3992_282# m1_n3992_282# vdd vdd m1_n3992_282# vdd vss pfet$3
+Xpfet$1_0 m1_n1572_302# m1_n1572_302# vdd vdd vout vdd vss pfet$1
+Xpfet$3_3 m1_n1572_302# m1_n1572_302# vdd vdd m1_n1572_302# vdd vss pfet$3
+Xpfet$1_1 m1_n3992_282# m1_n3992_282# vdd vdd m1_n3902_426# vdd vss pfet$1
+Xnfet$2_0 vss vss iref iref nfet$2
+C0 m1_n3992_282# m1_n1038_n762# 0.15718f
+C1 m1_n3992_282# m1_n3902_426# 0.60087f
+C2 m1_n1572_302# inn 0.05085f
+C3 m1_n1572_302# inp 0.09644f
+C4 m1_n1572_302# iref 0.04115f
+C5 inn m1_n3992_282# 0.11603f
+C6 m1_n3992_282# inp 0.03041f
+C7 m1_n1572_302# vout 0.31364f
+C8 m1_n3992_282# iref 0.00765f
+C9 vdd m1_n3902_426# 0.57848f
+C10 m1_n3902_426# m1_n1038_n762# 0.0361f
+C11 m1_n1572_302# m1_n3992_282# 0.81575f
+C12 inn vdd 0.03598f
+C13 vdd inp 0.0182f
+C14 inn m1_n1038_n762# 0.07706f
+C15 inp m1_n1038_n762# 0.11542f
+C16 vdd iref 0.00239f
+C17 inn m1_n3902_426# 0.08247f
+C18 inp m1_n3902_426# 0.04234f
+C19 m1_n1038_n762# iref 0.25259f
+C20 vdd vout 0.44981f
+C21 m1_n3902_426# iref 0.04286f
+C22 m1_n1038_n762# vout 0.0038f
+C23 m1_n3902_426# vout 0.0357f
+C24 inn inp 1.39836f
+C25 m1_n1572_302# vdd 1.19864f
+C26 inn iref 0.00213f
+C27 inp iref 1.21961f
+C28 m1_n1572_302# m1_n1038_n762# 0.15967f
+C29 inp vout 0
+C30 vdd m1_n3992_282# 1.25071f
+C31 m1_n1572_302# m1_n3902_426# 0.21924f
+C32 m1_n3992_282# vss 1.97209f
+C33 vdd vss 34.29608f
+C34 vout vss 1.28099f
+C35 m1_n3902_426# vss 3.10413f
+C36 m1_n1572_302# vss 2.11005f
+C37 m1_n1038_n762# vss 1.90673f
+C38 iref vss 3.93924f
+C39 inn vss 0.73719f
+C40 inp vss 0.8917f
+.ends
+
