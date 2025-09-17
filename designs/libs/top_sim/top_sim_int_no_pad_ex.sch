@@ -327,6 +327,8 @@ N 900 -2750 900 -2730 {lab=clk_in}
 N 1170 -2750 1170 -2730 {lab=en_in}
 N 1170 -2670 1170 -2630 {lab=#net9}
 N 900 -2670 900 -2620 {lab=#net10}
+N 310 -2500 310 -2460 {lab=GND}
+N 310 -2600 310 -2560 {lab=iref}
 C {title.sym} 70 30 0 0 {name=l1 author=", X.J. Lee, Christopher O Amankwaa"}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 2880 -1340 2 0 {name=xn_comp}
 C {libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sym} 1460 -1420 3 1 {name=x1}
@@ -737,7 +739,50 @@ C {lab_wire.sym} 1710 -2875 0 0 {name=p23 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 1770 -2875 0 0 {name=p24 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 1790 -2995 0 0 {name=p25 sig_type=std_logic lab=vho}
 C {lab_wire.sym} 1830 -2955 0 0 {name=p26 sig_type=std_logic lab=vlo}
-C {vsource.sym} 900 -2700 0 0 {name=V1 value=PULSE(0 3.3 0.1n 0.1n 0.1n 5n 10n 49) savecurrent=false}
-C {vsource.sym} 1170 -2700 0 0 {name=V2 value=0.8 savecurrent=false}
+C {vsource.sym} 900 -2700 0 0 {name=V1 value="PULSE(0 3.3 0.1n 0.1n 0.1n 5n 10n 49)" savecurrent=false}
+C {vsource.sym} 1170 -2700 0 0 {name=V2 value="PULSE(0 3.3 490n 0.1n 0.1n 20n 40n 1)" savecurrent=false}
 C {lab_wire.sym} 1170 -2640 0 1 {name=p27 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} 900 -2640 0 1 {name=p28 sig_type=std_logic lab=VSSd}
+C {devices/code_shown.sym} 50 -1710 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.include $::180MCU_MODELS/design.ngspice
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/smbb000149.ngspice typical
+"}
+C {netlist.sym} -260 -2100 0 0 {name=s1 value="
+.param VDD = 3.3
+.param Tbit = 20n
+.global VDDd VSSd
+.ic v(vout)=0 
+
+* data
+aclock [ clock_node ] clock_vector
+.model clock_vector d_source(input_file=\\"/foss/designs/libs/data_source/data_swmatrix_zeros.txt\\")
+* convert digital signals to analog
+aconvert [ clock_node ] [  data ] dac_in
+.model dac_in dac_bridge (out_low=0V out_high=3.3V t_rise=0.1ns t_fall=0.1ns)
+"}
+C {code_shown.sym} -300 -1760 0 0 {name=Simulation only_toplevel=false value="
+.control
+
+    save all
+    TRAN 1n 20u
+    write top_sim_int_no_pad_ex.raw
+
+.endc
+"
+}
+C {code_shown.sym} -3240 -630 0 0 {name=Simulation1 only_toplevel=false value="
+.control
+
+    save all
+    TRAN 1n 20u
+    write savestate.raw
+
+.endc
+"
+}
+C {isource.sym} 310 -2530 2 0 {name=I0 value=10u}
+C {gnd.sym} 310 -2460 0 0 {name=l5 lab=GND}
+C {lab_wire.sym} 310 -2600 0 0 {name=p36 sig_type=std_logic lab=top_iref}
