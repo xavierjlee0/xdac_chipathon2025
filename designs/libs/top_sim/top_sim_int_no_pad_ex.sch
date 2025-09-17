@@ -42,7 +42,7 @@ N 1790 -2600 1790 -2560 {lab=swthirteen}
 N 2000 -2450 2000 -2410 {lab=vss}
 N 2020 -2450 2020 -2410 {lab=vdd}
 N 2040 -2450 2040 -2410 {lab=ibias_buffer_opp}
-N 2100 -2450 2100 -2390 {lab=swmatrix_bus[5]}
+N 2100 -2450 2100 -2390 {lab=BUSFIVE}
 N 1900 -960 1940 -960 {lab=vss}
 N 1900 -980 1940 -980 {lab=vdd}
 N 1900 -1000 1940 -1000 {lab=ibias_opp_10u}
@@ -120,7 +120,7 @@ N 2790 -2820 2790 -2720 {lab=swmatrix_bus[2]}
 N 2570 -2820 2570 -2680 {lab=swmatrix_bus[3]}
 N 2570 -2680 3140 -2680 {lab=swmatrix_bus[3]}
 N 2350 -2640 3140 -2640 {lab=swmatrix_bus[4]}
-N 2990 -2600 3140 -2600 {lab=swmatrix_bus[5]}
+N 2990 -2600 3140 -2600 {lab=BUSFIVE}
 N 2990 -2560 3140 -2560 {lab=swmatrix_bus[6]}
 N 2990 -2520 3140 -2520 {lab=swmatrix_bus[7]}
 N 2990 -2480 3140 -2480 {lab=swmatrix_bus[8]}
@@ -128,11 +128,11 @@ N 2990 -2440 3140 -2440 {lab=swmatrix_bus[9]}
 N 2990 -2400 3140 -2400 {lab=swmatrix_bus[10]}
 N 2990 -2360 3140 -2360 {lab=swmatrix_bus[11]}
 N 2990 -2320 3140 -2320 {lab=swmatrix_bus[12]}
-N 2560 -2600 2990 -2600 {lab=swmatrix_bus[5]}
-N 2350 -2600 2560 -2600 {lab=swmatrix_bus[5]}
-N 2350 -2600 2350 -2380 {lab=swmatrix_bus[5]}
-N 2100 -2380 2350 -2380 {lab=swmatrix_bus[5]}
-N 2100 -2390 2100 -2380 {lab=swmatrix_bus[5]}
+N 2560 -2600 2990 -2600 {lab=BUSFIVE}
+N 2350 -2600 2560 -2600 {lab=BUSFIVE}
+N 2350 -2600 2350 -2380 {lab=BUSFIVE}
+N 2100 -2380 2350 -2380 {lab=BUSFIVE}
+N 2100 -2390 2100 -2380 {lab=BUSFIVE}
 N 2990 -2280 3140 -2280 {lab=swmatrix_bus[13]}
 N 2990 -2240 3140 -2240 {lab=swmatrix_bus[14]}
 N 2990 -2200 3140 -2200 {lab=swmatrix_bus[15]}
@@ -287,37 +287,19 @@ N 1270 -1720 1270 -1680 {lab=iref_10u_osc}
 N 1410 -2150 1410 -1850 {lab=vpgates_iref_top}
 N 980 -2520 1270 -2280 {lab=vcascode_iref_top}
 N 2350 -2860 2350 -2640 {lab=swmatrix_bus[4]}
-N 2410 -2070 2550 -2070 {lab=swmatrix_bus[1:16]}
-N 2410 -2090 2480 -2090 {lab=#net8}
-N 2480 -2150 2480 -2090 {lab=#net8}
-N 2050 -2050 2110 -2050 {lab=clk_in}
-N 2070 -2090 2110 -2090 {lab=en_in}
-N 2020 -2050 2050 -2050 {lab=clk_in}
-N 2050 -2030 2110 -2030 {lab=vss}
-N 2050 -2010 2110 -2010 {lab=vdd}
-N 1940 -2070 2110 -2070 {lab=serial_in}
+N 2420 -2050 2560 -2050 {lab=swmatrix_bus[6:16]}
+N 2410 -2070 2480 -2070 {lab=#net8}
+N 2480 -2130 2480 -2070 {lab=#net8}
+N 2050 -2070 2110 -2070 {lab=clk_in}
+N 2070 -2110 2110 -2110 {lab=en_in}
+N 2020 -2070 2050 -2070 {lab=clk_in}
+N 2050 -2050 2110 -2050 {lab=VSSd}
+N 2050 -2030 2110 -2030 {lab=VDDd}
+N 1940 -2090 2110 -2090 {lab=serial_in}
 N 2350 -3060 2350 -2840 {lab=swmatrix_bus[4]}
 N 2570 -3050 2570 -2840 {lab=swmatrix_bus[3]}
 N 2790 -3050 2790 -2840 {lab=swmatrix_bus[2]}
 N 2990 -3060 2990 -2830 {lab=swmatrix_bus[1]}
-N 2410 -2050 2530 -2050 {lab=swone}
-N 2410 -2030 2520 -2030 {lab=swten}
-N 2410 -2010 2510 -2010 {lab=sweleven}
-N 2410 -1990 2510 -1990 {lab=swtwo}
-N 2410 -1970 2510 -1970 {lab=swtwelve}
-N 2410 -1950 2510 -1950 {lab=swthree}
-N 2410 -1930 2510 -1930 {lab=swthirteen}
-N 2410 -1910 2500 -1910 {lab=swfour}
-N 2410 -1890 2480 -1890 {lab=swfourteen}
-N 2410 -1870 2490 -1870 {lab=swfive}
-N 2410 -1850 2480 -1850 {lab=swfifteen}
-N 2410 -1810 2480 -1810 {lab=swsixteen}
-N 2410 -1830 2490 -1830 {lab=swsix}
-N 2410 -1790 2480 -1790 {lab=swseven}
-N 2410 -1770 2510 -1770 {lab=swseventeen}
-N 2410 -1750 2480 -1750 {lab=sweighteen}
-N 2410 -1730 2500 -1730 {lab=sweight}
-N 2410 -1710 2470 -1710 {lab=swnine}
 N 1710 -2995 1710 -2955 {lab=vho}
 N 1710 -2895 1710 -2875 {lab=vss}
 N 1770 -2895 1770 -2875 {lab=vss}
@@ -325,10 +307,42 @@ N 1710 -2995 1795 -2995 {lab=vho}
 N 1770 -2955 1835 -2955 {lab=vlo}
 N 900 -2750 900 -2730 {lab=clk_in}
 N 1170 -2750 1170 -2730 {lab=en_in}
-N 1170 -2670 1170 -2630 {lab=#net9}
-N 900 -2670 900 -2620 {lab=#net10}
+N 1170 -2670 1170 -2630 {lab=VSSd}
+N 900 -2670 900 -2620 {lab=VSSd}
 N 310 -2500 310 -2460 {lab=GND}
-N 310 -2600 310 -2560 {lab=iref}
+N 310 -2600 310 -2560 {lab=top_iref}
+N 2410 -2030 2470 -2030 {lab=swone}
+N 2410 -2010 2480 -2010 {lab=swten}
+N 2410 -1990 2480 -1990 {lab=sweleven}
+N 2410 -1970 2480 -1970 {lab=swtwo}
+N 2410 -1950 2490 -1950 {lab=swtwelve}
+N 2410 -1930 2490 -1930 {lab=swthree}
+N 2410 -1910 2480 -1910 {lab=swthirteen}
+N 2410 -1890 2490 -1890 {lab=swfour}
+N 2410 -1870 2480 -1870 {lab=swfourteen}
+N 2410 -1850 2450 -1850 {lab=swfive}
+N 2410 -1830 2490 -1830 {lab=swfifteen}
+N 2410 -1810 2490 -1810 {lab=swsix}
+N 2410 -1790 2460 -1790 {lab=swsixteen}
+N 2410 -1770 2480 -1770 {lab=swseven}
+N 2410 -1750 2490 -1750 {lab=swseventeen}
+N 2410 -1730 2480 -1730 {lab=sweighteen}
+N 2410 -1710 2500 -1710 {lab=sweight}
+N 2410 -1690 2480 -1690 {lab=swnine}
+N 2410 -2050 2420 -2050 {lab=swmatrix_bus[6:16]}
+N 2410 -2090 2450 -2090 {lab=BUSFIVE}
+N 2410 -2110 2520 -2110 {lab=swmatrix_bus[1:4]}
+N 170 -2780 170 -2760 {lab=GND}
+N 170 -2860 170 -2840 {lab=vss}
+N 170 -2940 170 -2920 {lab=#net9}
+N 170 -2940 290 -2940 {lab=#net9}
+N 170 -2845 290 -2845 {lab=vss}
+N 350 -2845 390 -2845 {lab=VSSd}
+N 350 -2940 385 -2940 {lab=VDDd}
+N 385 -2940 400 -2940 {lab=VDDd}
+N 390 -2845 400 -2845 {lab=VSSd}
+N 170 -2955 170 -2940 {lab=#net9}
+N 170 -3035 170 -3015 {lab=vdd}
 C {title.sym} 70 30 0 0 {name=l1 author=", X.J. Lee, Christopher O Amankwaa"}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 2880 -1340 2 0 {name=xn_comp}
 C {libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sym} 1460 -1420 3 1 {name=x1}
@@ -344,7 +358,7 @@ C {lab_wire.sym} 480 -2700 2 0 {name=p33 sig_type=std_logic lab=top_iref}
 C {noconn.sym} 2570 -3070 1 0 {name=l19}
 C {lab_wire.sym} 3000 -2640 0 1 {name=p56 sig_type=std_logic lab=swmatrix_bus[4]}
 C {noconn.sym} 2790 -3070 3 1 {name=l21}
-C {lab_wire.sym} 3000 -2600 0 1 {name=p59 sig_type=std_logic lab=swmatrix_bus[5]}
+C {lab_wire.sym} 3000 -2600 0 1 {name=p59 sig_type=std_logic lab=BUSFIVE}
 C {lab_wire.sym} 3000 -2680 0 1 {name=p60 sig_type=std_logic lab=swmatrix_bus[3]}
 C {lab_wire.sym} 3000 -2720 0 1 {name=p61 sig_type=std_logic lab=swmatrix_bus[2]}
 C {lab_wire.sym} 3000 -2760 0 1 {name=p62 sig_type=std_logic lab=swmatrix_bus[1]}
@@ -689,15 +703,15 @@ C {lab_wire.sym} 1310 -1320 1 1 {name=p90 sig_type=std_logic lab=swseventeen}
 C {lab_wire.sym} 1560 -1320 3 0 {name=p104 sig_type=std_logic lab=swthirteen}
 C {lab_wire.sym} 2120 -2830 0 1 {name=p121 sig_type=std_logic lab=swmatrix_5_out}
 C {libs/core_swmatrix/Swmatrix.sym} 2260 -1900 0 0 {name=x7}
-C {lab_wire.sym} 2420 -2070 0 1 {name=p133 sig_type=std_logic lab=swmatrix_bus[1:16]}
-C {noconn.sym} 2480 -2150 1 0 {name=l16}
-C {lab_wire.sym} 1970 -2070 0 1 {name=p135 sig_type=std_logic lab=serial_in
+C {lab_wire.sym} 2430 -2050 0 1 {name=p133 sig_type=std_logic lab=swmatrix_bus[6:16]}
+C {noconn.sym} 2480 -2130 1 0 {name=l16}
+C {lab_wire.sym} 1970 -2090 0 1 {name=p135 sig_type=std_logic lab=serial_in
 }
-C {lab_wire.sym} 2070 -2090 0 1 {name=p136 sig_type=std_logic lab=en_in}
-C {lab_wire.sym} 2030 -2050 0 1 {name=p137 sig_type=std_logic lab=clk_in
+C {lab_wire.sym} 2070 -2110 0 1 {name=p136 sig_type=std_logic lab=en_in}
+C {lab_wire.sym} 2030 -2070 0 1 {name=p137 sig_type=std_logic lab=clk_in
 }
-C {lab_wire.sym} 2080 -2030 0 1 {name=p138 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 2060 -2010 2 0 {name=p139 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 2080 -2050 0 1 {name=p138 sig_type=std_logic lab=VSSd}
+C {lab_wire.sym} 2060 -2030 2 0 {name=p139 sig_type=std_logic lab=VDDd}
 C {noconn.sym} 3140 -2760 0 1 {name=l24}
 C {noconn.sym} 3140 -2720 0 1 {name=l25}
 C {noconn.sym} 3140 -2680 0 1 {name=l26}
@@ -714,24 +728,24 @@ C {noconn.sym} 3140 -2280 0 1 {name=l36}
 C {noconn.sym} 3140 -2240 0 1 {name=l37}
 C {noconn.sym} 3140 -2200 0 1 {name=l38}
 C {noconn.sym} 3140 -2160 0 1 {name=l39}
-C {lab_wire.sym} 2430 -2050 0 1 {name=p1 sig_type=std_logic lab=swone}
-C {lab_wire.sym} 2440 -2030 0 1 {name=p2 sig_type=std_logic lab=swten}
-C {lab_wire.sym} 2440 -2010 0 1 {name=p3 sig_type=std_logic lab=sweleven}
-C {lab_wire.sym} 2430 -1990 0 1 {name=p4 sig_type=std_logic lab=swtwo}
-C {lab_wire.sym} 2440 -1970 0 1 {name=p7 sig_type=std_logic lab=swtwelve}
-C {lab_wire.sym} 2440 -1950 0 1 {name=p8 sig_type=std_logic lab=swthree}
-C {lab_wire.sym} 2430 -1930 0 1 {name=p9 sig_type=std_logic lab=swthirteen}
-C {lab_wire.sym} 2430 -1890 0 1 {name=p10 sig_type=std_logic lab=swfourteen}
-C {lab_wire.sym} 2430 -1910 0 1 {name=p11 sig_type=std_logic lab=swfour}
-C {lab_wire.sym} 2420 -1870 0 1 {name=p12 sig_type=std_logic lab=swfive}
-C {lab_wire.sym} 2430 -1850 0 1 {name=p14 sig_type=std_logic lab=swfifteen}
-C {lab_wire.sym} 2420 -1830 0 1 {name=p15 sig_type=std_logic lab=swsix}
-C {lab_wire.sym} 2430 -1810 0 1 {name=p16 sig_type=std_logic lab=swsixteen}
-C {lab_wire.sym} 2420 -1790 0 1 {name=p17 sig_type=std_logic lab=swseven}
-C {lab_wire.sym} 2430 -1770 0 1 {name=p18 sig_type=std_logic lab=swseventeen}
-C {lab_wire.sym} 2420 -1750 0 1 {name=p19 sig_type=std_logic lab=sweighteen}
-C {lab_wire.sym} 2430 -1730 0 1 {name=p20 sig_type=std_logic lab=sweight}
-C {lab_wire.sym} 2420 -1710 0 1 {name=p21 sig_type=std_logic lab=swnine}
+C {lab_wire.sym} 2460 -2030 0 1 {name=p1 sig_type=std_logic lab=swone}
+C {lab_wire.sym} 2470 -2010 0 1 {name=p2 sig_type=std_logic lab=swten}
+C {lab_wire.sym} 2470 -1990 0 1 {name=p3 sig_type=std_logic lab=sweleven}
+C {lab_wire.sym} 2460 -1970 0 1 {name=p4 sig_type=std_logic lab=swtwo}
+C {lab_wire.sym} 2470 -1950 0 1 {name=p7 sig_type=std_logic lab=swtwelve}
+C {lab_wire.sym} 2470 -1930 0 1 {name=p8 sig_type=std_logic lab=swthree}
+C {lab_wire.sym} 2460 -1910 0 1 {name=p9 sig_type=std_logic lab=swthirteen}
+C {lab_wire.sym} 2460 -1870 0 1 {name=p10 sig_type=std_logic lab=swfourteen}
+C {lab_wire.sym} 2460 -1890 0 1 {name=p11 sig_type=std_logic lab=swfour}
+C {lab_wire.sym} 2450 -1850 0 1 {name=p12 sig_type=std_logic lab=swfive}
+C {lab_wire.sym} 2460 -1830 0 1 {name=p14 sig_type=std_logic lab=swfifteen}
+C {lab_wire.sym} 2450 -1810 0 1 {name=p15 sig_type=std_logic lab=swsix}
+C {lab_wire.sym} 2460 -1790 0 1 {name=p16 sig_type=std_logic lab=swsixteen}
+C {lab_wire.sym} 2450 -1770 0 1 {name=p17 sig_type=std_logic lab=swseven}
+C {lab_wire.sym} 2460 -1750 0 1 {name=p18 sig_type=std_logic lab=swseventeen}
+C {lab_wire.sym} 2450 -1730 0 1 {name=p19 sig_type=std_logic lab=sweighteen}
+C {lab_wire.sym} 2460 -1710 0 1 {name=p20 sig_type=std_logic lab=sweight}
+C {lab_wire.sym} 2450 -1690 0 1 {name=p21 sig_type=std_logic lab=swnine}
 C {lab_wire.sym} 1010 -1070 0 1 {name=p22 sig_type=std_logic lab=sweighteen}
 C {vsource.sym} 1710 -2925 0 0 {name=V3 value=2.5 savecurrent=false}
 C {vsource.sym} 1770 -2925 0 0 {name=V4 value=0.8 savecurrent=false}
@@ -786,3 +800,21 @@ C {code_shown.sym} -3240 -630 0 0 {name=Simulation1 only_toplevel=false value="
 C {isource.sym} 310 -2530 2 0 {name=I0 value=10u}
 C {gnd.sym} 310 -2460 0 0 {name=l5 lab=GND}
 C {lab_wire.sym} 310 -2600 0 0 {name=p36 sig_type=std_logic lab=top_iref}
+C {lab_wire.sym} 2430 -2090 0 1 {name=p29 sig_type=std_logic lab=BUSFIVE}
+C {lab_wire.sym} 2500 -2110 0 1 {name=p31 sig_type=std_logic lab=swmatrix_bus[1:4]}
+C {vsource.sym} 170 -2890 0 0 {name=V5 value=\\\{VDD\\\} savecurrent=false}
+C {vsource.sym} 170 -2810 0 0 {name=V6 value=0 savecurrent=false}
+C {gnd.sym} 170 -2760 0 0 {name=l2 lab=GND}
+C {lab_wire.sym} 170 -2850 0 0 {name=p32 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 170 -3035 0 0 {name=p34 sig_type=std_logic lab=vdd}
+C {vsource.sym} 320 -2940 1 0 {name=V7 value=0 savecurrent=false}
+C {vsource.sym} 320 -2845 1 0 {name=V8 value=0 savecurrent=false}
+C {lab_wire.sym} 400 -2845 0 0 {name=p38 sig_type=std_logic lab=VSSd}
+C {lab_wire.sym} 400 -2940 0 0 {name=p39 sig_type=std_logic lab=VDDd}
+C {res.sym} 170 -2985 0 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {opin.sym} 2120 -2850 3 0 {name=p37 lab=swmatrix_5_out}
+C {opin.sym} 460 -1410 2 0 {name=p41 lab=push_pull_out}

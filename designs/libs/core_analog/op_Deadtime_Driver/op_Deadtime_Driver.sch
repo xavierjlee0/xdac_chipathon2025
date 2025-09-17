@@ -49,11 +49,6 @@ N 360 -230 360 -100 {lab=n1}
 N 360 -100 370 -100 {lab=n1}
 N 400 -350 480 -350 {lab=vin}
 N 1230 -140 1350 -140 {lab=vout_nmos}
-N 1050 -0 1080 -0 {lab=vss}
-N 1080 -0 1080 20 {lab=vss}
-N 1200 0 1200 10 {lab=VDDd}
-N 1200 0 1230 -0 {lab=VDDd}
-N 1230 -0 1230 10 {lab=VDDd}
 C {title.sym} 100 250 0 0 {name=l1 author="Christopher O Amankwaa"}
 C {devices/code_shown.sym} 1980 90 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
@@ -87,6 +82,3 @@ C {lab_wire.sym} 750 -270 0 0 {name=p6 sig_type=std_logic lab=n2}
 C {lab_wire.sym} 580 -100 0 0 {name=p5 sig_type=std_logic lab=n1}
 C {lab_wire.sym} 660 -140 0 0 {name=p7 sig_type=std_logic lab=n3}
 C {lab_wire.sym} 1210 -440 0 0 {name=p8 sig_type=std_logic lab=n4}
-C {ipin.sym} 1080 20 3 0 {name=p9 lab=VSSd}
-C {ipin.sym} 1230 10 3 0 {name=p10 lab=VDDd}
-C {ipin.sym} 1200 10 3 0 {name=p11 lab=vdd}
