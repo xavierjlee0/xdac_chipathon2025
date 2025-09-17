@@ -101,7 +101,7 @@ N 1440 -100 1440 -60 {lab=iref}
 N 1210 230 1330 230 {lab=PIN[3]}
 N 2000 240 2080 240 {lab=vout}
 N 1890 225 2000 240 {lab=vout}
-N 1840 550 1840 610 {lab=VDD}
+N 1840 550 1840 610 {lab=vdd}
 N 1715 630 1775 630 {lab=stablein}
 N 1715 670 1775 670 {lab=deepstate}
 N 1715 600 1775 600 {lab=iref}
@@ -125,6 +125,7 @@ N 400 120 530 120 {lab=#net2}
 N 520 80 590 80 {lab=vout}
 N 590 80 590 90 {lab=vout}
 N 590 90 590 95 {lab=vout}
+N 1840 460 1840 550 {lab=vdd}
 C {code_shown.sym} -2110 1400 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
@@ -209,7 +210,6 @@ C {gnd.sym} 1440 40 0 0 {name=l5 lab=GND}
 C {lab_wire.sym} 1440 -100 0 0 {name=p36 sig_type=std_logic lab=iref}
 C {lab_wire.sym} 1280 230 0 0 {name=p37 sig_type=std_logic lab=PIN[3]}
 C {gnd.sym} 1840 720 0 0 {name=l7 lab=GND}
-C {vdd.sym} 1840 550 0 0 {name=l8 lab=VDD}
 C {lab_wire.sym} 1725 600 0 1 {name=p41 sig_type=std_logic lab=iref}
 C {noconn.sym} 2005 650 2 0 {name=l4}
 C {lab_wire.sym} 1985 650 0 0 {name=p42 sig_type=std_logic lab=bigout}
@@ -231,3 +231,4 @@ C {lab_wire.sym} 1860 225 0 0 {name=p9 sig_type=std_logic lab=vout}
 C {lab_wire.sym} 590 85 0 0 {name=p7 sig_type=std_logic lab=vout}
 C {lab_wire.sym} 1665 670 0 1 {name=p10 sig_type=std_logic lab=deepstate}
 C {lab_wire.sym} 490 100 0 0 {name=p8 sig_type=std_logic lab=deepstate}
+C {lab_wire.sym} 1840 510 0 0 {name=p14 sig_type=std_logic lab=vdd}
