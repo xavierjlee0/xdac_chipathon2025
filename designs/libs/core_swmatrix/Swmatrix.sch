@@ -50,8 +50,8 @@ N 510 410 530 410 {lab=VSSd}
 N 1150 180 1220 180 {lab=PIN[1]}
 N 720 -10 830 70 {lab=EN}
 N 1160 220 1230 220 {lab=PIN[2]}
-N 1160 260 1230 260 {lab=PIN[3]}
-N 1160 290 1230 290 {lab=PIN[4]}
+N 970 260 1040 260 {lab=PIN[3]}
+N 950 310 1020 310 {lab=PIN[4]}
 N 1160 320 1230 320 {lab=PIN[5]}
 N 1160 360 1230 360 {lab=PIN[6]}
 N 1150 400 1220 400 {lab=PIN[7]}
@@ -109,8 +109,8 @@ C {iopin.sym} 1220 180 0 0 {name=p28 lab=PIN[1]}
 C {lab_wire.sym} 1190 180 0 0 {name=p11 sig_type=std_logic lab=PIN[1]}
 C {libs/core_swmatrix/Angel_swmatrix_block.sym} 980 110 0 0 {name=x2}
 C {iopin.sym} 1230 220 0 0 {name=p1 lab=PIN[2]}
-C {iopin.sym} 1230 260 0 0 {name=p2 lab=PIN[3]}
-C {iopin.sym} 1230 290 0 0 {name=p14 lab=PIN[4]}
+C {iopin.sym} 1040 260 0 0 {name=p2 lab=PIN[3]}
+C {iopin.sym} 1020 310 0 0 {name=p14 lab=PIN[4]}
 C {iopin.sym} 1230 320 0 0 {name=p15 lab=PIN[5]}
 C {iopin.sym} 1230 360 0 0 {name=p17 lab=PIN[6]}
 C {iopin.sym} 1220 400 0 0 {name=p20 lab=PIN[7]}
@@ -126,8 +126,8 @@ C {iopin.sym} 1370 380 0 0 {name=p36 lab=PIN[16]}
 C {iopin.sym} 1370 420 0 0 {name=p37 lab=PIN[17]}
 C {iopin.sym} 1370 460 0 0 {name=p38 lab=PIN[18]}
 C {lab_wire.sym} 1200 220 0 0 {name=p39 sig_type=std_logic lab=PIN[2]}
-C {lab_wire.sym} 1200 260 0 0 {name=p40 sig_type=std_logic lab=PIN[3]}
-C {lab_wire.sym} 1200 290 0 0 {name=p41 sig_type=std_logic lab=PIN[4]}
+C {lab_wire.sym} 1010 260 0 0 {name=p40 sig_type=std_logic lab=PIN[3]}
+C {lab_wire.sym} 980 310 0 0 {name=p41 sig_type=std_logic lab=PIN[4]}
 C {lab_wire.sym} 1200 320 0 0 {name=p42 sig_type=std_logic lab=PIN[5]}
 C {lab_wire.sym} 1200 360 0 0 {name=p43 sig_type=std_logic lab=PIN[6]}
 C {lab_wire.sym} 1190 400 0 0 {name=p44 sig_type=std_logic lab=PIN[7]}
