@@ -260,15 +260,27 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 "}
 C {code_shown.sym} -720 40 0 0 {name=Simulation only_toplevel=false value="
-.ic V(dout) = 0
-.ic V("x7.x2.xangel_row_block[13].xSR.xFF[1].pls")=3.3
-.ic V("x7.x2.xangel_row_block[1].xSR.xFF[5].pls")=0
-.ic V("x7.x2.xangel_row_block[1].xSR.xFF[3].pls")=3.3
-.ic V("x7.x2.xangel_row_block[1].xSR.xFF[10].pls")=0
-.control
 
-    save all
-    TRAN 2n 20n
+.control
+    save clk_in
+    save data
+    save en_in
+    save v("x7.x2.xangel_row_block[1].xSR.xFF[1].out_m")
+    save v("x7.x2.xangel_row_block[1].xSR.xFF[1].s")
+    save v("x7.x2.xangel_row_block[7].xSR.xFF[1].out_m")
+    save v("x7.x2.xangel_row_block[7].xSR.xFF[1].s")
+    save v("x7.x2.xangel_row_block[7].xSR.xFF[2].out_m")
+    save v("x7.x2.xangel_row_block[7].xSR.xFF[2].s") 
+    save v("x7.x2.xangel_row_block[13].xSR.xFF[1].out_m")
+    save v("x7.x2.xangel_row_block[13].xSR.xFF[1].s")
+    save v("x7.x2.xangel_row_block[13].xSR.xFF[2].out_m")
+    save v("x7.x2.xangel_row_block[13].xSR.xFF[2].s")
+    save v("x7.x2.xangel_row_block[13].xSR.xFF[4].out_m")
+    save v("x7.x2.xangel_row_block[13].xSR.xFF[4].s")
+    save v("x7.x2.xangel_row_block[13].xSR.xFF[5].out_m")
+    save v("x7.x2.xangel_row_block[13].xSR.xFF[5].s")
+    save swone swtwo swthree swseven swnine swthirteen BUSFIVE
+    TRAN 2n 6u
     write deepstate.raw
 
 .endc
@@ -354,8 +366,8 @@ C {noconn.sym} 170 160 0 1 {name=l15}
 C {lab_wire.sym} 560 -870 0 1 {name=p40 sig_type=std_logic lab=clk_in
 }
 C {lab_wire.sym} 830 -870 0 1 {name=p63 sig_type=std_logic lab=en_in}
-C {vsource.sym} 560 -810 0 0 {name=V1 value="PULSE(0 3.3 0.1n 0.1n 0.1n 5n 10n 1)" savecurrent=false}
-C {vsource.sym} 830 -810 0 0 {name=V2 value="PULSE(0 3.3 10n 0.1n 0.1n 20n 5u 1)" savecurrent=false}
+C {vsource.sym} 560 -810 0 0 {name=V1 value="PULSE(0 3.3 0.1n 0.1n 0.1n 5n 10n 289)" savecurrent=false}
+C {vsource.sym} 830 -810 0 0 {name=V2 value="PULSE(0 3.3 2890n 0.1n 0.1n 5u 10u 1)" savecurrent=false}
 C {lab_wire.sym} 830 -750 0 1 {name=p27 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} 560 -750 0 1 {name=p28 sig_type=std_logic lab=VSSd}
 C {opin.sym} 1160 -320 0 0 {name=p13 lab=BUSFIVE}
