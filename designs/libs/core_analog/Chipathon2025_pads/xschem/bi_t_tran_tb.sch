@@ -139,7 +139,7 @@ value="
 C {devices/code_shown.sym} 70 -770 0 0 {name=DUT only_toplevel=true
 format="tcleval( @value )"
 value="
-.include "/foss/designs/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice"
+.include "/foss/designs/libs/core_analog/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice"
 XDUT0 A0 CS DVDD DVSS IE_0 OE_0 PAD0 PD PDRV0 PDRV1 PU SL VDD VSS Y0 gf180mcu_fd_io__bi_t
 XDUT1 A1 CS DVDD DVSS IE_1 OE_1 PAD1 PD PDRV0 PDRV1 PU SL VDD VSS Y1 gf180mcu_fd_io__bi_t
 XDUT2 A2 CS DVDD DVSS IE_2 OE_2 PAD2 PD PDRV0 PDRV1 PU SL VDD VSS Y2 gf180mcu_fd_io__bi_t

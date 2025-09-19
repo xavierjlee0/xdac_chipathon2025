@@ -4,7 +4,7 @@ K {type=io
 format="@spiceprefix@name @pinlist @model"
 lvs_format="@spiceprefix@name @pinlist @model"
 template="name=IO1
-model=gf180mcu_fd_io__in_s
+model=gf180mcu_fd_io__in_s_extracted
 spiceprefix=X
 "
 }
