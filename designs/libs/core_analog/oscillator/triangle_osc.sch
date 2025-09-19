@@ -248,4 +248,3 @@ C {lab_wire.sym} 260 -590 0 0 {name=p16 sig_type=std_logic lab=ibias_compn}
 C {lab_wire.sym} 930 -560 0 0 {name=p17 sig_type=std_logic lab=v_4_1_pn}
 C {lab_wire.sym} 1100 -350 0 0 {name=p18 sig_type=std_logic lab=v_8_7}
 C {lab_wire.sym} 1100 -580 0 0 {name=p19 sig_type=std_logic lab=v_5_6}
-

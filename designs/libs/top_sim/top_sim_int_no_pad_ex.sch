@@ -262,7 +262,6 @@ N 350 -2940 400 -2940 {lab=VDDd}
 N 170 -2955 170 -2940 {lab=#net9}
 N 170 -3035 170 -3015 {lab=vdd}
 N 2260 -1205 2260 -1170 {lab=vss}
-N 2940 -1225 2940 -1190 {lab=vss}
 N 1470 -1640 1470 -1570 {lab=vss}
 N 1900 -960 1940 -960 {lab=vss}
 N 1900 -980 1940 -980 {lab=vdd}
@@ -293,6 +292,18 @@ N 1270 -1920 1270 -1900 {lab=vdd}
 N 170 -2860 170 -2845 {lab=vss}
 N 2120 -2820 2120 -2760 {lab=BUSFIVE}
 N 2100 -2450 2140 -2450 {lab=BUSFIVE}
+N 3040 -1030 3040 -1000 {lab=GND}
+N 3040 -1170 3040 -1090 {lab=#net10}
+N 3040 -1250 3040 -1230 {lab=swone}
+N 3040 -1280 3040 -1250 {lab=swone}
+N 330 -970 370 -970 {lab=GND}
+N 370 -970 380 -970 {lab=GND}
+N 370 -970 370 -940 {lab=GND}
+N 330 -1120 330 -1110 {lab=push_pull_out}
+N 330 -1050 330 -1030 {lab=GND}
+N 380 -1120 380 -1030 {lab=push_pull_out}
+N 330 -1030 330 -970 {lab=GND}
+N 330 -1120 460 -1120 {lab=push_pull_out}
 C {title.sym} 70 30 0 0 {name=l1 author=", X.J. Lee, Christopher O Amankwaa"}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 2880 -1340 2 0 {name=xn_comp}
 C {libs/core_analog/Output_Stage/Output_Stage.sym} 680 -1040 0 1 {name=x2}
@@ -678,7 +689,7 @@ C {lab_wire.sym} 1770 -2875 0 0 {name=p24 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 1790 -2995 0 0 {name=p25 sig_type=std_logic lab=vho}
 C {lab_wire.sym} 1830 -2955 0 0 {name=p26 sig_type=std_logic lab=vlo}
 C {vsource.sym} 900 -2700 0 0 {name=V1 value="PULSE(0 3.3 0.1n 0.1n 0.1n 5n 10n 289)" savecurrent=false}
-C {vsource.sym} 1170 -2700 0 0 {name=V2 value="PULSE(0 3.3 2890n 0.1n 0.1n 20n 40n 1)" savecurrent=false}
+C {vsource.sym} 1170 -2700 0 0 {name=V2 value="PULSE(0 3.3 2890n 0.1n 0.1n 10u 20u 1)" savecurrent=false}
 C {lab_wire.sym} 1170 -2640 0 1 {name=p27 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} 900 -2640 0 1 {name=p28 sig_type=std_logic lab=VSSd}
 C {devices/code_shown.sym} 50 -1710 0 0 {name=Models only_toplevel=false
@@ -689,6 +700,9 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice res_typical
+.lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice bjt_typical
 "}
 C {netlist.sym} -260 -2100 0 0 {name=s1 value="
 .param VDD = 3.3
@@ -703,12 +717,71 @@ aclock [ clock_node ] clock_vector
 aconvert [ clock_node ] [  data ] dac_in
 .model dac_in dac_bridge (out_low=0V out_high=3.3V t_rise=0.1ns t_fall=0.1ns)
 "}
-C {code_shown.sym} -300 -1760 0 0 {name=Simulation only_toplevel=false value="
-.control
+C {code_shown.sym} -1190 -1690 0 0 {name=Simulation only_toplevel=false value="
 
-    save all
-    TRAN 1n 20u
-    write top_sim_int_no_pad_ex.raw
+.temp 27
+.param Tbit = 20n
+.ic v(osc_out)=0
+.global VDDd VSSd
+.control
+	save v("x7.x2.xangel_row_block[2].xSR.xFF[3].out_m")
+	save v("x7.x2.xangel_row_block[2].xSR.xFF[3].s")
+	save v("x7.x2.xangel_row_block[2].xSR.xFF[4].out_m")
+	save v("x7.x2.xangel_row_block[2].xSR.xFF[4].s")
+	save v("x7.x2.xangel_row_block[2].xSR.xFF[5].out_m")
+	save v("x7.x2.xangel_row_block[2].xSR.xFF[5].s")
+
+	save v("x7.x2.xangel_row_block[3].xSR.xFF[3].out_m")
+	save v("x7.x2.xangel_row_block[3].xSR.xFF[3].s")
+
+	save v("x7.x2.xangel_row_block[13].xSR.xFF[4].out_m")
+	save v("x7.x2.xangel_row_block[13].xSR.xFF[4].s")
+
+	save v("x7.x2.xangel_row_block[14].xSR.xFF[2].out_m")
+	save v("x7.x2.xangel_row_block[14].xSR.xFF[2].s")
+
+	save v("x7.x2.xangel_row_block[15].xSR.xFF[1].out_m")
+	save v("x7.x2.xangel_row_block[15].xSR.xFF[1].s")
+
+	save v("x7.x2.xangel_row_block[16].xSR.xFF[3].out_m")
+	save v("x7.x2.xangel_row_block[16].xSR.xFF[3].s")
+
+	save v("x7.x2.xangel_row_block[17].xSR.xFF[2].out_m")
+	save v("x7.x2.xangel_row_block[17].xSR.xFF[2].s")
+
+	save v("x7.x2.xangel_row_block[18].xSR.xFF[1].out_m")
+	save v("x7.x2.xangel_row_block[18].xSR.xFF[1].s")
+	save v("x7.x2.xangel_row_block[18].xSR.xFF[15].out_m")
+	save v("x7.x2.xangel_row_block[18].xSR.xFF[15].s")
+	save v("x7.x2.xangel_row_block[18].xSR.xFF[16].out_m")
+	save v("x7.x2.xangel_row_block[18].xSR.xFF[16].s")
+	
+	save clk_in en_in data push_pull_out
+	save swone stwo swthree swthirteen swfourteen swfifteen swsixteen swseventeen sweighteen
+	save @r5[i]
+	plot @r5[i]
+
+	
+	
+	**Frequency & time settings
+	let fsig = 20k
+	let tper=1/fsig
+	let tfr = 0.5*tper
+	let ton = 0.5*tper-2*tfr
+
+	let tstop = 4 * tper
+	let tstep = 0.001*tper
+**voltages
+*alter @VINP[PULSE] = [ 0 3.0 1u $&tfr $&tfr $&ton $&tper 3 ]
+	alter @VINP[DC] = 2
+	alter @VINP[SIN] = [ 1.6 0.4 $&fsig 0 0 ]
+
+	
+**Temperature analysis
+	tran 2n 10u 0
+	let t = $temp
+	print t
+
 
 .endc
 "
@@ -739,8 +812,6 @@ C {noconn.sym} 1450 -1170 1 1 {name=l4}
 C {noconn.sym} 1470 -1170 1 1 {name=l6}
 C {vsource.sym} 2260 -1235 0 0 {name=V9 value=1.5 savecurrent=false}
 C {lab_wire.sym} 2260 -1180 0 1 {name=p42 sig_type=std_logic lab=vss}
-C {vsource.sym} 2940 -1255 0 0 {name=V11 value=1.5 savecurrent=false}
-C {lab_wire.sym} 2940 -1200 0 1 {name=p43 sig_type=std_logic lab=vss}
 C {libs/core_analog/opamp/opamp_p_input.sym} 1880 -1170 0 1 {name=x3}
 C {libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sym} 1460 -1420 3 1 {name=x1}
 C {lab_wire.sym} 1470 -1600 3 1 {name=p44 sig_type=std_logic lab=vss}
@@ -752,3 +823,21 @@ C {lab_wire.sym} 1910 -1000 0 1 {name=p75 sig_type=std_logic lab=ibias_opn_10u}
 C {lab_wire.sym} 2620 -1070 2 0 {name=p46 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} 2620 -1050 2 0 {name=p48 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 2620 -1090 0 1 {name=p49 sig_type=std_logic lab=ibias_opn_10u}
+C {vsource.sym} 3040 -1060 0 0 {name=VINP value="1.5 AC 1.2" savecurrent=false}
+C {gnd.sym} 3040 -1000 0 0 {name=l7 lab=GND}
+C {res.sym} 3040 -1200 0 0 {name=R1
+value=100
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} 330 -1080 0 0 {name=R5
+value=8
+footprint=1206
+device=resistor
+m=1}
+C {capa.sym} 380 -1000 0 0 {name=C1
+m=1
+value=50p
+footprint=1206
+device="ceramic capacitor"}
+C {gnd.sym} 370 -940 0 0 {name=l11 lab=GND}

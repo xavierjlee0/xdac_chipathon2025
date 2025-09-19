@@ -199,7 +199,7 @@ OP
 show all
 
 **Temperature analysis
-tran 5n 200u 0
+tran 2n 200u 0
 let t = $temp
 print t
 
