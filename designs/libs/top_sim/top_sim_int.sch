@@ -507,7 +507,7 @@ spiceprefix=X
 C {lab_wire.sym} 2040 -2900 0 0 {name=p54 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 2200 -2940 0 1 {name=p55 sig_type=std_logic lab=vdd}
 C {noconn.sym} 2120 -3070 1 0 {name=l20}
-C {lab_wire.sym} 3000 -2640 0 1 {name=p56 sig_type=std_logic lab=swmatrix_bus[4]}
+C {lab_wire.sym} 3000 -2280 2 0 {name=p56 sig_type=std_logic lab=swmatrix_bus[4]}
 C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2710 -3050 1 0 {name=IO23
 model=gf180mcu_fd_io__asig_5p0_extracted
 spiceprefix=X
@@ -515,10 +515,10 @@ spiceprefix=X
 C {lab_wire.sym} 2710 -2900 0 0 {name=p57 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 2870 -2940 0 1 {name=p58 sig_type=std_logic lab=vdd}
 C {noconn.sym} 2790 -3070 3 1 {name=l21}
-C {lab_wire.sym} 3000 -2600 0 1 {name=p59 sig_type=std_logic lab=swmatrix_bus[5]}
-C {lab_wire.sym} 3000 -2680 0 1 {name=p60 sig_type=std_logic lab=swmatrix_bus[3]}
-C {lab_wire.sym} 3000 -2720 0 1 {name=p61 sig_type=std_logic lab=swmatrix_bus[2]}
-C {lab_wire.sym} 3000 -2760 0 1 {name=p62 sig_type=std_logic lab=swmatrix_bus[1]}
+C {lab_wire.sym} 3000 -2320 2 0 {name=p59 sig_type=std_logic lab=swmatrix_bus[5]}
+C {lab_wire.sym} 3000 -2240 2 0 {name=p60 sig_type=std_logic lab=swmatrix_bus[3]}
+C {lab_wire.sym} 3000 -2200 2 0 {name=p61 sig_type=std_logic lab=swmatrix_bus[2]}
+C {lab_wire.sym} 3000 -2160 2 0 {name=p62 sig_type=std_logic lab=swmatrix_bus[1]}
 C {noconn.sym} 2990 -3080 3 1 {name=l22}
 C {noconn.sym} 2350 -3080 3 1 {name=l23}
 C {lab_wire.sym} 650 -1150 0 0 {name=p47 sig_type=std_logic lab=vdd}
@@ -597,17 +597,17 @@ model=ppolyf_s
 spiceprefix=X
 m=1}
 C {lab_wire.sym} 2060 -2790 0 1 {name=p79 sig_type=std_logic lab=vdd}
-C {lab_wire.sym} 3000 -2560 0 1 {name=p81 sig_type=std_logic lab=swmatrix_bus[6]}
-C {lab_wire.sym} 3000 -2400 0 1 {name=p84 sig_type=std_logic lab=swmatrix_bus[10]}
-C {lab_wire.sym} 3000 -2360 0 1 {name=p105 sig_type=std_logic lab=swmatrix_bus[11]}
-C {lab_wire.sym} 3000 -2440 0 1 {name=p106 sig_type=std_logic lab=swmatrix_bus[9]}
-C {lab_wire.sym} 3000 -2480 0 1 {name=p107 sig_type=std_logic lab=swmatrix_bus[8]}
-C {lab_wire.sym} 3000 -2520 0 1 {name=p108 sig_type=std_logic lab=swmatrix_bus[7]}
-C {lab_wire.sym} 3000 -2320 0 1 {name=p109 sig_type=std_logic lab=swmatrix_bus[12]}
-C {lab_wire.sym} 3000 -2240 0 1 {name=p110 sig_type=std_logic lab=swmatrix_bus[14]}
-C {lab_wire.sym} 3000 -2200 0 1 {name=p111 sig_type=std_logic lab=swmatrix_bus[15]}
-C {lab_wire.sym} 3000 -2280 0 1 {name=p112 sig_type=std_logic lab=swmatrix_bus[13]}
-C {lab_wire.sym} 3000 -2160 0 1 {name=p113 sig_type=std_logic lab=swmatrix_bus[16]}
+C {lab_wire.sym} 3000 -2360 2 0 {name=p81 sig_type=std_logic lab=swmatrix_bus[6]}
+C {lab_wire.sym} 3000 -2520 2 0 {name=p84 sig_type=std_logic lab=swmatrix_bus[10]}
+C {lab_wire.sym} 3000 -2560 2 0 {name=p105 sig_type=std_logic lab=swmatrix_bus[11]}
+C {lab_wire.sym} 3000 -2480 2 0 {name=p106 sig_type=std_logic lab=swmatrix_bus[9]}
+C {lab_wire.sym} 3000 -2440 2 0 {name=p107 sig_type=std_logic lab=swmatrix_bus[8]}
+C {lab_wire.sym} 3000 -2400 2 0 {name=p108 sig_type=std_logic lab=swmatrix_bus[7]}
+C {lab_wire.sym} 3000 -2600 2 0 {name=p109 sig_type=std_logic lab=swmatrix_bus[12]}
+C {lab_wire.sym} 3000 -2680 2 0 {name=p110 sig_type=std_logic lab=swmatrix_bus[14]}
+C {lab_wire.sym} 3000 -2720 2 0 {name=p111 sig_type=std_logic lab=swmatrix_bus[15]}
+C {lab_wire.sym} 3000 -2640 2 0 {name=p112 sig_type=std_logic lab=swmatrix_bus[13]}
+C {lab_wire.sym} 3000 -2760 2 0 {name=p113 sig_type=std_logic lab=swmatrix_bus[16]}
 C {symbols/nfet_03v3.sym} 620 -2510 0 1 {name=M1
 L=1u
 W=4u
