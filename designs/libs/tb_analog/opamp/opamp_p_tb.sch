@@ -54,6 +54,7 @@ C {devices/vsource.sym} 280 -820 0 1 {name=V3 value="SIN(0 0.01 10k) AC 1" savec
 C {devices/lab_wire.sym} 500 -730 0 0 {name=p9 sig_type=std_logic lab=vin_p}
 C {devices/code_shown.sym} 1120 -940 0 0 {name=Simulation only_toplevel=false value="
 .control
+.options savecurrents
 save all
 
 OP
@@ -84,7 +85,7 @@ alter @V5[PULSE] = [ 0.025 -0.025 10u 25n 25n 5u 10.03u 10 ]
 
 TRAN 5n 17u 9u 
 plot out vin_p vin_n
-
+plot @R5[i]
 setplot op
 print out out_t
 
