@@ -40,8 +40,8 @@ m=1}
 C {devices/code_shown.sym} 10 -500 0 0 {name=DUT only_toplevel=true
 format="tcleval( @value )"
 value="
-.include "/foss/designs/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice"
-XDUT  DVDD DVSS VSS gf180mcu_fd_io__dvdd
+.include "/foss/designs/libs/core_analog/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice"
+XDUT0  DVDD DVSS VSS gf180mcu_fd_io__dvdd
 "}
 C {devices/code_shown.sym} 610 -370 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
@@ -60,7 +60,9 @@ value="
 .control
 run
 display
-plot PAD ASIG
-plot vdb(asig) vdb(pad)
+plot ASIG
+plot vdb(asig) 
+tran 1n 1u
+
 .endc
 "}

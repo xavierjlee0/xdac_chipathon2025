@@ -37,8 +37,6 @@ N 240 -555 240 -535 {lab=vdd}
 N 800 -375 880 -375 {lab=vlo}
 N 740 -415 880 -415 {lab=vho}
 N 740 -415 740 -375 {lab=vho}
-N 740 -315 740 -295 {lab=vss}
-N 800 -315 800 -295 {lab=vss}
 N 1080 -395 1165 -395 {lab=swone}
 N 1150 -330 1150 -290 {lab=vss}
 N 1325 -515 1325 -450 {lab=vss}
@@ -96,6 +94,57 @@ N 380 230 480 230 {lab=#net14}
 N 380 270 450 270 {lab=#net15}
 N 380 290 450 290 {lab=vss}
 N -40 210 120 210 {lab=en}
+N 1130 515 1130 535 {lab=vss}
+N 1130 400 1130 455 {lab=#net16}
+N 1130 400 1160 400 {lab=#net16}
+N 1360 400 1450 400 {lab=#net17}
+N 1450 400 1450 440 {lab=#net17}
+N 1470 400 1470 440 {lab=vlo}
+N 1470 400 1530 400 {lab=vlo}
+N 1240 320 1300 320 {lab=vss}
+N 1240 480 1310 480 {lab=vdd}
+N 1395 440 1430 440 {lab=vdd}
+N 1490 440 1515 440 {lab=vss}
+N 2460 55 2460 75 {lab=vss}
+N 2460 -130 2460 -5 {lab=#net18}
+N 2460 -130 2470 -130 {lab=#net18}
+N 2670 -130 2720 -130 {lab=#net19}
+N 2730 -130 2730 -40 {lab=#net19}
+N 2720 -130 2730 -130 {lab=#net19}
+N 2750 -130 2750 -40 {lab=vho}
+N 2750 -130 2800 -130 {lab=vho}
+N 2550 -210 2630 -210 {lab=vss}
+N 2550 -50 2630 -50 {lab=vdd}
+N 2670 -40 2710 -40 {lab=vdd}
+N 2770 -40 2810 -40 {lab=vss}
+N 2295 -590 2295 -550 {lab=vss}
+N 2140 -570 2160 -570 {lab=vss}
+N 2160 -570 2160 -540 {lab=vss}
+N 2150 -540 2160 -540 {lab=vss}
+N 2160 -570 2180 -570 {lab=vss}
+N 2060 -730 2160 -730 {lab=vdd}
+N 2160 -730 2200 -730 {lab=vdd}
+N 2260 -650 2300 -650 {lab=pad}
+N 1950 -680 1950 -650 {lab=#net20}
+N 1950 -650 2060 -650 {lab=#net20}
+N 1930 -680 1930 -580 {lab=swone}
+N 1870 -580 1930 -580 {lab=swone}
+N 1970 -680 2015 -680 {lab=vdd}
+N 1835 -680 1910 -680 {lab=vss}
+N 1895 180 1915 180 {lab=vss}
+N 1915 180 1915 210 {lab=vss}
+N 1905 210 1915 210 {lab=vss}
+N 1915 180 1935 180 {lab=vss}
+N 1815 20 1915 20 {lab=vdd}
+N 1915 20 1955 20 {lab=vdd}
+N 2015 100 2055 100 {lab=bus1out}
+N 1705 70 1705 100 {lab=#net21}
+N 1705 100 1815 100 {lab=#net21}
+N 1685 70 1685 170 {lab=BUS[1]}
+N 1625 170 1685 170 {lab=BUS[1]}
+N 1725 70 1770 70 {lab=vdd}
+N 1590 70 1665 70 {lab=vss}
+N 2055 100 2070 100 {lab=bus1out}
 C {lab_wire.sym} -320 -180 0 0 {name=p1 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} -300 80 0 0 {name=p2 sig_type=std_logic lab=vss}
 C {lab_wire.sym} -130 -80 0 0 {name=p3 sig_type=std_logic lab=vdd}
@@ -116,7 +165,6 @@ C {lab_wire.sym} 1000 -20 0 0 {name=p22 sig_type=std_logic lab=BUS[6:16]}
 C {lab_wire.sym} 1010 0 0 0 {name=p23 sig_type=std_logic lab=swone}
 C {lab_wire.sym} 1010 20 0 0 {name=p24 sig_type=std_logic lab=swtwo}
 C {lab_wire.sym} 1000 40 0 0 {name=p25 sig_type=std_logic lab=swthree}
-C {vsource.sym} 240 -410 0 0 {name=V1 value=\\\{VDD\\\} savecurrent=false}
 C {vsource.sym} 240 -330 0 0 {name=V2 value=0 savecurrent=false}
 C {gnd.sym} 240 -280 0 0 {name=l5 lab=GND}
 C {lab_wire.sym} 240 -370 0 0 {name=p26 sig_type=std_logic lab=vss}
@@ -136,10 +184,6 @@ m=1}
 C {libs/core_analog/Comparator/Pmos_Comparator.sym} 1365 -370 2 0 {name=xp_comp1}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 1190 -210 2 0 {name=xn_comp}
 C {libs/core_analog/oscillator/triangle_osc.sym} 900 -455 0 0 {name=x5}
-C {vsource.sym} 740 -345 0 0 {name=V3 value=2.5 savecurrent=false}
-C {vsource.sym} 800 -345 0 0 {name=V4 value=0.8 savecurrent=false}
-C {lab_wire.sym} 740 -295 0 0 {name=p31 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 800 -295 0 0 {name=p32 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 820 -415 0 0 {name=p33 sig_type=std_logic lab=vho}
 C {lab_wire.sym} 860 -375 0 0 {name=p34 sig_type=std_logic lab=vlo}
 C {lab_wire.sym} 1135 -395 0 0 {name=p35 sig_type=std_logic lab=swone}
@@ -159,14 +203,15 @@ C {noconn.sym} 1040 -40 2 0 {name=l8}
 C {noconn.sym} 1040 -20 2 0 {name=l9}
 C {lab_wire.sym} -90 680 0 1 {name=p49 sig_type=std_logic lab=clk
 }
-C {vsource.sym} -90 740 0 0 {name=V7 value="PULSE(0 3.3 0.1n 50n 50n 500n 1u 49)" savecurrent=false}
-C {vsource.sym} -40 300 0 0 {name=V8 value="PULSE(0 3.3 49u 50n 50n 50u 100u 1)" savecurrent=false}
+C {vsource.sym} -90 740 0 0 {name=V7 value="PULSE(0 3.3 1u 50n 50n 500n 1u 3)" savecurrent=false}
+C {vsource.sym} -40 300 0 0 {name=V8 value="PULSE(0 3.3 50u 50n 50n 50u 100u 1)" savecurrent=false}
 C {lab_wire.sym} -40 360 0 1 {name=p50 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} -90 800 0 1 {name=p51 sig_type=std_logic lab=VSSd}
 C {devices/code_shown.sym} -920 -670 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
 .include /foss/designs/libs/core_analog/Chipathon2025_pads/xschem/gf180mcu_fd_io.spice
+.include /foss/designs/libs/core_analog/Chipathon2025_pads/xschem/gf180mcu_fd_io__asig_5p0_extracted.spice
 .include $::180MCU_MODELS/design.ngspice
 .include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
@@ -180,12 +225,10 @@ value="
 C {devices/code_shown.sym} -760 100 0 0 {name=Simulation only_toplevel=false value="
 .param VDD = 3.3
 .global VDDd VSSd
-.options savecurrents
 .control
 save all
 
-
-TRAN 25n 100u 0
+TRAN 25n 5u 0
 
 .endc
 "}
@@ -251,3 +294,58 @@ C {noconn.sym} 480 230 2 0 {name=l2}
 C {noconn.sym} 460 250 2 0 {name=l3}
 C {noconn.sym} 440 270 2 0 {name=l10}
 C {lab_wire.sym} 430 190 0 0 {name=p67 sig_type=std_logic lab=vss}
+C {vsource.sym} 1130 485 0 0 {name=V11 value=0.8 savecurrent=false}
+C {lab_wire.sym} 1130 535 0 0 {name=p68 sig_type=std_logic lab=vss}
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1160 320 2 1 {name=IO3
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {libs/core_analog/ESD/io_secondary_5p0.sym} 1460 590 3 0 {name=x2}
+C {lab_wire.sym} 1505 400 0 0 {name=p69 sig_type=std_logic lab=vlo}
+C {lab_wire.sym} 1295 320 0 0 {name=p70 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1410 440 0 0 {name=p71 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 1515 440 0 0 {name=p72 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1310 480 0 0 {name=p73 sig_type=std_logic lab=vdd}
+C {vsource.sym} 2460 25 0 0 {name=V4 value=2.5 savecurrent=false}
+C {lab_wire.sym} 2460 75 0 0 {name=p10 sig_type=std_logic lab=vss}
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2470 -210 2 1 {name=IO5
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {libs/core_analog/ESD/io_secondary_5p0.sym} 2740 110 3 0 {name=x3}
+C {lab_wire.sym} 2785 -130 0 0 {name=p32 sig_type=std_logic lab=vho}
+C {lab_wire.sym} 2575 -210 0 0 {name=p75 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 2685 -40 0 0 {name=p77 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 2805 -40 0 0 {name=p78 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 2630 -50 0 0 {name=p79 sig_type=std_logic lab=vdd}
+C {capa.sym} 2295 -620 0 0 {name=C1
+m=1
+value=25p
+footprint=1206
+device="ceramic capacitor"}
+C {lab_wire.sym} 2295 -550 0 0 {name=p31 sig_type=std_logic lab=vss}
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2260 -570 0 1 {name=IO6
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {lab_wire.sym} 2150 -540 0 0 {name=p74 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 2290 -650 0 0 {name=p76 sig_type=std_logic lab=pad
+}
+C {lab_wire.sym} 2105 -730 0 0 {name=p80 sig_type=std_logic lab=vdd}
+C {libs/core_analog/ESD/io_secondary_5p0.sym} 1940 -830 1 0 {name=x4}
+C {lab_wire.sym} 2010 -680 0 0 {name=p82 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 1855 -680 0 0 {name=p83 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1885 -580 0 0 {name=p81 sig_type=std_logic lab=swone}
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2015 180 0 1 {name=IO7
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {lab_wire.sym} 1905 210 0 0 {name=p85 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1860 20 0 0 {name=p87 sig_type=std_logic lab=vdd}
+C {libs/core_analog/ESD/io_secondary_5p0.sym} 1695 -80 1 0 {name=x6}
+C {lab_wire.sym} 1765 70 0 0 {name=p88 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 1610 70 0 0 {name=p89 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1660 170 0 0 {name=p84 sig_type=std_logic lab=BUS[1]}
+C {lab_wire.sym} 2055 100 0 0 {name=p86 sig_type=std_logic lab=bus1out}
+C {opin.sym} 2070 100 0 0 {name=p90 lab=bus1out}
+C {vsource.sym} 240 -410 0 0 {name=V3 value="PULSE(0 3.3 .5u 50n 50n 50u 100u 1)" savecurrent=false}
