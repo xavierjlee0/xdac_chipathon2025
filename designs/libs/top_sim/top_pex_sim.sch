@@ -10,81 +10,10 @@ L 4 2880 -2100 3200 -2100 {}
 L 4 3200 -2580 3200 -2100 {}
 L 4 3160 -2580 3200 -2580 {}
 T {INTERNAL BUS CONNECTIONS} 2885 -2130 0 0 0.4 0.4 {}
-N 1850 -2800 1900 -2800 {lab=vho}
-N 1900 -2860 1900 -2800 {lab=vho}
-N 1670 -2860 1670 -2800 {lab=vlo}
-N 1580 -3340 1580 -3300 {lab=vss}
-N 1990 -3330 1990 -3290 {lab=vdd}
-N 1830 -3330 1830 -3290 {lab=vss}
-N 1830 -3290 1830 -3260 {lab=vss}
-N 1990 -3290 1990 -3260 {lab=vdd}
-N 1740 -3340 1740 -3270 {lab=vdd}
-N 1580 -3300 1580 -3270 {lab=vss}
-N 1910 -3440 1910 -3410 {lab=#net1}
-N 1660 -3440 1660 -3420 {lab=#net2}
-N 340 -1470 380 -1470 {lab=vss}
-N 340 -1630 410 -1630 {lab=vdd}
-N 380 -1470 410 -1470 {lab=vss}
-N 240 -1550 260 -1550 {lab=#net3}
-N 330 -1240 370 -1240 {lab=vss}
-N 330 -1400 400 -1400 {lab=vdd}
-N 370 -1240 400 -1240 {lab=vss}
-N 230 -1320 250 -1320 {lab=#net4}
-N 340 -1000 380 -1000 {lab=vss}
-N 340 -1160 410 -1160 {lab=vdd}
-N 380 -1000 410 -1000 {lab=vss}
-N 240 -1080 260 -1080 {lab=#net5}
 N 460 -1550 460 -1320 {lab=push_pull_out}
 N 460 -1320 460 -1080 {lab=push_pull_out}
-N 340 -1720 380 -1720 {lab=vss}
-N 340 -1880 410 -1880 {lab=vdd}
-N 380 -1720 410 -1720 {lab=vss}
-N 240 -1800 260 -1800 {lab=#net6}
-N 330 -1950 370 -1950 {lab=vss}
-N 330 -2110 400 -2110 {lab=vdd}
-N 370 -1950 400 -1950 {lab=vss}
-N 230 -2030 250 -2030 {lab=#net7}
-N 340 -2190 380 -2190 {lab=vss}
-N 340 -2350 410 -2350 {lab=vdd}
-N 380 -2190 410 -2190 {lab=vss}
-N 240 -2270 260 -2270 {lab=#net8}
-N 460 -2030 460 -1800 {lab=vdd}
-N 460 -2270 460 -2030 {lab=vdd}
-N 450 -2030 460 -2030 {lab=vdd}
-N 340 -2620 380 -2620 {lab=vss}
-N 340 -2780 410 -2780 {lab=vdd}
-N 380 -2620 410 -2620 {lab=vss}
-N 240 -2700 260 -2700 {lab=#net9}
+N 240 -2700 260 -2700 {lab=top_iref}
 N 460 -2700 490 -2700 {lab=top_iref}
-N 1350 -3340 1350 -3300 {lab=vss}
-N 1510 -3340 1510 -3270 {lab=vdd}
-N 1350 -3300 1350 -3270 {lab=vss}
-N 1430 -3440 1430 -3420 {lab=#net10}
-N 1430 -3220 1430 -3200 {lab=#net11}
-N 2890 -3320 2890 -3280 {lab=vss}
-N 3050 -3320 3050 -3250 {lab=vdd}
-N 2890 -3280 2890 -3250 {lab=vss}
-N 2970 -3420 2970 -3400 {lab=#net12}
-N 2470 -3310 2470 -3270 {lab=vss}
-N 2630 -3310 2630 -3240 {lab=vdd}
-N 2470 -3270 2470 -3240 {lab=vss}
-N 2550 -3410 2550 -3390 {lab=#net13}
-N 2250 -3320 2250 -3280 {lab=vss}
-N 2410 -3320 2410 -3250 {lab=vdd}
-N 2250 -3280 2250 -3250 {lab=vss}
-N 2330 -3420 2330 -3400 {lab=#net14}
-N 2040 -3320 2040 -3280 {lab=vss}
-N 2200 -3320 2200 -3250 {lab=vdd}
-N 2040 -3280 2040 -3250 {lab=vss}
-N 2120 -3420 2120 -3400 {lab=#net15}
-N 2690 -3310 2690 -3270 {lab=vss}
-N 2850 -3310 2850 -3240 {lab=vdd}
-N 2690 -3270 2690 -3240 {lab=vss}
-N 2770 -3410 2770 -3390 {lab=#net16}
-N 2120 -2850 2120 -2830 {lab=swmatrix_5_out}
-N 2570 -2850 2570 -2820 {lab=swmatrix_bus[3]}
-N 2790 -2850 2790 -2820 {lab=swmatrix_bus[2]}
-N 2990 -2860 2990 -2830 {lab=swmatrix_bus[1]}
 N 2120 -2750 2120 -2700 {lab=bus5_buff}
 N 2140 -2450 2140 -2430 {lab=bus5_buff}
 N 2140 -2430 2270 -2430 {lab=bus5_buff}
@@ -94,19 +23,19 @@ N 2270 -2720 2270 -2710 {lab=bus5_buff}
 N 650 -1170 650 -1120 {lab=vdd}
 N 1670 -2750 1710 -2750 {lab=vss}
 N 1870 -2750 1900 -2750 {lab=vdd}
-N 1880 -2710 1930 -2710 {lab=iref_10u_osc}
-N 1870 -2710 1880 -2710 {lab=iref_10u_osc}
+N 1880 -2710 1930 -2710 {lab=top_iref}
+N 1870 -2710 1880 -2710 {lab=top_iref}
 N 1790 -2600 1790 -2560 {lab=swthirteen}
 N 2000 -2450 2000 -2410 {lab=vss}
 N 2020 -2450 2020 -2410 {lab=vdd}
-N 2040 -2450 2040 -2410 {lab=ibias_buffer_opp}
+N 2040 -2450 2040 -2410 {lab=top_iref}
 N 2100 -2450 2100 -2390 {lab=BUSFIVE}
 N 1900 -960 1940 -960 {lab=vss}
 N 1900 -980 1940 -980 {lab=vdd}
-N 1900 -1000 1940 -1000 {lab=ibias_opp_10u}
+N 1900 -1000 1940 -1000 {lab=top_iref}
 N 2610 -1050 2650 -1050 {lab=vss}
 N 2610 -1070 2650 -1070 {lab=vdd}
-N 2610 -1090 2650 -1090 {lab=ibias_opn_10u}
+N 2610 -1090 2650 -1090 {lab=top_iref}
 N 1900 -1100 1920 -1100 {lab=sweleven}
 N 1920 -1220 1920 -1100 {lab=sweleven}
 N 1980 -1320 1980 -1060 {lab=swten}
@@ -115,13 +44,13 @@ N 1620 -1320 1620 -1080 {lab=swtwelve}
 N 2610 -1190 2630 -1190 {lab=swfive}
 N 2630 -1310 2630 -1190 {lab=swfive}
 N 2610 -1150 2650 -1150 {lab=swfour}
-N 2650 -1090 2690 -1090 {lab=ibias_opn_10u}
+N 2650 -1090 2690 -1090 {lab=top_iref}
 N 2160 -1440 2160 -1400 {lab=vss}
 N 2160 -1320 2160 -1280 {lab=vdd}
 N 2160 -1440 2160 -1400 {lab=vss}
 N 2160 -1320 2160 -1280 {lab=vdd}
-N 2180 -1440 2180 -1400 {lab=ibias_pcomp_10u}
-N 2180 -1480 2180 -1440 {lab=ibias_pcomp_10u}
+N 2180 -1440 2180 -1400 {lab=top_iref}
+N 2180 -1480 2180 -1440 {lab=top_iref}
 N 2060 -1360 2100 -1360 {lab=swnine}
 N 2220 -1340 2260 -1340 {lab=sweight}
 N 2900 -1360 2940 -1360 {lab=swtwo}
@@ -129,13 +58,11 @@ N 2900 -1400 3040 -1400 {lab=swone}
 N 2740 -1380 2780 -1380 {lab=swthree}
 N 2840 -1460 2840 -1420 {lab=vss}
 N 2840 -1460 2840 -1420 {lab=vss}
-N 2860 -1340 2860 -1300 {lab=ibias_ncomp_10u}
+N 2860 -1340 2860 -1300 {lab=top_iref}
 N 1470 -1640 1470 -1570 {lab=vss}
 N 1450 -1640 1450 -1570 {lab=swsixteen}
 N 1380 -1640 1380 -1300 {lab=swsixteen}
 N 1450 -1400 1450 -1300 {lab=swfifteen}
-N 1670 -2800 1770 -2800 {lab=vlo}
-N 1810 -2800 1850 -2800 {lab=vho}
 N 1450 -1300 1450 -1170 {lab=swfifteen}
 N 1380 -1300 1380 -1170 {lab=swsixteen}
 N 1470 -1400 1470 -1170 {lab=swfourteen}
@@ -153,7 +80,7 @@ N 2300 -1380 2300 -1280 {lab=swseven}
 N 2740 -1380 2740 -1280 {lab=swthree}
 N 2940 -1360 2940 -1280 {lab=swtwo}
 N 3040 -1400 3040 -1280 {lab=swone}
-N 2860 -1300 2860 -1220 {lab=ibias_ncomp_10u}
+N 2860 -1300 2860 -1220 {lab=top_iref}
 N 2670 -1310 2670 -1150 {lab=swfour}
 N 2340 -1340 2340 -1170 {lab=swsix}
 N 2630 -1340 2630 -1310 {lab=swfive}
@@ -167,10 +94,7 @@ N 2060 -1300 2060 -1270 {lab=swnine}
 N 2650 -1150 2670 -1150 {lab=swfour}
 N 2340 -1170 2360 -1170 {lab=swsix}
 N 2220 -1380 2300 -1380 {lab=swseven}
-N 2990 -2830 2990 -2820 {lab=swmatrix_bus[1]}
 N 2120 -2760 2120 -2750 {lab=bus5_buff}
-N 2120 -2830 2120 -2820 {lab=swmatrix_5_out}
-N 2050 -2790 2100 -2790 {lab=vdd}
 N 2990 -2820 2990 -2760 {lab=swmatrix_bus[1]}
 N 2990 -2760 3140 -2760 {lab=swmatrix_bus[1]}
 N 2790 -2720 3140 -2720 {lab=swmatrix_bus[2]}
@@ -196,161 +120,16 @@ N 2990 -2240 3140 -2240 {lab=swmatrix_bus[14]}
 N 2990 -2200 3140 -2200 {lab=swmatrix_bus[15]}
 N 2990 -2160 3140 -2160 {lab=swmatrix_bus[16]}
 N 490 -2700 600 -2700 {lab=top_iref}
-N 590 -2510 600 -2510 {lab=vss}
-N 600 -2480 600 -2450 {lab=vss}
-N 590 -2510 590 -2470 {lab=vss}
-N 590 -2470 600 -2470 {lab=vss}
-N 600 -2450 600 -2440 {lab=vss}
-N 640 -2510 680 -2510 {lab=vngates_iref_top}
-N 600 -2580 680 -2580 {lab=vngates_iref_top}
-N 600 -2600 600 -2540 {lab=vngates_iref_top}
-N 590 -2630 600 -2630 {lab=vss}
-N 590 -2630 590 -2510 {lab=vss}
-N 600 -2700 600 -2660 {lab=top_iref}
-N 640 -2700 640 -2630 {lab=top_iref}
-N 600 -2700 640 -2700 {lab=top_iref}
-N 980 -2070 980 -2030 {lab=vss}
-N 980 -2100 1010 -2100 {lab=vss}
-N 1010 -2100 1010 -2050 {lab=vss}
-N 980 -2050 1010 -2050 {lab=vss}
-N 980 -2160 980 -2130 {lab=#net17}
-N 900 -2100 940 -2100 {lab=vngates_iref_top}
-N 980 -2260 980 -2220 {lab=ibias_pcomp_10u}
-N 990 -2190 1010 -2190 {lab=vss}
-N 1010 -2190 1010 -2100 {lab=vss}
-N 980 -2190 990 -2190 {lab=vss}
-N 680 -1950 680 -1910 {lab=vss}
-N 650 -1980 680 -1980 {lab=vss}
-N 650 -1980 650 -1930 {lab=vss}
-N 650 -1930 680 -1930 {lab=vss}
-N 680 -2040 680 -2010 {lab=#net18}
-N 720 -1980 760 -1980 {lab=vngates_iref_top}
-N 680 -2140 680 -2100 {lab=ibias_opp_10u}
-N 650 -2070 670 -2070 {lab=vss}
-N 650 -2070 650 -1980 {lab=vss}
-N 670 -2070 680 -2070 {lab=vss}
-N 680 -2210 680 -2170 {lab=vss}
-N 650 -2240 680 -2240 {lab=vss}
-N 650 -2240 650 -2190 {lab=vss}
-N 650 -2190 680 -2190 {lab=vss}
-N 680 -2300 680 -2270 {lab=#net19}
-N 790 -2240 830 -2240 {lab=vngates_iref_top}
-N 650 -2330 670 -2330 {lab=vss}
-N 650 -2330 650 -2240 {lab=vss}
-N 670 -2330 680 -2330 {lab=vss}
-N 680 -2400 680 -2360 {lab=ibias_buffer_opp}
-N 830 -2510 830 -2240 {lab=vngates_iref_top}
 N 1560 -2560 1560 -2280 {lab=swthirteen}
 N 560 -1040 600 -1040 {lab=push_pull_out}
 N 560 -1320 560 -1040 {lab=push_pull_out}
 N 450 -1320 560 -1320 {lab=push_pull_out}
-N 830 -2240 830 -1980 {lab=vngates_iref_top}
-N 980 -2330 980 -2290 {lab=vss}
-N 980 -2360 1010 -2360 {lab=vss}
-N 1010 -2360 1010 -2310 {lab=vss}
-N 980 -2310 1010 -2310 {lab=vss}
-N 980 -2420 980 -2390 {lab=#net20}
-N 900 -2360 940 -2360 {lab=vngates_iref_top}
-N 990 -2450 1010 -2450 {lab=vss}
-N 1010 -2450 1010 -2360 {lab=vss}
-N 980 -2450 990 -2450 {lab=vss}
-N 980 -2520 980 -2470 {lab=vcascode_iref_top}
-N 1270 -2310 1310 -2310 {lab=vcascode_iref_top}
-N 1310 -2370 1310 -2310 {lab=vcascode_iref_top}
-N 1250 -2370 1270 -2370 {lab=vdd}
-N 1270 -2430 1310 -2430 {lab=vpgates_iref_top}
-N 1310 -2490 1310 -2430 {lab=vpgates_iref_top}
-N 1250 -2490 1270 -2490 {lab=vdd}
-N 1250 -2540 1250 -2490 {lab=vdd}
-N 1250 -2540 1260 -2540 {lab=vdd}
-N 1260 -2540 1270 -2540 {lab=vdd}
-N 1270 -2560 1270 -2520 {lab=vdd}
-N 1270 -2460 1270 -2400 {lab=vpgates_iref_top}
-N 1250 -2490 1250 -2420 {lab=vdd}
-N 1310 -2490 1410 -2490 {lab=vpgates_iref_top}
-N 1270 -2340 1270 -2280 {lab=vcascode_iref_top}
-N 1270 -2310 1310 -2310 {lab=vcascode_iref_top}
-N 1310 -2370 1310 -2310 {lab=vcascode_iref_top}
-N 1250 -2370 1270 -2370 {lab=vdd}
-N 1250 -2420 1250 -2370 {lab=vdd}
-N 1270 -2460 1270 -2400 {lab=vpgates_iref_top}
-N 1410 -2490 1410 -2150 {lab=vpgates_iref_top}
-N 1250 -2070 1270 -2070 {lab=vdd}
-N 1250 -2150 1270 -2150 {lab=vdd}
-N 1250 -2200 1250 -2150 {lab=vdd}
-N 1250 -2200 1260 -2200 {lab=vdd}
-N 1260 -2200 1270 -2200 {lab=vdd}
-N 1270 -2220 1270 -2180 {lab=vdd}
-N 1310 -2150 1410 -2150 {lab=vpgates_iref_top}
-N 1250 -2070 1270 -2070 {lab=vdd}
-N 1270 -2120 1270 -2110 {lab=#net21}
-N 1270 -2110 1270 -2100 {lab=#net21}
-N 1250 -2150 1250 -2070 {lab=vdd}
-N 1310 -2070 1330 -2070 {lab=ibias_ncomp_10u}
-N 1330 -2070 1330 -2020 {lab=ibias_ncomp_10u}
-N 1270 -2020 1330 -2020 {lab=ibias_ncomp_10u}
-N 1270 -2040 1270 -2020 {lab=ibias_ncomp_10u}
-N 1270 -2020 1270 -1980 {lab=ibias_ncomp_10u}
-N 920 -2450 940 -2450 {lab=vcascode_iref_top}
-N 920 -2500 920 -2450 {lab=vcascode_iref_top}
-N 920 -2500 980 -2500 {lab=vcascode_iref_top}
-N 930 -2190 940 -2190 {lab=ibias_pcomp_10u}
-N 930 -2240 930 -2190 {lab=ibias_pcomp_10u}
-N 930 -2240 980 -2240 {lab=ibias_pcomp_10u}
-N 720 -2370 720 -2330 {lab=ibias_buffer_opp}
-N 680 -2370 720 -2370 {lab=ibias_buffer_opp}
-N 720 -2110 720 -2070 {lab=ibias_opp_10u}
-N 680 -2110 720 -2110 {lab=ibias_opp_10u}
 N 1560 -2560 1790 -2560 {lab=swthirteen}
 N 1560 -2800 1560 -2560 {lab=swthirteen}
-N 1420 -2800 1550 -2800 {lab=swthirteen}
-N 1550 -2800 1560 -2800 {lab=swthirteen}
-N 680 -2580 680 -2510 {lab=vngates_iref_top}
-N 680 -2510 760 -2510 {lab=vngates_iref_top}
-N 780 -2240 790 -2240 {lab=vngates_iref_top}
-N 720 -2240 780 -2240 {lab=vngates_iref_top}
-N 760 -1980 830 -1980 {lab=vngates_iref_top}
-N 830 -1980 830 -1840 {lab=vngates_iref_top}
-N 830 -2100 900 -2100 {lab=vngates_iref_top}
-N 830 -2360 900 -2360 {lab=vngates_iref_top}
-N 760 -2510 830 -2510 {lab=vngates_iref_top}
-N 980 -1780 980 -1740 {lab=vss}
-N 980 -1810 1010 -1810 {lab=vss}
-N 1010 -1810 1010 -1760 {lab=vss}
-N 980 -1760 1010 -1760 {lab=vss}
-N 980 -1870 980 -1840 {lab=#net22}
-N 900 -1810 940 -1810 {lab=vngates_iref_top}
-N 980 -1970 980 -1930 {lab=ibias_opn_10u}
-N 990 -1900 1010 -1900 {lab=vss}
-N 1010 -1900 1010 -1810 {lab=vss}
-N 980 -1900 990 -1900 {lab=vss}
-N 940 -1940 940 -1900 {lab=ibias_opn_10u}
-N 940 -1940 980 -1940 {lab=ibias_opn_10u}
-N 830 -1810 900 -1810 {lab=vngates_iref_top}
-N 830 -1830 830 -1810 {lab=vngates_iref_top}
-N 830 -1840 830 -1830 {lab=vngates_iref_top}
-N 1250 -1770 1270 -1770 {lab=vdd}
-N 1250 -1850 1270 -1850 {lab=vdd}
-N 1250 -1900 1250 -1850 {lab=vdd}
-N 1250 -1900 1260 -1900 {lab=vdd}
-N 1260 -1900 1270 -1900 {lab=vdd}
-N 1270 -1920 1270 -1880 {lab=vdd}
-N 1310 -1850 1410 -1850 {lab=vpgates_iref_top}
-N 1250 -1770 1270 -1770 {lab=vdd}
-N 1270 -1820 1270 -1810 {lab=#net23}
-N 1270 -1810 1270 -1800 {lab=#net23}
-N 1250 -1850 1250 -1770 {lab=vdd}
-N 1310 -1770 1330 -1770 {lab=iref_10u_osc}
-N 1330 -1770 1330 -1720 {lab=iref_10u_osc}
-N 1270 -1720 1330 -1720 {lab=iref_10u_osc}
-N 1270 -1740 1270 -1720 {lab=iref_10u_osc}
-N 1270 -1720 1270 -1680 {lab=iref_10u_osc}
-N 1410 -2150 1410 -1850 {lab=vpgates_iref_top}
-N 980 -2520 1270 -2280 {lab=vcascode_iref_top}
 N 2350 -2860 2350 -2640 {lab=swmatrix_bus[4]}
 N 2410 -2110 2550 -2110 {lab=swmatrix_bus[1:4]}
-N 2410 -2070 2480 -2070 {lab=#net24}
-N 2480 -2130 2480 -2070 {lab=#net24}
+N 2410 -2070 2480 -2070 {lab=#net1}
+N 2480 -2130 2480 -2070 {lab=#net1}
 N 2050 -2070 2110 -2070 {lab=clk_in}
 N 2070 -2110 2110 -2110 {lab=en_in}
 N 2020 -2070 2050 -2070 {lab=clk_in}
@@ -385,10 +164,10 @@ N 240 -3240 330 -3240 {lab=vdd}
 N 240 -3260 340 -3260 {lab=vdd}
 N 240 -3200 320 -3200 {lab=vdd}
 N 240 -3180 320 -3180 {lab=vss}
-N 240 -3160 330 -3160 {lab=#net25}
-N 240 -3120 330 -3120 {lab=#net26}
-N 240 -3140 340 -3140 {lab=#net27}
-N 240 -3100 310 -3100 {lab=#net28}
+N 240 -3160 330 -3160 {lab=#net2}
+N 240 -3120 330 -3120 {lab=#net3}
+N 240 -3140 340 -3140 {lab=#net4}
+N 240 -3100 310 -3100 {lab=#net5}
 N 240 -3080 310 -3080 {lab=vss}
 N 430 -3460 430 -3400 {lab=en}
 N 430 -3340 430 -3300 {lab=VSSd}
@@ -399,10 +178,10 @@ N 850 -3540 940 -3540 {lab=vdd}
 N 850 -3560 950 -3560 {lab=vdd}
 N 850 -3500 930 -3500 {lab=vdd}
 N 850 -3480 930 -3480 {lab=vss}
-N 850 -3460 940 -3460 {lab=#net29}
-N 850 -3420 940 -3420 {lab=#net30}
-N 850 -3440 950 -3440 {lab=#net31}
-N 850 -3400 920 -3400 {lab=#net32}
+N 850 -3460 940 -3460 {lab=#net6}
+N 850 -3420 940 -3420 {lab=#net7}
+N 850 -3440 950 -3440 {lab=#net8}
+N 850 -3400 920 -3400 {lab=#net9}
 N 850 -3380 920 -3380 {lab=vss}
 N 430 -3460 590 -3460 {lab=en}
 N 960 -3990 1040 -3990 {lab=clk}
@@ -416,18 +195,60 @@ N 1390 -4070 1480 -4070 {lab=vdd}
 N 1390 -4090 1490 -4090 {lab=vdd}
 N 1390 -4030 1470 -4030 {lab=vdd}
 N 1390 -4010 1470 -4010 {lab=vss}
-N 1390 -3990 1480 -3990 {lab=#net33}
-N 1390 -3950 1480 -3950 {lab=#net34}
-N 1390 -3970 1490 -3970 {lab=#net35}
-N 1390 -3930 1460 -3930 {lab=#net36}
+N 1390 -3990 1480 -3990 {lab=#net10}
+N 1390 -3950 1480 -3950 {lab=#net11}
+N 1390 -3970 1490 -3970 {lab=#net12}
+N 1390 -3930 1460 -3930 {lab=#net13}
 N 1390 -3910 1460 -3910 {lab=vss}
-N 3030 -2900 3050 -2900 {lab=vdd}
-N 3050 -2900 3090 -2900 {lab=vdd}
-N 2920 -2900 2970 -2900 {lab=vss}
-N 2990 -2900 2990 -2860 {lab=swmatrix_bus[1]}
-N 3010 -2900 3010 -2860 {lab=swmatrix_bus_1out}
-N 2970 -3200 3080 -3200 {lab=swmatrix_bus_1out}
-N 1420 -2860 1420 -2800 {lab=swthirteen}
+N 160 -400 160 -380 {lab=GND}
+N 160 -480 160 -460 {lab=vss}
+N 160 -560 160 -540 {lab=#net14}
+N 160 -560 280 -560 {lab=#net14}
+N 160 -465 280 -465 {lab=vss}
+N 340 -465 380 -465 {lab=VSSd}
+N 340 -560 375 -560 {lab=VDDd}
+N 375 -560 390 -560 {lab=VDDd}
+N 380 -465 390 -465 {lab=VSSd}
+N 160 -575 160 -560 {lab=#net14}
+N 160 -655 160 -635 {lab=vdd}
+N 150 -2460 150 -2420 {lab=GND}
+N 150 -2560 150 -2520 {lab=top_iref}
+N 150 -2700 150 -2625 {lab=top_iref}
+N 150 -2700 240 -2700 {lab=top_iref}
+N 260 -2700 480 -2700 {lab=top_iref}
+N 150 -2630 150 -2560 {lab=top_iref}
+N 1570 -3065 1570 -3025 {lab=rvho}
+N 1570 -2965 1570 -2945 {lab=vss}
+N 1630 -2965 1630 -2945 {lab=vss}
+N 1570 -3065 1655 -3065 {lab=rvho}
+N 1630 -3025 1695 -3025 {lab=rvlo}
+N 2060 -2790 2100 -2790 {lab=vdd}
+N 1770 -2840 1770 -2800 {lab=vlo_esd}
+N 1810 -2845 1810 -2800 {lab=vho_esd}
+N 1930 -3170 1980 -3170 {lab=vho}
+N 1930 -3150 1975 -3150 {lab=vho_esd}
+N 1930 -3130 1930 -3085 {lab=vss}
+N 1930 -3225 1930 -3190 {lab=vdd}
+N 1765 -3385 1885 -3385 {lab=vho}
+N 1500 -3385 1565 -3385 {lab=rvho}
+N 1645 -3305 1710 -3305 {lab=vss}
+N 1645 -3465 1720 -3465 {lab=vdd}
+N 2350 -3240 2400 -3240 {lab=vlo}
+N 2350 -3220 2395 -3220 {lab=vlo_esd}
+N 2350 -3200 2350 -3155 {lab=vss}
+N 2350 -3295 2350 -3260 {lab=vdd}
+N 2185 -3455 2305 -3455 {lab=vlo}
+N 1920 -3455 1985 -3455 {lab=rvlo}
+N 2065 -3375 2130 -3375 {lab=vss}
+N 2065 -3535 2140 -3535 {lab=vdd}
+N 1260 -2960 1260 -2890 {lab=vss}
+N 1260 -3080 1260 -3020 {lab=vdd}
+N 1260 -2980 1330 -2980 {lab=swthirteen}
+N 1260 -3000 1350 -3000 {lab=esdoscout}
+N 1245 -3215 1290 -3215 {lab=esdoscout}
+N 1125 -3135 1195 -3135 {lab=vss}
+N 1125 -3295 1220 -3295 {lab=vdd}
+N 990 -3215 1045 -3215 {lab=roscout}
 C {title.sym} 70 30 0 0 {name=l1 author=", X.J. Lee, Christopher O Amankwaa"}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 2880 -1340 2 0 {name=xn_comp}
 C {libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sym} 1460 -1420 3 1 {name=x1}
@@ -436,140 +257,32 @@ C {libs/core_analog/opamp/opamp_p_input.sym} 1880 -1170 0 1 {name=x3}
 C {libs/core_analog/opamp/opamp_n_input.sym} 2590 -1260 0 1 {name=x4}
 C {libs/core_analog/oscillator/triangle_osc.sym} 1850 -2780 1 0 {name=x5}
 C {libs/core_analog/opamp/opamp_p_input.sym} 2210 -2470 1 1 {name=x6}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1580 -3420 1 0 {name=IO1
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1830 -3410 1 0 {name=IO2
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 1580 -3270 0 0 {name=p1 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 1830 -3260 0 0 {name=p2 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 1990 -3300 0 1 {name=p3 sig_type=std_logic lab=vdd}
-C {lab_wire.sym} 1740 -3310 0 1 {name=p4 sig_type=std_logic lab=vdd}
-C {noconn.sym} 1910 -3440 3 1 {name=l2}
-C {noconn.sym} 1660 -3440 1 0 {name=l3}
-C {lab_wire.sym} 1900 -2830 0 0 {name=p5 sig_type=std_logic lab=vho}
-C {lab_wire.sym} 1670 -2830 0 0 {name=p6 sig_type=std_logic lab=vlo}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 260 -1470 0 0 {name=IO3
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 410 -1470 3 0 {name=p7 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 370 -1630 3 1 {name=p8 sig_type=std_logic lab=vdd}
-C {noconn.sym} 240 -1550 2 1 {name=l4}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 250 -1240 0 0 {name=IO4
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 390 -1240 2 1 {name=p9 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 360 -1400 3 1 {name=p10 sig_type=std_logic lab=vdd}
-C {noconn.sym} 230 -1320 2 1 {name=l5}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 260 -1000 0 0 {name=IO5
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 410 -1000 3 0 {name=p11 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 370 -1160 3 1 {name=p12 sig_type=std_logic lab=vdd}
-C {noconn.sym} 240 -1080 2 1 {name=l6}
 C {lab_wire.sym} 490 -1320 0 1 {name=p13 sig_type=std_logic lab=push_pull_out}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 260 -1720 0 0 {name=IO6
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 410 -1720 3 0 {name=p14 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 370 -1880 3 1 {name=p15 sig_type=std_logic lab=vdd}
-C {noconn.sym} 240 -1800 0 0 {name=l7}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 250 -1950 0 0 {name=IO7
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 400 -1950 3 0 {name=p16 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 360 -2110 3 1 {name=p17 sig_type=std_logic lab=vdd}
-C {noconn.sym} 230 -2030 0 0 {name=l8}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 260 -2190 0 0 {name=IO8
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 410 -2190 3 0 {name=p18 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 370 -2350 3 1 {name=p19 sig_type=std_logic lab=vdd}
-C {noconn.sym} 240 -2270 0 0 {name=l9}
-C {lab_wire.sym} 460 -1960 2 0 {name=p20 sig_type=std_logic lab=vdd}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 260 -2620 0 0 {name=IO12
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 410 -2620 3 0 {name=p28 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 370 -2780 3 1 {name=p29 sig_type=std_logic lab=vdd}
-C {noconn.sym} 240 -2700 0 0 {name=l13}
 C {lab_wire.sym} 480 -2700 2 0 {name=p33 sig_type=std_logic lab=top_iref}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1350 -3420 1 0 {name=IO17
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 1350 -3320 0 0 {name=p43 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 1510 -3310 0 1 {name=p44 sig_type=std_logic lab=vdd}
-C {noconn.sym} 1430 -3440 1 0 {name=l18}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2890 -3400 1 0 {name=IO18
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 2890 -3250 0 0 {name=p46 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 3050 -3290 0 1 {name=p49 sig_type=std_logic lab=vdd}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2470 -3390 1 0 {name=IO20
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 2470 -3240 0 0 {name=p50 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 2630 -3280 0 1 {name=p51 sig_type=std_logic lab=vdd}
-C {noconn.sym} 2550 -3410 1 0 {name=l19}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2250 -3400 1 0 {name=IO21
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 2250 -3250 0 0 {name=p52 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 2410 -3290 0 1 {name=p53 sig_type=std_logic lab=vdd}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2040 -3400 1 0 {name=IO22
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 2040 -3250 0 0 {name=p54 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 2200 -3290 0 1 {name=p55 sig_type=std_logic lab=vdd}
-C {noconn.sym} 2120 -3420 1 0 {name=l20}
 C {lab_wire.sym} 3000 -2640 0 1 {name=p56 sig_type=std_logic lab=swmatrix_bus[4]}
-C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 2690 -3390 1 0 {name=IO23
-model=gf180mcu_fd_io__asig_5p0_extracted
-spiceprefix=X
-}
-C {lab_wire.sym} 2690 -3240 0 0 {name=p57 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 2850 -3280 0 1 {name=p58 sig_type=std_logic lab=vdd}
-C {noconn.sym} 2770 -3410 3 1 {name=l21}
 C {lab_wire.sym} 3000 -2600 0 1 {name=p59 sig_type=std_logic lab=BUSFIVE}
 C {lab_wire.sym} 3000 -2680 0 1 {name=p60 sig_type=std_logic lab=swmatrix_bus[3]}
 C {lab_wire.sym} 3000 -2720 0 1 {name=p61 sig_type=std_logic lab=swmatrix_bus[2]}
 C {lab_wire.sym} 3000 -2760 0 1 {name=p62 sig_type=std_logic lab=swmatrix_bus[1]}
-C {noconn.sym} 2970 -3420 3 1 {name=l22}
-C {noconn.sym} 2330 -3420 3 1 {name=l23}
 C {lab_wire.sym} 650 -1150 0 0 {name=p47 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} 1690 -2750 0 0 {name=p64 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 1880 -2750 0 1 {name=p65 sig_type=std_logic lab=vdd}
-C {lab_wire.sym} 1880 -2710 0 1 {name=p66 sig_type=std_logic lab=iref_10u_osc}
+C {lab_wire.sym} 1880 -2710 0 1 {name=p66 sig_type=std_logic lab=top_iref}
 C {lab_wire.sym} 2020 -2440 3 0 {name=p67 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} 2000 -2440 3 0 {name=p68 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 1910 -980 2 0 {name=p70 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} 1910 -960 2 0 {name=p71 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 1910 -1000 0 1 {name=p72 sig_type=std_logic lab=ibias_opp_10u}
+C {lab_wire.sym} 1910 -1000 0 1 {name=p72 sig_type=std_logic lab=top_iref}
 C {lab_wire.sym} 2620 -1070 2 0 {name=p73 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} 2620 -1050 2 0 {name=p74 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 2620 -1090 0 1 {name=p75 sig_type=std_logic lab=ibias_opn_10u}
+C {lab_wire.sym} 2620 -1090 0 1 {name=p75 sig_type=std_logic lab=top_iref}
 C {lab_wire.sym} 2160 -1280 0 1 {name=p76 sig_type=std_logic lab=vdd}
-C {lab_wire.sym} 2180 -1470 2 0 {name=p78 sig_type=std_logic lab=ibias_pcomp_10u}
+C {lab_wire.sym} 2180 -1470 2 0 {name=p78 sig_type=std_logic lab=top_iref}
 C {libs/core_analog/Comparator/Pmos_Comparator.sym} 2200 -1320 2 0 {name=xp_comp1}
 C {lab_wire.sym} 2160 -1420 0 0 {name=p80 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 2840 -1440 0 0 {name=p82 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 2840 -1330 2 1 {name=p83 sig_type=std_logic lab=vdd}
-C {lab_wire.sym} 2860 -1240 2 1 {name=p85 sig_type=std_logic lab=ibias_ncomp_10u}
+C {lab_wire.sym} 2860 -1240 2 1 {name=p85 sig_type=std_logic lab=top_iref}
 C {lab_wire.sym} 1470 -1600 1 0 {name=p86 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 2630 -1330 1 1 {name=p94 sig_type=std_logic lab=swfive}
 C {lab_wire.sym} 3040 -1320 1 1 {name=p101 sig_type=std_logic lab=swone
@@ -594,277 +307,7 @@ C {lab_wire.sym} 3000 -2240 0 1 {name=p110 sig_type=std_logic lab=swmatrix_bus[1
 C {lab_wire.sym} 3000 -2200 0 1 {name=p111 sig_type=std_logic lab=swmatrix_bus[15]}
 C {lab_wire.sym} 3000 -2280 0 1 {name=p112 sig_type=std_logic lab=swmatrix_bus[13]}
 C {lab_wire.sym} 3000 -2160 0 1 {name=p113 sig_type=std_logic lab=swmatrix_bus[16]}
-C {symbols/nfet_03v3.sym} 620 -2510 0 1 {name=M1
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 600 -2440 0 0 {name=p114 sig_type=std_logic lab=vss}
-C {symbols/nfet_03v3.sym} 620 -2630 0 1 {name=M2
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 830 -2510 0 0 {name=p116 sig_type=std_logic lab=vngates_iref_top}
-C {lab_wire.sym} 980 -2260 2 0 {name=p117 sig_type=std_logic lab=ibias_pcomp_10u}
-C {symbols/nfet_03v3.sym} 960 -2100 0 0 {name=M4
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 980 -2030 0 0 {name=p118 sig_type=std_logic lab=vss}
-C {symbols/nfet_03v3.sym} 960 -2190 0 0 {name=M5
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 700 -1980 0 1 {name=M3
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 680 -1910 0 1 {name=p115 sig_type=std_logic lab=vss}
-C {symbols/nfet_03v3.sym} 700 -2070 0 1 {name=M6
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 680 -2110 0 0 {name=p30 sig_type=std_logic lab=ibias_opp_10u}
-C {lab_wire.sym} 2040 -2440 3 0 {name=p119 sig_type=std_logic lab=ibias_buffer_opp}
-C {lab_wire.sym} 680 -2400 2 1 {name=p122 sig_type=std_logic lab=ibias_buffer_opp}
-C {symbols/nfet_03v3.sym} 700 -2240 0 1 {name=M9
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 680 -2170 0 1 {name=p123 sig_type=std_logic lab=vss}
-C {symbols/nfet_03v3.sym} 700 -2330 0 1 {name=M10
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 960 -2360 0 0 {name=M11
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {symbols/nfet_03v3.sym} 960 -2450 0 0 {name=M12
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 980 -2290 0 0 {name=p124 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 1270 -2560 0 1 {name=p125 sig_type=std_logic lab=vdd}
-C {symbols/pfet_03v3.sym} 1290 -2490 0 1 {name=M14
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 980 -2520 0 1 {name=p126 sig_type=std_logic lab=vcascode_iref_top}
-C {lab_wire.sym} 1330 -2490 0 1 {name=p127 sig_type=std_logic lab=vpgates_iref_top}
-C {symbols/pfet_03v3.sym} 1290 -2370 0 1 {name=M15
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 1270 -2220 0 1 {name=p129 sig_type=std_logic lab=vdd}
-C {symbols/pfet_03v3.sym} 1290 -2150 0 1 {name=M20
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/pfet_03v3.sym} 1290 -2070 0 1 {name=M21
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 1270 -2000 2 0 {name=p131 sig_type=std_logic lab=ibias_ncomp_10u}
-C {symbols/nfet_03v3.sym} 960 -1810 0 0 {name=M13
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 980 -1740 0 0 {name=p128 sig_type=std_logic lab=vss}
-C {symbols/nfet_03v3.sym} 960 -1900 0 0 {name=M16
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 980 -1960 0 1 {name=p130 sig_type=std_logic lab=ibias_opn_10u}
-C {lab_wire.sym} 1270 -1920 0 1 {name=p120 sig_type=std_logic lab=vdd}
-C {symbols/pfet_03v3.sym} 1290 -1850 0 1 {name=M7
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {symbols/pfet_03v3.sym} 1290 -1770 0 1 {name=M8
-L=1u
-W=4u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {lab_wire.sym} 1270 -1680 0 1 {name=p132 sig_type=std_logic lab=iref_10u_osc}
+C {lab_wire.sym} 2040 -2440 3 0 {name=p119 sig_type=std_logic lab=top_iref}
 C {lab_wire.sym} 2940 -1320 1 1 {name=p100 sig_type=std_logic lab=swtwo
 }
 C {lab_wire.sym} 2740 -1330 1 1 {name=p99 sig_type=std_logic lab=swthree
@@ -884,7 +327,6 @@ C {lab_wire.sym} 1380 -1320 3 0 {name=p89 sig_type=std_logic lab=swsixteen}
 C {lab_wire.sym} 1310 -1320 1 1 {name=p90 sig_type=std_logic lab=swseventeen}
 C {lab_wire.sym} 1250 -1320 1 1 {name=p103 sig_type=std_logic lab=sweighteen}
 C {lab_wire.sym} 1560 -1320 3 0 {name=p104 sig_type=std_logic lab=swthirteen}
-C {lab_wire.sym} 2120 -2830 0 1 {name=p121 sig_type=std_logic lab=swmatrix_5_out}
 C {libs/core_swmatrix/Swmatrix.sym} 2260 -1900 0 0 {name=x7}
 C {lab_wire.sym} 2510 -2110 0 1 {name=p133 sig_type=std_logic lab=swmatrix_bus[1:4]}
 C {noconn.sym} 2480 -2130 1 0 {name=l16}
@@ -970,7 +412,7 @@ C {noconn.sym} 910 -3400 2 0 {name=l45}
 C {lab_wire.sym} 900 -3480 0 0 {name=p174 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 960 -3960 0 1 {name=p34 sig_type=std_logic lab=clk
 }
-C {vsource.sym} 960 -3900 0 0 {name=V7 value="PULSE(0 3.3 1u 50n 50n 500n 1u 288)" savecurrent=false}
+C {vsource.sym} 960 -3900 0 0 {name=V7 value="PULSE(0 3.3 1u 50n 50n 500n 1u 3)" savecurrent=false}
 C {lab_wire.sym} 960 -3840 0 1 {name=p42 sig_type=std_logic lab=VSSd}
 C {lab_wire.sym} 1260 -4130 0 0 {name=p48 sig_type=std_logic lab=vdd}
 C {lab_wire.sym} 1280 -3870 0 0 {name=p63 sig_type=std_logic lab=vss}
@@ -988,18 +430,6 @@ C {noconn.sym} 1490 -3970 2 0 {name=l15}
 C {noconn.sym} 1480 -3950 2 0 {name=l46}
 C {noconn.sym} 1460 -3930 2 0 {name=l47}
 C {lab_wire.sym} 1430 -4010 0 0 {name=p179 sig_type=std_logic lab=vss}
-C {libs/core_analog/ESD/io_secondary_5p0.sym} 3000 -3050 1 0 {name=x8}
-C {lab_wire.sym} 2950 -2900 0 0 {name=p37 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 3070 -2900 0 1 {name=p39 sig_type=std_logic lab=vdd}
-C {lab_wire.sym} 3010 -2860 0 1 {name=p41 sig_type=std_logic lab=swmatrix_bus_1out}
-C {lab_wire.sym} 3070 -3200 0 1 {name=p159 sig_type=std_logic lab=swmatrix_bus_1out}
-C {libs/core_analog/ESD/io_secondary_5p0.sym} 2800 -3000 1 0 {name=x9}
-C {libs/core_analog/ESD/io_secondary_5p0.sym} 2580 -3000 1 0 {name=x10}
-C {libs/core_analog/ESD/io_secondary_5p0.sym} 2360 -3000 1 0 {name=x11}
-C {libs/core_analog/ESD/io_secondary_5p0.sym} 2130 -3000 1 0 {name=x12}
-C {libs/core_analog/ESD/io_secondary_5p0.sym} 1910 -3010 1 0 {name=x13}
-C {libs/core_analog/ESD/io_secondary_5p0.sym} 1680 -3010 1 0 {name=x14}
-C {libs/core_analog/ESD/io_secondary_5p0.sym} 1430 -3010 1 0 {name=x15}
 C {devices/code_shown.sym} -1160 -1650 0 0 {name=Models only_toplevel=false
 format="tcleval( @value )"
 value="
@@ -1018,17 +448,29 @@ value="
 C {devices/code_shown.sym} -1060 -1960 0 0 {name=Simulation only_toplevel=false value="
 .param VDD = 3.3
 .global VDDd VSSd
+.ic v(swthirteen)=0
+.ic v(esdoscout)=0
+.ic v(roscout)=0
+.ic v(vlo)=.8
+.ic v(vho)=2.5
+.ic v(vlo_esd)=.8
+.ic v(vho_esd)=2.5
 .control
 save serial_in
 save clk_in
 save en_in
 save VDD
 save "x7.x2.xAngel_row_block[1].xSR.xFF[1].out_m"
+save "x7.x2.xAngel_row_block[1].xSR.xFF[3].out_m"
+save rvho
+save vho_esd
+save vho
 save swone
 save swtwo
+save swthirteen
 save "swmatrix_bus[1]"
 
-TRAN 25n 2u 0
+TRAN 25n 5u 0
 
 .endc
 "}
@@ -1042,3 +484,67 @@ aclock [ clock_node ] clock_vector
 aconvert [ clock_node ] [  data ] dac_in
 .model dac_in dac_bridge (out_low=0V out_high=3.3V t_rise=50ns t_fall=50ns)
 "}
+C {vsource.sym} 160 -430 0 0 {name=V2 value=0 savecurrent=false}
+C {gnd.sym} 160 -380 0 0 {name=l7 lab=GND}
+C {lab_wire.sym} 160 -470 0 0 {name=p19 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 160 -655 0 0 {name=p20 sig_type=std_logic lab=vdd}
+C {vsource.sym} 310 -560 1 0 {name=V5 value=0 savecurrent=false}
+C {vsource.sym} 310 -465 1 0 {name=V6 value=0 savecurrent=false}
+C {lab_wire.sym} 390 -465 0 0 {name=p199 sig_type=std_logic lab=VSSd}
+C {lab_wire.sym} 390 -560 0 0 {name=p200 sig_type=std_logic lab=VDDd}
+C {res.sym} 160 -605 0 0 {name=R2
+value=3
+footprint=1206
+device=resistor
+m=1}
+C {isource.sym} 150 -2490 2 0 {name=I0 value=10u}
+C {gnd.sym} 150 -2420 0 0 {name=l9 lab=GND}
+C {vsource.sym} 160 -510 0 0 {name=V1 value=\\\{VDD\\\} savecurrent=false}
+C {vsource.sym} 1570 -2995 0 0 {name=V3 value=2.5 savecurrent=false}
+C {vsource.sym} 1630 -2995 0 0 {name=V4 value=0.8 savecurrent=false}
+C {lab_wire.sym} 1570 -2945 0 0 {name=p23 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1630 -2945 0 0 {name=p24 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1650 -3065 0 0 {name=p25 sig_type=std_logic lab=rvho}
+C {lab_wire.sym} 1690 -3025 0 0 {name=p26 sig_type=std_logic lab=rvlo}
+C {lab_wire.sym} 1770 -2815 0 0 {name=p1 sig_type=std_logic lab=vlo_esd}
+C {lab_wire.sym} 1810 -2825 0 0 {name=p2 sig_type=std_logic lab=vho_esd}
+C {libs/core_analog/ESD/io_secondary_5p0.sym} 1780 -3160 0 0 {name=x8}
+C {lab_wire.sym} 1970 -3170 0 0 {name=p3 sig_type=std_logic lab=vho}
+C {lab_wire.sym} 1970 -3150 0 0 {name=p4 sig_type=std_logic lab=vho_esd}
+C {lab_wire.sym} 1930 -3215 0 0 {name=p5 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 1930 -3085 0 0 {name=p6 sig_type=std_logic lab=vss}
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1565 -3305 0 0 {name=IO1
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {lab_wire.sym} 1850 -3385 0 0 {name=p7 sig_type=std_logic lab=vho}
+C {lab_wire.sym} 1515 -3385 0 0 {name=p8 sig_type=std_logic lab=rvho}
+C {lab_wire.sym} 1705 -3465 0 0 {name=p9 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 1710 -3305 0 0 {name=p10 sig_type=std_logic lab=vss}
+C {libs/core_analog/ESD/io_secondary_5p0.sym} 2200 -3230 0 0 {name=x9}
+C {lab_wire.sym} 2390 -3240 0 0 {name=p11 sig_type=std_logic lab=vlo}
+C {lab_wire.sym} 2390 -3220 0 0 {name=p12 sig_type=std_logic lab=vlo_esd}
+C {lab_wire.sym} 2350 -3285 0 0 {name=p14 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 2350 -3155 0 0 {name=p15 sig_type=std_logic lab=vss}
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1985 -3375 0 0 {name=IO2
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {lab_wire.sym} 2270 -3455 0 0 {name=p16 sig_type=std_logic lab=vlo}
+C {lab_wire.sym} 1935 -3455 0 0 {name=p17 sig_type=std_logic lab=rvlo}
+C {lab_wire.sym} 2125 -3535 0 0 {name=p18 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 2130 -3375 0 0 {name=p21 sig_type=std_logic lab=vss}
+C {libs/core_analog/ESD/io_secondary_5p0.sym} 1110 -2990 0 0 {name=x10}
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1045 -3135 0 0 {name=IO3
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {lab_wire.sym} 1260 -2905 0 0 {name=p22 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1260 -3055 0 0 {name=p27 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 1330 -2980 0 0 {name=p28 sig_type=std_logic lab=swthirteen}
+C {lab_wire.sym} 1335 -3000 0 0 {name=p29 sig_type=std_logic lab=esdoscout}
+C {lab_wire.sym} 1285 -3215 0 0 {name=p30 sig_type=std_logic lab=esdoscout}
+C {lab_wire.sym} 1190 -3135 0 0 {name=p31 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1210 -3295 0 0 {name=p37 sig_type=std_logic lab=vdd}
+C {noconn.sym} 990 -3215 2 1 {name=l2}
+C {lab_wire.sym} 1035 -3215 0 0 {name=p39 sig_type=std_logic lab=roscout}

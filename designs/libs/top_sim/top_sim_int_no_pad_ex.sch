@@ -10,7 +10,7 @@ L 4 2880 -2100 3200 -2100 {}
 L 4 3200 -2580 3200 -2100 {}
 L 4 3160 -2580 3200 -2580 {}
 T {INTERNAL BUS CONNECTIONS} 2885 -2130 0 0 0.4 0.4 {}
-N 1900 -2860 1900 -2800 {lab=vho}
+N 1900 -2860 1900 -2800 {lab=vho_esd}
 N 1670 -2860 1670 -2800 {lab=vlo}
 N 460 -1550 460 -1320 {lab=push_pull_out}
 N 460 -1320 460 -1080 {lab=push_pull_out}
@@ -53,7 +53,7 @@ N 1450 -1640 1450 -1570 {lab=swsixteen}
 N 1380 -1640 1380 -1170 {lab=swsixteen}
 N 1450 -1400 1450 -1170 {lab=swfifteen}
 N 1670 -2800 1770 -2800 {lab=vlo}
-N 1810 -2800 1900 -2800 {lab=vho}
+N 1810 -2800 1900 -2800 {lab=vho_esd}
 N 1470 -1400 1470 -1170 {lab=swfourteen}
 N 650 -960 650 -930 {lab=vss}
 N 730 -1070 1250 -1070 {lab=sweighteen}
@@ -222,10 +222,10 @@ N 2020 -2070 2110 -2070 {lab=clk_in}
 N 2050 -2050 2110 -2050 {lab=VSSd}
 N 2050 -2030 2110 -2030 {lab=VDDd}
 N 1940 -2090 2110 -2090 {lab=data}
-N 1710 -2995 1710 -2955 {lab=vho}
+N 1710 -2995 1710 -2955 {lab=vho_real}
 N 1710 -2895 1710 -2875 {lab=vss}
 N 1770 -2895 1770 -2875 {lab=vss}
-N 1710 -2995 1795 -2995 {lab=vho}
+N 1710 -2995 1795 -2995 {lab=vho_real}
 N 1770 -2955 1835 -2955 {lab=vlo}
 N 1170 -2670 1170 -2630 {lab=VSSd}
 N 900 -2670 900 -2620 {lab=VSSd}
@@ -304,12 +304,20 @@ N 330 -1050 330 -1030 {lab=GND}
 N 380 -1120 380 -1030 {lab=push_pull_out}
 N 330 -1030 330 -970 {lab=GND}
 N 330 -1120 460 -1120 {lab=push_pull_out}
+N 1740 -3160 1760 -3160 {lab=vho}
+N 1760 -3160 1800 -3160 {lab=vho}
+N 1740 -3140 1810 -3140 {lab=vho_esd}
+N 1740 -3220 1740 -3180 {lab=vdd}
+N 1740 -3120 1740 -3085 {lab=vss}
+N 1660 -3360 1760 -3360 {lab=vho}
+N 1360 -3360 1460 -3360 {lab=vho_real}
+N 1540 -3440 1610 -3440 {lab=vdd}
+N 1540 -3280 1600 -3280 {lab=vss}
 C {title.sym} 70 30 0 0 {name=l1 author=", X.J. Lee, Christopher O Amankwaa"}
 C {libs/core_analog/Comparator/Nmos_Comparator.sym} 2880 -1340 2 0 {name=xn_comp}
 C {libs/core_analog/Output_Stage/Output_Stage.sym} 680 -1040 0 1 {name=x2}
 C {libs/core_analog/oscillator/triangle_osc.sym} 1850 -2780 1 0 {name=x5}
-C {lab_wire.sym} 1900 -2830 0 0 {name=p5 sig_type=std_logic lab=vho}
-C {lab_wire.sym} 1670 -2830 0 0 {name=p6 sig_type=std_logic lab=vlo}
+C {lab_wire.sym} 1900 -2830 0 0 {name=p5 sig_type=std_logic lab=vho_esd}
 C {lab_wire.sym} 490 -1320 0 1 {name=p13 sig_type=std_logic lab=push_pull_out}
 C {lab_wire.sym} 480 -2700 2 0 {name=p33 sig_type=std_logic lab=top_iref}
 C {noconn.sym} 2570 -3070 1 0 {name=l19}
@@ -686,7 +694,7 @@ C {vsource.sym} 1710 -2925 0 0 {name=V3 value=2.5 savecurrent=false}
 C {vsource.sym} 1770 -2925 0 0 {name=V4 value=0.8 savecurrent=false}
 C {lab_wire.sym} 1710 -2875 0 0 {name=p23 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 1770 -2875 0 0 {name=p24 sig_type=std_logic lab=vss}
-C {lab_wire.sym} 1790 -2995 0 0 {name=p25 sig_type=std_logic lab=vho}
+C {lab_wire.sym} 1790 -2995 0 0 {name=p25 sig_type=std_logic lab=vho_real}
 C {lab_wire.sym} 1830 -2955 0 0 {name=p26 sig_type=std_logic lab=vlo}
 C {vsource.sym} 900 -2700 0 0 {name=V1 value="PULSE(0 3.3 0.1n 0.1n 0.1n 5n 10n 289)" savecurrent=false}
 C {vsource.sym} 1170 -2700 0 0 {name=V2 value="PULSE(0 3.3 2890n 0.1n 0.1n 10u 20u 1)" savecurrent=false}
@@ -841,3 +849,17 @@ value=50p
 footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 370 -940 0 0 {name=l11 lab=GND}
+C {libs/core_analog/ESD/io_secondary_5p0.sym} 1590 -3150 0 0 {name=x6}
+C {lab_wire.sym} 1790 -3160 0 0 {name=p6 sig_type=std_logic lab=vho}
+C {lab_wire.sym} 1790 -3140 0 0 {name=p35 sig_type=std_logic lab=vho_esd}
+C {lab_wire.sym} 1740 -3210 0 0 {name=p43 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 1740 -3090 0 0 {name=p50 sig_type=std_logic lab=vss}
+C {lab_wire.sym} 1670 -2815 0 0 {name=p51 sig_type=std_logic lab=vlo}
+C {libs/core_analog/Chipathon2025_pads/xschem/symbols/io_asig_5p0.sym} 1460 -3280 0 0 {name=IO1
+model=gf180mcu_fd_io__asig_5p0_extracted
+spiceprefix=X
+}
+C {lab_wire.sym} 1740 -3360 0 0 {name=p52 sig_type=std_logic lab=vho}
+C {lab_wire.sym} 1380 -3360 0 0 {name=p53 sig_type=std_logic lab=vho_real}
+C {lab_wire.sym} 1570 -3440 0 0 {name=p54 sig_type=std_logic lab=vdd}
+C {lab_wire.sym} 1570 -3280 0 0 {name=p55 sig_type=std_logic lab=vss}
