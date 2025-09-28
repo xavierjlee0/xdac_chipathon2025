@@ -1,4 +1,4 @@
-timestamp 1586217267
+timestamp 1587683040
 version 8.3
 tech gf180mcuD
 style ngspice()
@@ -20,945 +20,894 @@ use pfet$8 pfet$8_1[0:2:1200][0:0:0] 1 0 536 0 -1 2916
 use pfet$8 pfet$8_0[0:2:1200][0:0:0] 1 0 542 0 1 532
 port "ibias_compp" 12 -3084 -5654 -3084 -5654 m2
 port "ibias_compn" 7 -3758 418 -3758 418 m1
-port "vddd" 5 -900 -3058 -900 -3058 m1
-port "vssd" 4 -1740 -3044 -1740 -3044 m1
-port "vlo" 11 -8964 -3620 -8964 -3620 m2
-port "iref" 1 936 -2276 936 -2276 m1
-port "iref" 1 -8728 -2770 -8728 -2770 m4
-port "v_8_7" 8 1444 -2397 1444 -2397 m2
+port "vddd" 2 -898 -3058 -898 -3058 m1
+port "vssd" 1 -1738 -3044 -1738 -3044 m1
+port "vlo" 8 -8760 -3631 -8760 -3631 m2
+port "iref" 3 936 -2276 936 -2276 m1
+port "iref" 3 -8728 -2770 -8728 -2770 m4
+port "v_8_7" 9 1444 -2397 1444 -2397 m2
 port "q" 6 -1160 -1420 -1160 -1420 m1
 port "nq" 13 -92 -1268 -92 -1268 m2
 port "vss" 15 344 -1924 344 -1924 m5
 port "ibias_compn" 7 -162 268 -162 268 m2
-port "v_5_6" 9 2030 172 2030 172 m2
-port "out" 10 -910 -3632 -910 -3632 m4
-port "out" 10 1748 -1180 1748 -1180 m2
+port "v_5_6" 10 2030 172 2030 172 m2
+port "out" 11 -910 -3632 -910 -3632 m4
+port "out" 11 1748 -1180 1748 -1180 m2
 port "vho" 14 -8810 944 -8810 944 m4
-port "v_4_1_pn" 3 1394 1644 1394 1644 m1
-port "vdd" 2 1070 3538 1070 3538 m1
+port "v_4_1_pn" 5 1394 1644 1394 1644 m1
+port "vdd" 4 1070 3538 1070 3538 m1
 node "ibias_compp" 0 0 -3084 -5654 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "ibias_compn" 0 0 -3758 418 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vddd" 0 0 -900 -3058 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vssd" 0 0 -1740 -3044 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "vlo" 4 1080.09 -8964 -3620 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 178920 6084 0 0 0 0 0 0
-node "m1_n817_n2922#" 1 50.787 -817 -2922 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14700 688 0 0 0 0 0 0 0 0
-node "m1_n1732_n2960#" 1 122.206 -1732 -2960 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15200 708 0 0 0 0 0 0 0 0
-node "m1_n2608_n3706#" 5 1142.47 -2608 -3706 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25088 896 66432 2184 135788 4466 0 0 0 0
-node "iref" 4 1497.86 936 -2276 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 502134 9562 0 0 0 0 0 0 0 0
-node "iref" 18 2393.63 -8728 -2770 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25088 896 25088 896 25088 896 683168 22504 0 0
-node "m1_n326_n2068#" 10 2167.31 -326 -2068 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25088 896 408248 13340 0 0 0 0 0 0
+node "vddd" 0 0 -898 -3058 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vssd" 0 0 -1738 -3044 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vlo" 15 3588.53 -8760 -3631 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 602280 20196 0 0 0 0 0 0
+node "m1_n817_n2922#" 1 49.7451 -817 -2922 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14700 688 0 0 0 0 0 0 0 0
+node "m1_n1732_n2960#" 1 121.083 -1732 -2960 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15200 708 0 0 0 0 0 0 0 0
+node "m1_n2608_n3706#" 5 1137.16 -2608 -3706 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25088 896 66432 2184 135788 4466 0 0 0 0
+node "iref" 4 1497.42 936 -2276 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 502134 9562 0 0 0 0 0 0 0 0
+node "iref" 18 2392.23 -8728 -2770 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25088 896 25088 896 25088 896 683168 22504 0 0
+node "m1_n326_n2068#" 10 2166.29 -326 -2068 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25088 896 408248 13340 0 0 0 0 0 0
 node "v_8_7" 8 1265.91 1444 -2397 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 125440 4480 315204 8474 0 0 0 0 0 0
 node "m1_n818_n1740#" 1 269.406 -818 -1740 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46260 1662 0 0 0 0 0 0 0 0
 node "q" 2 249.882 -1160 -1420 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43650 1846 0 0 0 0 0 0 0 0
 node "m1_n1744_n1710#" 1 257.431 -1744 -1710 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46260 1662 0 0 0 0 0 0 0 0
-node "nq" 10 2095.77 -92 -1268 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 177012 5896 230712 7540 0 0 0 0 0 0
+node "nq" 10 2095.74 -92 -1268 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 177012 5896 230712 7540 0 0 0 0 0 0
 node "m1_n1392_n752#" 5 990.973 -1392 -752 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12544 448 70992 2336 134408 4420 0 0 0 0
-node "vss" 81 14688.6 344 -1924 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8697465 29602 1064944 35216 903168 32256 903168 32256 3907796 16744
+node "vss" 81 14719.8 344 -1924 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8697465 29602 1064944 35216 903168 32256 903168 32256 3907796 16744
 node "ibias_compn" 8 1574.77 -162 268 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 37632 1344 305772 9626 0 0 0 0 0 0
 node "v_5_6" 11 2536.52 2030 172 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 250880 8960 1154202 14104 0 0 0 0 0 0
 node "m1_n821_n158#" 1 69.8983 -821 -158 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19500 880 0 0 0 0 0 0 0 0
 node "m1_n1749_n140#" 1 145.942 -1749 -140 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18800 852 0 0 0 0 0 0 0 0
-node "out" 35 5435.47 1748 -1180 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 163072 5824 509288 10582 62720 2240 1001824 32644 0 0
+node "out" 35 5434.87 1748 -1180 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 163072 5824 509288 10582 62720 2240 1001824 32644 0 0
 node "vho" 9 1696.97 -8810 944 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15904 508 12544 448 12544 448 334144 11168 0 0
-node "v_4_1_pn" 18 5472.77 1394 1644 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1454572 15458 276024 8032 402136 12756 0 0 0 0
+node "v_4_1_pn" 18 5472.72 1394 1644 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1454572 15458 276024 8032 402136 12756 0 0 0 0
 node "m1_n1064_1974#" 0 289.297 -1064 1974 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 88160 1188 0 0 0 0 0 0 0 0
 node "m1_434_2220#" 11 1626.28 434 2220 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 150528 5376 432144 11566 0 0 0 0 0 0
-node "vdd" 31 15882.4 1070 3538 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3325016 34092 250880 8960 250880 8960 250880 8960 11706632 44544
-node "w_n1282_n3226#" 1192 1356.43 -1282 -3226 nw 452144 2700 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 30 10550.6 1070 3538 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3325016 34092 250880 8960 250880 8960 250880 8960 1948720 14440
+node "w_n1305_n3226#" 1145 1411.48 -1305 -3226 nw 470494 2750 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n1305_n308#" 1183 1472.18 -1305 -308 nw 490728 2812 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "m1_434_2220#" "v_4_1_pn" 1228.91
-cap "m1_n326_n2068#" "vss" 270.947
-cap "out" "m1_n821_n158#" 1.97594
-cap "vdd" "ibias_compn" 78.9592
-cap "vss" "m1_n1392_n752#" 57.9691
-cap "m1_n326_n2068#" "v_4_1_pn" 22.7749
-cap "vdd" "nq" 110.171
-cap "vdd" "m1_434_2220#" 815.723
-cap "m1_n817_n2922#" "m1_n1732_n2960#" 12.6037
-cap "w_n1282_n3226#" "vss" 18.6361
-cap "out" "ibias_compn" 127.661
-cap "w_n1282_n3226#" "v_4_1_pn" 4.07462
-cap "vdd" "m1_n326_n2068#" 47.8022
-cap "out" "nq" 361.392
-cap "vdd" "m1_n1392_n752#" 2.27176
-cap "out" "m1_434_2220#" 2.72454
-cap "v_8_7" "iref" 46.243
-cap "out" "m1_n326_n2068#" 27.9
-cap "out" "m1_n1392_n752#" 55.9584
-cap "m1_n817_n2922#" "nq" 0.16917
-cap "iref" "v_8_7" 90.8504
-cap "out" "w_n1282_n3226#" 14.5227
-cap "m1_n1744_n1710#" "iref" 1.23179
-cap "m1_n326_n2068#" "m1_n817_n2922#" 2.55949
-cap "iref" "iref" 89.1696
-cap "q" "iref" 1.18865
-cap "vss" "v_4_1_pn" 921.267
-cap "m1_n818_n1740#" "iref" 1.21094
-cap "out" "m1_n1749_n140#" 1.92758
-cap "w_n1305_n308#" "q" 1.67763
-cap "w_n1282_n3226#" "m1_n817_n2922#" 62.9347
-cap "w_n1305_n308#" "m1_n818_n1740#" 0.855357
-cap "m1_n1744_n1710#" "q" 63.8747
-cap "m1_n818_n1740#" "q" 101.742
-cap "vdd" "vss" 259.651
-cap "m1_n1064_1974#" "w_n1305_n308#" 0.408713
-cap "vdd" "v_4_1_pn" 1471.37
-cap "m1_n2608_n3706#" "iref" 62.943
-cap "out" "vss" 309.518
-cap "out" "v_4_1_pn" 243.272
-cap "vss" "vho" 42.1606
-cap "m1_n2608_n3706#" "m1_n1744_n1710#" 1.68406
-cap "m1_n2608_n3706#" "iref" 3.97414
-cap "out" "vdd" 1193.72
-cap "vss" "m1_n817_n2922#" 1.06651
-cap "v_4_1_pn" "m1_n817_n2922#" 0.33219
-cap "m1_n1732_n2960#" "iref" 7.0516
-cap "out" "vho" 217.184
-cap "m1_n1744_n1710#" "m1_n1732_n2960#" 2.07754
-cap "iref" "m1_n1732_n2960#" 0.990004
-cap "v_8_7" "nq" 56.3433
-cap "w_n1305_n308#" "m1_n821_n158#" 82.5956
-cap "out" "m1_n817_n2922#" 0.505243
-cap "m1_n821_n158#" "m1_n818_n1740#" 2.37711
-cap "nq" "iref" 24.815
-cap "w_n1305_n308#" "ibias_compn" 89.9783
-cap "m1_n1744_n1710#" "ibias_compn" 0.00711579
-cap "ibias_compn" "v_5_6" 39.5659
-cap "ibias_compn" "q" 0.127317
-cap "w_n1305_n308#" "nq" 22.9019
-cap "m1_n2608_n3706#" "m1_n1732_n2960#" 6.91857
-cap "m1_n326_n2068#" "iref" 28.1758
-cap "m1_n818_n1740#" "ibias_compn" 0.0906639
-cap "m1_n1744_n1710#" "nq" 9.77651
-cap "iref" "nq" 11.2445
-cap "v_5_6" "nq" 24.8905
-cap "q" "nq" 76.0734
-cap "m1_n818_n1740#" "nq" 57.2184
-cap "m1_434_2220#" "v_5_6" 87.3608
-cap "m1_n1064_1974#" "ibias_compn" 0.782175
-cap "w_n1282_n3226#" "iref" 33.2334
-cap "w_n1305_n308#" "m1_n1392_n752#" 26.2375
-cap "m1_n326_n2068#" "iref" 53.7063
-cap "m1_n326_n2068#" "q" 0.262378
-cap "m1_n1744_n1710#" "m1_n1392_n752#" 5.36194
-cap "m1_n1064_1974#" "m1_434_2220#" 2.78889
-cap "w_n1282_n3226#" "iref" 17.6586
-cap "m1_n2608_n3706#" "nq" 58.7931
-cap "w_n1282_n3226#" "q" 1.37282
-cap "w_n1282_n3226#" "m1_n818_n1740#" 0.622302
-cap "m1_n1749_n140#" "w_n1305_n308#" 16.2169
-cap "vlo" "iref" 16.6005
-cap "m1_n2608_n3706#" "m1_n326_n2068#" 6.00976
-cap "m1_n1744_n1710#" "m1_n1749_n140#" 2.31057
-cap "vss" "v_8_7" 684.604
-cap "m1_n2608_n3706#" "m1_n1392_n752#" 18.8362
-cap "v_8_7" "v_4_1_pn" 132.021
-cap "vss" "iref" 539.408
-cap "m1_n2608_n3706#" "w_n1282_n3226#" 24.0406
-cap "v_4_1_pn" "iref" 154.819
-cap "vdd" "v_8_7" 195.797
-cap "w_n1305_n308#" "vss" 3.04439
-cap "m1_n821_n158#" "ibias_compn" 7.37511
-cap "m1_n1744_n1710#" "vss" 57.1057
-cap "iref" "vss" 1230.17
-cap "vss" "q" 11.3242
-cap "w_n1305_n308#" "v_4_1_pn" 12.4082
-cap "m1_n821_n158#" "nq" 0.305932
-cap "iref" "v_4_1_pn" 141.15
-cap "vdd" "iref" 45.4777
-cap "m1_n818_n1740#" "vss" 7.00107
-cap "v_5_6" "v_4_1_pn" 253.057
-cap "m1_n326_n2068#" "m1_n1732_n2960#" 0.215485
+cap "vdd" "ibias_compn" 74.428
 cap "out" "v_8_7" 512.83
-cap "m1_n818_n1740#" "v_4_1_pn" 1.41076
-cap "vdd" "w_n1305_n308#" 1.22475
-cap "ibias_compn" "nq" 12.5177
-cap "out" "iref" 793.681
-cap "m1_n1064_1974#" "v_4_1_pn" 4.39327
-cap "vdd" "iref" 73.0384
-cap "m1_n821_n158#" "m1_n1392_n752#" 0.702935
-cap "w_n1282_n3226#" "m1_n1732_n2960#" 12.8584
-cap "vdd" "q" 0.281116
-cap "vdd" "v_5_6" 1858.29
-cap "m1_n2608_n3706#" "vss" 25.805
-cap "out" "w_n1305_n308#" 28.9486
-cap "out" "m1_n1744_n1710#" 0.337432
-cap "out" "iref" 64.9407
-cap "ibias_compn" "m1_n1392_n752#" 93.2622
-cap "out" "v_5_6" 811.541
-cap "vdd" "m1_n1064_1974#" 8.37883
-cap "out" "q" 0.333725
-cap "m1_n326_n2068#" "nq" 28.3997
-cap "out" "m1_n818_n1740#" 0.280512
-cap "m1_n1392_n752#" "nq" 25.7851
-cap "m1_n817_n2922#" "iref" 5.9594
+cap "v_5_6" "nq" 24.8905
+cap "nq" "v_4_1_pn" 65.8865
+cap "m1_n1744_n1710#" "q" 63.8747
+cap "m1_n818_n1740#" "m1_n821_n158#" 2.37711
+cap "iref" "out" 793.681
+cap "m1_n326_n2068#" "v_4_1_pn" 22.7749
+cap "m1_n818_n1740#" "w_n1305_n3226#" 0.622302
+cap "m1_n1744_n1710#" "nq" 9.77651
+cap "vss" "out" 311.439
 cap "m1_n1749_n140#" "m1_n821_n158#" 17.3623
-cap "out" "m1_n1064_1974#" 1.42741
-cap "w_n1282_n3226#" "nq" 7.28316
-cap "iref" "m1_n817_n2922#" 18.6102
-cap "m1_n818_n1740#" "m1_n817_n2922#" 2.30706
-cap "m1_n1749_n140#" "ibias_compn" 3.18498
-cap "out" "m1_n2608_n3706#" 130.444
-cap "w_n1282_n3226#" "m1_n326_n2068#" 35.5384
-cap "vss" "m1_n1732_n2960#" 1.07076
-cap "m1_n821_n158#" "v_4_1_pn" 14.1945
 cap "m1_n1749_n140#" "m1_n1392_n752#" 6.66817
-cap "m1_n2608_n3706#" "m1_n817_n2922#" 0.607588
+cap "iref" "v_8_7" 46.243
+cap "nq" "iref" 11.2445
+cap "ibias_compn" "m1_n1392_n752#" 93.2622
+cap "m1_n821_n158#" "ibias_compn" 7.37511
+cap "m1_n326_n2068#" "m1_n1732_n2960#" 0.215485
+cap "vss" "v_8_7" 686.128
+cap "m1_n326_n2068#" "iref" 53.7063
+cap "iref" "vss" 539.408
+cap "m1_n818_n1740#" "out" 0.280512
+cap "vdd" "v_4_1_pn" 918.749
+cap "v_5_6" "vdd" 1476.49
+cap "vdd" "m1_n1064_1974#" 8.37883
+cap "m1_n1749_n140#" "out" 1.92758
+cap "m1_n2608_n3706#" "m1_n1732_n2960#" 6.91857
+cap "m1_n1744_n1710#" "m1_n2608_n3706#" 1.68406
+cap "m1_n2608_n3706#" "iref" 3.97414
+cap "out" "ibias_compn" 127.661
+cap "m1_n818_n1740#" "iref" 1.21094
+cap "nq" "m1_n817_n2922#" 0.16917
+cap "w_n1305_n308#" "q" 1.67763
+cap "m1_n821_n158#" "v_4_1_pn" 14.1945
+cap "m1_n818_n1740#" "vss" 7.00107
+cap "w_n1305_n3226#" "v_4_1_pn" 4.12227
+cap "m1_n326_n2068#" "m1_n817_n2922#" 2.55949
+cap "w_n1305_n308#" "nq" 22.9019
+cap "m1_n1744_n1710#" "m1_n1392_n752#" 5.36194
 cap "vss" "ibias_compn" 26.7062
-cap "ibias_compn" "v_4_1_pn" 38.6554
-cap "vss" "nq" 171.003
+cap "w_n1305_n3226#" "m1_n1732_n2960#" 13.9815
+cap "w_n1305_n3226#" "iref" 18.0984
+cap "m1_n2608_n3706#" "m1_n817_n2922#" 0.607588
+cap "v_5_6" "out" 811.541
+cap "out" "v_4_1_pn" 243.272
+cap "m1_434_2220#" "vdd" 614.862
+cap "m1_n818_n1740#" "ibias_compn" 0.0906639
+cap "out" "m1_n1064_1974#" 1.42741
+cap "v_8_7" "v_4_1_pn" 132.021
+cap "nq" "q" 76.0734
+cap "m1_n1744_n1710#" "out" 0.337432
 cap "out" "m1_n1732_n2960#" 0.65256
-cap "v_4_1_pn" "nq" 65.8865
-cap "ibias_compp" "Pmos_Comparator_0/ibias_p" 5.68434e-14
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "ibias_compp" 2.54192
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/vdd" 1.96376
-cap "ibias_compp" "Pmos_Comparator_0/vdd" 122.982
-cap "Pmos_Comparator_0/pfet$5_1/a_830_0#" "Pmos_Comparator_0/vdd" 0.429013
-cap "Pmos_Comparator_0/pfet$5_1/a_382_0#" "Pmos_Comparator_0/vdd" 0.429013
+cap "w_n1305_n308#" "vdd" 1.22475
+cap "out" "iref" 64.9407
+cap "m1_n326_n2068#" "q" 0.262378
+cap "m1_n1749_n140#" "ibias_compn" 3.18498
+cap "iref" "v_4_1_pn" 154.819
+cap "vss" "v_4_1_pn" 921.267
+cap "v_8_7" "iref" 90.8504
+cap "m1_n326_n2068#" "nq" 28.3997
+cap "w_n1305_n3226#" "m1_n817_n2922#" 63.9766
+cap "m1_n1744_n1710#" "iref" 1.23179
+cap "iref" "m1_n1732_n2960#" 7.0516
+cap "iref" "iref" 89.1696
+cap "w_n1305_n308#" "m1_n1392_n752#" 26.2375
+cap "w_n1305_n308#" "m1_n821_n158#" 82.5956
+cap "vss" "m1_n1732_n2960#" 1.07076
+cap "m1_n1744_n1710#" "vss" 57.1057
+cap "vss" "iref" 1230.17
+cap "vdd" "q" 0.281116
+cap "m1_n818_n1740#" "v_4_1_pn" 1.41076
+cap "m1_n2608_n3706#" "nq" 58.7931
+cap "vdd" "nq" 52.3432
+cap "out" "m1_n817_n2922#" 0.505243
+cap "m1_434_2220#" "out" 2.72454
+cap "m1_n2608_n3706#" "m1_n326_n2068#" 6.00976
+cap "v_5_6" "ibias_compn" 39.5659
+cap "ibias_compn" "v_4_1_pn" 38.6554
+cap "w_n1305_n308#" "out" 28.9486
+cap "m1_n1744_n1710#" "m1_n1749_n140#" 2.31057
+cap "m1_n1064_1974#" "ibias_compn" 0.782175
+cap "w_n1305_n3226#" "q" 1.37282
+cap "m1_n1744_n1710#" "ibias_compn" 0.00711579
+cap "iref" "m1_n817_n2922#" 5.9594
+cap "nq" "m1_n1392_n752#" 25.7851
+cap "m1_n821_n158#" "nq" 0.305932
+cap "w_n1305_n3226#" "nq" 7.30831
+cap "vss" "m1_n817_n2922#" 1.06651
+cap "w_n1305_n3226#" "m1_n326_n2068#" 36.5595
+cap "w_n1305_n308#" "vss" 3.04439
+cap "out" "q" 0.333725
+cap "v_5_6" "v_4_1_pn" 253.057
+cap "m1_n818_n1740#" "m1_n817_n2922#" 2.30706
+cap "out" "nq" 361.392
+cap "m1_n2608_n3706#" "m1_n1392_n752#" 18.8362
+cap "vdd" "m1_n1392_n752#" 2.27176
+cap "m1_n1064_1974#" "v_4_1_pn" 4.39327
+cap "w_n1305_n308#" "m1_n818_n1740#" 0.855357
+cap "m1_n2608_n3706#" "w_n1305_n3226#" 29.3533
+cap "out" "m1_n326_n2068#" 27.9
+cap "iref" "v_4_1_pn" 141.15
+cap "v_8_7" "nq" 56.3433
+cap "iref" "q" 1.18865
+cap "vss" "q" 11.3242
+cap "w_n1305_n308#" "m1_n1749_n140#" 16.2169
+cap "iref" "nq" 24.815
+cap "m1_n1744_n1710#" "m1_n1732_n2960#" 2.07754
+cap "w_n1305_n308#" "ibias_compn" 89.9783
+cap "m1_n1732_n2960#" "iref" 0.990004
+cap "vss" "nq" 171.003
+cap "iref" "m1_n326_n2068#" 28.1758
+cap "m1_n821_n158#" "m1_n1392_n752#" 0.702935
+cap "m1_n2608_n3706#" "out" 130.444
+cap "vss" "m1_n326_n2068#" 270.947
+cap "vdd" "out" 124.178
+cap "m1_n818_n1740#" "q" 101.742
+cap "m1_n818_n1740#" "nq" 57.2184
+cap "vho" "out" 217.184
+cap "m1_n817_n2922#" "v_4_1_pn" 0.33219
+cap "m1_n2608_n3706#" "iref" 62.943
+cap "iref" "vdd" 0.200792
+cap "ibias_compn" "q" 0.127317
+cap "m1_434_2220#" "v_5_6" 87.3608
+cap "m1_434_2220#" "v_4_1_pn" 1228.91
+cap "out" "m1_n1392_n752#" 55.9584
+cap "out" "m1_n821_n158#" 1.97594
+cap "m1_n2608_n3706#" "vss" 25.805
+cap "vss" "vdd" 36.2467
+cap "w_n1305_n308#" "v_4_1_pn" 12.4082
+cap "w_n1305_n3226#" "out" 15.1249
+cap "nq" "ibias_compn" 12.5177
+cap "m1_n1732_n2960#" "m1_n817_n2922#" 12.6037
+cap "m1_434_2220#" "m1_n1064_1974#" 2.78889
+cap "m1_n817_n2922#" "iref" 18.6102
+cap "iref" "vlo" 16.6005
+cap "w_n1305_n308#" "m1_n1064_1974#" 0.408713
+cap "vho" "vss" 42.1606
+cap "w_n1305_n3226#" "iref" 34.6375
+cap "vss" "m1_n1392_n752#" 57.9691
+cap "w_n1305_n3226#" "vss" 19.4154
+cap "Pmos_Comparator_0/ibias_p" "ibias_compp" 5.68434e-14
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "ibias_compp" 2.33562
+cap "Pmos_Comparator_0/pfet$3$1_0/w_n230_n138#" "ibias_compp" 83.6711
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "ibias_compp" 34.0875
+cap "ibias_compp" "Pmos_Comparator_0/pfet$5_1/a_382_0#" 3.08897
 cap "ibias_compp" "Pmos_Comparator_0/pfet$5_1/a_n92_0#" 4.2139
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/vdd" 7.56713
-cap "Pmos_Comparator_0/pfet$5_1/a_830_0#" "ibias_compp" 3.08897
-cap "Pmos_Comparator_0/vdd" "ibias_compp" 47.4058
-cap "Pmos_Comparator_0/pfet$5_1/a_382_0#" "ibias_compp" 3.08897
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "ibias_compp" 33.8812
-cap "Pmos_Comparator_0/vdd" "Pmos_Comparator_0/pfet$5_1/a_n92_0#" 0.534545
-cap "vdd" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 0.481131
-cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "Pmos_Comparator_0/ibias_compp" 3.13705
-cap "Pmos_Comparator_0/v_7_3_p" "Pmos_Comparator_0/m1_n1348_64#" 2.53281
-cap "Pmos_Comparator_0/vdd" "Pmos_Comparator_0/v_7_3_p" -0.636498
-cap "Pmos_Comparator_0/v_7_3_p" "Pmos_Comparator_0/m1_n1348_64#" 1.27344
-cap "Pmos_Comparator_0/vdd" "Pmos_Comparator_0/ibias_p" -0.126656
-cap "Pmos_Comparator_0/pfet$5_0/a_486_n60#" "Pmos_Comparator_0/m1_n1348_64#" 0.0485297
-cap "Pmos_Comparator_0/pfet$5_0/a_486_n60#" "Pmos_Comparator_0/vdd" -0.230312
+cap "ibias_compp" "Pmos_Comparator_0/pfet$5_1/a_830_0#" 3.08897
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "ibias_compp" 59.598
+cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "Pmos_Comparator_0/ibias_compp" 6.2741
+cap "Pmos_Comparator_0/v_7_3_p" "vlo" 2.48048
+cap "Pmos_Comparator_0/v_7_3_p" "Pmos_Comparator_0/m1_n1348_64#" 1.27531
+cap "Pmos_Comparator_0/v_7_3_p" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" -0.519249
+cap "Pmos_Comparator_0/vdd" "Pmos_Comparator_0/pfet$5_0/a_486_n60#" -0.347562
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/pfet$5_0/a_486_n60#" 0.0989942
+cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/vdd" -0.126656
+cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/m1_n1348_64#" 1.75134
 cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/v_5_11_p" -0.0687926
 cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/nfet$3_5/a_238_0#" -0.332603
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/ibias_p" 1.75134
+cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/m1_n3667_1304#" 1.42109e-14
+cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/m1_n3667_1304#" 5.745
+cap "Pmos_Comparator_0/m1_n3667_1304#" "Pmos_Comparator_0/v_5_11_p" -0.171775
 cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/v_6_9_p" -0.0413593
-cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_n3667_1304#" -0.171775
-cap "Pmos_Comparator_0/vdd" "Pmos_Comparator_0/m1_n3667_1304#" -0.000134399
-cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/v_5_11_p" -0.00264703
-cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/vdd" -0.000236224
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/m1_n3667_1304#" 5.78665
+cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" -0.000236224
 cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/m1_n3667_1304#" -0.380558
-cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/m1_n3667_1304#" -1.42109e-14
 cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/ibias_p" 0.0448893
-cap "Pmos_Comparator_0/vdd" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 2.69782
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 0.823996
-cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/m1_664_66#" 0.156961
-cap "ibias_compp" "Pmos_Comparator_0/vdd" 0.436568
-cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 6.89212
-cap "ibias_compp" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 2.40905
-cap "vssd" "Pmos_Comparator_0/vcompp" 0.407628
-cap "ibias_compp" "Pmos_Comparator_0/vdd" 0.215169
-cap "ibias_compp" "Pmos_Comparator_0/vcompp" 1.69894
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/vdd" 8.91431
+cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/v_5_11_p" -0.00264703
+cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "Pmos_Comparator_0/m1_n3667_1304#" -0.000134399
+cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/ibias_p" 0.156961
+cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 0.865642
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "ibias_compp" 2.13299
+cap "ibias_compp" "Pmos_Comparator_0/pfet$3$1_0/w_n230_n138#" 0.341184
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/vcompp" 5.52251
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/pfet$3$1_0/w_n230_n138#" -1.36677
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" -0.321328
+cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 11.6714
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "ibias_compp" 0.310554
 cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "out" 0.725556
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/vcompp" 10.3018
-cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/vdd" 0.0531563
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "ibias_compp" 38.4143
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/ibias_compp" 19.4527
-cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "Pmos_Comparator_0/ibias_compp" 18.4424
-cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/ibias_compp" 8.6119
+cap "vssd" "Pmos_Comparator_0/vcompp" 0.407628
+cap "Pmos_Comparator_0/vcompp" "ibias_compp" 1.69894
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "ibias_compp" 38.6903
 cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "vssd" 0.0952854
-cap "vssd" "Pmos_Comparator_0/vcompp" 0.412885
-cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 0.699205
-cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "nfet$8_2[0]/a_n84_0#" 0.209394
-cap "nfet$8_2[0]/a_238_0#" "nfet$8_2[0]/a_n84_0#" 8.12661
+cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 18.4424
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/ibias_compp" 19.4527
+cap "Pmos_Comparator_0/vcompp" "vssd" 0.412885
+cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/vcompp" 8.6119
+cap "nfet$8_2[0]/a_n84_0#" "nfet$8_2[0]/a_238_0#" 7.73327
 cap "nfet$8_2[0]/a_38_n60#" "nfet$8_2[0]/a_n84_0#" 20.868
-cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 0.464663
-cap "nfet$8_2[0]/a_n84_0#" "nfet$8_2[2]/a_360_0#" 5.93601
+cap "nfet$8_2[0]/a_n84_0#" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 0.209394
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 0.699205
 cap "nfet$8_2[0]/a_38_n60#" "nfet$8_2[0]/a_n84_0#" 21.6113
-cap "iref" "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" 10.7622
-cap "Pmos_Comparator_0/v_7_3_p" "iref" 15.0043
-cap "Pmos_Comparator_0/v_7_3_p" "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" -4.77183
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" 199.905
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/v_7_3_p" 94.4358
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" 39.3148
-cap "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" "Pmos_Comparator_0/v_7_3_p" -4.35079
-cap "iref" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" 8.02455
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/m1_n1840_n1380#" 13.7095
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/v_7_3_p" 96.3216
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/v_5_11_p" 30.0338
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/pfet$2_0/a_1150_0#" 7.48086
-cap "iref" "Pmos_Comparator_0/m1_n1840_n1380#" 35.6007
-cap "iref" "Pmos_Comparator_0/v_5_11_p" 23.2839
-cap "iref" "Pmos_Comparator_0/v_7_3_p" 28.5161
-cap "iref" "Pmos_Comparator_0/pfet$2_0/a_1150_0#" 0.586057
-cap "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" "Pmos_Comparator_0/m1_n1348_64#" 194.024
-cap "Pmos_Comparator_0/pfet$2_0/a_1150_0#" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" -0.305632
-cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_n1840_n1380#" 4.5394
-cap "iref" "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" 12.1318
-cap "Pmos_Comparator_0/pfet$2_0/a_1150_0#" "Pmos_Comparator_0/v_5_11_p" -0.138317
-cap "iref" "Pmos_Comparator_0/m1_n1348_64#" 1.77636e-15
-cap "Pmos_Comparator_0/m1_n1840_n1380#" "Pmos_Comparator_0/v_6_9_p" 3.28709
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/m1_n1348_64#" -0.000265189
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/v_7_3_p" -0.291665
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/v_5_11_p" 5.02149e-05
-cap "iref" "Pmos_Comparator_0/ibias_p" 7.86599
-cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/ibias_p" 25.7711
+cap "nfet$8_2[0]/a_n84_0#" "nfet$8_3[0]/a_n84_0#" 0.464663
+cap "nfet$8_2[0]/a_n84_0#" "nfet$8_2[0]/a_238_0#" 6.32935
+cap "iref" "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" 9.39848
+cap "iref" "Pmos_Comparator_0/v_7_3_p" 14.8031
+cap "vlo" "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" 181.158
+cap "Pmos_Comparator_0/v_7_3_p" "vlo" 90.1963
+cap "Pmos_Comparator_0/v_7_3_p" "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" -4.28062
+cap "Pmos_Comparator_0/v_7_3_p" "iref" 28.7174
+cap "Pmos_Comparator_0/v_5_11_p" "iref" 22.9147
+cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "iref" 7.04342
+cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_n1840_n1380#" 3.6781
+cap "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" "Pmos_Comparator_0/v_7_3_p" -4.84201
+cap "Pmos_Comparator_0/m1_n1348_64#" "iref" 1.77636e-15
+cap "Pmos_Comparator_0/m1_n1840_n1380#" "Pmos_Comparator_0/m1_n1348_64#" 13.7095
+cap "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" "Pmos_Comparator_0/m1_n1348_64#" 212.771
+cap "Pmos_Comparator_0/m1_n1840_n1380#" "iref" 35.6007
+cap "Pmos_Comparator_0/v_7_3_p" "Pmos_Comparator_0/m1_n1348_64#" 100.747
+cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_n1348_64#" 28.778
+cap "Pmos_Comparator_0/pfet$5_0/w_n230_n138#" "iref" 13.4955
+cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "Pmos_Comparator_0/m1_n1348_64#" 34.7612
+cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/m1_n1840_n1380#" 3.13524
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" 5.45332
+cap "Pmos_Comparator_0/v_6_9_p" "iref" 23.2734
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/pfet$5_0/a_486_n60#" 0.0175092
+cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_n1840_n1380#" 10.8605
+cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/ibias_p" -0.516384
+cap "Pmos_Comparator_0/v_5_11_p" "iref" 66.9967
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/m1_664_66#" -0.000265189
+cap "Pmos_Comparator_0/v_7_3_p" "Pmos_Comparator_0/m1_n1348_64#" -0.291665
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/v_5_11_p" 4.66457
 cap "Pmos_Comparator_0/m1_n1840_n1380#" "Pmos_Comparator_0/ibias_p" -0.6645
-cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "Pmos_Comparator_0/ibias_p" -0.835395
-cap "iref" "Pmos_Comparator_0/m1_n1348_64#" 30.0351
-cap "iref" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" 4.54834
-cap "iref" "Pmos_Comparator_0/m1_n1840_n1380#" 61.1456
-cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/ibias_p" -0.378067
-cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "Pmos_Comparator_0/m1_n1348_64#" -0.000199708
-cap "Pmos_Comparator_0/m1_n1840_n1380#" "Pmos_Comparator_0/m1_n1348_64#" 4.5857
-cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "Pmos_Comparator_0/m1_n1348_64#" 0.899634
-cap "Pmos_Comparator_0/v_5_11_p" "iref" 66.8334
-cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_n1348_64#" 3.40872
-cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_n1840_n1380#" 9.99916
-cap "iref" "Pmos_Comparator_0/v_6_9_p" 23.8622
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" 3.17813
-cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "iref" 5.09229
-cap "iref" "Pmos_Comparator_0/ibias_p" 3.03612
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/nfet$3_5/a_360_0#" 0.407249
-cap "Pmos_Comparator_0/v_6_9_p" "iref" 51.3834
-cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/nfet$3_5/a_360_0#" 8.37195
-cap "Pmos_Comparator_0/m1_664_66#" "iref" 2.38525
-cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_664_66#" 16.7336
-cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/v_6_9_p" 5.68434e-14
-cap "Pmos_Comparator_0/m1_n3667_1304#" "Pmos_Comparator_0/m1_664_66#" 6.39568
-cap "iref" "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" 2.77517
-cap "iref" "Pmos_Comparator_0/nfet$3_5/a_360_0#" 45.3877
-cap "Pmos_Comparator_0/v_5_11_p" "iref" 24.6144
-cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/nfet$3_5/a_360_0#" 7.7586
-cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" -0.00701603
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 11.2192
+cap "iref" "Pmos_Comparator_0/ibias_p" 8.13763
+cap "iref" "Pmos_Comparator_0/m1_n1840_n1380#" 53.4624
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" -0.000199708
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/ibias_p" 33.252
+cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "Pmos_Comparator_0/ibias_p" -1.14103
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/m1_n1840_n1380#" 4.5857
+cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "iref" 4.14306
+cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/v_5_11_p" 5.02149e-05
+cap "Pmos_Comparator_0/m1_n1348_64#" "iref" 30.0351
+cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "Pmos_Comparator_0/m1_664_66#" 3.17813
+cap "Pmos_Comparator_0/m1_n1840_n1380#" "Pmos_Comparator_0/m1_664_66#" 0.406138
 cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/ibias_p" -0.0413593
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/ibias_p" 12.4652
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/m1_n1348_64#" 3.26741
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "iref" 5.09229
 cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/m1_664_66#" -1.29896
-cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/m1_664_66#" 50.0143
-cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "iref" 0.458535
-cap "vddd" "Pmos_Comparator_0/vcompp" 0.682043
-cap "vssd" "Pmos_Comparator_0/vcompp" 16.2907
-cap "Pmos_Comparator_0/m1_664_66#" "iref" 1.84389
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/vcompp" 7.71741
+cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" -0.00701603
+cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/ibias_p" 12.2543
+cap "Pmos_Comparator_0/v_6_9_p" "iref" 46.2687
+cap "Pmos_Comparator_0/v_5_11_p" "iref" 24.8202
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "Pmos_Comparator_0/m1_664_66#" 11.0183
+cap "Pmos_Comparator_0/pfet$2_0/w_n230_n138#" "iref" 4.16158
+cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/v_5_11_p" 5.68434e-14
+cap "Pmos_Comparator_0/m1_n1840_n1380#" "iref" 53.0709
+cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/m1_n3667_1304#" 6.34579
+cap "Pmos_Comparator_0/m1_664_66#" "iref" 2.09252
+cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/m1_n1840_n1380#" 7.66249
+cap "Pmos_Comparator_0/m1_n1348_64#" "Pmos_Comparator_0/m1_664_66#" 3.26741
+cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/m1_664_66#" 47.7528
+cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_n1840_n1380#" 7.7586
+cap "iref" "Pmos_Comparator_0/ibias_p" 3.35053
+cap "Pmos_Comparator_0/v_5_11_p" "Pmos_Comparator_0/m1_664_66#" 16.7336
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/m1_664_66#" 1.24714
+cap "Pmos_Comparator_0/v_6_9_p" "vssd" 9.82381
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/vcompp" 6.2634
+cap "iref" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 0.458535
+cap "iref" "Pmos_Comparator_0/m1_664_66#" 2.13662
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "Pmos_Comparator_0/m1_664_66#" 50.3042
+cap "iref" "Pmos_Comparator_0/vcompp" 18.1291
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "Pmos_Comparator_0/vcompp" 47.0432
+cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/m1_664_66#" 10.5721
+cap "iref" "Pmos_Comparator_0/v_6_9_p" 50.7356
+cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/m1_664_66#" 30.6048
 cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/vcompp" 1.00955
-cap "vssd" "Pmos_Comparator_0/v_6_9_p" 8.96251
-cap "vddd" "Pmos_Comparator_0/v_6_9_p" 0.00373681
-cap "iref" "Pmos_Comparator_0/vcompp" 18.2113
-cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/m1_664_66#" 13.6812
-cap "iref" "vssd" 70.1217
-cap "iref" "Pmos_Comparator_0/v_6_9_p" 45.0321
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 55.0141
-cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "Pmos_Comparator_0/vcompp" 53.1748
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/vcompp" 10.6207
+cap "vddd" "Pmos_Comparator_0/vcompp" 0.67744
 cap "Pmos_Comparator_0/ibias_p" "iref" 0.17484
-cap "Pmos_Comparator_0/m1_664_66#" "vssd" 17.6838
-cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "Pmos_Comparator_0/v_6_9_p" 1.42109e-14
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 1.24714
-cap "Pmos_Comparator_0/m1_664_66#" "Pmos_Comparator_0/v_6_9_p" 28.3433
-cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 71.0971
-cap "nand2_2_0[1]/a_1371_7154#" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 0.00572879
-cap "iref" "nand2_2_0[1]/a_1371_7378#" 1.09103
-cap "vssd" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 5.07331
-cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/nfet$3_2/a_n84_0#" 11.7525
-cap "vddd" "nand2_2_0[1]/a_1371_7154#" 5.02569
+cap "Pmos_Comparator_0/ibias_p" "Pmos_Comparator_0/m1_664_66#" 13.8921
+cap "iref" "vssd" 70.1217
+cap "Pmos_Comparator_0/m1_664_66#" "vssd" 17.6849
+cap "Pmos_Comparator_0/v_6_9_p" "vddd" 0.00370388
+cap "Pmos_Comparator_0/vcompp" "vssd" 16.2907
+cap "nand2_2_0[1]/a_1371_7378#" "iref" 1.09103
+cap "nand2_2_0[1]/a_1371_7378#" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 0.471155
 cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 0.848956
-cap "iref" "Pmos_Comparator_0/vcompp" 8.04761
+cap "out" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 39.0297
+cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 23.5587
+cap "vddd" "vssd" -4.31936
+cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$2_1/a_342_n60#" -0.0917665
+cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/vcompp" 0.624235
+cap "nand2_2_0[1]/a_1327_6850#" "vssd" 6.85489
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "iref" 0.44098
+cap "nand2_2_0[1]/a_1371_7154#" "iref" 8.99404
+cap "Pmos_Comparator_0/nfet$3_2/a_n84_0#" "Pmos_Comparator_0/vcompp" 11.7525
+cap "out" "vssd" 5.36128
+cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 2.65022
 cap "nand2_2_0[1]/a_1327_6850#" "vddd" 9.42475
-cap "vssd" "nand2_2_0[1]/a_1371_7378#" 0.049413
+cap "Pmos_Comparator_0/vcompp" "vssd" 91.6882
+cap "out" "vddd" 0.948475
+cap "Pmos_Comparator_0/vcompp" "vddd" 27.5442
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "vssd" 5.07331
 cap "iref" "vssd" 24.7341
 cap "nfet$8_1/a_38_n60#" "vssd" -0.495002
-cap "vddd" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 5.70436
-cap "Pmos_Comparator_0/vcompp" "vssd" 91.6882
-cap "iref" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 0.44098
-cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 2.65022
-cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 22.1047
-cap "out" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 68.2931
-cap "vddd" "iref" 8.71032
-cap "vddd" "Pmos_Comparator_0/vcompp" 28.6133
-cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "vssd" 0.846289
-cap "iref" "nand2_2_0[1]/a_1371_6970#" 0.590967
-cap "Pmos_Comparator_0/pfet$2_1/a_646_n60#" "Pmos_Comparator_0/vcompp" -0.0917665
-cap "vddd" "vssd" -3.38147
-cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/vcompp" 0.624235
+cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/vcompp" 1.66581
+cap "Pmos_Comparator_0/vcompp" "out" 39.8275
+cap "vddd" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 3.83854
+cap "vddd" "iref" 6.19607
+cap "nand2_2_0[1]/a_1371_7378#" "vssd" 0.049413
+cap "nand2_2_0[1]/a_1327_6850#" "iref" 11.5867
 cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 1.3373
-cap "out" "Pmos_Comparator_0/vcompp" 39.7788
+cap "out" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 69.4717
+cap "nand2_2_0[1]/a_1371_7154#" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 0.00572879
+cap "Pmos_Comparator_0/vcompp" "iref" 7.38922
+cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 77.2286
+cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 0.052058
+cap "iref" "nand2_2_0[0]/VNW" 0.198423
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "vssd" 0.846289
+cap "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" "iref" 1.70993
+cap "nand2_2_0[1]/a_1371_7154#" "vssd" 0.254666
 cap "Pmos_Comparator_0/ibias_compp" "vssd" -0.0196554
 cap "vddd" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 1.78298
-cap "out" "vssd" 5.36128
-cap "iref" "nand2_2_0[1]/a_1371_7154#" 9.8553
-cap "nand2_2_0[1]/a_1327_6850#" "iref" 12.3143
-cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 0.052058
-cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/vcompp" 1.66581
-cap "out" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 38.9798
-cap "iref" "nand2_2_0[0]/VNW" 0.248251
-cap "nand2_2_0[1]/a_1371_7378#" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 0.471155
-cap "nand2_2_0[1]/a_1371_7154#" "vssd" 0.254666
-cap "iref" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 1.70993
-cap "out" "vddd" 1.74448
-cap "nand2_2_0[1]/a_1327_6850#" "vssd" 6.85489
-cap "vssd" "nfet$8_3[1]/a_n84_0#" -11.9505
-cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 7.82718
-cap "nfet$8_0/a_38_n60#" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 0.108659
-cap "vddd" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 1.87702
-cap "pfet$10_0[0]/a_30_860#" "nfet$8_0/a_38_n60#" 0.987532
-cap "nfet$8_3[1]/a_n84_0#" "nfet$8_0/a_38_n60#" 0.419759
-cap "vssd" "nfet$8_2[1]/a_n84_0#" -13.6241
-cap "vssd" "Pmos_Comparator_0/ibias_compp" 4.70232
-cap "vssd" "nfet$8_0/a_38_n60#" 86.3089
+cap "nand2_2_0[1]/a_1371_6970#" "iref" 0.590967
+cap "nand2_2_0[1]/a_1371_7154#" "vddd" 5.02569
+cap "Pmos_Comparator_0/pfet$5_1/a_934_n60#" "Pmos_Comparator_0/ibias_compp" 2.29328
+cap "Pmos_Comparator_0/vcompp" "nfet$8_0/a_38_n60#" 1.74554
 cap "vssd" "vddd" -1.14912
-cap "nand2_2_0[1]/a_1327_7034#" "nfet$8_0/a_38_n60#" 1.00501
-cap "Pmos_Comparator_0/ibias_compp" "nfet$8_2[1]/a_n84_0#" 0.256373
-cap "nand2_2_0[1]/a_1327_7034#" "vddd" -0.0323283
-cap "nfet$4_0/a_n84_0#" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 3.73212
-cap "Pmos_Comparator_0/ibias_compp" "nfet$8_0/a_38_n60#" 4.02073
-cap "vddd" "Pmos_Comparator_0/ibias_compp" 2.24458
-cap "nfet$8_0/a_38_n60#" "nand2_2_0[0]/VNW" 0.170839
-cap "vddd" "nfet$8_0/a_38_n60#" 30.3477
-cap "nfet$8_0/a_38_n60#" "nand2_2_0[1]/a_1371_7154#" 0.991395
+cap "vddd" "Pmos_Comparator_0/ibias_compp" 1.42479
+cap "vssd" "nfet$4_0/a_n84_0#" 1.87908
+cap "vssd" "nfet$8_2[1]/a_n84_0#" 5.41362
 cap "vssd" "Pmos_Comparator_0/vcompp" 5.70783
-cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/pfet$5_1/a_934_n60#" 2.29328
-cap "nfet$4_0/a_n84_0#" "vssd" 4.33482
-cap "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/vcompp" 2.50637
-cap "nfet$8_0/a_38_n60#" "Pmos_Comparator_0/vcompp" 0.0168752
-cap "nfet$4_0/a_n84_0#" "nfet$8_0/a_38_n60#" 0.957376
+cap "nfet$8_2[1]/a_n84_0#" "Pmos_Comparator_0/ibias_compp" 0.256373
+cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/ibias_compp" 2.50637
+cap "nfet$8_3[1]/a_n84_0#" "nfet$8_0/a_38_n60#" 0.419759
 cap "vssd" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 1.02965
-cap "nfet$4_0/a_n84_0#" "vddd" 1.7868
-cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_n84_0#" -90.9731
-cap "nfet$4_0/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 5.76954
-cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 14.2846
+cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "Pmos_Comparator_0/ibias_compp" 7.82718
+cap "vssd" "nfet$8_0/a_38_n60#" 70.1791
+cap "vddd" "nfet$4_0/a_n84_0#" 1.99261
+cap "vssd" "nfet$8_3[1]/a_n84_0#" 5.76128
+cap "nfet$8_0/a_38_n60#" "Pmos_Comparator_0/ibias_compp" 3.6834
+cap "vddd" "Pmos_Comparator_0/vcompp" -0.0323283
+cap "pfet$10_0[0]/a_30_860#" "nfet$8_0/a_38_n60#" 1.71519
+cap "nand2_2_0[1]/a_1371_7154#" "nfet$8_0/a_38_n60#" 1.85266
+cap "vddd" "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" 3.75404
+cap "nand2_2_0[0]/VNW" "nfet$8_0/a_38_n60#" 0.220667
+cap "vssd" "Pmos_Comparator_0/ibias_compp" 4.70232
+cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "nfet$4_0/a_n84_0#" 7.46425
+cap "vddd" "nfet$8_0/a_38_n60#" 30.7055
+cap "nfet$4_0/a_n84_0#" "nfet$8_0/a_38_n60#" -0.00496467
 cap "nfet$8_0/a_38_n60#" "nfet$8_2[0]/a_n84_0#" 148.266
-cap "vdd" "nfet$8_2[0]/a_n84_0#" 7.64871
-cap "nfet$8_0/a_38_n60#" "nfet$8_1/a_n84_0#" -5.55112e-17
-cap "nfet$8_2[0]/a_n84_0#" "vddd" -0.298995
-cap "nfet$4_0/a_n84_0#" "nfet$8_0/a_238_0#" 16.6279
-cap "nfet$8_0/a_238_0#" "nfet$8_3[0]/a_n84_0#" -120.265
-cap "nfet$8_0/a_38_n60#" "nfet$8_0/a_238_0#" 133.461
-cap "nfet$4_0/a_n84_0#" "nfet$8_3[0]/a_n84_0#" 5.59189
-cap "nfet$8_0/a_238_0#" "vdd" 2.95895
-cap "nfet$8_0/a_38_n60#" "nfet$4_0/a_n84_0#" 46.3566
-cap "nfet$8_0/a_38_n60#" "nfet$8_3[0]/a_n84_0#" 88.6969
+cap "nfet$8_0/a_238_0#" "nfet$4_0/a_n84_0#" 19.0836
+cap "nfet$8_3[0]/a_n84_0#" "nfet$4_0/a_n84_0#" 5.59189
+cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_n84_0#" -109.529
+cap "vddd" "nfet$8_2[0]/a_n84_0#" -0.326262
+cap "nfet$8_0/a_238_0#" "nfet$8_0/a_38_n60#" 146.14
+cap "nfet$8_0/a_38_n60#" "nfet$8_1/a_n84_0#" 0.337329
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 14.2846
+cap "vddd" "nfet$8_0/a_38_n60#" 0.584952
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_0/a_38_n60#" 88.6969
 cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "nfet$8_2[0]/a_n84_0#" 0.0911408
-cap "nfet$8_3[0]/a_n84_0#" "vdd" 7.49505
-cap "nfet$8_0/a_38_n60#" "vdd" 50.0219
-cap "nfet$8_0/a_238_0#" "nfet$8_3[0]/a_n84_0#" -29.5792
-cap "vdd" "nfet$8_2[0]/a_n84_0#" 2.15751
-cap "vdd" "nfet$8_2[0]/a_38_n60#" 17.5966
-cap "nfet$8_0/a_238_0#" "pfet$10_0[1]/a_30_860#" -0.315462
-cap "nfet$8_2[0]/a_38_n60#" "nfet$8_2[0]/a_n84_0#" 19.0657
-cap "nfet$8_0/a_238_0#" "vdd" 8.51612
-cap "nfet$8_3[0]/a_n84_0#" "pfet$10_0[1]/w_n230_n138#" 0.018148
-cap "vdd" "nfet$8_3[0]/a_n84_0#" 2.14242
-cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_n84_0#" -30.8764
-cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_38_n60#" 22.055
-cap "nfet$8_2[0]/a_n84_0#" "nfet$8_3[0]/a_n84_0#" 7.50059
+cap "nfet$4_0/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 5.76954
+cap "nfet$8_0/a_38_n60#" "Pmos_Comparator_0/pfet$5_1/a_n92_0#" 0.0168752
+cap "Pmos_Comparator_0/pfet$5_1/w_n230_n138#" "nfet$8_0/a_38_n60#" 0.108659
+cap "nfet$4_0/a_n84_0#" "nfet$8_0/a_38_n60#" 47.3189
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_0/a_238_0#" -120.265
 cap "nfet$8_2[0]/a_38_n60#" "nfet$8_3[0]/a_n84_0#" 15.8871
-cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/v_5_11_p" 32.6319
+cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_n84_0#" -29.8287
+cap "nfet$8_2[0]/a_n84_0#" "nfet$8_3[0]/a_n84_0#" 7.50059
+cap "nfet$8_0/a_238_0#" "nfet$8_3[0]/a_n84_0#" -29.5792
+cap "nfet$8_3[0]/a_n84_0#" "pfet$10_0[1]/w_n230_n138#" 0.018148
+cap "nfet$8_2[0]/a_38_n60#" "nfet$8_2[0]/a_n84_0#" 19.0657
+cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_38_n60#" 30.0492
+cap "nfet$8_0/a_238_0#" "pfet$10_0[1]/a_30_860#" -0.315462
 cap "Nmos_Comparator_0/vss" "iref" -0.355825
-cap "Nmos_Comparator_0/vss" "iref" -0.840754
-cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/v_5_11_p" 149.516
+cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/v_5_11_p" 31.7706
 cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/v_6_9_p" 66.6894
-cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/m1_664_66#" 0.404698
-cap "iref" "Nmos_Comparator_0/vss" -0.695905
-cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/v_6_9_p" 77.2895
+cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/v_5_11_p" 150.377
+cap "Nmos_Comparator_0/vss" "iref" -0.752585
+cap "Pmos_Comparator_0/m1_664_66#" "Nmos_Comparator_0/vss" 0.404698
+cap "iref" "Nmos_Comparator_0/vss" -0.784074
 cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/v_5_11_p" 73.4134
-cap "vssd" "Pmos_Comparator_0/v_6_9_p" 117.113
-cap "vssd" "nand2_2_0[1]/a_1327_6850#" -0.201323
-cap "vssd" "iref" -0.817952
-cap "vssd" "Pmos_Comparator_0/vcompp" 39.1125
+cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/v_6_9_p" 64.8907
+cap "nand2_2_0[1]/a_1327_6850#" "vssd" -0.201323
+cap "Pmos_Comparator_0/v_6_9_p" "Pmos_Comparator_0/vcompp" 0.37367
+cap "Pmos_Comparator_0/v_6_9_p" "vssd" 129.512
 cap "nand2_2_0[1]/a_1371_7154#" "vssd" -1.23952
-cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/v_6_9_p" 0.37367
-cap "nand2_2_0[1]/a_1327_6850#" "vssd" 45.8272
-cap "vssd" "nand2_2_0[1]/a_1371_7378#" 0.904646
-cap "nand2_2_0[0]/a_1371_6970#" "vssd" 0.381592
+cap "iref" "vssd" -0.817952
+cap "Pmos_Comparator_0/vcompp" "vssd" 39.1125
 cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 11.6678
-cap "Pmos_Comparator_0/vcompp" "nand2_2_0[1]/a_1371_7154#" 24.3356
-cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/pfet$5_1/a_710_n60#" 0.0937335
-cap "vddd" "nand2_2_0[1]/a_1371_7154#" 38.9433
-cap "nand2_2_0[1]/a_1327_6850#" "iref" 1.35546
-cap "nfet$8_1/a_n84_0#" "nand2_2_0[1]/a_1327_6850#" -1.29875
-cap "vssd" "iref" -0.0137676
-cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[0]/a_1327_7034#" 1.60207
-cap "nand2_2_0[1]/a_1327_6850#" "nfet$8_1/a_38_n60#" 1.29426
-cap "vssd" "nand2_2_0[0]/a_1371_7378#" 0.701324
-cap "Pmos_Comparator_0/vcompp" "out" -0.0996253
-cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$5_1/a_486_n60#" 0.031325
-cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[1]/a_1371_6970#" 1.84746
-cap "Pmos_Comparator_0/vcompp" "nand2_2_0[1]/a_1327_6850#" 50.9278
-cap "nand2_2_0[0]/a_1327_7034#" "vssd" 4.40504
-cap "Pmos_Comparator_0/vcompp" "nand2_2_0[1]/a_1371_7378#" 4.42792
-cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/nfet$3_2/a_n84_0#" 0.161874
-cap "nand2_2_0[1]/a_1327_6850#" "vddd" 66.5989
-cap "vssd" "nand2_2_0[1]/a_1371_6970#" 1.63045
-cap "Pmos_Comparator_0/vcompp" "vssd" 153.761
-cap "Pmos_Comparator_0/nfet$3_2/a_n84_0#" "vssd" 1.14445
-cap "vddd" "vssd" 12.8307
-cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 0.893893
-cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[1]/a_1371_7154#" 91.1369
-cap "Pmos_Comparator_0/vcompp" "iref" -0.27266
-cap "nand2_2_0[1]/a_1371_7154#" "vssd" 37.2497
-cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$5_1/a_38_n60#" 0.434075
-cap "Pmos_Comparator_0/vcompp" "nand2_2_0[0]/a_1371_7378#" 0.409042
-cap "Pmos_Comparator_0/vcompp" "nfet$8_1/a_n84_0#" -0.01259
-cap "Pmos_Comparator_0/vcompp" "nand2_2_0[0]/a_1327_7034#" 0.309638
-cap "Pmos_Comparator_0/vcompp" "nfet$8_1/a_38_n60#" -1.46031
-cap "nand2_2_0[1]/a_1371_7154#" "iref" 0.0324591
+cap "nand2_2_0[0]/a_1327_7034#" "vssd" 3.96399
+cap "nand2_2_0[1]/a_1371_7154#" "vssd" 35.3084
 cap "nand2_2_0[1]/a_1327_6850#" "out" 0.102068
-cap "Pmos_Comparator_0/vcompp" "nand2_2_0[1]/a_1371_6970#" 1.69887
-cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$5_1/a_262_n60#" 0.326675
+cap "nand2_2_0[1]/a_1327_6850#" "nfet$8_1/a_n84_0#" -1.29875
+cap "nand2_2_0[1]/a_1327_6850#" "vddd" 62.9788
+cap "Pmos_Comparator_0/vcompp" "out" -0.0996253
+cap "iref" "nand2_2_0[1]/a_1371_7154#" 0.0324591
+cap "Pmos_Comparator_0/vcompp" "nfet$8_1/a_n84_0#" -0.01259
+cap "nand2_2_0[1]/a_1371_7378#" "vssd" 0.904646
+cap "Pmos_Comparator_0/vcompp" "vddd" 2.29555
+cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[0]/a_1327_7034#" 0.815548
+cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$5_1/a_38_n60#" 0.434075
+cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[1]/a_1371_7154#" 89.4602
+cap "nand2_2_0[0]/a_1327_7034#" "Pmos_Comparator_0/vcompp" 0.309638
+cap "nand2_2_0[1]/a_1371_6970#" "vssd" 1.63045
+cap "Pmos_Comparator_0/vcompp" "nand2_2_0[1]/a_1371_7154#" 24.3356
 cap "nfet$8_1/a_n84_0#" "nand2_2_0[1]/a_1371_7154#" -0.126758
+cap "Pmos_Comparator_0/vcompp" "nand2_2_0[1]/a_1371_7378#" 4.42792
+cap "nand2_2_0[0]/a_1371_7378#" "vssd" 0.701324
+cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[1]/a_1371_6970#" 1.84746
+cap "nand2_2_0[1]/a_1371_7154#" "vddd" 38.9433
+cap "nand2_2_0[0]/a_1371_6970#" "vssd" 0.381592
+cap "Pmos_Comparator_0/vcompp" "nand2_2_0[1]/a_1371_6970#" 1.69887
+cap "Pmos_Comparator_0/pfet$5_1/a_710_n60#" "Pmos_Comparator_0/vcompp" 0.0937335
+cap "nand2_2_0[0]/a_1371_7378#" "Pmos_Comparator_0/vcompp" 0.409042
+cap "Pmos_Comparator_0/nfet$3_2/a_n84_0#" "vssd" 1.14445
+cap "iref" "vssd" -0.0137676
+cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/nfet$3_2/a_n84_0#" 0.161874
+cap "Pmos_Comparator_0/pfet$5_1/a_486_n60#" "nand2_2_0[1]/a_1327_6850#" 0.031325
+cap "nand2_2_0[1]/a_1327_6850#" "nfet$8_1/a_38_n60#" 1.29426
 cap "Pmos_Comparator_0/vcompp" "Pmos_Comparator_0/nfet$3_2/a_n84_0#" 6.62103
-cap "Pmos_Comparator_0/vcompp" "vddd" 6.42729
-cap "nand2_2_0[1]/a_1371_7154#" "nfet$8_0/a_38_n60#" 0.100828
-cap "nfet$8_0/a_38_n60#" "pfet$8_2/a_38_n60#" 1.58979
-cap "nand2_2_0[1]/a_1371_7378#" "nfet$8_1/a_n84_0#" 0.5414
-cap "vddd" "nfet$8_1/a_n84_0#" 70.7769
-cap "nand2_2_0[1]/a_1327_7034#" "nfet$8_0/a_38_n60#" -0.797552
-cap "pfet$8_2/a_n92_0#" "nfet$8_0/a_38_n60#" 1.30962
-cap "vssd" "nfet$8_1/a_n84_0#" -27.0959
-cap "vssd" "nand2_2_0[1]/a_1371_6970#" 0.0386688
-cap "pfet$10_0[0]/a_n92_0#" "pfet$10_0[0]/a_30_860#" 0.0334168
-cap "nfet$8_2[1]/a_n84_0#" "pfet$10_0[0]/a_30_860#" 0.0310006
-cap "vssd" "pfet$8_2/w_n230_n138#" 31.2558
-cap "pfet$8_2/w_n230_n138#" "nfet$8_1/a_n84_0#" 4.13889
-cap "nfet$8_2[1]/a_n84_0#" "nand2_2_0[1]/a_1327_7034#" 0.0519604
-cap "vddd" "pfet$10_0[0]/a_30_860#" 34.1756
-cap "nfet$8_2[1]/a_n84_0#" "nfet$8_0/a_38_n60#" 0.00298901
-cap "pfet$10_0[0]/a_n92_0#" "nfet$8_0/a_38_n60#" 0.12464
-cap "vssd" "nand2_2_0[0]/a_1327_7034#" 0.62612
-cap "nand2_2_0[1]/a_1371_7154#" "vddd" 2.80336
-cap "vdd" "nfet$8_0/a_38_n60#" 0.00369897
-cap "vssd" "pfet$10_0[0]/a_30_860#" 8.99582
-cap "vssd" "pfet$8_2/a_38_n60#" 9.15053
-cap "nand2_2_0[1]/a_1371_7154#" "vssd" 5.70806
-cap "pfet$10_0[0]/a_30_860#" "nfet$8_1/a_n84_0#" 9.45687
-cap "vddd" "nfet$8_0/a_38_n60#" 33.6611
+cap "nand2_2_0[1]/a_1327_6850#" "vssd" 44.1535
+cap "nand2_2_0[1]/a_1327_6850#" "iref" 1.35546
+cap "Pmos_Comparator_0/vcompp" "nfet$8_1/a_38_n60#" -1.46031
+cap "Pmos_Comparator_0/vcompp" "vssd" 152.909
+cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$5_1/a_262_n60#" 0.326675
+cap "iref" "Pmos_Comparator_0/vcompp" -0.27266
+cap "vssd" "vddd" 9.64502
+cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/pfet$2_1/w_n230_n138#" 0.893893
+cap "nand2_2_0[1]/a_1327_6850#" "Pmos_Comparator_0/vcompp" 50.2904
+cap "pfet$8_2/w_n200_n138#" "vssd" 24.4405
+cap "pfet$8_2/w_n200_n138#" "nfet$8_0/a_38_n60#" 3.34278
+cap "nand2_2_0[1]/a_1371_7154#" "pfet$10_0[0]/a_30_860#" 4.2111
+cap "pfet$8_2/w_n200_n138#" "pfet$10_0[0]/a_30_860#" 30.9148
+cap "vssd" "nfet$8_0/a_38_n60#" 60.8817
+cap "nand2_2_0[1]/a_1371_6970#" "vssd" 0.0386688
 cap "nand2_2_0[1]/a_1371_7154#" "nfet$8_1/a_n84_0#" 6.59715
-cap "vssd" "nand2_2_0[1]/a_1327_7034#" 1.84693
+cap "nfet$8_2[1]/a_n84_0#" "nfet$8_0/a_38_n60#" 0.00298901
+cap "pfet$8_2/a_38_n60#" "vssd" 9.15053
+cap "pfet$8_2/a_38_n60#" "nfet$8_0/a_38_n60#" 1.58979
+cap "pfet$8_2/w_n200_n138#" "nfet$8_1/a_n84_0#" 3.6761
+cap "vddd" "nand2_2_0[1]/a_1371_7154#" 2.80336
+cap "pfet$10_0[0]/a_30_860#" "vssd" 10.2117
+cap "pfet$10_0[0]/a_30_860#" "nfet$8_0/a_38_n60#" 13.7223
+cap "nfet$8_2[1]/a_n84_0#" "pfet$10_0[0]/a_30_860#" 0.0310006
+cap "nand2_2_0[1]/a_1371_7378#" "nfet$8_1/a_n84_0#" 0.5414
+cap "pfet$8_2/a_38_n60#" "pfet$10_0[0]/a_30_860#" 18.4015
+cap "vssd" "nfet$8_1/a_n84_0#" -27.0959
+cap "Pmos_Comparator_0/vcompp" "vssd" 2.69909
+cap "nfet$8_0/a_38_n60#" "nfet$8_1/a_n84_0#" 21.1155
+cap "Pmos_Comparator_0/vcompp" "nfet$8_0/a_38_n60#" -0.797552
+cap "nfet$8_2[1]/a_n84_0#" "Pmos_Comparator_0/vcompp" 0.0519604
 cap "pfet$8_2/a_n92_0#" "vssd" 2.53185
-cap "nand2_2_0[1]/a_1327_7034#" "nfet$8_1/a_n84_0#" 6.68641
-cap "vssd" "nfet$8_0/a_38_n60#" 78.8113
-cap "pfet$10_0[0]/a_30_860#" "pfet$8_2/w_n230_n138#" 39.0316
-cap "nfet$8_0/a_38_n60#" "nfet$8_1/a_n84_0#" 21.1782
-cap "pfet$10_0[0]/a_30_860#" "nand2_2_0[0]/a_1327_7034#" 1.35853
-cap "vssd" "nfet$8_3[1]/a_n84_0#" 0.237093
-cap "vddd" "nfet$8_2[1]/a_n84_0#" 0.0830926
-cap "nfet$8_0/a_38_n60#" "pfet$8_2/w_n230_n138#" 3.36157
-cap "pfet$10_0[0]/a_30_860#" "pfet$8_2/a_38_n60#" 18.4015
-cap "pfet$10_0[0]/a_n92_0#" "vssd" 0.408632
-cap "nand2_2_0[1]/a_1371_7154#" "pfet$10_0[0]/a_30_860#" 2.53446
-cap "pfet$10_0[0]/a_n92_0#" "nfet$8_1/a_n84_0#" 0.000312932
-cap "pfet$10_0[0]/a_30_860#" "nand2_2_0[1]/a_1327_7034#" 0.864996
+cap "vssd" "pfet$10_0[0]/a_n92_0#" 0.408632
+cap "pfet$10_0[0]/a_n92_0#" "nfet$8_0/a_38_n60#" 0.12464
+cap "vddd" "vssd" 42.5871
+cap "vddd" "nfet$8_0/a_38_n60#" 33.4346
+cap "pfet$8_2/a_n92_0#" "nfet$8_0/a_38_n60#" 1.30962
+cap "nand2_2_0[0]/a_1327_7034#" "vssd" 1.06717
+cap "nfet$8_2[1]/a_n84_0#" "vddd" 0.0830926
+cap "pfet$10_0[0]/a_30_860#" "nfet$8_1/a_n84_0#" 9.45687
+cap "Pmos_Comparator_0/vcompp" "pfet$10_0[0]/a_30_860#" 1.50236
 cap "pfet$8_2/a_n92_0#" "pfet$10_0[0]/a_30_860#" 6.11447
-cap "vddd" "vssd" 40.1643
-cap "pfet$10_0[0]/a_30_860#" "nfet$8_0/a_38_n60#" 14.1012
-cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_n84_0#" 10.2279
-cap "nfet$8_3[0]/a_n84_0#" "pfet$10_0[1]/a_n92_0#" -118.622
-cap "nfet$8_0/a_38_n60#" "nand2_2_0[1]/a_1327_7034#" 0.00744832
-cap "nfet$8_3[0]/a_n84_0#" "nfet$8_0/a_38_n60#" 53.4465
-cap "nfet$8_0/a_238_0#" "vdd" 5.61628
-cap "pfet$8_2/w_n230_n138#" "nfet$8_0/a_38_n60#" 6.13402
-cap "pfet$10_0[1]/a_30_860#" "pfet$10_0[1]/a_98_0#" 2.96236
-cap "nfet$8_2[0]/a_n84_0#" "nand2_2_0[1]/a_1327_7034#" 0.0906136
-cap "nfet$8_2[0]/a_n84_0#" "nfet$8_3[0]/a_n84_0#" 1.6935
-cap "vddd" "nfet$8_0/a_38_n60#" 0.00621541
-cap "nfet$8_2[0]/a_n84_0#" "nand2_2_0[1]/a_1327_6850#" 0.0906136
-cap "nfet$8_0/a_238_0#" "nfet$8_3[0]/a_n84_0#" 232.226
-cap "nfet$8_3[0]/a_n84_0#" "vdd" 3.06339
-cap "vddd" "nfet$8_2[0]/a_n84_0#" 2.86673
-cap "pfet$8_2/w_n230_n138#" "nfet$8_0/a_238_0#" 2.34044
-cap "nfet$8_1/a_n84_0#" "pfet$10_0[1]/a_n92_0#" 0.259112
-cap "nand2_2_0[1]/a_1371_7154#" "nfet$8_2[0]/a_n84_0#" 0.0961192
-cap "nfet$8_1/a_n84_0#" "nfet$8_0/a_38_n60#" 0.8741
-cap "pfet$10_0[1]/a_30_860#" "nfet$8_0/a_38_n60#" 32.3536
-cap "pfet$10_0[1]/a_30_860#" "pfet$10_0[1]/a_n92_0#" 26.9699
-cap "pfet$8_2/w_n230_n138#" "nfet$8_3[0]/a_n84_0#" 0.808707
-cap "nfet$8_2[0]/a_n84_0#" "nfet$8_1/a_n84_0#" 1.10311
-cap "nfet$8_0/a_38_n60#" "pfet$10_0[1]/a_n92_0#" 45.2964
-cap "pfet$10_0[1]/a_30_860#" "nfet$8_2[0]/a_n84_0#" 2.53859
-cap "vdd" "nfet$8_1/a_n84_0#" 0.600285
-cap "nfet$8_2[0]/a_n84_0#" "nand2_2_0[1]/a_1327_7034#" 0.0833645
-cap "nfet$8_0/a_238_0#" "pfet$10_0[1]/a_30_860#" 27.6551
-cap "pfet$10_0[1]/a_30_860#" "vdd" 8.80865
-cap "nfet$8_2[0]/a_n84_0#" "pfet$10_0[1]/a_n92_0#" 1.43077
-cap "nfet$8_2[0]/a_n84_0#" "nfet$8_0/a_38_n60#" 36.6447
-cap "nfet$8_0/a_238_0#" "pfet$10_0[1]/a_n92_0#" 21.3947
-cap "vdd" "pfet$10_0[1]/a_n92_0#" 6.3959
-cap "vdd" "nfet$8_0/a_38_n60#" 13.3127
-cap "nfet$8_0/a_238_0#" "nfet$8_0/a_38_n60#" 83.9764
-cap "pfet$10_0[1]/a_30_860#" "nfet$8_3[0]/a_n84_0#" 23.8439
+cap "pfet$10_0[0]/a_30_860#" "pfet$10_0[0]/a_n92_0#" 0.0334168
+cap "nfet$8_3[1]/a_n84_0#" "vssd" 0.237093
+cap "vddd" "pfet$10_0[0]/a_30_860#" 38.228
+cap "Pmos_Comparator_0/vcompp" "nfet$8_1/a_n84_0#" 6.68641
+cap "pfet$10_0[0]/a_30_860#" "nand2_2_0[0]/a_1327_7034#" 2.14505
+cap "pfet$10_0[0]/a_n92_0#" "nfet$8_1/a_n84_0#" 0.000312932
+cap "nand2_2_0[1]/a_1371_7154#" "vssd" 7.73828
+cap "vddd" "nfet$8_1/a_n84_0#" 70.6601
+cap "nand2_2_0[1]/a_1371_7154#" "nfet$8_0/a_38_n60#" 0.100828
+cap "nand2_2_0[1]/a_1327_6850#" "nfet$8_2[0]/a_n84_0#" 0.0906136
+cap "nand2_2_0[1]/a_1327_7034#" "nfet$8_0/a_38_n60#" 0.00744832
+cap "pfet$10_0[1]/a_30_860#" "nfet$8_0/a_38_n60#" 32.5084
+cap "pfet$10_0[1]/a_30_860#" "nfet$8_0/a_238_0#" 14.9981
+cap "pfet$10_0[1]/a_30_860#" "nfet$8_3[0]/a_n84_0#" 23.8509
 cap "nfet$8_2[0]/a_n84_0#" "nand2_2_0[1]/a_1327_6850#" 0.0543682
-cap "pfet$8_2/w_n230_n138#" "pfet$10_0[1]/a_30_860#" 50.8559
-cap "pfet$10_0[1]/a_30_860#" "nfet$8_3[0]/a_n84_0#" 0.355341
-cap "pfet$10_0[1]/a_30_860#" "nfet$8_0/a_238_0#" 19.9412
-cap "nfet$8_3[0]/a_n84_0#" "nfet$8_0/a_238_0#" 11.8191
-cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 0.369046
+cap "vddd" "nfet$8_0/a_38_n60#" 0.160335
+cap "nfet$8_0/a_238_0#" "nfet$8_0/a_38_n60#" 102.282
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_0/a_38_n60#" 53.4465
+cap "nand2_2_0[1]/a_1327_7034#" "nfet$8_2[0]/a_n84_0#" 0.0906136
+cap "pfet$10_0[1]/a_30_860#" "nfet$8_2[0]/a_n84_0#" 2.53859
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_0/a_238_0#" 147.11
+cap "pfet$10_0[1]/a_30_860#" "pfet$10_0[1]/a_n92_0#" 26.9699
+cap "pfet$10_0[1]/a_30_860#" "pfet$8_2/w_n200_n138#" 58.9058
+cap "nfet$8_2[0]/a_n84_0#" "nand2_2_0[1]/a_1371_7154#" 0.0961192
+cap "vddd" "nfet$8_2[0]/a_n84_0#" 2.86127
+cap "nfet$8_2[0]/a_n84_0#" "nfet$8_0/a_38_n60#" 36.6447
+cap "nfet$8_1/a_n84_0#" "nfet$8_0/a_38_n60#" 0.936836
+cap "pfet$10_0[1]/a_n92_0#" "nfet$8_0/a_38_n60#" 45.2964
+cap "pfet$8_2/w_n200_n138#" "nfet$8_0/a_38_n60#" 6.19308
+cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_n84_0#" 10.2279
+cap "nand2_2_0[1]/a_1327_6850#" "nfet$8_0/a_38_n60#" 0.224111
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 1.6935
+cap "nfet$8_0/a_238_0#" "pfet$10_0[1]/a_n92_0#" 16.2263
+cap "nfet$8_0/a_238_0#" "pfet$8_2/w_n200_n138#" 9.16852
+cap "nfet$8_3[0]/a_n84_0#" "pfet$8_2/w_n200_n138#" 0.808707
+cap "nfet$8_3[0]/a_n84_0#" "pfet$10_0[1]/a_n92_0#" -118.622
+cap "pfet$10_0[1]/a_30_860#" "pfet$10_0[1]/a_98_0#" 2.96236
+cap "nfet$8_2[0]/a_n84_0#" "nand2_2_0[1]/a_1327_7034#" 0.0833645
+cap "nfet$8_2[0]/a_n84_0#" "nfet$8_1/a_n84_0#" 1.10311
+cap "nfet$8_2[0]/a_n84_0#" "pfet$10_0[1]/a_n92_0#" 1.43077
+cap "nfet$8_1/a_n84_0#" "pfet$10_0[1]/a_n92_0#" 0.259112
+cap "pfet$10_0[1]/a_30_860#" "nfet$8_0/a_238_0#" 33.8319
 cap "pfet$10_0[1]/a_30_860#" "nfet$8_2[0]/a_38_n60#" 1.62227
-cap "nfet$8_0/a_238_0#" "nfet$8_2[0]/a_38_n60#" 4.87597
+cap "nfet$8_2[0]/a_38_n60#" "nfet$8_0/a_238_0#" 4.87597
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_n84_0#" 0.369046
+cap "nfet$8_0/a_38_n60#" "nfet$8_0/a_238_0#" -0.375573
+cap "pfet$10_0[1]/a_n92_0#" "nfet$8_3[0]/a_n84_0#" 0.0203573
+cap "pfet$8_2/w_n200_n138#" "pfet$10_0[1]/a_30_860#" 14.9101
+cap "pfet$10_0[1]/a_30_860#" "nfet$8_3[0]/a_n84_0#" 0.34832
+cap "pfet$8_2/w_n200_n138#" "nfet$8_2[0]/a_38_n60#" 0.238994
+cap "nfet$8_3[0]/a_n84_0#" "nfet$8_0/a_238_0#" 97.2321
+cap "pfet$10_0[1]/a_n92_0#" "pfet$10_0[1]/a_30_860#" 1.41308
+cap "pfet$10_0[1]/a_n92_0#" "nfet$8_0/a_238_0#" 9.27201
 cap "nfet$8_3[0]/a_n84_0#" "nfet$8_2[0]/a_38_n60#" 26.2405
-cap "nfet$8_0/a_238_0#" "pfet$10_0[1]/a_n92_0#" 3.84447
-cap "nfet$8_3[0]/a_n84_0#" "pfet$10_0[1]/a_n92_0#" 0.0203573
-cap "pfet$8_2/w_n230_n138#" "pfet$10_0[1]/a_30_860#" 14.9101
-cap "pfet$10_0[1]/a_30_860#" "pfet$10_0[1]/a_n92_0#" 1.41308
-cap "vdd" "nfet$8_3[0]/a_n84_0#" 0.0147414
-cap "vdd" "nfet$8_0/a_238_0#" 9.95272
-cap "pfet$10_0[1]/a_30_860#" "vdd" -0.938859
-cap "nfet$8_2[0]/a_38_n60#" "pfet$10_0[1]/a_n92_0#" 0.261804
-cap "pfet$8_2/w_n230_n138#" "nfet$8_2[0]/a_38_n60#" 0.238994
-cap "vdd" "nfet$8_2[0]/a_38_n60#" 1.18582
-cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/v_3_7_n" 0.249018
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/vss" -0.322842
-cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/v_3_7_n" 9.14642
+cap "pfet$10_0[1]/a_n92_0#" "nfet$8_2[0]/a_38_n60#" 0.261804
+cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/v_3_7_n" 0.222201
+cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/v_3_7_n" 9.17324
+cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" -0.322842
 cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" -1.60444
-cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/nfet$3_3/a_38_n60#" 0.674843
-cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 1.95955
-cap "Nmos_Comparator_0/vss" "ibias_compn" 76.1946
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/i_bias_n" 0.301514
-cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/i_bias_n" 18.6381
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/vss" 0.699403
 cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/v_5_11_n" 4.07531
-cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" -0.910029
+cap "Nmos_Comparator_0/vss" "Pmos_Comparator_0/nfet$3_3/a_38_n60#" 0.674843
+cap "Nmos_Comparator_0/i_bias_n" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 0.301514
+cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/i_bias_n" 18.6381
+cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 2.04946
+cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/v_6_9_n" 0.615129
+cap "Nmos_Comparator_0/vss" "ibias_compn" 76.0534
+cap "Nmos_Comparator_0/nfet$6_1/a_38_n60#" "nand2_2_0[0]/VPW" 1.46838
 cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[0]/VPW" -1.1953
 cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VPW" 1.06081
-cap "nand2_2_0[0]/a_1371_7378#" "nand2_2_0[0]/VPW" 1.65267
-cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/nfet$6_1/a_38_n60#" 1.46838
-cap "nand2_2_0[1]/a_1371_7154#" "nand2_2_0[0]/VPW" 2.32982
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "nand2_2_0[0]/VPW" -0.999936
 cap "Nmos_Comparator_0/vcompn" "ibias_compn" 0.256062
-cap "ibias_compn" "nand2_2_0[0]/VPW" 138.36
-cap "nand2_2_0[0]/VPW" "nand2_2_0[0]/VNW" -0.214337
-cap "pfet$8_2/w_n230_n138#" "nand2_2_0[1]/a_1327_6850#" 7.52246
-cap "Nmos_Comparator_0/vcompn" "pfet$8_0[0]/a_38_n60#" 0.0911539
-cap "nand2_2_0[0]/a_1371_7378#" "nand2_2_0[1]/a_1327_6850#" 1.80564
-cap "nand2_2_0[1]/a_1327_6850#" "ibias_compn" 1.74063
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[1]/a_1327_6850#" 37.6598
-cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[1]/a_1371_7154#" 32.9637
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[1]/a_1371_6970#" 0.355014
-cap "nand2_2_0[1]/a_1327_6850#" "out" 0.0261368
-cap "nand2_2_0[1]/VNW" "nand2_2_0[1]/a_1371_7154#" -0.608522
-cap "nand2_2_0[0]/VPW" "ibias_compn" -0.0678535
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VPW" 137.171
-cap "nand2_2_0[0]/VPW" "nand2_2_0[1]/a_1371_7154#" 8.50266
-cap "nand2_2_0[0]/VNW" "nand2_2_0[1]/a_1327_6850#" 80.7175
-cap "Nmos_Comparator_0/vcompn" "pfet$8_2/w_n230_n138#" 0.350231
+cap "nand2_2_0[0]/a_1371_7378#" "nand2_2_0[0]/VPW" 1.65267
+cap "nand2_2_0[1]/a_1371_7154#" "nand2_2_0[0]/VPW" 2.32982
+cap "ibias_compn" "nand2_2_0[0]/VPW" 138.501
+cap "nand2_2_0[0]/VNW" "nand2_2_0[0]/VPW" -0.214337
+cap "Nmos_Comparator_0/v_6_9_n" "nand2_2_0[0]/VPW" 0.0842737
+cap "nand2_2_0[0]/VNW" "nand2_2_0[1]/a_1327_6850#" 57.7219
 cap "Nmos_Comparator_0/vcompn" "nand2_2_0[1]/a_1327_7034#" 0.755407
-cap "pfet$8_2/w_n230_n138#" "nand2_2_0[1]/a_1371_7154#" 0.0636086
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/a_1371_7378#" 2.94196
-cap "nand2_2_0[0]/VPW" "out" -0.00276995
 cap "Nmos_Comparator_0/vcompn" "ibias_compn" 4.34285
-cap "nand2_2_0[1]/a_1371_7154#" "ibias_compn" 0.315596
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[1]/a_1371_7154#" 49.6487
-cap "nand2_2_0[0]/VNW" "nand2_2_0[0]/VPW" -12.0133
 cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/a_1371_6970#" 2.68455
-cap "pfet$8_0[0]/a_38_n60#" "nand2_2_0[1]/a_1327_6850#" 2.94603
-cap "Nmos_Comparator_0/vcompn" "out" -0.0635673
+cap "nand2_2_0[0]/VPW" "nand2_2_0[1]/a_1371_7154#" 8.50266
+cap "nand2_2_0[1]/a_1371_6970#" "Nmos_Comparator_0/vcompn" 0.355014
+cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[1]/a_1371_7154#" 32.5435
+cap "nand2_2_0[0]/VNW" "nand2_2_0[1]/a_1371_7154#" 48.8949
+cap "nand2_2_0[0]/VPW" "out" -0.00276995
+cap "nand2_2_0[1]/a_1327_6850#" "pfet$8_2/w_n200_n138#" 7.21594
+cap "nand2_2_0[1]/a_1327_6850#" "nand2_2_0[0]/a_1371_7378#" 1.80564
+cap "nand2_2_0[1]/a_1327_6850#" "out" 0.0323493
+cap "Nmos_Comparator_0/vcompn" "pfet$8_2/a_38_n60#" 0.0911539
+cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/vcompn" 137.171
+cap "Nmos_Comparator_0/vcompn" "nand2_2_0[1]/a_1327_6850#" 32.0147
+cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VNW" 5.51638
+cap "nand2_2_0[1]/a_1371_7154#" "pfet$8_2/w_n200_n138#" 0.047963
 cap "nand2_2_0[1]/a_1371_7154#" "out" 0.149214
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VNW" 5.52023
-cap "nand2_2_0[0]/VNW" "nand2_2_0[1]/a_1371_7154#" 48.8983
-cap "nand2_2_0[0]/VPW" "nand2_2_0[1]/a_1327_6850#" 11.9474
-cap "pfet$8_0[0]/w_n230_n138#" "pfet$10_0[0]/w_n230_n138#" 6.96772
-cap "vdd" "pfet$8_0[0]/w_n230_n138#" -0.737445
-cap "nfet$8_1/a_n84_0#" "pfet$8_2/a_n92_0#" 0.290137
-cap "pfet$8_2/a_n92_0#" "pfet$8_0[1]/a_38_n60#" 34.1234
-cap "pfet$8_2/a_n92_0#" "pfet$8_0[1]/a_n92_0#" 0.11375
-cap "pfet$10_0[0]/a_n92_0#" "pfet$8_0[0]/w_n230_n138#" 7.27454
-cap "pfet$8_0[0]/w_n230_n138#" "nand2_2_0[1]/a_1371_7154#" 4.59641
-cap "nand2_2_0[0]/VPW" "pfet$8_0[1]/a_38_n60#" 0.56633
-cap "pfet$10_0[0]/a_30_860#" "pfet$8_0[1]/a_38_n60#" 0.863986
-cap "nand2_2_0[0]/VNW" "pfet$8_0[1]/a_38_n60#" 5.68064
-cap "pfet$8_2/a_n92_0#" "Nmos_Comparator_0/vcompn" 4.75164
-cap "pfet$8_2/a_n92_0#" "pfet$8_0[0]/w_n230_n138#" 0.19344
-cap "pfet$10_0[0]/a_n92_0#" "nand2_2_0[1]/a_1371_7154#" 0.0235326
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VNW" -1.29606
-cap "pfet$8_2/a_n92_0#" "pfet$10_0[0]/w_n230_n138#" 4.22871
-cap "pfet$10_0[0]/a_30_860#" "pfet$8_0[0]/w_n230_n138#" -2.06853
-cap "pfet$8_0[0]/w_n230_n138#" "nand2_2_0[0]/VPW" 0.368567
-cap "pfet$8_0[0]/w_n230_n138#" "nand2_2_0[0]/VNW" 33.5813
-cap "pfet$8_2/a_n92_0#" "nand2_2_0[0]/a_1371_6970#" 0.316407
-cap "nand2_2_0[1]/VNW" "nand2_2_0[0]/VNW" -0.530373
-cap "pfet$8_2/a_n92_0#" "nfet$8_0/a_38_n60#" 1.88123
-cap "pfet$10_0[0]/a_n92_0#" "pfet$8_2/a_n92_0#" 0.5251
-cap "pfet$8_2/a_n92_0#" "nand2_2_0[1]/a_1371_7154#" 4.43369
-cap "pfet$8_0[1]/a_n92_0#" "pfet$8_0[1]/a_38_n60#" 0.250884
+cap "nand2_2_0[0]/VPW" "ibias_compn" -0.0678535
+cap "nand2_2_0[1]/a_1327_6850#" "ibias_compn" 1.05001
+cap "Nmos_Comparator_0/vcompn" "nand2_2_0[1]/a_1371_7154#" 49.6487
+cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/a_1371_7378#" 2.94196
+cap "Nmos_Comparator_0/vcompn" "out" -0.0635673
+cap "Nmos_Comparator_0/vcompn" "pfet$8_2/w_n200_n138#" 0.160589
+cap "nand2_2_0[1]/a_1371_7154#" "nand2_2_0[1]/VNW" -0.608522
+cap "ibias_compn" "nand2_2_0[1]/a_1371_7154#" 0.315596
+cap "nand2_2_0[1]/a_1327_6850#" "pfet$8_2/a_38_n60#" 1.86168
+cap "nand2_2_0[0]/VPW" "nand2_2_0[0]/VNW" -12.0077
+cap "nand2_2_0[0]/VPW" "nand2_2_0[1]/a_1327_6850#" 12.001
+cap "pfet$10_0[0]/a_n92_0#" "pfet$8_0[0]/w_n200_n138#" 7.27454
 cap "pfet$10_0[0]/a_n92_0#" "nand2_2_0[0]/VNW" -0.0051295
-cap "pfet$10_0[0]/a_30_860#" "nand2_2_0[1]/a_1371_7154#" 0.00931634
-cap "nand2_2_0[1]/a_1371_7154#" "nand2_2_0[0]/VNW" 2.93064
-cap "Nmos_Comparator_0/vcompn" "pfet$8_0[1]/a_38_n60#" 0.0620011
-cap "pfet$8_0[0]/w_n230_n138#" "pfet$8_0[1]/a_38_n60#" 1.04196
-cap "pfet$8_0[1]/a_n92_0#" "pfet$8_0[0]/w_n230_n138#" -4.93165
-cap "pfet$8_2/a_n92_0#" "nand2_2_0[0]/VPW" 1.3665
-cap "pfet$10_0[0]/a_30_860#" "pfet$8_2/a_n92_0#" 4.75249
-cap "pfet$8_0[1]/a_38_n60#" "pfet$10_0[0]/w_n230_n138#" 0.70432
+cap "pfet$8_0[1]/a_n92_0#" "pfet$8_2/a_n92_0#" 0.11375
+cap "pfet$10_0[0]/w_n230_n138#" "pfet$8_0[0]/w_n200_n138#" 6.96772
+cap "nand2_2_0[0]/VPW" "pfet$8_0[0]/w_n200_n138#" 0.34289
 cap "pfet$8_2/a_n92_0#" "nand2_2_0[0]/VNW" 73.4138
-cap "vdd" "pfet$8_0[1]/a_38_n60#" 0.0561765
 cap "nand2_2_0[0]/VPW" "nand2_2_0[0]/VNW" -4.84808
-cap "pfet$10_0[0]/a_30_860#" "nand2_2_0[0]/VNW" 7.52239
-cap "pfet$8_0[0]/w_n230_n138#" "Nmos_Comparator_0/vcompn" 3.6924
-cap "nfet$8_0/a_38_n60#" "pfet$8_0[1]/a_38_n60#" 0.892637
+cap "pfet$8_2/a_n92_0#" "pfet$8_0[0]/w_n200_n138#" -1.79571
+cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[1]/a_n92_0#" 0.250884
+cap "nand2_2_0[0]/a_1371_6970#" "pfet$8_2/a_n92_0#" 0.316407
+cap "nfet$8_1/a_n84_0#" "pfet$8_2/a_n92_0#" 0.290137
+cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[0]/w_n200_n138#" 1.0285
+cap "pfet$8_0[1]/a_38_n60#" "nand2_2_0[0]/VNW" 5.68064
+cap "Nmos_Comparator_0/vcompn" "pfet$8_0[0]/w_n200_n138#" 3.32732
+cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VNW" -1.29606
+cap "nand2_2_0[1]/a_1371_7154#" "pfet$8_0[0]/w_n200_n138#" 4.23133
+cap "nand2_2_0[1]/a_1371_7154#" "nand2_2_0[0]/VNW" 2.93064
+cap "pfet$10_0[0]/a_30_860#" "pfet$10_0[0]/a_n92_0#" -0.00621249
+cap "nand2_2_0[0]/VNW" "nand2_2_0[1]/VNW" -0.530373
+cap "pfet$10_0[0]/a_30_860#" "nand2_2_0[0]/VPW" -0.0536645
+cap "pfet$8_0[1]/a_n92_0#" "pfet$8_0[0]/w_n200_n138#" -5.07785
+cap "pfet$10_0[0]/a_30_860#" "pfet$8_2/a_n92_0#" 5.44312
+cap "pfet$10_0[0]/a_n92_0#" "pfet$8_2/a_n92_0#" 0.5251
+cap "nand2_2_0[0]/VNW" "pfet$8_0[0]/w_n200_n138#" 27.4182
+cap "pfet$10_0[0]/a_30_860#" "pfet$8_0[1]/a_38_n60#" 1.94834
+cap "pfet$10_0[0]/a_30_860#" "Nmos_Comparator_0/vcompn" 5.64512
+cap "pfet$8_2/a_n92_0#" "pfet$10_0[0]/w_n230_n138#" 4.22871
+cap "nand2_2_0[0]/VPW" "pfet$8_2/a_n92_0#" 1.3665
 cap "pfet$10_0[0]/a_n92_0#" "pfet$8_0[1]/a_38_n60#" 0.343906
+cap "nand2_2_0[1]/a_1371_7154#" "pfet$10_0[0]/a_30_860#" 0.429569
+cap "pfet$8_0[1]/a_38_n60#" "pfet$10_0[0]/w_n230_n138#" 0.70432
+cap "nand2_2_0[0]/VPW" "pfet$8_0[1]/a_38_n60#" 0.56633
+cap "pfet$8_0[1]/a_38_n60#" "pfet$8_2/a_n92_0#" 34.1234
+cap "nand2_2_0[1]/a_1371_7154#" "pfet$10_0[0]/a_n92_0#" 0.0235326
+cap "Nmos_Comparator_0/vcompn" "pfet$8_2/a_n92_0#" 4.75164
+cap "nfet$8_0/a_38_n60#" "pfet$8_2/a_n92_0#" 1.88123
+cap "Nmos_Comparator_0/vcompn" "pfet$8_0[1]/a_38_n60#" 0.0620011
+cap "nand2_2_0[1]/a_1371_7154#" "pfet$8_2/a_n92_0#" 4.43369
+cap "pfet$10_0[0]/a_30_860#" "pfet$8_0[0]/w_n200_n138#" -2.41256
+cap "pfet$10_0[0]/a_30_860#" "nand2_2_0[0]/VNW" 30.5084
+cap "nfet$8_0/a_38_n60#" "pfet$8_0[1]/a_38_n60#" 0.892637
 cap "nand2_2_0[1]/a_1371_7154#" "pfet$8_0[1]/a_38_n60#" 0.0893871
-cap "pfet$8_0[2]/a_38_n60#" "pfet$8_2/a_n92_0#" 3.48324
-cap "pfet$8_2/a_n92_0#" "vdd" 2.1279
-cap "pfet$10_0[1]/a_n92_0#" "pfet$8_0[2]/w_n230_n138#" 192.922
-cap "pfet$10_0[1]/a_n92_0#" "vdd" -0.407619
-cap "pfet$10_0[1]/a_n92_0#" "pfet$8_0[2]/a_38_n60#" 20.271
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$10_0[1]/a_30_860#" 13.2402
-cap "vdd" "pfet$10_0[1]/a_30_860#" 10.3438
-cap "pfet$8_0[2]/a_38_n60#" "pfet$10_0[1]/a_30_860#" 6.77902
-cap "pfet$10_0[1]/a_30_860#" "nfet$8_0/a_238_0#" 0.0236248
-cap "pfet$10_0[1]/a_n92_0#" "pfet$8_2/a_n92_0#" 3.49111
-cap "pfet$8_2/a_n92_0#" "pfet$10_0[1]/a_30_860#" 0.0298054
-cap "nfet$8_3[1]/a_38_n60#" "pfet$10_0[1]/a_30_860#" 0.299946
-cap "pfet$10_0[1]/a_n92_0#" "pfet$10_0[1]/a_30_860#" 30.5831
-cap "pfet$8_0[2]/a_38_n60#" "nand2_2_0[0]/a_1327_6850#" 0.0906136
 cap "nand2_2_0[0]/a_1327_6850#" "pfet$8_0[2]/a_38_n60#" 0.0906136
+cap "pfet$8_2/a_n92_0#" "pfet$10_0[1]/a_n92_0#" 3.49111
+cap "pfet$8_2/a_n92_0#" "pfet$8_0[2]/w_n200_n138#" 0.224653
+cap "nfet$8_0/a_238_0#" "pfet$8_0[2]/w_n200_n138#" 0.325815
 cap "nfet$8_3[0]/a_n84_0#" "pfet$10_0[1]/a_30_860#" 0.0334456
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$8_0[2]/a_n92_0#" 202.428
-cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/a_n92_0#" 4.23939
-cap "pfet$8_0[2]/a_n92_0#" "vdd" 1.67355
-cap "pfet$8_0[2]/a_38_n60#" "nand2_2_0[0]/a_1327_7034#" 0.0906136
-cap "pfet$8_0[2]/w_n230_n138#" "nfet$8_0/a_38_n60#" 0.101397
-cap "pfet$8_0[2]/a_n92_0#" "pfet$8_2/a_n92_0#" 0.204425
-cap "nand2_2_0[0]/a_1327_7034#" "pfet$8_0[2]/a_38_n60#" 0.0906136
-cap "pfet$8_0[2]/w_n230_n138#" "nand2_2_0[0]/VNW" 0.610351
-cap "pfet$8_0[2]/a_38_n60#" "nand2_2_0[0]/VNW" 3.45607
-cap "pfet$10_0[1]/a_n92_0#" "pfet$8_0[2]/a_n92_0#" -20.2407
-cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/w_n230_n138#" 76.105
+cap "nfet$8_0/a_38_n60#" "pfet$8_0[2]/w_n200_n138#" 0.101397
 cap "pfet$8_0[2]/a_n92_0#" "pfet$10_0[1]/a_30_860#" 14.1189
-cap "pfet$8_0[2]/w_n230_n138#" "nfet$8_0/a_238_0#" 0.300138
-cap "pfet$8_0[2]/w_n230_n138#" "vdd" 75.8548
-cap "pfet$8_0[2]/a_38_n60#" "vdd" 8.32139
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$8_2/a_n92_0#" 0.224653
-cap "pfet$8_0[2]/a_n92_0#" "pfet$10_0[1]/a_n92_0#" -4.31333
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$10_0[1]/a_n92_0#" 125.392
+cap "pfet$8_0[2]/a_38_n60#" "nand2_2_0[0]/a_1327_7034#" 0.0906136
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$10_0[1]/a_n92_0#" 197.637
+cap "pfet$10_0[1]/a_30_860#" "pfet$8_0[2]/a_38_n60#" 6.77902
+cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/a_38_n60#" 4.23939
+cap "pfet$10_0[1]/a_30_860#" "nfet$8_3[1]/a_38_n60#" 0.299946
+cap "pfet$8_2/a_n92_0#" "pfet$10_0[1]/a_30_860#" 0.0298054
+cap "pfet$8_0[2]/a_38_n60#" "nand2_2_0[0]/a_1327_6850#" 0.0906136
+cap "nand2_2_0[0]/VNW" "pfet$8_0[2]/a_38_n60#" 3.45607
+cap "pfet$10_0[1]/a_30_860#" "nfet$8_0/a_238_0#" 0.0236248
+cap "pfet$8_0[2]/a_n92_0#" "pfet$8_2/a_n92_0#" 0.204425
+cap "pfet$10_0[1]/a_30_860#" "pfet$10_0[1]/a_n92_0#" 30.5831
+cap "pfet$8_2/a_n92_0#" "pfet$8_0[2]/a_38_n60#" 3.48324
+cap "pfet$10_0[1]/a_30_860#" "pfet$8_0[2]/w_n200_n138#" 13.571
+cap "pfet$8_0[2]/a_n92_0#" "pfet$10_0[1]/a_n92_0#" -20.2407
+cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/w_n200_n138#" 203.224
+cap "pfet$8_0[2]/a_38_n60#" "pfet$10_0[1]/a_n92_0#" 20.271
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_38_n60#" 77.6709
+cap "pfet$8_0[2]/a_38_n60#" "nand2_2_0[0]/a_1327_7034#" 0.0906136
+cap "nand2_2_0[0]/VNW" "pfet$8_0[2]/w_n200_n138#" 0.610351
 cap "pfet$10_0[1]/a_30_860#" "nfet$8_3[0]/a_n84_0#" 0.139141
-cap "vdd" "pfet$8_0[2]/w_n230_n138#" 24.8015
-cap "vdd" "pfet$8_0[2]/a_n92_0#" -0.395512
-cap "pfet$10_0[1]/a_30_860#" "pfet$8_0[2]/w_n230_n138#" 12.571
 cap "pfet$10_0[1]/a_30_860#" "pfet$8_0[2]/a_n92_0#" 24.2696
-cap "vdd" "pfet$10_0[1]/a_n92_0#" 2.93646
-cap "pfet$10_0[1]/a_30_860#" "pfet$10_0[1]/a_n92_0#" 19.5194
-cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/w_n230_n138#" 127.322
+cap "pfet$10_0[1]/a_n92_0#" "pfet$8_0[2]/a_n92_0#" -4.31333
+cap "pfet$10_0[1]/a_30_860#" "pfet$8_0[2]/w_n200_n138#" 12.571
+cap "pfet$10_0[1]/a_n92_0#" "pfet$8_0[2]/w_n200_n138#" 125.392
 cap "pfet$10_0[1]/a_30_860#" "pfet$8_0[2]/a_38_n60#" 0.00336151
-cap "pfet$10_0[1]/a_30_860#" "vdd" 3.39398
-cap "vho" "Nmos_Comparator_0/pfet$1_1/w_n230_n138#" 5.63562
-cap "vho" "Nmos_Comparator_0/v_5_11_n" 8.70274
-cap "vho" "Nmos_Comparator_0/pfet$1_1/w_n230_n138#" 10.8909
-cap "vho" "Nmos_Comparator_0/v_3_7_n" 27.6722
-cap "vho" "Nmos_Comparator_0/pfet$3_2/w_n230_n138#" 11.554
-cap "Nmos_Comparator_0/v_3_7_n" "Nmos_Comparator_0/vss" 0.965837
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_3_7_n" 67.0133
-cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 2.18916
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_n92_0#" 127.322
+cap "pfet$10_0[1]/a_30_860#" "pfet$10_0[1]/a_n92_0#" 19.5194
+cap "Nmos_Comparator_0/pfet$1$1_1/w_n230_n138#" "vho" 3.96839
+cap "Nmos_Comparator_0/v_3_7_n" "Nmos_Comparator_0/vss" 0.861824
+cap "vho" "Nmos_Comparator_0/v_5_11_n" 8.53737
+cap "vho" "Nmos_Comparator_0/v_3_7_n" 26.573
+cap "Nmos_Comparator_0/pfet$1$1_1/w_n230_n138#" "vho" 12.5581
+cap "Nmos_Comparator_0/pfet$3_2/w_n230_n138#" "vho" 10.0199
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_3_7_n" 67.6042
+cap "Nmos_Comparator_0/i_bias_n" "Nmos_Comparator_0/vss" -0.114425
 cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/vss" 28.928
-cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/v_3_7_n" 6.33312
-cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/i_bias_n" -0.114425
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_5_11_n" 17.0218
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_6_9_n" 2.69645
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/pfet$3_2/w_n230_n138#" 18.357
-cap "Nmos_Comparator_0/pfet$3_2/w_n230_n138#" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 22.2577
-cap "ibias_compn" "Nmos_Comparator_0/vss" 1.13094
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/nfet$6_1/a_n84_0#" 1.63296
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/vss" 0.791862
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "ibias_compn" 27.2148
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 13.4683
-cap "Nmos_Comparator_0/pfet$3_2/w_n230_n138#" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 0.580922
-cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "Nmos_Comparator_0/i_bias_n" -0.515889
-cap "ibias_compn" "Nmos_Comparator_0/i_bias_n" 4.68567
-cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "ibias_compn" -0.268105
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/vss" 139.31
-cap "Nmos_Comparator_0/v_6_9_n" "ibias_compn" -1.00384
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 7.21757
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/vss" 102.064
+cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/v_3_7_n" 6.43714
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/pfet$3_2/w_n230_n138#" 19.8354
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_5_11_n" 14.8054
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/vss" 2.18916
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_6_9_n" 2.6559
+cap "ibias_compn" "Nmos_Comparator_0/v_6_9_n" -1.00384
 cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/i_bias_n" 105.104
-cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 23.8922
-cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/i_bias_n" 10.6124
-cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "Nmos_Comparator_0/vss" -1.76623
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/i_bias_n" 71.4662
-cap "Nmos_Comparator_0/v_5_11_n" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 42.8066
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/nfet$6_0/a_n84_0#" 9.85193
-cap "Nmos_Comparator_0/v_5_11_n" "Nmos_Comparator_0/vss" 4.01142
+cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "Nmos_Comparator_0/i_bias_n" -0.515889
 cap "ibias_compn" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 13.6122
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 18.3534
-cap "Nmos_Comparator_0/v_5_11_n" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 7.15602
-cap "Nmos_Comparator_0/i_bias_n" "nand2_2_0[0]/VPW" -0.155186
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "nand2_2_0[0]/VPW" 1.83946
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "ibias_compn" 20.2966
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 6.15326
+cap "Nmos_Comparator_0/v_5_11_n" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 7.02617
+cap "ibias_compn" "Nmos_Comparator_0/nfet$6_0/a_n84_0#" -0.268105
+cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/vss" 0.527908
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/i_bias_n" 71.4662
+cap "ibias_compn" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 26.6958
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/vss" 139.31
+cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "Nmos_Comparator_0/vss" -1.76623
+cap "ibias_compn" "Nmos_Comparator_0/i_bias_n" 4.68567
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/vss" 99.8221
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_6_9_n" 18.3939
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/pfet$3_2/w_n230_n138#" 22.3135
+cap "Nmos_Comparator_0/v_5_11_n" "Nmos_Comparator_0/vss" 4.01142
+cap "Nmos_Comparator_0/vss" "Nmos_Comparator_0/i_bias_n" 10.6124
+cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 24.4006
+cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 9.58244
+cap "Nmos_Comparator_0/pfet$3_2/w_n230_n138#" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 0.545557
+cap "ibias_compn" "Nmos_Comparator_0/vss" 1.13094
+cap "Nmos_Comparator_0/nfet$6_1/a_n84_0#" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 1.63296
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 7.21757
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_5_11_n" 45.1884
+cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 9.69279
+cap "ibias_compn" "Nmos_Comparator_0/v_6_9_n" 1.49317
+cap "Nmos_Comparator_0/vcompn" "ibias_compn" 59.0052
+cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/v_6_9_n" 0.263954
 cap "Nmos_Comparator_0/nfet$6_1/a_38_n60#" "ibias_compn" 20.1132
-cap "Nmos_Comparator_0/vcompn" "ibias_compn" 62.7123
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/nfet$6_1/a_38_n60#" 0.0117566
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "nand2_2_0[0]/VPW" 37.8573
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/vcompn" 0.150543
-cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/nfet$6_1/a_38_n60#" 0.259297
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VPW" 2.91248
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/pfet$3_0/a_138_0#" 1.0795
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/nfet$6_1/a_38_n60#" 12.9581
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/vcompn" 12.4747
-cap "Nmos_Comparator_0/vcompn" "Nmos_Comparator_0/nfet$6_1/a_38_n60#" 0.0335361
-cap "Nmos_Comparator_0/v_6_9_n" "ibias_compn" 1.49317
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/pfet$3_0/w_n230_n138#" 5.99121
+cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 1.83946
+cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/vcompn" 2.91248
+cap "Nmos_Comparator_0/nfet$6_1/a_38_n60#" "nand2_2_0[0]/VPW" 0.259297
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/pfet$3_0/w_n230_n138#" 5.60206
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/v_6_9_n" 9.94369
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/vcompn" 12.2202
+cap "Nmos_Comparator_0/nfet$6_1/a_38_n60#" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 13.1173
 cap "Nmos_Comparator_0/i_bias_n" "ibias_compn" 4.82001
+cap "Nmos_Comparator_0/i_bias_n" "nand2_2_0[0]/VPW" -0.155186
 cap "nand2_2_0[0]/VPW" "ibias_compn" 60.5603
-cap "nand2_2_0[0]/VPW" "nand2_2_0[0]/VNW" -0.730047
-cap "nand2_2_0[0]/VNW" "Nmos_Comparator_0/v_6_9_n" 2.54718
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/pfet$3_0/a_138_0#" 1.20935
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/vcompn" 0.150543
+cap "Nmos_Comparator_0/nfet$6_1/a_38_n60#" "Nmos_Comparator_0/vcompn" 0.0335361
+cap "Nmos_Comparator_0/nfet$6_1/a_38_n60#" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 0.0117566
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "ibias_compn" 20.8156
+cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 40.0994
+cap "Nmos_Comparator_0/vcompn" "ibias_compn" 74.0238
 cap "nand2_2_0[0]/a_1371_6970#" "out" 0.535681
-cap "out" "nand2_2_0[0]/VNW" 6.69607
-cap "ibias_compn" "nand2_2_0[0]/VPW" 42.3925
-cap "nand2_2_0[0]/a_1371_7154#" "nand2_2_0[0]/VNW" 12.4412
-cap "ibias_compn" "Nmos_Comparator_0/v_6_9_n" 0.746433
-cap "nand2_2_0[0]/a_1327_6850#" "nand2_2_0[0]/VNW" 0.421761
-cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/v_6_9_n" 6.65616
-cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VNW" 1.84714
-cap "nand2_2_0[0]/VNW" "Nmos_Comparator_0/pfet$1_0/w_n230_n138#" 0.455289
+cap "nand2_2_0[0]/VPW" "ibias_compn" 42.3925
+cap "Nmos_Comparator_0/pfet$3_3/w_n230_n138#" "out" 2.9675
+cap "Nmos_Comparator_0/vcompn" "out" 11.1017
+cap "nand2_2_0[0]/VNW" "out" 5.53841
 cap "Nmos_Comparator_0/vcompn" "Nmos_Comparator_0/nfet$6_1/a_38_n60#" 5.98349
-cap "out" "nand2_2_0[0]/VPW" 17.9091
-cap "nand2_2_0[0]/a_1371_7154#" "ibias_compn" 4.82255
-cap "out" "Nmos_Comparator_0/v_6_9_n" 3.48185
-cap "nand2_2_0[0]/a_1327_6850#" "ibias_compn" 5.26716
-cap "nand2_2_0[0]/a_1371_7154#" "nand2_2_0[0]/VPW" 8.73793
-cap "Nmos_Comparator_0/vcompn" "pfet$8_0[0]/a_38_n60#" 0.392358
-cap "nand2_2_0[0]/a_1327_6850#" "nand2_2_0[0]/VPW" 0.905103
-cap "Nmos_Comparator_0/vcompn" "ibias_compn" 70.7578
-cap "out" "nand2_2_0[0]/a_1371_7378#" 0.562252
+cap "nand2_2_0[0]/a_1371_7154#" "ibias_compn" 4.44977
+cap "ibias_compn" "nand2_2_0[0]/a_1327_6850#" 4.78226
+cap "Nmos_Comparator_0/pfet$1$1_0/w_n230_n138#" "ibias_compn" 0.841493
+cap "nand2_2_0[0]/VPW" "out" 17.9091
+cap "Nmos_Comparator_0/vcompn" "pfet$8_2/a_38_n60#" 0.392358
+cap "Nmos_Comparator_0/pfet$3_3/w_n230_n138#" "Nmos_Comparator_0/vcompn" 4.12915
+cap "nand2_2_0[0]/VNW" "Nmos_Comparator_0/vcompn" 1.84108
+cap "nand2_2_0[0]/VPW" "nand2_2_0[0]/a_1371_6970#" 0.426954
+cap "nand2_2_0[0]/a_1371_7154#" "out" 6.88012
+cap "Nmos_Comparator_0/v_6_9_n" "ibias_compn" 0.746433
+cap "nand2_2_0[0]/VNW" "nand2_2_0[0]/VPW" -0.630519
+cap "out" "nand2_2_0[0]/a_1327_6850#" 7.13783
 cap "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/VPW" 18.9443
-cap "Nmos_Comparator_0/pfet$3_3/w_n230_n138#" "out" 2.54298
-cap "ibias_compn" "Nmos_Comparator_0/pfet$1_0/w_n230_n138#" 1.09513
+cap "Nmos_Comparator_0/pfet$1$1_0/w_n230_n138#" "out" 2.31433
+cap "Nmos_Comparator_0/v_6_9_n" "out" 3.57728
+cap "nand2_2_0[0]/VNW" "nand2_2_0[0]/a_1371_7154#" 12.4412
+cap "nand2_2_0[0]/VNW" "nand2_2_0[0]/a_1327_6850#" 0.421761
+cap "pfet$8_0[0]/w_n200_n138#" "Nmos_Comparator_0/vcompn" 0.236459
+cap "Nmos_Comparator_0/pfet$1$1_0/w_n230_n138#" "nand2_2_0[0]/VNW" 0.322644
+cap "nand2_2_0[0]/VPW" "nand2_2_0[0]/a_1371_7154#" 8.73793
+cap "nand2_2_0[0]/a_1371_7378#" "out" 0.562252
 cap "Nmos_Comparator_0/vcompn" "Nmos_Comparator_0/v_6_9_n" 0.589563
-cap "out" "Nmos_Comparator_0/pfet$1_0/a_n92_0#" 0.601253
-cap "Nmos_Comparator_0/vcompn" "pfet$8_0[0]/w_n230_n138#" 0.497862
-cap "nand2_2_0[0]/VPW" "Nmos_Comparator_0/pfet$1_0/w_n230_n138#" 0.045968
-cap "nand2_2_0[0]/a_1371_7154#" "out" 7.37241
-cap "nand2_2_0[0]/a_1327_6850#" "out" 7.63849
-cap "Nmos_Comparator_0/vcompn" "out" 11.3176
-cap "Nmos_Comparator_0/vcompn" "Nmos_Comparator_0/pfet$3_3/w_n230_n138#" 4.12915
-cap "out" "Nmos_Comparator_0/pfet$1_0/w_n230_n138#" 2.57742
+cap "nand2_2_0[0]/VNW" "Nmos_Comparator_0/v_6_9_n" 2.54718
+cap "nand2_2_0[0]/VPW" "nand2_2_0[0]/a_1327_6850#" 0.905103
+cap "Nmos_Comparator_0/pfet$1$1_0/w_n230_n138#" "nand2_2_0[0]/VPW" 0.045968
+cap "Nmos_Comparator_0/v_6_9_n" "nand2_2_0[0]/VPW" 6.65616
+cap "Nmos_Comparator_0/pfet$1$1_0/a_n92_0#" "out" 0.601253
 cap "nand2_2_0[0]/a_1371_6970#" "ibias_compn" 0.603438
-cap "ibias_compn" "nand2_2_0[0]/VNW" 20.9568
-cap "nand2_2_0[0]/a_1371_6970#" "nand2_2_0[0]/VPW" 0.426954
-cap "nand2_2_0[0]/a_1327_6850#" "pfet$8_2/a_n92_0#" 0.701126
-cap "pfet$8_2/a_n92_0#" "pfet$8_0[1]/a_n92_0#" 0.0214055
-cap "pfet$8_2/a_n92_0#" "Nmos_Comparator_0/pfet$1_0/w_n230_n138#" 1.38271
-cap "pfet$10_0[0]/a_n92_0#" "Nmos_Comparator_0/vcompn" 0.662438
-cap "pfet$10_0[0]/a_n92_0#" "pfet$10_0[0]/a_30_860#" 0.681988
-cap "nand2_2_0[0]/VNW" "pfet$8_0[1]/a_38_n60#" 8.8273
-cap "nand2_2_0[0]/VNW" "Nmos_Comparator_0/pfet$1_0/w_n230_n138#" 1.67889
-cap "nand2_2_0[0]/VNW" "pfet$8_2/a_n92_0#" 26.6311
-cap "nand2_2_0[0]/VPW" "pfet$8_2/a_n92_0#" 0.617248
-cap "pfet$8_0[1]/a_38_n60#" "Nmos_Comparator_0/vcompn" 0.421615
-cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[1]/w_n230_n138#" 0.269582
+cap "nand2_2_0[0]/VNW" "ibias_compn" 17.8061
+cap "pfet$10_0[0]/a_30_860#" "pfet$10_0[0]/a_n92_0#" 1.17428
+cap "pfet$8_2/a_n92_0#" "nand2_2_0[0]/VPW" 0.617248
+cap "pfet$8_2/a_n92_0#" "nand2_2_0[0]/a_1327_6850#" 1.18603
+cap "pfet$8_0[1]/a_38_n60#" "pfet$10_0[0]/a_n92_0#" 10.273
+cap "Nmos_Comparator_0/pfet$1$1_0/w_n230_n138#" "pfet$10_0[0]/a_n92_0#" 1.65659
+cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[0]/w_n200_n138#" 23.0696
+cap "pfet$8_2/a_n92_0#" "pfet$10_0[0]/a_n92_0#" 2.44398
+cap "pfet$8_2/a_n92_0#" "pfet$8_0[0]/w_n200_n138#" 8.41908
+cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[1]/a_n92_0#" 18.8246
 cap "nand2_2_0[0]/VPW" "nand2_2_0[0]/VNW" -0.186691
-cap "pfet$10_0[0]/a_n92_0#" "pfet$8_0[0]/w_n230_n138#" 29.559
-cap "pfet$8_2/a_n92_0#" "Nmos_Comparator_0/vcompn" 0.619091
-cap "pfet$8_2/a_n92_0#" "pfet$10_0[0]/a_30_860#" 0.696799
-cap "nand2_2_0[0]/a_1327_6850#" "pfet$10_0[0]/a_n92_0#" 0.679472
-cap "pfet$10_0[0]/a_n92_0#" "pfet$8_1[0]/w_n230_n138#" 1.10372
-cap "pfet$10_0[0]/a_n92_0#" "pfet$8_0[1]/a_n92_0#" 0.454079
-cap "pfet$8_0[1]/a_38_n60#" "pfet$10_0[0]/a_n92_0#" 10.3181
-cap "pfet$8_0[0]/w_n230_n138#" "pfet$8_0[1]/a_n92_0#" 33.9404
-cap "pfet$10_0[0]/a_n92_0#" "Nmos_Comparator_0/pfet$1_0/w_n230_n138#" 1.3935
-cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[0]/w_n230_n138#" 30.8859
-cap "pfet$10_0[0]/a_n92_0#" "pfet$8_2/a_n92_0#" 2.44398
-cap "pfet$8_2/a_n92_0#" "pfet$8_0[0]/w_n230_n138#" 10.8338
-cap "pfet$8_1[0]/w_n230_n138#" "pfet$8_0[1]/a_n92_0#" 0.360409
-cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[1]/a_n92_0#" 37.1907
-cap "nand2_2_0[0]/VNW" "pfet$10_0[0]/a_n92_0#" 11.9298
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$8_0[2]/a_38_n60#" 186.656
-cap "pfet$8_0[2]/a_n92_0#" "pfet$10_0[1]/a_n92_0#" 6.19342
+cap "Nmos_Comparator_0/vcompn" "pfet$8_0[1]/a_38_n60#" 0.421615
+cap "pfet$8_0[1]/a_n92_0#" "pfet$8_2/a_n92_0#" 0.0214055
+cap "nand2_2_0[0]/VNW" "pfet$10_0[0]/a_n92_0#" 13.0734
+cap "Nmos_Comparator_0/vcompn" "pfet$8_2/a_n92_0#" 1.06016
+cap "pfet$8_1[0]/w_n200_n138#" "pfet$10_0[0]/a_n92_0#" 0.695243
+cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[1]/w_n200_n138#" 0.207753
+cap "nand2_2_0[0]/a_1327_6850#" "pfet$10_0[0]/a_n92_0#" 1.18013
+cap "pfet$8_2/a_n92_0#" "pfet$10_0[0]/a_30_860#" 1.06958
+cap "pfet$8_0[0]/w_n200_n138#" "pfet$10_0[0]/a_n92_0#" 21.5774
+cap "pfet$8_2/a_n92_0#" "Nmos_Comparator_0/pfet$1$1_0/w_n230_n138#" 1.63635
+cap "Nmos_Comparator_0/vcompn" "pfet$10_0[0]/a_n92_0#" 1.13288
+cap "pfet$8_0[1]/a_38_n60#" "nand2_2_0[0]/VNW" 8.82426
+cap "Nmos_Comparator_0/pfet$1$1_0/w_n230_n138#" "nand2_2_0[0]/VNW" 1.81153
+cap "pfet$8_2/a_n92_0#" "nand2_2_0[0]/VNW" 29.7498
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$10_0[1]/a_30_860#" 2.29058
+cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/a_n92_0#" 158.692
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_n92_0#" 79.1909
+cap "pfet$8_0[2]/a_38_n60#" "pfet$10_0[1]/a_n92_0#" 15.1841
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$10_0[1]/a_n92_0#" 48.6535
+cap "pfet$8_0[2]/a_38_n60#" "pfet$8_2/a_n92_0#" 0.309936
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_38_n60#" 180.79
 cap "pfet$8_0[2]/a_n92_0#" "pfet$10_0[1]/a_30_860#" 3.98601
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$10_0[1]/a_n92_0#" 40.7383
-cap "pfet$8_0[2]/a_n92_0#" "vdd" 16.6722
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$10_0[1]/a_30_860#" 2.29058
-cap "pfet$8_0[2]/a_38_n60#" "pfet$10_0[1]/a_n92_0#" 15.139
-cap "pfet$8_0[2]/w_n230_n138#" "vdd" 41.6871
-cap "pfet$8_2/a_n92_0#" "pfet$8_0[2]/a_38_n60#" 0.309936
-cap "pfet$8_0[2]/a_38_n60#" "vdd" 25.4809
-cap "pfet$8_0[2]/a_38_n60#" "nand2_2_0[0]/VNW" 0.185799
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$8_0[2]/a_n92_0#" 46.5215
-cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/a_38_n60#" 147.032
-cap "vdd" "pfet$8_0[2]/w_n230_n138#" 35.237
-cap "pfet$8_0[2]/a_38_n60#" "vdd" 25.4564
-cap "vdd" "pfet$8_0[2]/a_n92_0#" 2.64409
-cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/w_n230_n138#" 172.972
-cap "pfet$10_0[1]/a_n92_0#" "pfet$8_0[2]/w_n230_n138#" -0.00430219
-cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/w_n230_n138#" -0.884292
-cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/a_n92_0#" 79.4748
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$8_0[2]/a_38_n60#" 8.47471
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$8_0[2]/a_n92_0#" 1.31467
-cap "Nmos_Comparator_0/pfet$1_1/w_n230_n138#" "vho" 0.0578861
-cap "Nmos_Comparator_0/v_5_11_n" "vho" 1.87721
+cap "nand2_2_0[0]/VNW" "pfet$8_0[2]/a_38_n60#" 0.185799
+cap "pfet$10_0[1]/a_n92_0#" "pfet$8_0[2]/a_n92_0#" 6.6475
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_38_n60#" 165.836
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_n92_0#" -0.742701
+cap "pfet$10_0[1]/a_n92_0#" "pfet$8_0[2]/w_n200_n138#" -0.00430219
+cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/a_n92_0#" 86.1807
+cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/w_n200_n138#" 19.0827
+cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/w_n200_n138#" 2.531
+cap "vho" "Nmos_Comparator_0/v_5_11_n" 1.79636
 cap "Nmos_Comparator_0/v_3_7_n" "vho" 0.0408069
-cap "vho" "Nmos_Comparator_0/vdd" 0.209837
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 0.305856
-cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_5_11_n" 2.23136
+cap "Nmos_Comparator_0/vdd" "vho" 0.267723
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_5_11_n" 2.27508
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_6_9_n" 0.226566
 cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/vdd" 0.115718
-cap "Nmos_Comparator_0/v_5_11_n" "ibias_compn" -0.0786393
-cap "Nmos_Comparator_0/v_5_11_n" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 0.947332
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/v_5_11_n" 0.925021
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_5_11_n" 3.77241
 cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/v_5_11_n" 1.13687e-13
-cap "Nmos_Comparator_0/v_5_11_n" "Nmos_Comparator_0/nfet$6_0/a_238_0#" -0.368538
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 0.0453088
 cap "Nmos_Comparator_0/nfet$6_0/a_n84_0#" "Nmos_Comparator_0/v_5_11_n" -3.55271e-15
-cap "Nmos_Comparator_0/v_5_11_n" "Nmos_Comparator_0/nfet$5_0/a_38_n60#" 3.73528
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/nfet$5_1/a_38_n60#" 0.810927
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/pfet$3_0/a_138_0#" 0.192479
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/pfet$1_0/a_342_0#" 0.733568
+cap "Nmos_Comparator_0/nfet$6_0/a_238_0#" "Nmos_Comparator_0/v_5_11_n" -0.368538
+cap "ibias_compn" "Nmos_Comparator_0/v_5_11_n" -0.0786393
+cap "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "Nmos_Comparator_0/v_6_9_n" 0.124599
 cap "filltie_0/a_1762_n1315#" "Nmos_Comparator_0/v_6_9_n" -0.355885
-cap "Nmos_Comparator_0/v_6_9_n" "ibias_compn" 1.71297
-cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/pfet$1_0/a_342_0#" 0.057189
-cap "ibias_compn" "Nmos_Comparator_0/pfet$1_0/a_342_0#" 0.0351499
-cap "Nmos_Comparator_0/vcompn" "Nmos_Comparator_0/pfet$1_0/a_342_0#" 6.94353
-cap "Nmos_Comparator_0/vcompn" "Nmos_Comparator_0/v_6_9_n" 1.39752
-cap "ibias_compn" "Nmos_Comparator_0/v_6_9_n" 0.81135
-cap "filltie_0/w_1604_n947#" "Nmos_Comparator_0/pfet$1_0/a_342_0#" 0.174141
-cap "filltie_0/w_1604_n947#" "Nmos_Comparator_0/v_6_9_n" 3.4561
-cap "Nmos_Comparator_0/vcompn" "pfet$8_1[0]/w_n230_n138#" 2.61767
-cap "pfet$8_0[0]/a_38_n60#" "Nmos_Comparator_0/v_6_9_n" 0.366676
-cap "out" "Nmos_Comparator_0/v_6_9_n" 0.569377
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" 0.057189
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/pfet$3_0/a_138_0#" 0.21479
+cap "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" "ibias_compn" 0.0351499
+cap "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" "Nmos_Comparator_0/v_6_9_n" 0.733568
+cap "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "Nmos_Comparator_0/v_6_9_n" 0.786404
+cap "Nmos_Comparator_0/v_6_9_n" "ibias_compn" 1.67962
+cap "ibias_compn" "Nmos_Comparator_0/vcompn" 0.499183
+cap "pfet$8_2/a_38_n60#" "Nmos_Comparator_0/vcompn" 0.335344
+cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/vcompn" 1.39752
 cap "Nmos_Comparator_0/v_6_9_n" "filltie_0/a_1762_n1315#" 6.66736
-cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/pfet$1_0/a_342_0#" 3.40337
-cap "Nmos_Comparator_0/vcompn" "ibias_compn" 0.499183
-cap "Nmos_Comparator_0/vcompn" "pfet$8_0[0]/a_38_n60#" 0.335344
-cap "pfet$8_1[0]/w_n230_n138#" "Nmos_Comparator_0/v_6_9_n" 0.205667
-cap "pfet$8_1[0]/w_n230_n138#" "pfet$8_0[1]/a_38_n60#" 55.3801
-cap "pfet$8_0[1]/a_38_n60#" "Nmos_Comparator_0/vcompn" 0.0686803
-cap "Nmos_Comparator_0/pfet$1_0/a_342_0#" "pfet$8_0[1]/a_38_n60#" 35.9176
-cap "Nmos_Comparator_0/pfet$3_3/a_242_n60#" "pfet$8_0[1]/a_38_n60#" 1.54042
-cap "Nmos_Comparator_0/pfet$1_0/a_342_0#" "filltie_0/w_1604_n947#" 1.12761
-cap "out" "Nmos_Comparator_0/pfet$1_0/a_342_0#" -6.93889e-18
-cap "pfet$8_0[0]/w_n230_n138#" "pfet$8_0[1]/a_38_n60#" 19.2604
-cap "pfet$8_0[1]/a_n92_0#" "pfet$8_0[1]/a_38_n60#" 2.07827
-cap "Nmos_Comparator_0/pfet$1_0/a_342_0#" "pfet$8_1[0]/w_n230_n138#" 2.65443
-cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/a_38_n60#" 14.2217
-cap "pfet$8_0[2]/a_38_n60#" "out" 0.00349863
-cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/w_n230_n138#" 238.618
-cap "pfet$8_0[2]/a_38_n60#" "Nmos_Comparator_0/pfet$1_0/a_342_0#" 0.885403
-cap "Nmos_Comparator_0/pfet$1_0/a_342_0#" "pfet$8_0[2]/w_n230_n138#" -1.46191
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$8_0[2]/a_38_n60#" 210.427
+cap "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" "Nmos_Comparator_0/vcompn" 6.94353
+cap "Nmos_Comparator_0/v_6_9_n" "pfet$8_1[0]/w_n200_n138#" 0.16714
+cap "Nmos_Comparator_0/v_6_9_n" "ibias_compn" 0.844696
+cap "Nmos_Comparator_0/v_6_9_n" "filltie_0/w_1604_n945#" 3.45329
+cap "Nmos_Comparator_0/v_6_9_n" "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" 3.40337
+cap "Nmos_Comparator_0/v_6_9_n" "pfet$8_1[0]/a_n92_0#" 0.366676
+cap "pfet$8_1[0]/w_n200_n138#" "Nmos_Comparator_0/vcompn" 1.73892
+cap "filltie_0/w_1604_n945#" "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" 0.10825
+cap "Nmos_Comparator_0/v_6_9_n" "out" 0.593899
+cap "pfet$8_0[1]/a_38_n60#" "pfet$8_0[0]/w_n200_n138#" 11.0573
+cap "filltie_0/w_1604_n945#" "Nmos_Comparator_0/vdd" 1.1935
+cap "pfet$8_0[1]/a_38_n60#" "Nmos_Comparator_0/vdd" 12.0128
+cap "pfet$8_0[1]/a_38_n60#" "pfet$8_1[0]/w_n200_n138#" 10.4999
+cap "Nmos_Comparator_0/vcompn" "pfet$8_0[1]/a_38_n60#" 0.0686803
+cap "Nmos_Comparator_0/vdd" "pfet$8_1[0]/w_n200_n138#" 1.46948
+cap "out" "pfet$8_0[2]/a_38_n60#" 0.00349863
+cap "pfet$8_0[2]/a_38_n60#" "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" 24.7902
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_38_n60#" 228.548
+cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/a_38_n60#" 16.2999
+cap "Nmos_Comparator_0/pfet$1$1_0/a_242_n60#" "pfet$8_0[2]/a_38_n60#" 1.54042
+cap "pfet$8_0[2]/w_n200_n138#" "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" -1.46191
 cap "pfet$8_0[2]/a_n92_0#" "pfet$8_0[2]/a_38_n60#" 1.98854
-cap "pfet$8_0[2]/w_n230_n138#" "pfet$8_0[2]/a_38_n60#" 8.85327
-cap "Nmos_Comparator_0/pfet$1_0/a_342_0#" "Nmos_Comparator_0/v_6_9_n" 8.58331
-cap "Nmos_Comparator_0/pfet$1_0/a_342_0#" "Nmos_Comparator_0/pfet$1_0/a_138_0#" -1.30926
-cap "Nmos_Comparator_0/pfet$1_0/a_342_0#" "Nmos_Comparator_0/pfet$1_0/a_138_0#" 51.7383
-cap "Nmos_Comparator_0/pfet$1_0/a_342_0#" "Nmos_Comparator_0/v_6_9_n" 26.5764
-cap "Nmos_Comparator_0/pfet$1_0/a_138_0#" "pfet$8_1[0]/w_n230_n138#" 0.0713166
-cap "pfet$8_0[1]/a_38_n60#" "pfet$8_1[0]/w_n230_n138#" 0.290655
-cap "pfet$8_1[0]/w_n230_n138#" "Nmos_Comparator_0/pfet$1_0/a_342_0#" 37.3745
-cap "pfet$8_0[2]/a_38_n60#" "pfet$8_1[2]/w_n230_n138#" 31.3727
-cap "pfet$8_0[2]/a_38_n60#" "pfet$8_1[2]/w_n230_n138#" 16.8899
-merge "Nmos_Comparator_0/pfet$1_0/a_342_0#" "m1_n1064_1974#" -10850.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -896498 -25846 0 0 0 0 0 0 -8077900 -26744
+cap "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_38_n60#" 182.145
+cap "pfet$8_0[2]/a_38_n60#" "pfet$8_0[2]/w_n200_n138#" 18.0038
+cap "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" "Nmos_Comparator_0/pfet$1$1_0/a_138_0#" -1.30926
+cap "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" "Nmos_Comparator_0/v_6_9_n" 8.47488
+cap "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" "Nmos_Comparator_0/pfet$1$1_0/a_138_0#" 51.7383
+cap "Nmos_Comparator_0/pfet$1$1_0/a_138_0#" "pfet$8_1[0]/w_n200_n138#" 0.0482225
+cap "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" "Nmos_Comparator_0/v_6_9_n" 26.6849
+cap "Nmos_Comparator_0/vdd" "pfet$8_1[0]/w_n200_n138#" 45.7376
+cap "pfet$8_0[2]/a_38_n60#" "pfet$8_1[2]/w_n200_n138#" 24.551
+cap "pfet$8_0[2]/a_38_n60#" "pfet$8_1[2]/w_n200_n138#" 36.4619
+merge "Nmos_Comparator_0/pfet$1$1_0/a_342_0#" "m1_n1064_1974#" -6380.52 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -896498 -25846 0 0 0 0 0 0 -397040 -3396
 merge "m1_n1064_1974#" "Nmos_Comparator_0/vdd"
-merge "Nmos_Comparator_0/vdd" "pfet$8_1[2]/w_n230_n138#"
-merge "pfet$8_1[2]/w_n230_n138#" "pfet$8_1[2]/a_238_0#"
-merge "pfet$8_1[2]/a_238_0#" "pfet$8_1[1]/w_n230_n138#"
-merge "pfet$8_1[1]/w_n230_n138#" "pfet$8_1[1]/a_238_0#"
-merge "pfet$8_1[1]/a_238_0#" "pfet$8_1[0]/w_n230_n138#"
-merge "pfet$8_1[0]/w_n230_n138#" "pfet$8_1[0]/a_238_0#"
-merge "pfet$8_1[0]/a_238_0#" "pfet$8_0[2]/w_n230_n138#"
-merge "pfet$8_0[2]/w_n230_n138#" "pfet$8_0[2]/a_238_0#"
-merge "pfet$8_0[2]/a_238_0#" "pfet$8_0[1]/w_n230_n138#"
-merge "pfet$8_0[1]/w_n230_n138#" "pfet$8_0[1]/a_238_0#"
-merge "pfet$8_0[1]/a_238_0#" "pfet$8_0[0]/w_n230_n138#"
-merge "pfet$8_0[0]/w_n230_n138#" "pfet$8_0[0]/a_238_0#"
+merge "Nmos_Comparator_0/vdd" "pfet$8_1[2]/w_n200_n138#"
+merge "pfet$8_1[2]/w_n200_n138#" "pfet$8_1[2]/a_238_0#"
+merge "pfet$8_1[2]/a_238_0#" "pfet$8_1[1]/w_n200_n138#"
+merge "pfet$8_1[1]/w_n200_n138#" "pfet$8_1[1]/a_238_0#"
+merge "pfet$8_1[1]/a_238_0#" "pfet$8_1[0]/w_n200_n138#"
+merge "pfet$8_1[0]/w_n200_n138#" "pfet$8_1[0]/a_238_0#"
+merge "pfet$8_1[0]/a_238_0#" "pfet$8_0[2]/w_n200_n138#"
+merge "pfet$8_0[2]/w_n200_n138#" "pfet$8_0[2]/a_238_0#"
+merge "pfet$8_0[2]/a_238_0#" "pfet$8_0[1]/w_n200_n138#"
+merge "pfet$8_0[1]/w_n200_n138#" "pfet$8_0[1]/a_238_0#"
+merge "pfet$8_0[1]/a_238_0#" "pfet$8_0[0]/w_n200_n138#"
+merge "pfet$8_0[0]/w_n200_n138#" "pfet$8_0[0]/a_238_0#"
 merge "pfet$8_0[0]/a_238_0#" "pfet$10_0[1]/w_n230_n138#"
 merge "pfet$10_0[1]/w_n230_n138#" "pfet$10_0[0]/w_n230_n138#"
-merge "pfet$10_0[0]/w_n230_n138#" "pfet$8_2/w_n230_n138#"
-merge "pfet$8_2/w_n230_n138#" "pfet$8_2/a_238_0#"
-merge "pfet$8_2/a_238_0#" "Pmos_Comparator_0/vdd"
-merge "Pmos_Comparator_0/vdd" "vdd"
-merge "pfet$8_1[2]/VSUBS" "pfet$8_1[1]/VSUBS" -3763.77 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -501070 -17169 0 0 0 0 0 0 0 0
+merge "pfet$10_0[0]/w_n230_n138#" "pfet$8_2/w_n200_n138#"
+merge "pfet$8_2/w_n200_n138#" "pfet$8_2/a_238_0#"
+merge "pfet$8_2/a_238_0#" "vdd"
+merge "pfet$8_1[2]/VSUBS" "pfet$8_1[1]/VSUBS" -3914.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -501070 -17550 0 0 0 0 0 0 0 0
 merge "pfet$8_1[1]/VSUBS" "pfet$8_1[0]/VSUBS"
 merge "pfet$8_1[0]/VSUBS" "pfet$8_0[2]/VSUBS"
 merge "pfet$8_0[2]/VSUBS" "pfet$8_0[1]/VSUBS"
@@ -1004,7 +953,7 @@ merge "vss" "nfet$8_2[1]/a_360_0#"
 merge "nfet$8_2[1]/a_360_0#" "nfet$8_2[0]/a_360_0#"
 merge "nfet$8_2[0]/a_360_0#" "Pmos_Comparator_0/VSUBS"
 merge "Pmos_Comparator_0/VSUBS" "VSUBS"
-merge "nfet$8_0/a_38_n60#" "nfet$8_0/a_n84_0#" -3020.94 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -64012 -3330 0 0 0 0 -490800 -16420 0 0
+merge "nfet$8_0/a_38_n60#" "nfet$8_0/a_n84_0#" -3013.91 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -64012 -3330 0 0 0 0 -487440 -16308 0 0
 merge "nfet$8_0/a_n84_0#" "nfet$8_1/a_38_n60#"
 merge "nfet$8_1/a_38_n60#" "nfet$8_2[0]/a_38_n60#"
 merge "nfet$8_2[0]/a_38_n60#" "nfet$8_3[0]/a_38_n60#"
@@ -1013,13 +962,13 @@ merge "nfet$8_2[1]/a_38_n60#" "nfet$8_3[1]/a_38_n60#"
 merge "nfet$8_3[1]/a_38_n60#" "nfet$8_2[2]/a_38_n60#"
 merge "nfet$8_2[2]/a_38_n60#" "nfet$8_3[2]/a_38_n60#"
 merge "nfet$8_3[2]/a_38_n60#" "iref"
-merge "nand2_2_0[1]/a_1327_7034#" "Pmos_Comparator_0/vcompp" -705.599 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15669 -730 0 0 0 0 0 0 0 0
+merge "nand2_2_0[1]/a_1327_7034#" "Pmos_Comparator_0/vcompp" -700.393 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15669 -730 0 0 0 0 0 0 0 0
 merge "Pmos_Comparator_0/vcompp" "m1_n2608_n3706#"
-merge "pfet$8_1[2]/a_38_n60#" "pfet$8_1[2]/a_n92_0#" -3210.94 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -199588 -9454 0 0 0 0 0 0 0 0
+merge "pfet$8_1[2]/a_38_n60#" "pfet$8_1[2]/a_n92_0#" -3189.35 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -199588 -9454 0 0 0 0 0 0 0 0
 merge "pfet$8_1[2]/a_n92_0#" "pfet$8_1[1]/a_38_n60#"
-merge "pfet$8_1[1]/a_38_n60#" "pfet$8_1[1]/a_n92_0#"
-merge "pfet$8_1[1]/a_n92_0#" "pfet$8_1[0]/a_38_n60#"
-merge "pfet$8_1[0]/a_38_n60#" "pfet$8_1[0]/a_n92_0#"
+merge "pfet$8_1[1]/a_38_n60#" "pfet$8_1[0]/a_38_n60#"
+merge "pfet$8_1[0]/a_38_n60#" "pfet$8_1[1]/a_n92_0#"
+merge "pfet$8_1[1]/a_n92_0#" "pfet$8_1[0]/a_n92_0#"
 merge "pfet$8_1[0]/a_n92_0#" "m1_434_2220#"
 merge "m1_434_2220#" "pfet$8_0[2]/a_38_n60#"
 merge "pfet$8_0[2]/a_38_n60#" "pfet$8_0[1]/a_38_n60#"
@@ -1029,45 +978,45 @@ merge "pfet$8_2/a_38_n60#" "nfet$8_2[0]/a_n84_0#"
 merge "nfet$8_2[0]/a_n84_0#" "nfet$8_2[1]/a_n84_0#"
 merge "nfet$8_2[1]/a_n84_0#" "nfet$8_2[2]/a_n84_0#"
 merge "nfet$8_2[2]/a_n84_0#" "v_4_1_pn"
-merge "nfet$8_1/a_n84_0#" "Pmos_Comparator_0/ibias_compp" -473.613 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -17024 -752 -4080 -256 0 0 0 0 0 0
+merge "nfet$8_1/a_n84_0#" "Pmos_Comparator_0/ibias_compp" -469.896 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -17024 -752 -4080 -256 0 0 0 0 0 0
 merge "Pmos_Comparator_0/ibias_compp" "Pmos_Comparator_0/m1_n492_1809#"
 merge "Pmos_Comparator_0/m1_n492_1809#" "ibias_compp"
 merge "ibias_compp" "m1_n326_n2068#"
-merge "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "vho" -1126.63 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6888 -332 0 0 0 0 -153480 -5176 0 0
-merge "pfet$8_0[2]/a_n92_0#" "pfet$8_0[1]/a_n92_0#" -1733.64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -167504 -7448 0 0 0 0 0 0 0 0
+merge "Nmos_Comparator_0/nfet$5_0/a_38_n60#" "vho" -1112.78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6888 -332 0 0 0 0 -150120 -5064 0 0
+merge "pfet$8_0[2]/a_n92_0#" "pfet$8_0[1]/a_n92_0#" -1734.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -167504 -7448 0 0 0 0 0 0 0 0
 merge "pfet$8_0[1]/a_n92_0#" "pfet$8_0[0]/a_n92_0#"
 merge "pfet$8_0[0]/a_n92_0#" "pfet$10_0[1]/a_98_0#"
 merge "pfet$10_0[1]/a_98_0#" "pfet$10_0[0]/a_98_0#"
 merge "pfet$10_0[0]/a_98_0#" "v_5_6"
-merge "filltie_0/w_1604_n947#" "nand2_2_0[0]/VNW" -3308.86 -831784 -7676 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -19140 -1334 0 0 0 0 0 0 0 0
+merge "filltie_0/w_1604_n945#" "nand2_2_0[0]/VNW" -3349.01 -847228 -7768 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -19140 -1334 0 0 0 0 0 0 0 0
 merge "nand2_2_0[0]/VNW" "w_n1305_n308#"
-merge "w_n1305_n308#" "filltie_1/w_1604_n947#"
-merge "filltie_1/w_1604_n947#" "m1_n821_n158#"
+merge "w_n1305_n308#" "filltie_1/w_1604_n945#"
+merge "filltie_1/w_1604_n945#" "m1_n821_n158#"
 merge "m1_n821_n158#" "nand2_2_0[0]/a_1909_6762#"
 merge "nand2_2_0[0]/a_1909_6762#" "m1_n818_n1740#"
 merge "m1_n818_n1740#" "vddd"
 merge "vddd" "nand2_2_0[1]/a_1909_6762#"
 merge "nand2_2_0[1]/a_1909_6762#" "m1_n817_n2922#"
 merge "m1_n817_n2922#" "nand2_2_0[1]/VNW"
-merge "nand2_2_0[1]/VNW" "w_n1282_n3226#"
-merge "nand2_2_0[0]/a_1371_7154#" "pfet$10_0[1]/a_30_860#" -919.068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -33164 -1790 0 0 0 0 0 0 0 0
+merge "nand2_2_0[1]/VNW" "w_n1305_n3226#"
+merge "nand2_2_0[0]/a_1371_7154#" "pfet$10_0[1]/a_30_860#" -919.104 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -33164 -1790 0 0 0 0 0 0 0 0
 merge "pfet$10_0[1]/a_30_860#" "pfet$10_0[0]/a_30_860#"
 merge "pfet$10_0[0]/a_30_860#" "nfet$4_0/a_32_860#"
 merge "nfet$4_0/a_32_860#" "nand2_2_0[1]/a_1327_6850#"
 merge "nand2_2_0[1]/a_1327_6850#" "nq"
-merge "nand2_2_0[0]/a_1327_6850#" "nand2_2_0[1]/a_1371_7154#" -145.479 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1450 -258 0 0 0 0 0 0 0 0
+merge "nand2_2_0[0]/a_1327_6850#" "nand2_2_0[1]/a_1371_7154#" -145.095 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1450 -258 0 0 0 0 0 0 0 0
 merge "nand2_2_0[1]/a_1371_7154#" "q"
 merge "nfet$4_0/a_98_0#" "nfet$8_3[0]/a_n84_0#" -716.49 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -84892 -3754 0 0 0 0 0 0 0 0
 merge "nfet$8_3[0]/a_n84_0#" "nfet$8_3[1]/a_n84_0#"
 merge "nfet$8_3[1]/a_n84_0#" "nfet$8_3[2]/a_n84_0#"
 merge "nfet$8_3[2]/a_n84_0#" "v_8_7"
-merge "pfet$8_2/a_n92_0#" "Nmos_Comparator_0/m1_n922_n1160#" -774.509 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24852 -1110 -13320 -564 0 0 0 0 0 0
+merge "pfet$8_2/a_n92_0#" "Nmos_Comparator_0/m1_n922_n1160#" -770.073 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24852 -1110 -13320 -564 0 0 0 0 0 0
 merge "Nmos_Comparator_0/m1_n922_n1160#" "ibias_compn"
-merge "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/a_1327_7034#" -512.343 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10355 -408 -6720 -344 0 0 0 0 0 0
+merge "Nmos_Comparator_0/vcompn" "nand2_2_0[0]/a_1327_7034#" -510.639 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10355 -408 -6720 -344 0 0 0 0 0 0
 merge "nand2_2_0[0]/a_1327_7034#" "m1_n1392_n752#"
-merge "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "pfet$10_0[1]/a_n92_0#" -2577.62 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -101552 -4648 -24864 -892 0 0 -168000 -5600 0 0
+merge "Nmos_Comparator_0/nfet$5_1/a_38_n60#" "pfet$10_0[1]/a_n92_0#" -2586.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -101552 -4648 -24864 -892 0 0 -168000 -5600 0 0
 merge "pfet$10_0[1]/a_n92_0#" "pfet$10_0[0]/a_n92_0#"
 merge "pfet$10_0[0]/a_n92_0#" "nfet$4_0/a_n84_0#"
 merge "nfet$4_0/a_n84_0#" "Pmos_Comparator_0/m1_664_66#"
 merge "Pmos_Comparator_0/m1_664_66#" "out"
-merge "Pmos_Comparator_0/m1_n1348_64#" "vlo" -403.619 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1800 -180 0 0 0 0 0 0
+merge "Pmos_Comparator_0/m1_n1348_64#" "vlo" -1163.68 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -150060 -5182 0 0 0 0 0 0
