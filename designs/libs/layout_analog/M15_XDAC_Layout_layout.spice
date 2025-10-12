@@ -1,0 +1,1509 @@
+* NGSPICE file created from M15_XDAC_Layout.ext - technology: gf180mcuD
+
+.subckt nfet$1$4 a_30_1260# a_254_0# a_190_1260# a_350_1260# a_414_0# a_n84_0# a_94_0#
++ a_510_1260# a_574_0# a_696_0#
+X0 a_254_0# a_190_1260# a_94_0# a_696_0# nfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X1 a_574_0# a_510_1260# a_414_0# a_696_0# nfet_03v3 ad=3.66p pd=13.22u as=1.56p ps=6.52u w=6u l=0.28u
+X2 a_94_0# a_30_1260# a_n84_0# a_696_0# nfet_03v3 ad=1.56p pd=6.52u as=3.66p ps=13.22u w=6u l=0.28u
+X3 a_414_0# a_350_1260# a_254_0# a_696_0# nfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+.ends
+
+.subckt pfet$1$4 a_1534_0# a_1054_0# a_734_0# a_508_1260# a_1694_0# a_254_0# a_1308_1260#
++ a_894_0# a_668_1260# a_1468_1260# a_1214_0# a_828_1260# a_28_1260# a_1854_0# a_414_0#
++ a_n92_0# a_1628_1260# a_1374_0# a_94_0# a_188_1260# a_574_0# a_988_1260# a_1788_1260#
++ a_348_1260# a_1148_1260# w_n230_n138#
+X0 a_1214_0# a_1148_1260# a_1054_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X1 a_734_0# a_668_1260# a_574_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X2 a_254_0# a_188_1260# a_94_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X3 a_574_0# a_508_1260# a_414_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X4 a_1534_0# a_1468_1260# a_1374_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X5 a_1374_0# a_1308_1260# a_1214_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X6 a_1054_0# a_988_1260# a_894_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X7 a_894_0# a_828_1260# a_734_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X8 a_94_0# a_28_1260# a_n92_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=3.9p ps=13.3u w=6u l=0.28u
+X9 a_414_0# a_348_1260# a_254_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+X10 a_1854_0# a_1788_1260# a_1694_0# w_n230_n138# pfet_03v3 ad=3.9p pd=13.3u as=1.56p ps=6.52u w=6u l=0.28u
+X11 a_1694_0# a_1628_1260# a_1534_0# w_n230_n138# pfet_03v3 ad=1.56p pd=6.52u as=1.56p ps=6.52u w=6u l=0.28u
+.ends
+
+.subckt inv_1$2 VNW VPW a_2374_6271# a_2254_6227# a_2166_6271# a_2186_6775#
+X0 a_2374_6271# a_2254_6227# a_2166_6271# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X1 a_2374_6271# a_2254_6227# a_2186_6775# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+.ends
+
+.subckt transmission_gate_2$1 I VDDd VSSd ZN pin Bus
+Xnfet$1$4_0 I pin I I Bus pin Bus I pin VSSd nfet$1$4
+Xpfet$1$4_0 pin Bus Bus ZN Bus pin ZN pin ZN ZN pin ZN ZN pin Bus pin ZN Bus Bus ZN
++ pin ZN ZN ZN ZN VDDd pfet$1$4
+Xinv_1$2_0 VDDd VSSd ZN I VSSd VDDd inv_1$2
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__latq_1$1 Q VDD VSS D E VNW VPW
+X0 VSS a_1020_652# Q VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X1 a_504_110# a_36_92# VDD VNW pfet_05v0 ad=0.44p pd=2.88u as=0.476p ps=2.18u w=1u l=0.5u
+X2 VDD a_1020_652# Q VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X3 a_1264_107# a_36_92# a_1020_652# VPW nfet_05v0 ad=0.263p pd=1.49u as=0.182p ps=1.22u w=0.7u l=0.6u
+X4 VSS E a_36_92# VPW nfet_05v0 ad=0.263p pd=1.49u as=0.3476p ps=2.46u w=0.79u l=0.6u
+X5 VSS a_1364_532# a_1264_107# VPW nfet_05v0 ad=0.2054p pd=1.31u as=0.263p ps=1.49u w=0.79u l=0.6u
+X6 VDD E a_36_92# VNW pfet_05v0 ad=0.476p pd=2.18u as=0.6072p ps=3.64u w=1.38u l=0.5u
+X7 VDD a_1364_532# a_1224_652# VNW pfet_05v0 ad=0.3588p pd=1.9u as=0.426p ps=2.08u w=1.38u l=0.5u
+X8 a_872_652# D VDD VNW pfet_05v0 ad=0.12p pd=1.24u as=0.44p ps=2.88u w=1u l=0.5u
+X9 a_1364_532# a_1020_652# VDD VNW pfet_05v0 ad=0.6072p pd=3.64u as=0.3588p ps=1.9u w=1.38u l=0.5u
+X10 a_1020_652# a_504_110# a_872_107# VPW nfet_05v0 ad=0.182p pd=1.22u as=83.99999f ps=0.94u w=0.7u l=0.6u
+X11 a_872_107# D VSS VPW nfet_05v0 ad=83.99999f pd=0.94u as=0.308p ps=2.28u w=0.7u l=0.6u
+X12 a_1020_652# a_36_92# a_872_652# VNW pfet_05v0 ad=0.26p pd=1.52u as=0.12p ps=1.24u w=1u l=0.5u
+X13 a_504_110# a_36_92# VSS VPW nfet_05v0 ad=0.308p pd=2.28u as=0.263p ps=1.49u w=0.7u l=0.6u
+X14 a_1364_532# a_1020_652# VSS VPW nfet_05v0 ad=0.3476p pd=2.46u as=0.2054p ps=1.31u w=0.79u l=0.6u
+X15 a_1224_652# a_504_110# a_1020_652# VNW pfet_05v0 ad=0.426p pd=2.08u as=0.26p ps=1.52u w=1u l=0.5u
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__inv_1$1$1 VDD VSS I ZN VNW VPW
+X0 ZN I VDD VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X1 ZN I VSS VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__nand2_1$1$1 VDD VSS A1 A2 ZN VNW VPW
+X0 ZN A2 VDD VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
+X1 VDD A1 ZN VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X2 ZN A1 a_245_69# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X3 a_245_69# A2 VSS VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt DFF_2phase_1$1 out_m EN D PHI_1 Q I gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW PHI_2 VSS
+Xgf180mcu_fd_sc_mcu9t5v0__latq_1$1_0 Q gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW VSS
++ out_m PHI_2 gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW VSS gf180mcu_fd_sc_mcu9t5v0__latq_1$1
+Xgf180mcu_fd_sc_mcu9t5v0__latq_1$1_1 out_m gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW
++ VSS gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D PHI_1 gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW
++ VSS gf180mcu_fd_sc_mcu9t5v0__latq_1$1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1$1$1_0 gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW VSS
++ gf180mcu_fd_sc_mcu9t5v0__inv_1$1$1_0/I I gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW
++ VSS gf180mcu_fd_sc_mcu9t5v0__inv_1$1$1
+Xgf180mcu_fd_sc_mcu9t5v0__nand2_1$1$1_0 gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW VSS
++ EN Q gf180mcu_fd_sc_mcu9t5v0__inv_1$1$1_0/I gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW
++ VSS gf180mcu_fd_sc_mcu9t5v0__nand2_1$1$1
+.ends
+
+.subckt Angel_one_SW_block$1 DFF_2phase_1$1_0/PHI_1 DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ DFF_2phase_1$1_0/Q transmission_gate_2$1_0/pin DFF_2phase_1$1_0/PHI_2 DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW
++ DFF_2phase_1$1_0/EN transmission_gate_2$1_0/VDDd transmission_gate_2$1_0/Bus VSUBS
+Xtransmission_gate_2$1_0 DFF_2phase_1$1_0/I transmission_gate_2$1_0/VDDd VSUBS transmission_gate_2$1_0/ZN
++ transmission_gate_2$1_0/pin transmission_gate_2$1_0/Bus transmission_gate_2$1
+XDFF_2phase_1$1_0 DFF_2phase_1$1_0/out_m DFF_2phase_1$1_0/EN DFF_2phase_1$1_0/D DFF_2phase_1$1_0/PHI_1
++ DFF_2phase_1$1_0/Q DFF_2phase_1$1_0/I DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/VNW DFF_2phase_1$1_0/PHI_2
++ VSUBS DFF_2phase_1$1
+.ends
+
+.subckt Angel_row_block$1 D_in D_out pin BUS[2] BUS[3] BUS[4] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS EN
+XAngel_one_SW_block$1_0[0] PHI_1 Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[1] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[1] PHI_1 Angel_one_SW_block$1_0[1]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[1]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[2] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[2] PHI_1 Angel_one_SW_block$1_0[2]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[2]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[3] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[3] PHI_1 Angel_one_SW_block$1_0[3]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[3]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[4] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[4] PHI_1 Angel_one_SW_block$1_0[4]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[4]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[5] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[5] PHI_1 Angel_one_SW_block$1_0[5]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[5]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[6] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[6] PHI_1 Angel_one_SW_block$1_0[6]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[6]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[7] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[7] PHI_1 Angel_one_SW_block$1_0[7]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[7]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[8] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[8] PHI_1 Angel_one_SW_block$1_0[8]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[8]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[9] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[9] PHI_1 Angel_one_SW_block$1_0[9]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[9]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[10] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[10] PHI_1 Angel_one_SW_block$1_0[10]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[10]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[11] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[11] PHI_1 Angel_one_SW_block$1_0[11]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[11]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[12] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[12] PHI_1 Angel_one_SW_block$1_0[12]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[12]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[13] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[13] PHI_1 Angel_one_SW_block$1_0[13]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[13]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[14] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[14] PHI_1 Angel_one_SW_block$1_0[14]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_one_SW_block$1_0[14]/DFF_2phase_1$1_0/Q pin PHI_2 VDD EN VDD BUS[15] VSS Angel_one_SW_block$1
+XAngel_one_SW_block$1_0[15] PHI_1 Angel_one_SW_block$1_0[15]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ D_out pin PHI_2 VDD EN VDD BUS[16] VSS Angel_one_SW_block$1
+.ends
+
+.subckt Angel_swmatrix_block$1 EN D_in D_out_row[3] D_out_row[4] D_out_row[5] D_out_row[6]
++ D_out_row[8] D_out_row[9] PHI_2 PHI_1 D_out_row[12] D_out_row[13] D_out_row[14]
++ D_out_row[15] D_out_row[16] D_out_row[17] D_out_row[18] D_out_row[7] D_out D_out_row[1]
++ D_out_row[2] PIN[17] PIN[5] PIN[6] PIN[10] PIN[11] PIN[12] PIN[13] PIN[14] PIN[15]
++ PIN[16] PIN[4] PIN[3] PIN[2] PIN[1] PIN[18] BUS[16] PIN[8] Angel_row_block$1_0[17]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ Angel_row_block$1_0[12]/VDD PIN[7] PIN[9] Angel_row_block$1_0[13]/VDD Angel_row_block$1_0[14]/VDD
++ BUS[8] BUS[9] Angel_row_block$1_0[10]/VDD Angel_row_block$1_0[11]/VDD BUS[2] BUS[13]
++ VDD BUS[12] BUS[10] BUS[3] BUS[14] BUS[11] BUS[1] BUS[15] VSS BUS[5] BUS[4] BUS[6]
++ BUS[7]
+XAngel_row_block$1_0[0] Angel_row_block$1_0[0]/D_in D_out_row[18] PIN[18] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[0]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[0]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[1] Angel_row_block$1_0[1]/D_in D_out_row[17] PIN[17] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[1]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[1]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[2] Angel_row_block$1_0[2]/D_in D_out_row[16] PIN[16] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[2]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[2]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[3] Angel_row_block$1_0[3]/D_in D_out_row[15] PIN[15] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[3]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[3]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[4] Angel_row_block$1_0[4]/D_in D_out_row[14] PIN[14] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[4]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[4]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[5] Angel_row_block$1_0[5]/D_in D_out_row[13] PIN[13] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[5]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[5]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[6] Angel_row_block$1_0[6]/D_in Angel_row_block$1_0[6]/D_out PIN[12]
++ BUS[2] BUS[3] BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15]
++ Angel_row_block$1_0[6]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[6]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[7] Angel_row_block$1_0[7]/D_in PHI_2 PIN[11] BUS[2] BUS[3] BUS[4]
++ BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[7]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[7]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[8] Angel_row_block$1_0[8]/D_in D_out_row[9] PIN[10] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[8]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[8]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[9] Angel_row_block$1_0[9]/D_in D_out_row[8] PIN[9] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[9]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[9]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[10] Angel_row_block$1_0[10]/D_in D_out_row[7] PIN[8] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[10]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[10]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[11] Angel_row_block$1_0[11]/D_in D_out_row[6] PIN[7] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[11]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[11]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[12] Angel_row_block$1_0[12]/D_in D_out_row[5] PIN[6] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[12]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[12]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[13] Angel_row_block$1_0[13]/D_in D_out_row[4] PIN[5] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[13]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[13]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[14] Angel_row_block$1_0[14]/D_in D_out_row[3] PIN[4] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[14]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[14]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+XAngel_row_block$1_0[15] Angel_row_block$1_0[15]/D_in D_out_row[2] PIN[3] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[15]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS EN Angel_row_block$1
+XAngel_row_block$1_0[16] Angel_row_block$1_0[16]/D_in D_out_row[1] PIN[2] BUS[2] BUS[3]
++ BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14] BUS[15] Angel_row_block$1_0[16]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS EN Angel_row_block$1
+XAngel_row_block$1_0[17] Angel_row_block$1_0[17]/D_in Angel_row_block$1_0[17]/D_out
++ PIN[1] BUS[2] BUS[3] BUS[4] BUS[6] BUS[7] BUS[8] BUS[9] BUS[11] BUS[13] BUS[14]
++ BUS[15] Angel_row_block$1_0[17]/Angel_one_SW_block$1_0[0]/DFF_2phase_1$1_0/gf180mcu_fd_sc_mcu9t5v0__latq_1$1_1/D
++ PHI_1 BUS[1] Angel_row_block$1_0[17]/VDD BUS[12] BUS[10] BUS[5] PHI_2 BUS[16] VSS
++ EN Angel_row_block$1
+.ends
+
+.subckt nfet$12$1 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=1.83p pd=7.22u as=1.83p ps=7.22u w=3u l=1u
+.ends
+
+.subckt pfet$14 a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.275p pd=8.3u as=2.275p ps=8.3u w=3.5u l=1u
+.ends
+
+.subckt cap_mim$2 m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=25u c_length=24u
+.ends
+
+.subckt pfet$6$2 a_38_n60# a_n92_0# a_198_0# w_n230_n138#
+X0 a_198_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=0.8u
+.ends
+
+.subckt nfet$11$1 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=3.05p pd=11.22u as=3.05p ps=11.22u w=5u l=1u
+.ends
+
+.subckt nfet$9$3 a_38_n60# a_n84_0# a_560_0# a_438_0#
+X0 a_438_0# a_38_n60# a_n84_0# a_560_0# nfet_03v3 ad=2.745p pd=10.22u as=2.745p ps=10.22u w=4.5u l=2u
+.ends
+
+.subckt nfet$14 a_38_n60# a_n84_0# a_198_0# a_320_0#
+X0 a_198_0# a_38_n60# a_n84_0# a_320_0# nfet_03v3 ad=3.355p pd=12.22u as=3.355p ps=12.22u w=5.5u l=0.8u
+.ends
+
+.subckt nfet$10$1 a_838_0# a_38_n60# a_n84_0# a_960_0#
+X0 a_838_0# a_38_n60# a_n84_0# a_960_0# nfet_03v3 ad=1.22p pd=5.22u as=1.22p ps=5.22u w=2u l=4u
+.ends
+
+.subckt pfet$1$2 a_38_n60# a_n92_0# a_138_0# w_n230_n138#
+X0 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=3.575p pd=12.3u as=3.575p ps=12.3u w=5.5u l=0.5u
+.ends
+
+.subckt opamp_n_input ibias vinp vinn viss vb2 vg1 i_in v_17_16 v_16_12 v_11_7 v_6_9
++ v_2_4 v_3_1 vdd out cap_mim$2_0/m4_n120_n120# m4_n14278_n12150# m1_n16595_n11746#
++ vss
+Xnfet$12$1_0 vss viss vinp v_2_4 nfet$12$1
+Xpfet$14_0 v_17_16 ibias v_16_12 vdd pfet$14
+Xnfet$12$1_1 vss viss vinn v_3_1 nfet$12$1
+Xpfet$14_1 vdd i_in i_in vdd pfet$14
+Xpfet$14_2 vdd i_in vb2 vdd pfet$14
+Xcap_mim$2_0 cap_mim$2_0/m4_n120_n120# v_2_4 cap_mim$2
+Xpfet$14_3 vdd i_in v_17_16 vdd pfet$14
+Xpfet$14_4 i_in ibias ibias vdd pfet$14
+Xpfet$6$2_0[0|0] vg1 vg1 vdd vdd pfet$6$2
+Xpfet$6$2_0[1|0] vg1 vg1 vdd vdd pfet$6$2
+Xpfet$6$2_0[0|1] vg1 vg1 vdd vdd pfet$6$2
+Xpfet$6$2_0[1|1] vg1 vg1 vdd vdd pfet$6$2
+Xpfet$6$2_2 vg1 v_6_9 vdd vdd pfet$6$2
+Xpfet$6$2_1 vg1 vg1 vdd vdd pfet$6$2
+Xpfet$6$2_3[0|0] vg1 v_6_9 vdd vdd pfet$6$2
+Xpfet$6$2_3[1|0] vg1 v_6_9 vdd vdd pfet$6$2
+Xpfet$6$2_3[0|1] vg1 v_6_9 vdd vdd pfet$6$2
+Xpfet$6$2_3[1|1] vg1 v_6_9 vdd vdd pfet$6$2
+Xnfet$11$1_0[0] vss v_2_4 vb2 v_6_9 nfet$11$1
+Xnfet$11$1_0[1] vss v_2_4 vb2 v_6_9 nfet$11$1
+Xnfet$11$1_0[2] vss v_2_4 vb2 v_6_9 nfet$11$1
+Xnfet$9$3_0[0] v_11_7 viss vss vss nfet$9$3
+Xnfet$9$3_0[1] v_11_7 viss vss vss nfet$9$3
+Xnfet$9$3_0[2] v_11_7 viss vss vss nfet$9$3
+Xnfet$11$1_1[0] vss v_2_4 vb2 v_6_9 nfet$11$1
+Xnfet$11$1_1[1] vss v_2_4 vb2 v_6_9 nfet$11$1
+Xnfet$11$1_1[2] vss v_2_4 vb2 v_6_9 nfet$11$1
+Xnfet$9$3_1 v_11_7 v_11_7 vss vss nfet$9$3
+Xnfet$11$1_2[0] vss v_3_1 vb2 vg1 nfet$11$1
+Xnfet$11$1_2[1] vss v_3_1 vb2 vg1 nfet$11$1
+Xnfet$11$1_2[2] vss v_3_1 vb2 vg1 nfet$11$1
+Xnfet$9$3_2 v_16_12 v_16_12 vss v_11_7 nfet$9$3
+Xnfet$11$1_3[0] vss v_3_1 vb2 vg1 nfet$11$1
+Xnfet$11$1_3[1] vss v_3_1 vb2 vg1 nfet$11$1
+Xnfet$11$1_3[2] vss v_3_1 vb2 vg1 nfet$11$1
+Xnfet$14_1 v_11_7 out vss vss nfet$14
+Xnfet$14_0 v_11_7 out vss vss nfet$14
+Xnfet$10$1_0 viss vb2 vb2 vss nfet$10$1
+Xpfet$1$2_0[0] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_0[1] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[0|0] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[1|0] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[2|0] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[3|0] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[0|1] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[1|1] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[2|1] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[3|1] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[0|2] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[1|2] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[2|2] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+Xpfet$1$2_1[3|2] v_6_9 m1_n16595_n11746# vdd vdd pfet$1$2
+.ends
+
+.subckt pfet$16 a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.6p pd=9.3u as=2.6p ps=9.3u w=4u l=1u
+.ends
+
+.subckt nfet$16 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt nfet$1$3 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt I_reference buffer_s opp_s opn_s pcomp_s cascode_s osc_s ncomp_s top_ref vngates_iref_top
++ ibias_opp_10u vcascode_iref_top ibias_pcomp_10u vpgates_iref_top iref_10u_osc vdd
++ ibias_ncomp_10u ibias_opn_10u ibias_buffer_opp vss
+Xpfet$16_0 osc_s iref_10u_osc iref_10u_osc vdd pfet$16
+Xpfet$16_1 ncomp_s ibias_ncomp_10u ibias_ncomp_10u vdd pfet$16
+Xpfet$16_2 vdd vpgates_iref_top ncomp_s vdd pfet$16
+Xpfet$16_3 vdd vpgates_iref_top osc_s vdd pfet$16
+Xpfet$16_4[0] vdd vpgates_iref_top vpgates_iref_top vdd pfet$16
+Xpfet$16_4[1] vpgates_iref_top vcascode_iref_top vcascode_iref_top vdd pfet$16
+Xnfet$16_0 vss opn_s ibias_opn_10u ibias_opn_10u nfet$16
+Xnfet$16_1 vss pcomp_s ibias_pcomp_10u ibias_pcomp_10u nfet$16
+Xnfet$16_2 vss cascode_s vcascode_iref_top vcascode_iref_top nfet$16
+Xnfet$16_3 vss opp_s ibias_opp_10u ibias_opp_10u nfet$16
+Xnfet$16_4 vss buffer_s ibias_buffer_opp ibias_buffer_opp nfet$16
+Xnfet$1$3_1[0] vss vss vngates_iref_top opn_s nfet$1$3
+Xnfet$1$3_1[1] vss vss vngates_iref_top pcomp_s nfet$1$3
+Xnfet$1$3_1[2] vss vss vngates_iref_top cascode_s nfet$1$3
+Xnfet$1$3_0 vss vngates_iref_top top_ref top_ref nfet$1$3
+Xnfet$1$3_2[0] vss vss vngates_iref_top opp_s nfet$1$3
+Xnfet$1$3_2[1] vss vss vngates_iref_top buffer_s nfet$1$3
+Xnfet$1$3_2[2] vss vss vngates_iref_top vngates_iref_top nfet$1$3
+.ends
+
+.subckt pfet$3$3 a_28_1060# a_n92_0# a_94_0# w_n230_n138#
+X0 a_94_0# a_28_1060# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=0.28u
+.ends
+
+.subckt Output_Stage_p$2 pfet$3$3_0/a_n92_0# m1_1501_n36# m1_1393_1036# m1_n521_1120#
++ m1_n409_30#
+Xpfet$3$3_0 m1_n521_1120# pfet$3$3_0/a_n92_0# m1_n409_30# m1_n409_30# pfet$3$3
+Xpfet$3$3_1 m1_1393_1036# m1_1501_n36# m1_n409_30# m1_n409_30# pfet$3$3
+.ends
+
+.subckt nfet$10 a_216_0# a_n84_0# a_94_0# a_30_1060#
+X0 a_94_0# a_30_1060# a_n84_0# a_216_0# nfet_03v3 ad=3.05p pd=11.22u as=3.05p ps=11.22u w=5u l=0.28u
+.ends
+
+.subckt Output_Stage_n nfet$10_0/a_n84_0# m1_2313_1219# m1_996_1314# m1_2421_212#
++ VSUBS
+Xnfet$10_0 VSUBS nfet$10_0/a_n84_0# VSUBS m1_996_1314# nfet$10
+Xnfet$10_1 VSUBS m1_2421_212# VSUBS m1_2313_1219# nfet$10
+.ends
+
+.subckt Output_Stage vout vdd vin_pmos vin_nmos vss
+XOutput_Stage_p$2_0[0|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|0] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|1] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|2] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|3] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|4] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|5] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|6] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|7] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|8] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|9] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|10] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|11] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|12] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|13] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|14] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|15] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|16] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|17] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|18] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[0|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[1|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[2|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[3|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[4|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[5|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[6|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[7|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[8|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[9|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[10|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[11|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[12|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[13|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[14|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_p$2_0[15|19] vout vout vin_pmos vin_pmos vdd Output_Stage_p$2
+XOutput_Stage_n_0[0|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|0] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|1] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|2] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|3] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|4] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|5] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|6] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|7] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|8] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[0|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[1|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[2|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[3|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[4|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[5|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[6|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[7|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[8|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[9|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[10|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[11|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[12|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+XOutput_Stage_n_0[13|9] vout vin_nmos vin_nmos vout vss Output_Stage_n
+.ends
+
+.subckt nand2_1$1 VNW VPW a_2809_3578# a_2709_3030# a_2621_3074# a_2893_3030# a_2621_3578#
+X0 a_2621_3578# a_2893_3030# a_2809_3578# VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X1 a_2809_3578# a_2893_3030# a_2829_3074# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X2 a_2809_3578# a_2709_3030# a_2621_3578# VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
+X3 a_2829_3074# a_2709_3030# a_2621_3074# VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt inv_8$1 VNW VPW a_4630_5296# a_4818_5296# a_4718_4748# a_4630_4792#
+X0 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X1 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X2 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X3 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X4 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X5 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X6 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X7 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X8 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X9 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X10 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X11 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X12 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X13 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X14 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X15 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+.ends
+
+.subckt nand2_1 VNW VPW a_2809_3578# a_2709_3030# a_2621_3074# a_2893_3030# a_2621_3578#
+X0 a_2621_3578# a_2893_3030# a_2809_3578# VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X1 a_2809_3578# a_2893_3030# a_2829_3074# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X2 a_2809_3578# a_2709_3030# a_2621_3578# VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
+X3 a_2829_3074# a_2709_3030# a_2621_3074# VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt cap_mim$1$1 m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=27u c_length=27u
+.ends
+
+.subckt inv_1$1 VNW VPW a_3844_3074# a_4052_3074# a_3864_3578# a_3932_3030#
+X0 a_4052_3074# a_3932_3030# a_3844_3074# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X1 a_4052_3074# a_3932_3030# a_3864_3578# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+.ends
+
+.subckt inv_8 VNW VPW a_4630_5296# a_4818_5296# a_4718_4748# a_4630_4792#
+X0 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X1 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X2 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X3 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X4 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X5 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X6 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X7 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X8 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X9 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X10 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X11 a_4630_5296# a_4718_4748# a_4818_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X12 a_4818_5296# a_4718_4748# a_4630_5296# VNW pfet_05v0 ad=0.5673p pd=2.45u as=0.5673p ps=2.45u w=1.83u l=0.5u
+X13 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X14 a_4630_4792# a_4718_4748# a_4818_5296# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X15 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.3432p ps=1.84u w=1.32u l=0.6u
+.ends
+
+.subckt inv_1$1$1 VNW VPW a_3844_3074# a_4052_3074# a_3864_3578# a_3932_3030#
+X0 a_4052_3074# a_3932_3030# a_3844_3074# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X1 a_4052_3074# a_3932_3030# a_3864_3578# VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+.ends
+
+.subckt op_Deadtime_Driver vin n1 vout_nmos n4 n2 n3 vout_pmos vdd vss
+Xnand2_1$1_0 vdd vss n3 vin vss n2 vdd nand2_1$1
+Xinv_8$1_0 vdd vss vdd vout_nmos n2 vss inv_8$1
+Xnand2_1_0 vdd vss n2 n1 vss n3 vdd nand2_1
+Xcap_mim$1$1_0 vss n2 cap_mim$1$1
+Xcap_mim$1$1_1 vss n3 cap_mim$1$1
+Xinv_1$1_0 vdd vss vss n4 vdd n3 inv_1$1
+Xinv_8_0 vdd vss vdd vout_pmos n4 vss inv_8
+Xinv_1$1$1_0 vdd vss vss n1 vdd vin inv_1$1$1
+.ends
+
+.subckt pfet$3$6 a_242_n60# a_38_n60# a_n92_0# a_342_0# a_138_0# w_n230_n138#
+X0 a_342_0# a_242_n60# a_138_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.5u
+X1 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.5u
+.ends
+
+.subckt nfet$15 a_342_n60# a_238_0# a_542_0# a_38_n60# a_n84_0# a_664_0#
+X0 a_542_0# a_342_n60# a_238_0# a_664_0# nfet_03v3 ad=1.525p pd=6.22u as=0.65p ps=3.02u w=2.5u l=1u
+X1 a_238_0# a_38_n60# a_n84_0# a_664_0# nfet_03v3 ad=0.65p pd=3.02u as=1.525p ps=6.22u w=2.5u l=1u
+.ends
+
+.subckt pfet$1$3 a_242_n60# a_38_n60# a_n92_0# a_342_0# a_138_0# w_n230_n138#
+X0 a_342_0# a_242_n60# a_138_0# w_n230_n138# pfet_03v3 ad=5.3625p pd=17.8u as=2.145p ps=8.77u w=8.25u l=0.5u
+X1 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.145p pd=8.77u as=5.3625p ps=17.8u w=8.25u l=0.5u
+.ends
+
+.subckt nfet$6$1 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.135p pd=8.22u as=2.135p ps=8.22u w=3.5u l=1u
+.ends
+
+.subckt nfet$2$1 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=1.525p pd=6.22u as=1.525p ps=6.22u w=2.5u l=1u
+.ends
+
+.subckt nfet$5$1 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt Nmos_Comparator$1 vdd inp inn v_5_11_n v_3_7_n i_bias_n vout v_6_9_n iref
++ vss
+Xpfet$3$6_1 v_5_11_n v_5_11_n vdd vdd v_6_9_n vdd pfet$3$6
+Xpfet$3$6_0 v_6_9_n v_6_9_n vdd vdd v_5_11_n vdd pfet$3$6
+Xpfet$3$6_2 v_5_11_n v_5_11_n vdd vdd v_5_11_n vdd pfet$3$6
+Xnfet$15_0 iref i_bias_n vss iref vss vss nfet$15
+Xpfet$3$6_3 v_6_9_n v_6_9_n vdd vdd v_6_9_n vdd pfet$3$6
+Xpfet$1$3_0 v_6_9_n v_6_9_n vdd vdd vout vdd pfet$1$3
+Xpfet$1$3_1 v_5_11_n v_5_11_n vdd vdd v_3_7_n vdd pfet$1$3
+Xnfet$6$1_0 vss vss v_3_7_n v_3_7_n nfet$6$1
+Xnfet$6$1_1 vss vss v_3_7_n vout nfet$6$1
+Xnfet$2$1_0 vss vss iref iref nfet$2$1
+Xnfet$5$1_0 vss i_bias_n inp v_6_9_n nfet$5$1
+Xnfet$5$1_1 vss i_bias_n inn v_5_11_n nfet$5$1
+.ends
+
+.subckt pfet$4$2 a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=2.6p pd=9.3u as=2.6p ps=9.3u w=4u l=1u
+.ends
+
+.subckt pfet$5$3 a_1054_0# a_382_0# a_606_0# a_486_n60# a_262_n60# a_158_0# a_1158_n60#
++ a_38_n60# a_n92_0# a_934_n60# a_710_n60# a_830_0# a_1278_0# w_n230_n138#
+X0 a_1278_0# a_1158_n60# a_1054_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.6u
+X1 a_830_0# a_710_n60# a_606_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X2 a_1054_0# a_934_n60# a_830_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X3 a_382_0# a_262_n60# a_158_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X4 a_606_0# a_486_n60# a_382_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X5 a_158_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.6u
+.ends
+
+.subckt nfet$1$2 vss a_238_0# a_n84_0# a_38_n132#
+X0 a_238_0# a_38_n132# a_n84_0# vss nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt pfet$7$1 a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=2.925p pd=10.3u as=2.925p ps=10.3u w=4.5u l=1u
+.ends
+
+.subckt pfet$3$5 a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.925p pd=10.3u as=2.925p ps=10.3u w=4.5u l=1u
+.ends
+
+.subckt pfet$13 a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=1u
+.ends
+
+.subckt cap_mim$1 m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=25u c_length=24u
+.ends
+
+.subckt nfet$12 a_952_0# a_382_0# a_606_0# a_486_n60# a_262_n60# a_158_0# a_38_n60#
++ a_n84_0# a_710_n60# a_830_0#
+X0 a_830_0# a_710_n60# a_606_0# a_952_0# nfet_03v3 ad=3.355p pd=12.22u as=1.43p ps=6.02u w=5.5u l=0.6u
+X1 a_382_0# a_262_n60# a_158_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=1.43p ps=6.02u w=5.5u l=0.6u
+X2 a_606_0# a_486_n60# a_382_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=1.43p ps=6.02u w=5.5u l=0.6u
+X3 a_158_0# a_38_n60# a_n84_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=3.355p ps=12.22u w=5.5u l=0.6u
+.ends
+
+.subckt nfet$13$1 a_360_0# a_238_0# a_n84_0# a_38_n132#
+X0 a_238_0# a_38_n132# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt pfet$6$1 a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=1u
+.ends
+
+.subckt nfet$9$2 a_1960_0# a_1838_0# a_n84_0# a_38_n132#
+X0 a_1838_0# a_38_n132# a_n84_0# a_1960_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=9u
+.ends
+
+.subckt opamp_p_input$1 vcomp vb2 vb3 vdd vg1 viss out vc45 ibias vinn vinp vo1 m4_8030_n6441#
++ vss
+Xpfet$4$2_3[0] viss vg1 vinn vdd pfet$4$2
+Xpfet$4$2_3[1] viss vg1 vinn vdd pfet$4$2
+Xpfet$5$3_0 out vdd out vb3 vb3 out vb3 vb3 vdd vb3 vb3 vdd vdd vdd pfet$5$3
+Xnfet$1$2_0[0] vss vc45 vg1 vb2 nfet$1$2
+Xnfet$1$2_0[1] vss vc45 vg1 vb2 nfet$1$2
+Xpfet$7$1_0[0] vb3 ibias ibias vdd pfet$7$1
+Xpfet$7$1_0[1] vdd vb3 vb3 vdd pfet$7$1
+Xpfet$7$1_1 vdd vb2 vb3 vdd pfet$7$1
+Xpfet$3$5_0[0] vb3 ibias ibias vdd pfet$3$5
+Xpfet$3$5_0[1] vdd vb3 vb3 vdd pfet$3$5
+Xpfet$13_0[0] vdd viss vb3 vdd pfet$13
+Xpfet$13_0[1] vdd viss vb3 vdd pfet$13
+Xcap_mim$1_0 m4_8030_n6441# out cap_mim$1
+Xnfet$12_0 vss vss out vo1 vo1 out vo1 vss vo1 vss nfet$12
+Xnfet$13$1_1[0] vss vcomp vo1 vb2 nfet$13$1
+Xnfet$13$1_1[1] vss vcomp vo1 vb2 nfet$13$1
+Xnfet$13$1_0[0] vss vss vcomp vg1 nfet$13$1
+Xnfet$13$1_0[1] vss vss vcomp vg1 nfet$13$1
+Xpfet$6$1_0[0] vdd vb3 viss vdd pfet$6$1
+Xpfet$6$1_0[1] vdd vb3 viss vdd pfet$6$1
+Xpfet$6$1_0[2] vdd vb3 viss vdd pfet$6$1
+Xnfet$13$1_2[0] vss vss vc45 vg1 nfet$13$1
+Xnfet$13$1_2[1] vss vss vc45 vg1 nfet$13$1
+Xpfet$4$2_0[0] viss vo1 vinp vdd pfet$4$2
+Xpfet$4$2_0[1] viss vo1 vinp vdd pfet$4$2
+Xpfet$4$2_1[0] viss vg1 vinn vdd pfet$4$2
+Xpfet$4$2_1[1] viss vg1 vinn vdd pfet$4$2
+Xnfet$9$2_0 vss vss vb2 vb2 nfet$9$2
+Xpfet$4$2_2[0] viss vo1 vinp vdd pfet$4$2
+Xpfet$4$2_2[1] viss vo1 vinp vdd pfet$4$2
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__nand2_1 A1 A2 VDD VSS ZN VNW VPW
+X0 ZN A2 VDD VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
+X1 VDD A1 ZN VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X2 ZN A1 a_245_69# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X3 a_245_69# A2 VSS VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt gf180mcu_fd_sc_mcu9t5v0__inv_1 ZN VSS VDD I VNW VPW
+X0 ZN I VDD VNW pfet_05v0 ad=0.8052p pd=4.54u as=0.8052p ps=4.54u w=1.83u l=0.5u
+X1 ZN I VSS VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.5808p ps=3.52u w=1.32u l=0.6u
+.ends
+
+.subckt NO_ClkGen CLKbuf CLKB CLK gf180mcu_fd_sc_mcu9t5v0__inv_1_1/I PHI_2 gf180mcu_fd_sc_mcu9t5v0__inv_1_9/I
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_3/I PHI_1 gf180mcu_fd_sc_mcu9t5v0__inv_1_4/ZN gf180mcu_fd_sc_mcu9t5v0__inv_1_7/I
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_0/ZN
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_4/I
+Xgf180mcu_fd_sc_mcu9t5v0__nand2_1_0 CLKB gf180mcu_fd_sc_mcu9t5v0__inv_1_0/ZN gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_1/I gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS
++ gf180mcu_fd_sc_mcu9t5v0__nand2_1
+Xgf180mcu_fd_sc_mcu9t5v0__nand2_1_1 gf180mcu_fd_sc_mcu9t5v0__inv_1_4/ZN CLKbuf gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_7/I gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS
++ gf180mcu_fd_sc_mcu9t5v0__nand2_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_0 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/ZN VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_1 PHI_2 VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_1/I gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_2 gf180mcu_fd_sc_mcu9t5v0__inv_1_3/I VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ PHI_2 gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_3 gf180mcu_fd_sc_mcu9t5v0__inv_1_4/I VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_3/I gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_4 gf180mcu_fd_sc_mcu9t5v0__inv_1_4/ZN VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_4/I gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_5 CLKB VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ CLK gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_6 CLKbuf VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ CLKB gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_7 PHI_1 VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_7/I gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_8 gf180mcu_fd_sc_mcu9t5v0__inv_1_9/I VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ PHI_1 gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+Xgf180mcu_fd_sc_mcu9t5v0__inv_1_9 gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
++ gf180mcu_fd_sc_mcu9t5v0__inv_1_9/I gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW VSUBS gf180mcu_fd_sc_mcu9t5v0__inv_1
+.ends
+
+.subckt pfet$3$4 a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.925p pd=10.3u as=2.925p ps=10.3u w=4.5u l=1u
+.ends
+
+.subckt pfet$6 a_238_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=1u
+.ends
+
+.subckt nfet$13 a_360_0# a_238_0# a_n84_0# a_38_n132#
+X0 a_238_0# a_38_n132# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt pfet$12 a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=3.25p ps=11.3u w=5u l=1u
+.ends
+
+.subckt cap_mim m4_n120_n120# m4_0_0#
+X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=25u c_length=24u
+.ends
+
+.subckt nfet$11 a_952_0# a_382_0# a_606_0# a_486_n60# a_262_n60# a_158_0# a_38_n60#
++ a_n84_0# a_710_n60# a_830_0#
+X0 a_830_0# a_710_n60# a_606_0# a_952_0# nfet_03v3 ad=3.355p pd=12.22u as=1.43p ps=6.02u w=5.5u l=0.6u
+X1 a_382_0# a_262_n60# a_158_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=1.43p ps=6.02u w=5.5u l=0.6u
+X2 a_606_0# a_486_n60# a_382_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=1.43p ps=6.02u w=5.5u l=0.6u
+X3 a_158_0# a_38_n60# a_n84_0# a_952_0# nfet_03v3 ad=1.43p pd=6.02u as=3.355p ps=12.22u w=5.5u l=0.6u
+.ends
+
+.subckt pfet$4$1 a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=2.6p pd=9.3u as=2.6p ps=9.3u w=4u l=1u
+.ends
+
+.subckt nfet$9$1 a_1960_0# a_1838_0# a_n84_0# a_38_n132#
+X0 a_1838_0# a_38_n132# a_n84_0# a_1960_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=9u
+.ends
+
+.subckt pfet$7 a_238_0# a_n92_0# a_38_n136# w_n230_n138#
+X0 a_238_0# a_38_n136# a_n92_0# w_n230_n138# pfet_03v3 ad=2.925p pd=10.3u as=2.925p ps=10.3u w=4.5u l=1u
+.ends
+
+.subckt pfet$5$2 a_1054_0# a_382_0# a_606_0# a_486_n60# a_262_n60# a_158_0# a_1158_n60#
++ a_38_n60# a_n92_0# a_934_n60# a_710_n60# a_830_0# a_1278_0# w_n230_n138#
+X0 a_1278_0# a_1158_n60# a_1054_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.6u
+X1 a_830_0# a_710_n60# a_606_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X2 a_1054_0# a_934_n60# a_830_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X3 a_382_0# a_262_n60# a_158_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X4 a_606_0# a_486_n60# a_382_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X5 a_158_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.6u
+.ends
+
+.subckt nfet$1$1 vss a_238_0# a_n84_0# a_38_n132#
+X0 a_238_0# a_38_n132# a_n84_0# vss nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt opamp_p_input vcomp vb2 vb3 vdd vg1 viss out ibias vc45 vinn vinp vo1 m4_3674_n3720#
++ vss
+Xpfet$3$4_0[0] vb3 ibias ibias vdd pfet$3$4
+Xpfet$3$4_0[1] vdd vb3 vb3 vdd pfet$3$4
+Xpfet$6_0[0] vdd vb3 viss vdd pfet$6
+Xpfet$6_0[1] vdd vb3 viss vdd pfet$6
+Xpfet$6_0[2] vdd vb3 viss vdd pfet$6
+Xnfet$13_0[0] vss vss vc45 vg1 nfet$13
+Xnfet$13_0[1] vss vss vc45 vg1 nfet$13
+Xpfet$12_0[0] vdd viss vb3 vdd pfet$12
+Xpfet$12_0[1] vdd viss vb3 vdd pfet$12
+Xnfet$13_1[0] vss vcomp vo1 vb2 nfet$13
+Xnfet$13_1[1] vss vcomp vo1 vb2 nfet$13
+Xcap_mim_0 m4_3674_n3720# out cap_mim
+Xnfet$13_2[0] vss vss vcomp vg1 nfet$13
+Xnfet$13_2[1] vss vss vcomp vg1 nfet$13
+Xnfet$11_0 vss vss out vo1 vo1 out vo1 vss vo1 vss nfet$11
+Xpfet$4$1_0[0] viss vo1 vinp vdd pfet$4$1
+Xpfet$4$1_0[1] viss vo1 vinp vdd pfet$4$1
+Xpfet$4$1_1[0] viss vg1 vinn vdd pfet$4$1
+Xpfet$4$1_1[1] viss vg1 vinn vdd pfet$4$1
+Xpfet$4$1_3[0] viss vg1 vinn vdd pfet$4$1
+Xpfet$4$1_3[1] viss vg1 vinn vdd pfet$4$1
+Xpfet$4$1_2[0] viss vo1 vinp vdd pfet$4$1
+Xpfet$4$1_2[1] viss vo1 vinp vdd pfet$4$1
+Xnfet$9$1_0 vss vss vb2 vb2 nfet$9$1
+Xpfet$7_0 vdd vb2 vb3 vdd pfet$7
+Xpfet$7_1[0] vb3 ibias ibias vdd pfet$7
+Xpfet$7_1[1] vdd vb3 vb3 vdd pfet$7
+Xpfet$5$2_0 out vdd out vb3 vb3 out vb3 vb3 vdd vb3 vb3 vdd vdd vdd pfet$5$2
+Xnfet$1$1_0[0] vss vc45 vg1 vb2 nfet$1$1
+Xnfet$1$1_0[1] vss vc45 vg1 vb2 nfet$1$1
+.ends
+
+.subckt pfet$8 a_238_0# a_38_n60# w_n200_n138# a_n92_0#
+X0 a_238_0# a_38_n60# a_n92_0# w_n200_n138# pfet_03v3 ad=2.925p pd=10.3u as=2.925p ps=10.3u w=4.5u l=1u
+.ends
+
+.subckt pfet$4 a_342_n60# a_238_0# a_542_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_542_0# a_342_n60# a_238_0# w_n230_n138# pfet_03v3 ad=2.275p pd=8.3u as=0.91p ps=4.02u w=3.5u l=1u
+X1 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=0.91p pd=4.02u as=2.275p ps=8.3u w=3.5u l=1u
+.ends
+
+.subckt pfet$2 a_846_0# a_342_n60# a_238_0# a_950_n60# a_542_0# a_38_n60# a_n92_0#
++ a_1150_0# a_646_n60# w_n230_n138#
+X0 a_846_0# a_646_n60# a_542_0# w_n230_n138# pfet_03v3 ad=0.78p pd=3.52u as=0.78p ps=3.52u w=3u l=1u
+X1 a_1150_0# a_950_n60# a_846_0# w_n230_n138# pfet_03v3 ad=1.95p pd=7.3u as=0.78p ps=3.52u w=3u l=1u
+X2 a_542_0# a_342_n60# a_238_0# w_n230_n138# pfet_03v3 ad=0.78p pd=3.52u as=0.78p ps=3.52u w=3u l=1u
+X3 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=0.78p pd=3.52u as=1.95p ps=7.3u w=3u l=1u
+.ends
+
+.subckt nfet$3 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=3.355p pd=12.22u as=3.355p ps=12.22u w=5.5u l=1u
+.ends
+
+.subckt pfet$5 a_1054_0# a_382_0# a_606_0# a_486_n60# a_262_n60# a_158_0# a_38_n60#
++ a_n92_0# a_934_n60# a_710_n60# a_830_0# w_n230_n138#
+X0 a_830_0# a_710_n60# a_606_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X1 a_1054_0# a_934_n60# a_830_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.6u
+X2 a_382_0# a_262_n60# a_158_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X3 a_606_0# a_486_n60# a_382_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X4 a_158_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.6u
+.ends
+
+.subckt pfet$3$1 a_846_0# a_342_n60# a_238_0# a_950_n60# a_542_0# a_38_n60# a_n92_0#
++ a_1150_0# a_646_n60# w_n230_n138#
+X0 a_846_0# a_646_n60# a_542_0# w_n230_n138# pfet_03v3 ad=0.91p pd=4.02u as=0.91p ps=4.02u w=3.5u l=1u
+X1 a_1150_0# a_950_n60# a_846_0# w_n230_n138# pfet_03v3 ad=2.275p pd=8.3u as=0.91p ps=4.02u w=3.5u l=1u
+X2 a_542_0# a_342_n60# a_238_0# w_n230_n138# pfet_03v3 ad=0.91p pd=4.02u as=0.91p ps=4.02u w=3.5u l=1u
+X3 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=0.91p pd=4.02u as=2.275p ps=8.3u w=3.5u l=1u
+.ends
+
+.subckt Pmos_Comparator vcompp v_7_3_p v_5_11_p v_6_9_p vdd ibias_compp ibias_p m1_n1348_64#
++ m1_664_66# m1_n492_1809# VSUBS
+Xpfet$4_0 m1_n492_1809# m1_n492_1809# vdd m1_n492_1809# vdd vdd pfet$4
+Xpfet$2_0 v_5_11_p m1_n1348_64# v_5_11_p m1_n1348_64# ibias_p m1_n1348_64# ibias_p
++ ibias_p m1_n1348_64# vdd pfet$2
+Xpfet$2_1 v_6_9_p m1_664_66# v_6_9_p m1_664_66# ibias_p m1_664_66# ibias_p ibias_p
++ m1_664_66# vdd pfet$2
+Xnfet$3_0 VSUBS VSUBS v_6_9_p v_5_11_p nfet$3
+Xnfet$3_1 VSUBS VSUBS v_6_9_p vcompp nfet$3
+Xnfet$3_2 VSUBS VSUBS v_6_9_p v_6_9_p nfet$3
+Xnfet$3_3 VSUBS VSUBS v_5_11_p v_6_9_p nfet$3
+Xnfet$3_4 VSUBS VSUBS v_5_11_p v_5_11_p nfet$3
+Xnfet$3_5 VSUBS VSUBS v_5_11_p v_7_3_p nfet$3
+Xpfet$5_0 vdd v_7_3_p vdd v_7_3_p v_7_3_p vdd v_7_3_p v_7_3_p v_7_3_p v_7_3_p v_7_3_p
++ vdd pfet$5
+Xpfet$5_1 vdd vcompp vdd v_7_3_p v_7_3_p vdd v_7_3_p vcompp v_7_3_p v_7_3_p vcompp
++ vdd pfet$5
+Xpfet$3$1_0 ibias_p m1_n492_1809# ibias_p m1_n492_1809# vdd m1_n492_1809# vdd vdd
++ m1_n492_1809# vdd pfet$3$1
+.ends
+
+.subckt pfet$10 a_98_0# a_30_860# a_n92_0# w_n230_n138#
+X0 a_98_0# a_30_860# a_n92_0# w_n230_n138# pfet_03v3 ad=2.6p pd=9.3u as=2.6p ps=9.3u w=4u l=0.3u
+.ends
+
+.subckt nfet$8 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=1.525p pd=6.22u as=1.525p ps=6.22u w=2.5u l=1u
+.ends
+
+.subckt nand2_2 VNW VPW a_1371_7154# a_1371_6762# a_1909_6762# a_1327_6850# a_1327_7034#
+X0 a_1371_7154# a_1327_7034# a_1371_6970# VPW nfet_05v0 ad=0.3432p pd=1.84u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X1 a_1909_6762# a_1327_7034# a_1371_7154# VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X2 a_1371_7378# a_1327_7034# a_1371_7154# VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.3432p ps=1.84u w=1.32u l=0.6u
+X3 a_1371_7154# a_1327_6850# a_1909_6762# VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.7238p ps=4.17u w=1.645u l=0.5u
+X4 a_1371_6970# a_1327_6850# a_1371_6762# VPW nfet_05v0 ad=0.2112p pd=1.64u as=0.5808p ps=3.52u w=1.32u l=0.6u
+X5 a_1371_7154# a_1327_7034# a_1909_6762# VNW pfet_05v0 ad=0.4277p pd=2.165u as=0.4277p ps=2.165u w=1.645u l=0.5u
+X6 a_1371_6762# a_1327_6850# a_1371_7378# VPW nfet_05v0 ad=0.5808p pd=3.52u as=0.2112p ps=1.64u w=1.32u l=0.6u
+X7 a_1909_6762# a_1327_6850# a_1371_7154# VNW pfet_05v0 ad=0.7238p pd=4.17u as=0.4277p ps=2.165u w=1.645u l=0.5u
+.ends
+
+.subckt nfet$4 a_98_0# a_n84_0# a_220_0# a_32_860#
+X0 a_98_0# a_32_860# a_n84_0# a_220_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=0.3u
+.ends
+
+.subckt nfet$5 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.44p pd=9.22u as=2.44p ps=9.22u w=4u l=1u
+.ends
+
+.subckt pfet$1$1 a_242_n60# a_38_n60# a_n92_0# a_342_0# a_138_0# w_n230_n138#
+X0 a_342_0# a_242_n60# a_138_0# w_n230_n138# pfet_03v3 ad=5.3625p pd=17.8u as=2.145p ps=8.77u w=8.25u l=0.5u
+X1 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=2.145p pd=8.77u as=5.3625p ps=17.8u w=8.25u l=0.5u
+.ends
+
+.subckt nfet a_342_n60# a_238_0# a_542_0# a_38_n60# a_n84_0# a_664_0#
+X0 a_542_0# a_342_n60# a_238_0# a_664_0# nfet_03v3 ad=1.525p pd=6.22u as=0.65p ps=3.02u w=2.5u l=1u
+X1 a_238_0# a_38_n60# a_n84_0# a_664_0# nfet_03v3 ad=0.65p pd=3.02u as=1.525p ps=6.22u w=2.5u l=1u
+.ends
+
+.subckt pfet$3 a_242_n60# a_38_n60# a_n92_0# a_342_0# a_138_0# w_n230_n138#
+X0 a_342_0# a_242_n60# a_138_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.5u
+X1 a_138_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.5u
+.ends
+
+.subckt nfet$6 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=2.135p pd=8.22u as=2.135p ps=8.22u w=3.5u l=1u
+.ends
+
+.subckt nfet$2 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=1.525p pd=6.22u as=1.525p ps=6.22u w=2.5u l=1u
+.ends
+
+.subckt Nmos_Comparator vss vcompn v_6_9_n i_bias_n v_3_7_n v_5_11_n m1_n922_n1160#
++ vdd m1_n316_n956# m1_n1190_n958# VSUBS
+Xnfet$5_0 VSUBS i_bias_n m1_n316_n956# v_6_9_n nfet$5
+Xnfet$5_1 VSUBS i_bias_n m1_n1190_n958# v_5_11_n nfet$5
+Xpfet$1$1_0 v_6_9_n v_6_9_n vdd vdd vcompn vdd pfet$1$1
+Xpfet$1$1_1 v_5_11_n v_5_11_n vdd vdd v_3_7_n vdd pfet$1$1
+Xnfet_0 m1_n922_n1160# i_bias_n VSUBS m1_n922_n1160# VSUBS VSUBS nfet
+Xpfet$3_0 v_6_9_n v_6_9_n vdd vdd v_5_11_n vdd pfet$3
+Xnfet$6_0 VSUBS VSUBS v_3_7_n v_3_7_n nfet$6
+Xpfet$3_1 v_5_11_n v_5_11_n vdd vdd v_6_9_n vdd pfet$3
+Xnfet$6_1 VSUBS VSUBS v_3_7_n vcompn nfet$6
+Xpfet$3_2 v_5_11_n v_5_11_n vdd vdd v_5_11_n vdd pfet$3
+Xpfet$3_3 v_6_9_n v_6_9_n vdd vdd v_6_9_n vdd pfet$3
+Xnfet$2_0 VSUBS VSUBS m1_n922_n1160# m1_n922_n1160# nfet$2
+.ends
+
+.subckt triangle_osc vddd iref vdd v_4_1_pn q ibias_compn vlo v_8_7 v_5_6 out ibias_compp
++ nq vho Pmos_Comparator_0/vdd Nmos_Comparator_0/vss vss
+Xpfet$8_0[0] vdd v_4_1_pn vdd v_5_6 pfet$8
+Xpfet$8_0[1] vdd v_4_1_pn vdd v_5_6 pfet$8
+Xpfet$8_0[2] vdd v_4_1_pn vdd v_5_6 pfet$8
+Xpfet$8_1[0] vdd v_4_1_pn vdd v_4_1_pn pfet$8
+Xpfet$8_1[1] vdd v_4_1_pn vdd v_4_1_pn pfet$8
+Xpfet$8_1[2] vdd v_4_1_pn vdd v_4_1_pn pfet$8
+Xpfet$8_2 vdd v_4_1_pn vdd ibias_compn pfet$8
+XPmos_Comparator_0 Pmos_Comparator_0/vcompp Pmos_Comparator_0/v_7_3_p Pmos_Comparator_0/v_5_11_p
++ Pmos_Comparator_0/v_6_9_p Pmos_Comparator_0/vdd ibias_compp Pmos_Comparator_0/ibias_p
++ vlo out ibias_compp vss Pmos_Comparator
+Xpfet$10_0[0] v_5_6 nq out vdd pfet$10
+Xpfet$10_0[1] v_5_6 nq out vdd pfet$10
+Xnfet$8_0 vss vss iref iref nfet$8
+Xnfet$8_1 vss vss iref ibias_compp nfet$8
+Xnfet$8_2[0] vss vss iref v_4_1_pn nfet$8
+Xnfet$8_2[1] vss vss iref v_4_1_pn nfet$8
+Xnfet$8_2[2] vss vss iref v_4_1_pn nfet$8
+Xnfet$8_3[0] vss vss iref v_8_7 nfet$8
+Xnfet$8_3[1] vss vss iref v_8_7 nfet$8
+Xnfet$8_3[2] vss vss iref v_8_7 nfet$8
+Xnand2_2_0[0] vddd vss nq vss vddd q Nmos_Comparator_0/vcompn nand2_2
+Xnand2_2_0[1] vddd vss q vss vddd nq Pmos_Comparator_0/vcompp nand2_2
+Xnfet$4_0 v_8_7 out vss nq nfet$4
+XNmos_Comparator_0 Nmos_Comparator_0/vss Nmos_Comparator_0/vcompn Nmos_Comparator_0/v_6_9_n
++ Nmos_Comparator_0/i_bias_n Nmos_Comparator_0/v_3_7_n Nmos_Comparator_0/v_5_11_n
++ ibias_compn vdd vho out vss Nmos_Comparator
+.ends
+
+.subckt pfet$2$1 a_846_0# a_342_n60# a_238_0# a_950_n60# a_542_0# a_38_n60# a_n92_0#
++ a_1150_0# a_646_n60# w_n230_n138#
+X0 a_846_0# a_646_n60# a_542_0# w_n230_n138# pfet_03v3 ad=0.78p pd=3.52u as=0.78p ps=3.52u w=3u l=1u
+X1 a_1150_0# a_950_n60# a_846_0# w_n230_n138# pfet_03v3 ad=1.95p pd=7.3u as=0.78p ps=3.52u w=3u l=1u
+X2 a_542_0# a_342_n60# a_238_0# w_n230_n138# pfet_03v3 ad=0.78p pd=3.52u as=0.78p ps=3.52u w=3u l=1u
+X3 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=0.78p pd=3.52u as=1.95p ps=7.3u w=3u l=1u
+.ends
+
+.subckt nfet$9 a_360_0# a_238_0# a_38_n60# a_n84_0#
+X0 a_238_0# a_38_n60# a_n84_0# a_360_0# nfet_03v3 ad=3.355p pd=12.22u as=3.355p ps=12.22u w=5.5u l=1u
+.ends
+
+.subckt pfet$5$1 a_1054_0# a_382_0# a_606_0# a_486_n60# a_262_n60# a_158_0# a_38_n60#
++ a_n92_0# a_934_n60# a_710_n60# a_830_0# w_n230_n138#
+X0 a_830_0# a_710_n60# a_606_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X1 a_1054_0# a_934_n60# a_830_0# w_n230_n138# pfet_03v3 ad=3.25p pd=11.3u as=1.3p ps=5.52u w=5u l=0.6u
+X2 a_382_0# a_262_n60# a_158_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X3 a_606_0# a_486_n60# a_382_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=1.3p ps=5.52u w=5u l=0.6u
+X4 a_158_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=1.3p pd=5.52u as=3.25p ps=11.3u w=5u l=0.6u
+.ends
+
+.subckt pfet$3$2 a_846_0# a_342_n60# a_238_0# a_950_n60# a_542_0# a_38_n60# a_n92_0#
++ a_1150_0# a_646_n60# w_n230_n138#
+X0 a_846_0# a_646_n60# a_542_0# w_n230_n138# pfet_03v3 ad=0.91p pd=4.02u as=0.91p ps=4.02u w=3.5u l=1u
+X1 a_1150_0# a_950_n60# a_846_0# w_n230_n138# pfet_03v3 ad=2.275p pd=8.3u as=0.91p ps=4.02u w=3.5u l=1u
+X2 a_542_0# a_342_n60# a_238_0# w_n230_n138# pfet_03v3 ad=0.91p pd=4.02u as=0.91p ps=4.02u w=3.5u l=1u
+X3 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=0.91p pd=4.02u as=2.275p ps=8.3u w=3.5u l=1u
+.ends
+
+.subckt pfet$11 a_342_n60# a_238_0# a_542_0# a_38_n60# a_n92_0# w_n230_n138#
+X0 a_542_0# a_342_n60# a_238_0# w_n230_n138# pfet_03v3 ad=2.275p pd=8.3u as=0.91p ps=4.02u w=3.5u l=1u
+X1 a_238_0# a_38_n60# a_n92_0# w_n230_n138# pfet_03v3 ad=0.91p pd=4.02u as=2.275p ps=8.3u w=3.5u l=1u
+.ends
+
+.subckt Pmos_Comparator$1 v_7_3_p v_5_11_p v_6_9_p vout vdd ibias_p iref inn inp vss
+Xpfet$2$1_0 v_5_11_p inn v_5_11_p inn ibias_p inn ibias_p ibias_p inn vdd pfet$2$1
+Xpfet$2$1_1 v_6_9_p inp v_6_9_p inp ibias_p inp ibias_p ibias_p inp vdd pfet$2$1
+Xnfet$9_0 vss vss v_6_9_p v_5_11_p nfet$9
+Xnfet$9_1 vss vss v_6_9_p vout nfet$9
+Xpfet$5$1_0 vdd v_7_3_p vdd v_7_3_p v_7_3_p vdd v_7_3_p v_7_3_p v_7_3_p v_7_3_p v_7_3_p
++ vdd pfet$5$1
+Xnfet$9_2 vss vss v_6_9_p v_6_9_p nfet$9
+Xpfet$5$1_1 vdd vout vdd v_7_3_p v_7_3_p vdd v_7_3_p vout v_7_3_p v_7_3_p vout vdd
++ pfet$5$1
+Xnfet$9_3 vss vss v_5_11_p v_6_9_p nfet$9
+Xpfet$3$2_0 ibias_p iref ibias_p iref vdd iref vdd vdd iref vdd pfet$3$2
+Xnfet$9_5 vss vss v_5_11_p v_7_3_p nfet$9
+Xnfet$9_4 vss vss v_5_11_p v_5_11_p nfet$9
+Xpfet$11_0 iref iref vdd iref vdd vdd pfet$11
+.ends
+
+.subckt top_sim_int I_reference_0/top_ref opamp_n_input_0/out opamp_p_input_0/vinp
++ triangle_osc_0/Nmos_Comparator_0/vss opamp_p_input_0/out opamp_p_input_0/vinn opamp_p_input$1_0/ibias
++ NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_1/I Nmos_Comparator$1_0/iref opamp_p_input$1_0/out
++ Nmos_Comparator$1_0/vout opamp_p_input_0/ibias NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_9/I
++ Pmos_Comparator$1_0/iref Pmos_Comparator$1_0/vout NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_3/I
++ Output_Stage_0/vout Output_Stage_0/vin_pmos op_Deadtime_Driver_0/vout_nmos opamp_n_input_0/ibias
++ opamp_p_input$1_0/vcomp Nmos_Comparator$1_0/inp opamp_n_input_0/vinp opamp_p_input_0/vcomp
++ Nmos_Comparator$1_0/inn I_reference_0/ibias_ncomp_10u opamp_n_input_0/vinn op_Deadtime_Driver_0/vin
++ NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_4/ZN NO_ClkGen_0/CLKbuf I_reference_0/ibias_opp_10u
++ Nmos_Comparator$1_0/vdd opamp_p_input$1_0/vinp opamp_n_input_0/m4_n14278_n12150#
++ triangle_osc_0/vlo op_Deadtime_Driver_0/vout_pmos opamp_p_input$1_0/vinn opamp_p_input$1_0/m4_8030_n6441#
++ I_reference_0/vdd triangle_osc_0/Pmos_Comparator_0/vdd I_reference_0/ibias_opn_10u
++ NO_ClkGen_0/PHI_1 triangle_osc_0/vdd opamp_p_input_0/m4_3674_n3720# Output_Stage_0/vdd
++ I_reference_0/iref_10u_osc NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_7/I Pmos_Comparator$1_0/inp
++ opamp_n_input_0/vdd NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I NO_ClkGen_0/PHI_2
++ NO_ClkGen_0/CLKB opamp_n_input_0/m1_n16595_n11746# NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_4/I
++ opamp_p_input_0/vdd I_reference_0/ibias_buffer_opp Pmos_Comparator$1_0/inn op_Deadtime_Driver_0/vdd
++ NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_0/ZN NO_ClkGen_0/CLK opamp_n_input_0/cap_mim$2_0/m4_n120_n120#
++ triangle_osc_0/vddd opamp_p_input$1_0/vdd triangle_osc_0/iref Pmos_Comparator$1_0/vdd
++ Output_Stage_0/vin_nmos triangle_osc_0/out I_reference_0/ibias_pcomp_10u VSUBS NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW
+Xopamp_n_input_0 opamp_n_input_0/ibias opamp_n_input_0/vinp opamp_n_input_0/vinn opamp_n_input_0/viss
++ opamp_n_input_0/vb2 opamp_n_input_0/vg1 opamp_n_input_0/i_in opamp_n_input_0/v_17_16
++ opamp_n_input_0/v_16_12 opamp_n_input_0/v_11_7 opamp_n_input_0/v_6_9 opamp_n_input_0/v_2_4
++ opamp_n_input_0/v_3_1 opamp_n_input_0/vdd opamp_n_input_0/out opamp_n_input_0/cap_mim$2_0/m4_n120_n120#
++ opamp_n_input_0/m4_n14278_n12150# opamp_n_input_0/m1_n16595_n11746# VSUBS opamp_n_input
+XI_reference_0 I_reference_0/buffer_s I_reference_0/opp_s I_reference_0/opn_s I_reference_0/pcomp_s
++ I_reference_0/cascode_s I_reference_0/osc_s I_reference_0/ncomp_s I_reference_0/top_ref
++ I_reference_0/vngates_iref_top I_reference_0/ibias_opp_10u I_reference_0/vcascode_iref_top
++ I_reference_0/ibias_pcomp_10u I_reference_0/vpgates_iref_top I_reference_0/iref_10u_osc
++ I_reference_0/vdd I_reference_0/ibias_ncomp_10u I_reference_0/ibias_opn_10u I_reference_0/ibias_buffer_opp
++ VSUBS I_reference
+XOutput_Stage_0 Output_Stage_0/vout Output_Stage_0/vdd Output_Stage_0/vin_pmos Output_Stage_0/vin_nmos
++ VSUBS Output_Stage
+Xop_Deadtime_Driver_0 op_Deadtime_Driver_0/vin op_Deadtime_Driver_0/n1 op_Deadtime_Driver_0/vout_nmos
++ op_Deadtime_Driver_0/n4 op_Deadtime_Driver_0/n2 op_Deadtime_Driver_0/n3 op_Deadtime_Driver_0/vout_pmos
++ op_Deadtime_Driver_0/vdd VSUBS op_Deadtime_Driver
+XNmos_Comparator$1_0 Nmos_Comparator$1_0/vdd Nmos_Comparator$1_0/inp Nmos_Comparator$1_0/inn
++ Nmos_Comparator$1_0/v_5_11_n Nmos_Comparator$1_0/v_3_7_n Nmos_Comparator$1_0/i_bias_n
++ Nmos_Comparator$1_0/vout Nmos_Comparator$1_0/v_6_9_n Nmos_Comparator$1_0/iref VSUBS
++ Nmos_Comparator$1
+Xopamp_p_input$1_0 opamp_p_input$1_0/vcomp opamp_p_input$1_0/vb2 opamp_p_input$1_0/vb3
++ opamp_p_input$1_0/vdd opamp_p_input$1_0/vg1 opamp_p_input$1_0/viss opamp_p_input$1_0/out
++ opamp_p_input$1_0/vc45 opamp_p_input$1_0/ibias opamp_p_input$1_0/vinn opamp_p_input$1_0/vinp
++ opamp_p_input$1_0/vo1 opamp_p_input$1_0/m4_8030_n6441# VSUBS opamp_p_input$1
+XNO_ClkGen_0 NO_ClkGen_0/CLKbuf NO_ClkGen_0/CLKB NO_ClkGen_0/CLK NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_1/I
++ NO_ClkGen_0/PHI_2 NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_9/I NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_3/I
++ NO_ClkGen_0/PHI_1 NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_4/ZN NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_7/I
++ NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_9/VNW NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_0/I
++ VSUBS NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_0/ZN NO_ClkGen_0/gf180mcu_fd_sc_mcu9t5v0__inv_1_4/I
++ NO_ClkGen
+Xopamp_p_input_0 opamp_p_input_0/vcomp opamp_p_input_0/vb2 opamp_p_input_0/vb3 opamp_p_input_0/vdd
++ opamp_p_input_0/vg1 opamp_p_input_0/viss opamp_p_input_0/out opamp_p_input_0/ibias
++ opamp_p_input_0/vc45 opamp_p_input_0/vinn opamp_p_input_0/vinp opamp_p_input_0/vo1
++ opamp_p_input_0/m4_3674_n3720# VSUBS opamp_p_input
+Xtriangle_osc_0 triangle_osc_0/vddd triangle_osc_0/iref triangle_osc_0/vdd triangle_osc_0/v_4_1_pn
++ triangle_osc_0/q triangle_osc_0/ibias_compn triangle_osc_0/vlo triangle_osc_0/v_8_7
++ triangle_osc_0/v_5_6 triangle_osc_0/out triangle_osc_0/ibias_compp triangle_osc_0/nq
++ triangle_osc_0/vho triangle_osc_0/Pmos_Comparator_0/vdd triangle_osc_0/Nmos_Comparator_0/vss
++ VSUBS triangle_osc
+XPmos_Comparator$1_0 Pmos_Comparator$1_0/v_7_3_p Pmos_Comparator$1_0/v_5_11_p Pmos_Comparator$1_0/v_6_9_p
++ Pmos_Comparator$1_0/vout Pmos_Comparator$1_0/vdd Pmos_Comparator$1_0/ibias_p Pmos_Comparator$1_0/iref
++ Pmos_Comparator$1_0/inn Pmos_Comparator$1_0/inp VSUBS Pmos_Comparator$1
+.ends
+
+.subckt ppolyf_u_9H3LNU a_n4000_1000# a_n4000_n1102# w_n4216_n1318#
+X0 a_n4000_1000# a_n4000_n1102# w_n4216_n1318# ppolyf_u r_width=40u r_length=10u
+.ends
+
+.subckt diode_nd2ps_06v0_MV3SZ3 a_116_n1000# a_2348_n1000# a_n4348_n1000# a_n4500_n1152#
++ a_n2116_n1000#
+D0 a_n4500_n1152# a_116_n1000# diode_nd2ps_06v0 pj=40u area=99.99999p
+D1 a_n4500_n1152# a_2348_n1000# diode_nd2ps_06v0 pj=40u area=99.99999p
+D2 a_n4500_n1152# a_n4348_n1000# diode_nd2ps_06v0 pj=40u area=99.99999p
+D3 a_n4500_n1152# a_n2116_n1000# diode_nd2ps_06v0 pj=40u area=99.99999p
+.ends
+
+.subckt diode_pd2nw_06v0_5DG9HC a_n2108_n1000# a_2324_n1000# w_n4500_n1176# a_n4324_n1000#
++ a_108_n1000#
+D0 a_2324_n1000# w_n4500_n1176# diode_pd2nw_06v0 pj=40u area=99.99999p
+D1 a_n4324_n1000# w_n4500_n1176# diode_pd2nw_06v0 pj=40u area=99.99999p
+D2 a_n2108_n1000# w_n4500_n1176# diode_pd2nw_06v0 pj=40u area=99.99999p
+D3 a_108_n1000# w_n4500_n1176# diode_pd2nw_06v0 pj=40u area=99.99999p
+.ends
+
+.subckt io_secondary_5p0 VDD to_gate ASIG5V VSS
+Xppolyf_u_9H3LNU_0 ASIG5V to_gate VDD ppolyf_u_9H3LNU
+Xdiode_nd2ps_06v0_MV3SZ3_0 to_gate to_gate to_gate VSS to_gate diode_nd2ps_06v0_MV3SZ3
+Xdiode_pd2nw_06v0_5DG9HC_0 to_gate to_gate VDD to_gate to_gate diode_pd2nw_06v0_5DG9HC
+.ends
+
+.subckt M15_XDAC_Layout ibias_opn_10u swmatrix_12_out_esd_out swmatrix_bus_13_esd_out
++ swmatrix_bus_14_esd_out swmatrix_bus_15_esd_out swmatrix_bus_16_esd_out vho_esd_out
++ vlo_esd_out swmatrix_pin_6_esd_out vho vlo swmatrix_pin[16] swmatrix_bus[16] swmatrix_bus[15]
++ swmatrix_bus[14] swmatrix_bus[13] push_pull_out iref_10u_osc ibias_pcomp_10u ibias_buffer_opp
++ top_iref top_iref_esd_out en_in vss vdd swmatrix_pin[14] swmatrix_pin[13] vcomp
++ swmatrix_pin[7] swmatrix_pin[8] swmatrix_pin[9] swmatrix_pin[15] swmatrix_pin[1]
++ swmatrix_pin[2] swmatrix_pin[3] swmatrix_pin[4] swmatrix_pin[5] swmatrix_pin[10]
++ swmatrix_pin[11] swmatrix_pin[12] swmatrix_pin[17] swmatrix_pin[18] swmatrix_12_out
++ D swmatrix_bus[12] swmatrix_bus[11] swmatrix_bus[10] swmatrix_bus[9] swmatrix_bus[8]
++ swmatrix_bus[7] swmatrix_bus[6] swmatrix_bus[5] swmatrix_bus[4] swmatrix_bus[3]
++ swmatrix_bus[2] swmatrix_bus[1]
+XAngel_swmatrix_block$1_0 en_in D Angel_swmatrix_block$1_0/D_out_row[3] Angel_swmatrix_block$1_0/D_out_row[4]
++ Angel_swmatrix_block$1_0/D_out_row[5] Angel_swmatrix_block$1_0/D_out_row[6] Angel_swmatrix_block$1_0/D_out_row[8]
++ Angel_swmatrix_block$1_0/D_out_row[9] vss vss Angel_swmatrix_block$1_0/D_out_row[12]
++ Angel_swmatrix_block$1_0/D_out_row[13] Angel_swmatrix_block$1_0/D_out_row[14] Angel_swmatrix_block$1_0/D_out_row[15]
++ Angel_swmatrix_block$1_0/D_out_row[16] Angel_swmatrix_block$1_0/D_out_row[17] Angel_swmatrix_block$1_0/D_out_row[18]
++ Angel_swmatrix_block$1_0/D_out_row[7] Angel_swmatrix_block$1_0/D_out Angel_swmatrix_block$1_0/D_out_row[1]
++ Angel_swmatrix_block$1_0/D_out_row[2] swmatrix_pin[17] swmatrix_pin[5] D swmatrix_pin[10]
++ swmatrix_pin[11] swmatrix_pin[12] swmatrix_pin[13] swmatrix_pin[14] swmatrix_pin[15]
++ swmatrix_pin[16] swmatrix_pin[4] swmatrix_pin[3] swmatrix_pin[2] swmatrix_pin[1]
++ swmatrix_pin[18] swmatrix_bus[16] swmatrix_pin[8] D vdd swmatrix_pin[7] swmatrix_pin[9]
++ vdd vdd swmatrix_bus[8] swmatrix_bus[9] vdd vdd swmatrix_bus[2] swmatrix_bus[13]
++ vdd swmatrix_bus[12] swmatrix_bus[10] swmatrix_bus[3] swmatrix_bus[14] swmatrix_bus[11]
++ swmatrix_bus[1] swmatrix_bus[15] vss swmatrix_bus[5] swmatrix_bus[4] swmatrix_bus[6]
++ swmatrix_bus[7] Angel_swmatrix_block$1
+Xtop_sim_int_0 top_iref swmatrix_pin[15] swmatrix_pin[8] vss swmatrix_pin[7] swmatrix_pin[9]
++ ibias_buffer_opp vss ibias_pcomp_10u swmatrix_12_out swmatrix_pin[16] ibias_pcomp_10u
++ vss ibias_pcomp_10u swmatrix_pin[10] vss push_pull_out swmatrix_pin[1] swmatrix_pin[5]
++ ibias_opn_10u vcomp swmatrix_pin[17] swmatrix_pin[14] vcomp swmatrix_pin[18] ibias_pcomp_10u
++ swmatrix_pin[13] swmatrix_pin[3] vss vss ibias_pcomp_10u vdd swmatrix_bus[12] swmatrix_pin[15]
++ vlo swmatrix_pin[4] swmatrix_12_out vcomp vdd vdd ibias_opn_10u vss vdd vcomp vdd
++ iref_10u_osc vss swmatrix_pin[11] vdd vss vss vss swmatrix_pin[15] vss vdd ibias_buffer_opp
++ swmatrix_pin[12] vdd vss D swmatrix_pin[15] vdd vdd iref_10u_osc vdd swmatrix_pin[2]
++ D ibias_pcomp_10u vss vdd top_sim_int
+Xio_secondary_5p0_0 vdd vho vho_esd_out vss io_secondary_5p0
+Xio_secondary_5p0_1 vdd vlo vlo_esd_out vss io_secondary_5p0
+Xio_secondary_5p0_2 vdd swmatrix_bus[16] swmatrix_bus_16_esd_out vss io_secondary_5p0
+Xio_secondary_5p0_3 vdd swmatrix_bus[13] swmatrix_bus_13_esd_out vss io_secondary_5p0
+Xio_secondary_5p0_4 vdd swmatrix_bus[14] swmatrix_bus_14_esd_out vss io_secondary_5p0
+Xio_secondary_5p0_5 vdd swmatrix_12_out swmatrix_12_out_esd_out vss io_secondary_5p0
+Xio_secondary_5p0_6 vdd swmatrix_bus[15] swmatrix_bus_15_esd_out vss io_secondary_5p0
+Xio_secondary_5p0_7 vdd top_iref top_iref_esd_out vss io_secondary_5p0
+Xio_secondary_5p0_8 vdd D swmatrix_pin_6_esd_out vss io_secondary_5p0
+.ends
+

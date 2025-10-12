@@ -66,7 +66,7 @@ X15 a_4818_5296# a_4718_4748# a_4630_4792# VPW nfet_05v0 ad=0.3432p pd=1.84u as=
 X0 m4_0_0# m4_n120_n120# cap_mim_2f0_m4m5_noshield c_width=27u c_length=27u
 .ends
 
-.subckt op_Deadtime_Driver vout_pmos vout_nmos n1 vdd vss vin n2 n3 n4
+.subckt op_Deadtime_Driver vout_pmos vout_nmos vdd n1 vss vin n3 n2 n4
 Xnand2_1$1_0 vdd vss n3 vin vss n2 vdd nand2_1$1
 Xinv_8$1_0 vdd vss vdd vout_nmos n2 vss inv_8$1
 Xnand2_1_0 vdd vss n2 n1 vss n3 vdd nand2_1

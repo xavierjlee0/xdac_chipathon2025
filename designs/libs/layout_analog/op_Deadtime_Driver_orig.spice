@@ -1,0 +1,18 @@
+** sch_path: /foss/designs/libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sch
+.subckt op_Deadtime_Driver vout_pmos vin vout_nmos vss
+*.PININFO vin:I vss:I vout_pmos:O vout_nmos:O
+XC3 n3 vss cap_mim_2f0fF c_width=27e-6 c_length=27e-6 m=1
+XC4 n2 vss cap_mim_2f0fF c_width=27e-6 c_length=27e-6 m=1
+x4 n2 vin n3 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_1
+x5 n3 n1 n2 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_1
+x2 n4 vout_pmos VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_8
+x1 n2 vout_nmos VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_8
+x3 n3 n4 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x6 vin n1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
+
+**** end user architecture code
+.ends

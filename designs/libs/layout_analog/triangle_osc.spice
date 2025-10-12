@@ -1,15 +1,15 @@
 ** sch_path: /foss/designs/libs/core_analog/oscillator/triangle_osc.sch
 .subckt triangle_osc vdd vho out vlo iref vss
 *.PININFO iref:I vss:I vho:I vlo:I out:O vdd:I
-M1 v_4_1_pn iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=3
-M8 v_8_7 iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=3
-M4 v_4_1_pn v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=3
-M5 v_5_6 v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=3
-M6 out nq v_5_6 vdd pfet_03v3 L=0.3u W=4u nf=1 m=2
-M7 out nq v_8_7 vss nfet_03v3 L=0.3u W=4u nf=1 m=1
-M2 iref iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
-M10 ibias_compp iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
-M9 ibias_compn v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=1
+XM1 v_4_1_pn iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=3
+XM8 v_8_7 iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=3
+XM4 v_4_1_pn v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=3
+XM5 v_5_6 v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=3
+XM6 out nq v_5_6 vdd pfet_03v3 L=0.3u W=4u nf=1 m=2
+XM7 out nq v_8_7 vss nfet_03v3 L=0.3u W=4u nf=1 m=1
+XM2 iref iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
+XM10 ibias_compp iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
+XM9 ibias_compn v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=1
 xn_comp vdd vcompn vho vss out ibias_compn Nmos_Comparator
 xp_comp vdd vcompp out vss vlo ibias_compp Pmos_Comparator
 x1 vcompp q nq vcompn sr_latch
@@ -46,18 +46,18 @@ M10 i_bias_n iref vss vss nfet_03v3 L=1u W=5u nf=2 m=1
 ** sch_path: /foss/designs/libs/core_analog/Comparator/Pmos_Comparator.sch
 .subckt Pmos_Comparator vdd vout inp vss inn iref
 *.PININFO vdd:I vss:I iref:I inn:I inp:I vout:O
-M3 v_7_3_p v_7_3_p vdd vdd pfet_03v3 L=0.6u W=25u nf=5 m=1
-M4 vout v_7_3_p vdd vdd pfet_03v3 L=0.6u W=25u nf=5 m=1
-M5 v_5_11_p inn ibias_p vdd pfet_03v3 L=1u W=12u nf=4 m=1
-M6 v_6_9_p inp ibias_p vdd pfet_03v3 L=1u W=12u nf=4 m=1
-M7 v_7_3_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
-M8 v_5_11_p v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
-M9 v_6_9_p v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
-M10 v_6_9_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
-M11 v_5_11_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
-M12 vout v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
-M1 ibias_p iref vdd vdd pfet_03v3 L=1u W=14u nf=4 m=1
-M2 iref iref vdd vdd pfet_03v3 L=1u W=7u nf=1 m=1
+XM3 v_7_3_p v_7_3_p vdd vdd pfet_03v3 L=0.6u W=25u nf=5 m=1
+XM4 vout v_7_3_p vdd vdd pfet_03v3 L=0.6u W=25u nf=5 m=1
+XM5 v_5_11_p inn ibias_p vdd pfet_03v3 L=1u W=12u nf=4 m=1
+XM6 v_6_9_p inp ibias_p vdd pfet_03v3 L=1u W=12u nf=4 m=1
+XM7 v_7_3_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM8 v_5_11_p v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM9 v_6_9_p v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM10 v_6_9_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM11 v_5_11_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM12 vout v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM1 ibias_p iref vdd vdd pfet_03v3 L=1u W=14u nf=4 m=1
+XM2 iref iref vdd vdd pfet_03v3 L=1u W=7u nf=1 m=1
 .ends
 
 

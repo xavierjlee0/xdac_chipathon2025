@@ -1,0 +1,373 @@
+** sch_path: /foss/designs/libs/top_sim/M15_XDAC_Layout.sch
+.subckt M15_XDAC_Layout serial_in en_in clk_in push_pull_out top_iref_esd_out swmatrix_pin_6_esd_out vlo_esd_out vho_esd_out
++ swmatrix_12_out_esd_out swmatrix_bus_13_esd_out swmatrix_bus_14_esd_out swmatrix_bus_15_esd_out swmatrix_bus_16_esd_out
+*.PININFO serial_in:I en_in:I clk_in:I push_pull_out:O top_iref_esd_out:O swmatrix_pin_6_esd_out:O vlo_esd_out:O vho_esd_out:O
+*+ swmatrix_12_out_esd_out:O swmatrix_bus_13_esd_out:O swmatrix_bus_14_esd_out:O swmatrix_bus_15_esd_out:O swmatrix_bus_16_esd_out:O
+xn_comp vdd swmatrix_pin[16] swmatrix_pin[17] vss swmatrix_pin[18] ibias_ncomp_10u Nmos_Comparator
+x2 vdd swmatrix_pin[1] push_pull_out swmatrix_pin[2] vss Output_Stage
+x3 swmatrix_pin[8] swmatrix_pin[9] ibias_opp_10u vdd swmatrix_pin[7] vss opamp_p_input
+x4 swmatrix_pin[14] swmatrix_pin[13] ibias_opn_10u vdd swmatrix_pin[15] vss opamp_n_input
+x5 vdd vho swmatrix_pin[6] vlo iref_10u_osc vss triangle_osc
+x6 swmatrix_bus[12] swmatrix_12_out ibias_buffer_opp vdd swmatrix_12_out vss opamp_p_input
+xp_comp1 vdd swmatrix_pin[10] swmatrix_pin[11] vss swmatrix_pin[12] ibias_pcomp_10u Pmos_Comparator
+* noconn swmatrix_bus[1]
+* noconn swmatrix_bus[2]
+* noconn swmatrix_bus[3]
+* noconn swmatrix_bus[4]
+* noconn swmatrix_bus[5]
+* noconn swmatrix_bus[6]
+* noconn swmatrix_bus[7]
+* noconn swmatrix_bus[8]
+* noconn swmatrix_bus[9]
+* noconn swmatrix_bus[10]
+* noconn swmatrix_bus[11]
+x8 vdd swmatrix_12_out_esd_out swmatrix_12_out vss io_secondary_5p0
+x9 vdd vho_esd_out vho vss io_secondary_5p0
+x10 vdd vlo_esd_out vlo vss io_secondary_5p0
+x11 vdd swmatrix_pin_6_esd_out swmatrix_pin[6] vss io_secondary_5p0
+x12 vdd swmatrix_bus_13_esd_out swmatrix_bus[13] vss io_secondary_5p0
+x13 vdd swmatrix_bus_14_esd_out swmatrix_bus[14] vss io_secondary_5p0
+x14 vdd swmatrix_bus_15_esd_out swmatrix_bus[15] vss io_secondary_5p0
+x15 vdd swmatrix_bus_16_esd_out swmatrix_bus[16] vss io_secondary_5p0
+x17 vdd top_iref_esd_out top_iref vss io_secondary_5p0
+x18 en_in vdd vss net1 serial_in PHI_1 PHI_2 swmatrix_bus[1] swmatrix_bus[2] swmatrix_bus[3] swmatrix_bus[4] swmatrix_bus[5]
++ swmatrix_bus[6] swmatrix_bus[7] swmatrix_bus[8] swmatrix_bus[9] swmatrix_bus[10] swmatrix_bus[11] swmatrix_bus[12] swmatrix_bus[13]
++ swmatrix_bus[14] swmatrix_bus[15] swmatrix_bus[16] swmatrix_pin[1] swmatrix_pin[2] swmatrix_pin[3] swmatrix_pin[4] swmatrix_pin[5] swmatrix_pin[6]
++ swmatrix_pin[7] swmatrix_pin[8] swmatrix_pin[9] swmatrix_pin[10] swmatrix_pin[11] swmatrix_pin[12] swmatrix_pin[13] swmatrix_pin[14]
++ swmatrix_pin[15] swmatrix_pin[16] swmatrix_pin[17] swmatrix_pin[18] Angel_swmatrix_block
+x19 PHI_2 clk_in PHI_1 NO_ClkGen
+* noconn #net1
+x1 swmatrix_pin[4] swmatrix_pin[3] swmatrix_pin[5] vdd vss op_Deadtime_Driver
+x7 top_iref vdd vss ibias_buffer_opp ibias_pcomp_10u ibias_opp_10u ibias_ncomp_10u ibias_opn_10u iref_10u_osc I_reference
+.ends
+
+* expanding   symbol:  libs/core_analog/Comparator/Nmos_Comparator.sym # of pins=6
+** sym_path: /foss/designs/libs/core_analog/Comparator/Nmos_Comparator.sym
+** sch_path: /foss/designs/libs/core_analog/Comparator/Nmos_Comparator.sch
+.subckt Nmos_Comparator vdd vout inp vss inn iref
+*.PININFO vss:I vdd:I iref:I inn:I inp:I vout:O
+XM3 v_3_7_n v_3_7_n vss vss nfet_03v3 L=1u W=3.5u nf=1 m=1
+XM4 vout v_3_7_n vss vss nfet_03v3 L=1u W=3.5u nf=1 m=1
+XM5 v_5_11_n inn i_bias_n vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM6 v_6_9_n inp i_bias_n vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM7 v_3_7_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=16.5u nf=4 m=1
+XM9 v_6_9_n v_6_9_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+XM11 v_5_11_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+XM12 vout v_6_9_n vdd vdd pfet_03v3 L=0.5u W=16.5u nf=4 m=1
+XM1 v_6_9_n v_5_11_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+XM2 v_5_11_n v_6_9_n vdd vdd pfet_03v3 L=0.5u W=10u nf=2 m=1
+XM8 iref iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
+XM10 i_bias_n iref vss vss nfet_03v3 L=1u W=5u nf=2 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/Output_Stage/Output_Stage.sym # of pins=5
+** sym_path: /foss/designs/libs/core_analog/Output_Stage/Output_Stage.sym
+** sch_path: /foss/designs/libs/core_analog/Output_Stage/Output_Stage.sch
+.subckt Output_Stage vdd vin_pmos vout vin_nmos vss
+*.PININFO vin_pmos:I vdd:I vss:I vout:O vin_nmos:I
+XM1 vout vin_pmos vdd vdd pfet_03v3 L=0.28u W=5u nf=1 m=640
+XM2 vout vin_nmos vss vss nfet_03v3 L=0.28u W=5u nf=1 m=280
+.ends
+
+
+* expanding   symbol:  libs/core_analog/opamp/opamp_p_input.sym # of pins=6
+** sym_path: /foss/designs/libs/core_analog/opamp/opamp_p_input.sym
+** sch_path: /foss/designs/libs/core_analog/opamp/opamp_p_input.sch
+.subckt opamp_p_input vinp vinn ibias vdd out vss
+*.PININFO out:O vdd:I vss:I vinn:I ibias:I vinp:I
+XM7 viss vb3 vdd vdd pfet_03v3 L=1u W=5u nf=1 m=5
+XM8 out vb3 vdd vdd pfet_03v3 L=0.6u W=5u nf=1 m=6
+XM11 vb3 vb3 vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=2
+XM12 ibias ibias vb3 vdd pfet_03v3 L=1u W=4.5u nf=1 m=2
+XM1 vg1 vinn viss vdd pfet_03v3 L=1u W=4u nf=1 m=4
+XM2 vo1 vinp viss vdd pfet_03v3 L=1u W=4u nf=1 m=4
+XM5 vc45 vg1 vss vss nfet_03v3 L=1u W=4u nf=1 m=2
+XM6 vcomp vg1 vss vss nfet_03v3 L=1u W=4u nf=1 m=2
+XM9 out vo1 vss vss nfet_03v3 L=0.6u W=5.5u nf=1 m=4
+XM3 vo1 vb2 vcomp vss nfet_03v3 L=1u W=4u nf=1 m=2
+XM4 vg1 vb2 vc45 vss nfet_03v3 L=1u W=4u nf=1 m=2
+XM10 vb2 vb2 vss vss nfet_03v3 L=9u W=4u nf=1 m=1
+XM13 vb2 vb3 vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=1
+XC1 out vcomp cap_mim_2f0fF c_width=25e-6 c_length=24e-6 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/opamp/opamp_n_input.sym # of pins=6
+** sym_path: /foss/designs/libs/core_analog/opamp/opamp_n_input.sym
+** sch_path: /foss/designs/libs/core_analog/opamp/opamp_n_input.sch
+.subckt opamp_n_input vinp vinn ibias vdd out vss
+*.PININFO out:O vdd:I vss:I vinn:I ibias:I vinp:I
+XM1 v_3_1 vinn viss vss nfet_03v3 L=1u W=3u nf=1 m=1
+XM2 v_2_4 vinp viss vss nfet_03v3 L=1u W=3u nf=1 m=1
+XM6 v_6_9 vg1 vdd vdd pfet_03v3 L=0.8u W=5u nf=1 m=5
+XM5 vg1 vg1 vdd vdd pfet_03v3 L=0.8u W=5u nf=1 m=5
+XM4 v_6_9 vb2 v_2_4 vss nfet_03v3 L=1u W=5u nf=1 m=6
+XM3 vg1 vb2 v_3_1 vss nfet_03v3 L=1u W=5u nf=1 m=6
+XM7 viss v_11_7 vss vss nfet_03v3 L=2u W=4.5u nf=1 m=3
+XM11 v_11_7 v_11_7 vss vss nfet_03v3 L=2u W=4.5u nf=1 m=1
+XM10 vb2 vb2 viss vss nfet_03v3 L=4u W=2u nf=1 m=1
+XM8 out v_11_7 vss vss nfet_03v3 L=0.8u W=5.5u nf=1 m=2
+XM9 out v_6_9 vdd vdd pfet_03v3 L=0.5u W=5.5u nf=1 m=14
+XM12 v_16_12 v_16_12 v_11_7 vss nfet_03v3 L=2u W=4.5u nf=1 m=1
+XM13 vb2 i_in vdd vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+XM14 i_in i_in vdd vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+XM15 ibias ibias i_in vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+XM16 v_16_12 ibias v_17_16 vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+XM17 v_17_16 i_in vdd vdd pfet_03v3 L=1u W=3.5u nf=1 m=1
+XC3 v_2_4 out cap_mim_2f0fF c_width=25e-6 c_length=24e-6 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/oscillator/triangle_osc.sym # of pins=6
+** sym_path: /foss/designs/libs/core_analog/oscillator/triangle_osc.sym
+** sch_path: /foss/designs/libs/core_analog/oscillator/triangle_osc.sch
+.subckt triangle_osc vdd vho out vlo iref vss
+*.PININFO iref:I vss:I vho:I vlo:I out:O vdd:I
+XM1 v_4_1_pn iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=3
+XM8 v_8_7 iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=3
+XM4 v_4_1_pn v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=3
+XM5 v_5_6 v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=3
+XM6 out nq v_5_6 vdd pfet_03v3 L=0.3u W=4u nf=1 m=2
+XM7 out nq v_8_7 vss nfet_03v3 L=0.3u W=4u nf=1 m=1
+XM2 iref iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
+XM10 ibias_compp iref vss vss nfet_03v3 L=1u W=2.5u nf=1 m=1
+XM9 ibias_compn v_4_1_pn vdd vdd pfet_03v3 L=1u W=4.5u nf=1 m=1
+xn_comp vdd vcompn vho vss out ibias_compn Nmos_Comparator
+xp_comp vdd vcompp out vss vlo ibias_compp Pmos_Comparator
+x1 vcompp q nq vcompn sr_latch
+.ends
+
+
+* expanding   symbol:  libs/core_analog/Comparator/Pmos_Comparator.sym # of pins=6
+** sym_path: /foss/designs/libs/core_analog/Comparator/Pmos_Comparator.sym
+** sch_path: /foss/designs/libs/core_analog/Comparator/Pmos_Comparator.sch
+.subckt Pmos_Comparator vdd vout inp vss inn iref
+*.PININFO vdd:I vss:I iref:I inn:I inp:I vout:O
+XM3 v_7_3_p v_7_3_p vdd vdd pfet_03v3 L=0.6u W=25u nf=5 m=1
+XM4 vout v_7_3_p vdd vdd pfet_03v3 L=0.6u W=25u nf=5 m=1
+XM5 v_5_11_p inn ibias_p vdd pfet_03v3 L=1u W=12u nf=4 m=1
+XM6 v_6_9_p inp ibias_p vdd pfet_03v3 L=1u W=12u nf=4 m=1
+XM7 v_7_3_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM8 v_5_11_p v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM9 v_6_9_p v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM10 v_6_9_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM11 v_5_11_p v_5_11_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM12 vout v_6_9_p vss vss nfet_03v3 L=1u W=5.5u nf=1 m=1
+XM1 ibias_p iref vdd vdd pfet_03v3 L=1u W=14u nf=4 m=1
+XM2 iref iref vdd vdd pfet_03v3 L=1u W=7u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/ESD/io_secondary_5p0.sym # of pins=4
+** sym_path: /foss/designs/libs/core_analog/ESD/io_secondary_5p0.sym
+** sch_path: /foss/designs/libs/core_analog/ESD/io_secondary_5p0.sch
+.subckt io_secondary_5p0 VDD ASIG_5V to_gate VSS
+*.PININFO VSS:B VDD:B to_gate:B ASIG_5V:B
+XD1 VSS to_gate diode_nd2ps_06v0 area='10u * 10u ' pj='2*10u + 2*10u ' m=1
+XD2 to_gate VDD diode_pd2nw_03v3 area='10u * 10u ' pj='2*10u + 2*10u ' m=1
+XR1 to_gate ASIG_5V VDD ppolyf_u r_width=16e-6 r_length=4e-6 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_swmatrix/Angel_swmatrix_block.sym # of pins=9
+** sym_path: /foss/designs/libs/core_swmatrix/Angel_swmatrix_block.sym
+** sch_path: /foss/designs/libs/core_swmatrix/Angel_swmatrix_block.sch
+.subckt Angel_swmatrix_block EN VDDd VSSd D_out D_in PHI_1 PHI_2 BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[1] PIN[2] PIN[3] PIN[4] PIN[5] PIN[6] PIN[7] PIN[8] PIN[9] PIN[10] PIN[11]
++ PIN[12] PIN[13] PIN[14] PIN[15] PIN[16] PIN[17] PIN[18]
+*.PININFO PIN[1:18]:B BUS[1:16]:B PHI_1:I PHI_2:I D_in:I D_out:O VDDd:B VSSd:B EN:I
+xAngel_row_block[1] EN D_in D_out_row[1] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9] BUS[10]
++ BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[1] VSSd Angel_row_block
+xAngel_row_block[2] EN D_out_row[1] D_out_row[2] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[2] VSSd Angel_row_block
+xAngel_row_block[3] EN D_out_row[2] D_out_row[3] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[3] VSSd Angel_row_block
+xAngel_row_block[4] EN D_out_row[3] D_out_row[4] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[4] VSSd Angel_row_block
+xAngel_row_block[5] EN D_out_row[4] D_out_row[5] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[5] VSSd Angel_row_block
+xAngel_row_block[6] EN D_out_row[5] D_out_row[6] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[6] VSSd Angel_row_block
+xAngel_row_block[7] EN D_out_row[6] D_out_row[7] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[7] VSSd Angel_row_block
+xAngel_row_block[8] EN D_out_row[7] D_out_row[8] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[8] VSSd Angel_row_block
+xAngel_row_block[9] EN D_out_row[8] D_out_row[9] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[9] VSSd Angel_row_block
+xAngel_row_block[10] EN D_out_row[9] D_out_row[10] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[10] VSSd Angel_row_block
+xAngel_row_block[11] EN D_out_row[10] D_out_row[11] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[11] VSSd Angel_row_block
+xAngel_row_block[12] EN D_out_row[11] D_out_row[12] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[12] VSSd Angel_row_block
+xAngel_row_block[13] EN D_out_row[12] D_out_row[13] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[13] VSSd Angel_row_block
+xAngel_row_block[14] EN D_out_row[13] D_out_row[14] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[14] VSSd Angel_row_block
+xAngel_row_block[15] EN D_out_row[14] D_out_row[15] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[15] VSSd Angel_row_block
+xAngel_row_block[16] EN D_out_row[15] D_out_row[16] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[16] VSSd Angel_row_block
+xAngel_row_block[17] EN D_out_row[16] D_out_row[17] PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8]
++ BUS[9] BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[17] VSSd Angel_row_block
+xAngel_row_block[18] EN D_out_row[17] D_out PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9]
++ BUS[10] BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] PIN[18] VSSd Angel_row_block
+.ends
+
+
+* expanding   symbol:  libs/core_swmatrix/NO_ClkGen.sym # of pins=3
+** sym_path: /foss/designs/libs/core_swmatrix/NO_ClkGen.sym
+** sch_path: /foss/designs/libs/core_swmatrix/NO_ClkGen.sch
+.subckt NO_ClkGen PHI_2 CLK PHI_1
+*.PININFO CLK:I PHI_2:O PHI_1:O
+x1 CLKB OUT_bot_d OUT_top VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_1
+x2 OUT_top_d CLKbuf OUT_bot VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_1
+x3 OUT_top PHI_2 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x4 PHI_2 net3 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x5 net1 OUT_top_d VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x6 OUT_bot PHI_1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x7 PHI_1 net4 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x8 net2 OUT_bot_d VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x9 CLKB CLKbuf VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x10 CLK CLKB VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x11 net3 net1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x12 net4 net2 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sym # of pins=5
+** sym_path: /foss/designs/libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sym
+** sch_path: /foss/designs/libs/core_analog/op_Deadtime_Driver/op_Deadtime_Driver.sch
+.subckt op_Deadtime_Driver vout_pmos vin vout_nmos vdd vss
+*.PININFO vin:I vss:I vout_pmos:O vout_nmos:O vdd:I
+**** begin user architecture code
+
+.include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
+.include /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu9t5v0/spice/gf180mcu_fd_sc_mcu9t5v0.spice
+
+**** end user architecture code
+XC3 n3 vss cap_mim_2f0fF c_width=27e-6 c_length=27e-6 m=1
+XC4 n2 vss cap_mim_2f0fF c_width=27e-6 c_length=27e-6 m=1
+x4 n2 vin n3 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_1
+x5 n3 n1 n2 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_1
+x2 n4 vout_pmos VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_8
+x1 n2 vout_nmos VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_8
+x3 n3 n4 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+x6 vin n1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/I_reference/I_reference.sym # of pins=16
+** sym_path: /foss/designs/libs/core_analog/I_reference/I_reference.sym
+** sch_path: /foss/designs/libs/core_analog/I_reference/I_reference.sch
+.subckt I_reference top_ref vdd vss ibias_buffer_opp ibias_pcomp_10u ibias_opp_10u ibias_ncomp_10u ibias_opn_10u iref_10u_osc
+*.PININFO top_ref:I vss:I ibias_opp_10u:O vss:I ibias_buffer_opp:O vss:I vss:I vss:I vdd:I vdd:I vdd:I ibias_pcomp_10u:O
+*+ ibias_opn_10u:O ibias_ncomp_10u:O iref_10u_osc:O vss:I
+XM1 vngates_iref_top vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM2 top_ref top_ref vngates_iref_top vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM4 pcomp_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM5 ibias_pcomp_10u ibias_pcomp_10u pcomp_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM3 opp_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM6 ibias_opp_10u ibias_opp_10u opp_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM9 buffer_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM10 ibias_buffer_opp ibias_buffer_opp buffer_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM11 cascode_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM12 vcascode_iref_top vcascode_iref_top cascode_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM14 vpgates_iref_top vpgates_iref_top vdd vdd pfet_03v3 L=1u W=4u nf=1 m=1
+XM15 vcascode_iref_top vcascode_iref_top vpgates_iref_top vdd pfet_03v3 L=1u W=4u nf=1 m=1
+XM20 ncomp_s vpgates_iref_top vdd vdd pfet_03v3 L=1u W=4u nf=1 m=1
+XM21 ibias_ncomp_10u ibias_ncomp_10u ncomp_s vdd pfet_03v3 L=1u W=4u nf=1 m=1
+XM13 opn_s vngates_iref_top vss vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM16 ibias_opn_10u ibias_opn_10u opn_s vss nfet_03v3 L=1u W=4u nf=1 m=1
+XM7 osc_s vpgates_iref_top vdd vdd pfet_03v3 L=1u W=4u nf=1 m=1
+XM8 iref_10u_osc iref_10u_osc osc_s vdd pfet_03v3 L=1u W=4u nf=1 m=1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/oscillator/sr_latch.sym # of pins=4
+** sym_path: /foss/designs/libs/core_analog/oscillator/sr_latch.sym
+** sch_path: /foss/designs/libs/core_analog/oscillator/sr_latch.sch
+.subckt sr_latch NOTR Q NOTQ NOTS
+*.PININFO NOTR:I NOTS:I Q:O NOTQ:O
+x1 NOTR NOTQ Q VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_2
+x2 Q NOTS NOTQ VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_2
+.ends
+
+
+* expanding   symbol:  libs/core_swmatrix/Angel_row_block.sym # of pins=9
+** sym_path: /foss/designs/libs/core_swmatrix/Angel_row_block.sym
+** sch_path: /foss/designs/libs/core_swmatrix/Angel_row_block.sch
+.subckt Angel_row_block EN D_in D_out PHI_1 PHI_2 VDDd BUS[1] BUS[2] BUS[3] BUS[4] BUS[5] BUS[6] BUS[7] BUS[8] BUS[9] BUS[10]
++ BUS[11] BUS[12] BUS[13] BUS[14] BUS[15] BUS[16] pin VSSd
+*.PININFO pin:B PHI_2:I PHI_1:I BUS[1:16]:B D_in:I D_out:O VDDd:B VSSd:B EN:I
+xSR Q[1] Q[2] Q[3] Q[4] Q[5] Q[6] Q[7] Q[8] Q[9] Q[10] Q[11] Q[12] Q[13] Q[14] Q[15] D_out D_in PHI_1 PHI_2 I[1] I[2] I[3] I[4]
++ I[5] I[6] I[7] I[8] I[9] I[10] I[11] I[12] I[13] I[14] I[15] I[16] EN VSSd VDDd ShiftReg_row_10_2
+xTx_gate[1] VDDd I[1] BUS[1] pin VSSd transmission_gate_2
+xTx_gate[2] VDDd I[2] BUS[2] pin VSSd transmission_gate_2
+xTx_gate[3] VDDd I[3] BUS[3] pin VSSd transmission_gate_2
+xTx_gate[4] VDDd I[4] BUS[4] pin VSSd transmission_gate_2
+xTx_gate[5] VDDd I[5] BUS[5] pin VSSd transmission_gate_2
+xTx_gate[6] VDDd I[6] BUS[6] pin VSSd transmission_gate_2
+xTx_gate[7] VDDd I[7] BUS[7] pin VSSd transmission_gate_2
+xTx_gate[8] VDDd I[8] BUS[8] pin VSSd transmission_gate_2
+xTx_gate[9] VDDd I[9] BUS[9] pin VSSd transmission_gate_2
+xTx_gate[10] VDDd I[10] BUS[10] pin VSSd transmission_gate_2
+xTx_gate[11] VDDd I[11] BUS[11] pin VSSd transmission_gate_2
+xTx_gate[12] VDDd I[12] BUS[12] pin VSSd transmission_gate_2
+xTx_gate[13] VDDd I[13] BUS[13] pin VSSd transmission_gate_2
+xTx_gate[14] VDDd I[14] BUS[14] pin VSSd transmission_gate_2
+xTx_gate[15] VDDd I[15] BUS[15] pin VSSd transmission_gate_2
+xTx_gate[16] VDDd I[16] BUS[16] pin VSSd transmission_gate_2
+.ends
+
+
+* expanding   symbol:  libs/core_swmatrix/ShiftReg_row_10_2.sym # of pins=8
+** sym_path: /foss/designs/libs/core_swmatrix/ShiftReg_row_10_2.sym
+** sch_path: /foss/designs/libs/core_swmatrix/ShiftReg_row_10_2.sch
+.subckt ShiftReg_row_10_2 Q[1] Q[2] Q[3] Q[4] Q[5] Q[6] Q[7] Q[8] Q[9] Q[10] Q[11] Q[12] Q[13] Q[14] Q[15] Q[16] D_in PHI_1 PHI_2
++ I[1] I[2] I[3] I[4] I[5] I[6] I[7] I[8] I[9] I[10] I[11] I[12] I[13] I[14] I[15] I[16] EN VSSd VDDd
+*.PININFO PHI_1:I PHI_2:I D_in:I Q[1:16]:O EN:I I[1:16]:O VSSd:I VDDd:I
+xFF[1] D_in Q[1] PHI_1 PHI_2 EN I[1] VSSd VDDd DFF_2phase_1
+xFF[2] Q[1] Q[2] PHI_1 PHI_2 EN I[2] VSSd VDDd DFF_2phase_1
+xFF[3] Q[2] Q[3] PHI_1 PHI_2 EN I[3] VSSd VDDd DFF_2phase_1
+xFF[4] Q[3] Q[4] PHI_1 PHI_2 EN I[4] VSSd VDDd DFF_2phase_1
+xFF[5] Q[4] Q[5] PHI_1 PHI_2 EN I[5] VSSd VDDd DFF_2phase_1
+xFF[6] Q[5] Q[6] PHI_1 PHI_2 EN I[6] VSSd VDDd DFF_2phase_1
+xFF[7] Q[6] Q[7] PHI_1 PHI_2 EN I[7] VSSd VDDd DFF_2phase_1
+xFF[8] Q[7] Q[8] PHI_1 PHI_2 EN I[8] VSSd VDDd DFF_2phase_1
+xFF[9] Q[8] Q[9] PHI_1 PHI_2 EN I[9] VSSd VDDd DFF_2phase_1
+xFF[10] Q[9] Q[10] PHI_1 PHI_2 EN I[10] VSSd VDDd DFF_2phase_1
+xFF[11] Q[10] Q[11] PHI_1 PHI_2 EN I[11] VSSd VDDd DFF_2phase_1
+xFF[12] Q[11] Q[12] PHI_1 PHI_2 EN I[12] VSSd VDDd DFF_2phase_1
+xFF[13] Q[12] Q[13] PHI_1 PHI_2 EN I[13] VSSd VDDd DFF_2phase_1
+xFF[14] Q[13] Q[14] PHI_1 PHI_2 EN I[14] VSSd VDDd DFF_2phase_1
+xFF[15] Q[14] Q[15] PHI_1 PHI_2 EN I[15] VSSd VDDd DFF_2phase_1
+xFF[16] Q[15] Q[16] PHI_1 PHI_2 EN I[16] VSSd VDDd DFF_2phase_1
+.ends
+
+
+* expanding   symbol:  libs/core_analog/tx_gate/transmission_gate_2.sym # of pins=5
+** sym_path: /foss/designs/libs/core_analog/tx_gate/transmission_gate_2.sym
+** sch_path: /foss/designs/libs/core_analog/tx_gate/transmission_gate_2.sch
+.subckt transmission_gate_2 VDDd I Bus Pin VSSd
+*.PININFO VDDd:B I:I Bus:O Pin:I VSSd:B
+XM3 Bus I Pin VSSd nfet_03v3 L=0.28u W=6u nf=1 m=4
+XM4 Bus net1 Pin VDDd pfet_03v3 L=0.28u W=6u nf=1 m=12
+x1 I net1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+.ends
+
+
+* expanding   symbol:  libs/core_swmatrix/DFF_2phase_1.sym # of pins=8
+** sym_path: /foss/designs/libs/core_swmatrix/DFF_2phase_1.sym
+** sch_path: /foss/designs/libs/core_swmatrix/DFF_2phase_1.sch
+.subckt DFF_2phase_1 D Q PHI_1 PHI_2 EN I VSSd VDDd
+*.PININFO D:I PHI_1:I PHI_2:I Q:O EN:I I:O VSSd:I VDDd:I
+xmain D PHI_1 out_m VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__latq_1
+xsecondary out_m PHI_2 Q VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__latq_1
+x2 EN Q net1 VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__nand2_1
+x3 net1 I VDDd VDDd VSSd VSSd gf180mcu_fd_sc_mcu9t5v0__inv_1
+* noconn VSSd
+* noconn VDDd
+.ends
+
