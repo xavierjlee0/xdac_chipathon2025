@@ -1,5 +1,5 @@
 # ignore .extfiles folder
-.\designs\libs\layout_analog\extfiles
+./designs/libs/layout_analog/extfiles
 
 # Ignore all spice simulation results
 *.raw
